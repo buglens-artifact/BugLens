@@ -1,0 +1,399 @@
+[32m[     info][0m Compiler type: llvm
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/llvm-2.8.0/bin/clang
+====================Ground truth & buggy output:====================
+Correct output:
+0
+Output of llvm-2.8.0 with -Os:
+Output of llvm-2.8.0 with -O1:
+0
+====================================================================
+[32m[     info][0m Good version found: llvm-2.6.0
+[32m[     info][0m Start Bisection...
+Removing llvm/tools/clang/
+No local changes to save
+Bisecting: a merge base must be tested
+[56d60eaa616498200d8090f45c2602e42e7c5385] revert r79708 + r79711
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [56d60ea]
++---------------------------------------- Current commit hash: [56d60ea] ----------------------------------------+
+[32m[     info][0m LLVM with commit [56d60ea] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-56d60ea/bin/clang with -Os:
+0
+Output of /tmp/llvm-56d60ea/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [56d60ea] is good. Return value: 0
+
+Bisecting: 12261 revisions left to test after this (roughly 14 steps)
+[56ec7895210b6b488d9915963927489085000278] fix two bugs in OPC_EmitRegister, which makes ppc happier.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [56ec789]
++---------------------------------------- Current commit hash: [56ec789] ----------------------------------------+
+[32m[     info][0m LLVM with commit [56ec789] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-56ec789/bin/clang with -Os:
+0
+Output of /tmp/llvm-56ec789/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [56ec789] is good. Return value: 0
+
+Bisecting: 6130 revisions left to test after this (roughly 13 steps)
+[4cdcf59c6d00f049df1416bccbeac2a23bdd287c] Testing commit access.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [4cdcf59]
++---------------------------------------- Current commit hash: [4cdcf59] ----------------------------------------+
+[32m[     info][0m LLVM with commit [4cdcf59] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-4cdcf59/bin/clang with -Os:
+0
+Output of /tmp/llvm-4cdcf59/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [4cdcf59] is good. Return value: 0
+
+Bisecting: 3065 revisions left to test after this (roughly 12 steps)
+[268b576b723810d06e971f7f49b6723da256d429] Mangle enum constant expressions.  Fixes rdar://problem/8204122
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [268b576]
++---------------------------------------- Current commit hash: [268b576] ----------------------------------------+
+[32m[     info][0m LLVM with commit [268b576] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-268b576/bin/clang with -Os:
+Output of /tmp/llvm-268b576/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [268b576] is bad. Return value: 1
+
+Bisecting: 1532 revisions left to test after this (roughly 11 steps)
+[b1fdde1d01a3c1eeed669256fd5fe60aac5deb40] Adding soft-float comparisons, addition, subtraction, multiplication and negation
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [b1fdde1]
++---------------------------------------- Current commit hash: [b1fdde1] ----------------------------------------+
+[32m[     info][0m LLVM with commit [b1fdde1] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-b1fdde1/bin/clang with -Os:
+Output of /tmp/llvm-b1fdde1/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [b1fdde1] is bad. Return value: 1
+
+Bisecting: 765 revisions left to test after this (roughly 10 steps)
+[51d00092b6ea6622aeaa8b1929e6bd79bcf3d296] Include the use kind along with the expression in the key of the use sharing map. The reconcileNewOffset logic already forces a separate use if the kinds differ, so incorporating the kind in the key means we can track more sharing opportunities.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [51d0009]
++---------------------------------------- Current commit hash: [51d0009] ----------------------------------------+
+[32m[     info][0m LLVM with commit [51d0009] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-51d0009/bin/clang with -Os:
+0
+Output of /tmp/llvm-51d0009/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [51d0009] is good. Return value: 0
+
+Bisecting: 382 revisions left to test after this (roughly 9 steps)
+[c3bcc36a0bdb87ec56ec77da88a7ce8eb5051a81] When a constant size array is casted to another type, its length should be scaled as well.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [c3bcc36]
++---------------------------------------- Current commit hash: [c3bcc36] ----------------------------------------+
+[32m[     info][0m LLVM with commit [c3bcc36] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-c3bcc36/bin/clang with -Os:
+0
+Output of /tmp/llvm-c3bcc36/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [c3bcc36] is good. Return value: 0
+
+Bisecting: 191 revisions left to test after this (roughly 8 steps)
+[049f4ffab16e05ef0e7ca6aa380b7b415a8e823b] Move non-temporal movs to their own section
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [049f4ff]
++---------------------------------------- Current commit hash: [049f4ff] ----------------------------------------+
+[32m[     info][0m LLVM with commit [049f4ff] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-049f4ff/bin/clang with -Os:
+Output of /tmp/llvm-049f4ff/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [049f4ff] is bad. Return value: 1
+
+Bisecting: 95 revisions left to test after this (roughly 7 steps)
+[f3b2db68c6c717ed09865883845705fe94852598] Preserve deleted function's local variables' debug info. Radar 8122864.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [f3b2db6]
++---------------------------------------- Current commit hash: [f3b2db6] ----------------------------------------+
+[32m[     info][0m LLVM with commit [f3b2db6] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-f3b2db6/bin/clang with -Os:
+0
+Output of /tmp/llvm-f3b2db6/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [f3b2db6] is good. Return value: 0
+
+Bisecting: 47 revisions left to test after this (roughly 6 steps)
+[d6a091a4d4db147e4aecc610b1aa9b9cd2b1813d] Described the missing AVX forms of SSE2 convert instructions
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [d6a091a]
++---------------------------------------- Current commit hash: [d6a091a] ----------------------------------------+
+[32m[     info][0m LLVM with commit [d6a091a] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-d6a091a/bin/clang with -Os:
+Output of /tmp/llvm-d6a091a/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [d6a091a] is bad. Return value: 1
+
+Bisecting: 23 revisions left to test after this (roughly 5 steps)
+[e697a6f24f571c690bf196700f69a316b803563f] Constant fold x == undef to undef.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [e697a6f]
++---------------------------------------- Current commit hash: [e697a6f] ----------------------------------------+
+[32m[     info][0m LLVM with commit [e697a6f] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-e697a6f/bin/clang with -Os:
+Output of /tmp/llvm-e697a6f/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [e697a6f] is bad. Return value: 1
+
+Bisecting: 11 revisions left to test after this (roughly 4 steps)
+[0e4d964bfe404e73dbeadf48de29cab97ee912d8] Testcase for llvm-gcc fix 107051.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [0e4d964]
++---------------------------------------- Current commit hash: [0e4d964] ----------------------------------------+
+[32m[     info][0m LLVM with commit [0e4d964] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-0e4d964/bin/clang with -Os:
+Output of /tmp/llvm-0e4d964/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [0e4d964] is bad. Return value: 1
+
+Bisecting: 5 revisions left to test after this (roughly 3 steps)
+[0117091c16b0399beb21cb02b4e91f58b9ff4985] Add a triple so test runs on Linux as well.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [0117091]
++---------------------------------------- Current commit hash: [0117091] ----------------------------------------+
+[32m[     info][0m LLVM with commit [0117091] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-0117091/bin/clang with -Os:
+0
+Output of /tmp/llvm-0117091/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [0117091] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[a7d81ab7f3df57e3e26e55037bb00735ba87c145] X86-64: pass/return structs of float/int as float/i32 instead of double/i64 to make the code generated for ABI cleaner.  Passing in the low part of a double is the same as passing in a float.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [a7d81ab]
++---------------------------------------- Current commit hash: [a7d81ab] ----------------------------------------+
+[32m[     info][0m LLVM with commit [a7d81ab] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-a7d81ab/bin/clang with -Os:
+Output of /tmp/llvm-a7d81ab/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [a7d81ab] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[c42461e145fb458377e3c4d8892c1348c7dad4e1] Minor refactorin of my last patch (radar 7860965 related).
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/41 small
+[32m[     info][0m Testing commit: [c42461e]
++---------------------------------------- Current commit hash: [c42461e] ----------------------------------------+
+[32m[     info][0m LLVM with commit [c42461e] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-c42461e/bin/clang with -Os:
+0
+Output of /tmp/llvm-c42461e/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [c42461e] is good. Return value: 0
+
+a7d81ab7f3df57e3e26e55037bb00735ba87c145 is the first bad commit
+commit a7d81ab7f3df57e3e26e55037bb00735ba87c145
+Author: Chris Lattner <sabre@nondot.org>
+Date:   Mon Jun 28 19:56:59 2010 +0000
+
+    X86-64:
+    pass/return structs of float/int as float/i32 instead of double/i64
+    to make the code generated for ABI cleaner.  Passing in the low part
+    of a double is the same as passing in a float.
+    
+    For example, we now compile:
+    
+    struct DeclGroup { float NumDecls; };
+    float foo(DeclGroup D);
+    void bar(DeclGroup *D) {
+     foo(*D);
+    }
+    
+    into:
+    
+    %struct.DeclGroup = type { float }
+    
+    define void @_Z3barP9DeclGroup(%struct.DeclGroup* %D) nounwind {
+    entry:
+      %D.addr = alloca %struct.DeclGroup*, align 8    ; <%struct.DeclGroup**> [#uses=2]
+      %agg.tmp = alloca %struct.DeclGroup, align 4    ; <%struct.DeclGroup*> [#uses=2]
+      store %struct.DeclGroup* %D, %struct.DeclGroup** %D.addr
+      %tmp = load %struct.DeclGroup** %D.addr         ; <%struct.DeclGroup*> [#uses=1]
+      %tmp1 = bitcast %struct.DeclGroup* %agg.tmp to i8* ; <i8*> [#uses=1]
+      %tmp2 = bitcast %struct.DeclGroup* %tmp to i8*  ; <i8*> [#uses=1]
+      call void @llvm.memcpy.p0i8.p0i8.i64(i8* %tmp1, i8* %tmp2, i64 4, i32 4, i1 false)
+      %coerce.dive = getelementptr %struct.DeclGroup* %agg.tmp, i32 0, i32 0 ; <float*> [#uses=1]
+      %0 = load float* %coerce.dive, align 1          ; <float> [#uses=1]
+      %call = call float @_Z3foo9DeclGroup(float %0)  ; <float> [#uses=0]
+      ret void
+    }
+    
+    instead of:
+    
+    %struct.DeclGroup = type { float }
+    
+    define void @_Z3barP9DeclGroup(%struct.DeclGroup* %D) nounwind {
+    entry:
+      %D.addr = alloca %struct.DeclGroup*, align 8    ; <%struct.DeclGroup**> [#uses=2]
+      %agg.tmp = alloca %struct.DeclGroup, align 4    ; <%struct.DeclGroup*> [#uses=2]
+      %tmp3 = alloca double                           ; <double*> [#uses=2]
+      store %struct.DeclGroup* %D, %struct.DeclGroup** %D.addr
+      %tmp = load %struct.DeclGroup** %D.addr         ; <%struct.DeclGroup*> [#uses=1]
+      %tmp1 = bitcast %struct.DeclGroup* %agg.tmp to i8* ; <i8*> [#uses=1]
+      %tmp2 = bitcast %struct.DeclGroup* %tmp to i8*  ; <i8*> [#uses=1]
+      call void @llvm.memcpy.p0i8.p0i8.i64(i8* %tmp1, i8* %tmp2, i64 4, i32 4, i1 false)
+      %coerce.dive = getelementptr %struct.DeclGroup* %agg.tmp, i32 0, i32 0 ; <float*> [#uses=1]
+      %0 = bitcast double* %tmp3 to float*            ; <float*> [#uses=1]
+      %1 = load float* %coerce.dive                   ; <float> [#uses=1]
+      store float %1, float* %0, align 1
+      %2 = load double* %tmp3                         ; <double> [#uses=1]
+      %call = call float @_Z3foo9DeclGroup(double %2) ; <float> [#uses=0]
+      ret void
+    }
+    
+    which is this machine code (at -O0):
+    
+    __Z3barP9DeclGroup:
+    	subq	$24, %rsp
+    	movq	%rdi, 16(%rsp)
+    	movq	16(%rsp), %rdi
+    	leaq	8(%rsp), %rax
+    	movl	(%rdi), %ecx
+    	movl	%ecx, (%rax)
+    	movss	8(%rsp), %xmm0
+    	callq	__Z3foo9DeclGroup
+    	addq	$24, %rsp
+    	ret
+    
+    vs this:
+    
+    __Z3barP9DeclGroup:
+    	subq	$24, %rsp
+    	movq	%rdi, 16(%rsp)
+    	movq	16(%rsp), %rdi
+    	leaq	8(%rsp), %rax
+    	movl	(%rdi), %ecx
+    	movl	%ecx, (%rax)
+    	movss	8(%rsp), %xmm0
+    	movss	%xmm0, (%rsp)
+    	movsd	(%rsp), %xmm0
+    	callq	__Z3foo9DeclGroup
+    	addq	$24, %rsp
+    	ret
+    
+    At -O3, it is the difference between this now:
+    
+    __Z3barP9DeclGroup:
+    	movss	(%rdi), %xmm0
+    	jmp	__Z3foo9DeclGroup  # TAILCALL
+    
+    vs this before:
+    
+    __Z3barP9DeclGroup:
+    	movl	(%rdi), %eax
+    	movd	%rax, %xmm0
+    	jmp	__Z3foo9DeclGroup  # TAILCALL
+    
+    llvm-svn: 107048
+
+:040000 040000 5267f0c1cb5c7d9eb3ab6653e1f8b936a2dbaf6e b5ec49c061cf53b2f06f11d9761a3ae3b016366a M	clang
+bisect run success
+[32m[     info][0m First bad commit: a7d81ab X86-64: pass/return structs of float/int as float/i32 instead of double/i64 to make the code generated for ABI cleaner.  Passing in the low part of a double is the same as passing in a float.
+Previous HEAD position was c42461e... Minor refactorin of my last patch (radar 7860965 related).
+HEAD is now at 71cc9d8... Added checking of (x == x) and (x != x) to IdempotentOperationChecker and updated test cases flagged by it.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [a7d81ab]
++---------------------------------------- Current commit hash: [a7d81ab] ----------------------------------------+
+[32m[     info][0m LLVM with commit [a7d81ab] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-a7d81ab/bin/clang with -Os:
+Output of /tmp/llvm-a7d81ab/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [a7d81ab] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [c42461e]
++---------------------------------------- Current commit hash: [c42461e] ----------------------------------------+
+[32m[     info][0m LLVM with commit [c42461e] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/llvm-c42461e/bin/clang with -Os:
+0
+Output of /tmp/llvm-c42461e/bin/clang with -O1:
+0
+----------------------------------------------------
+[32m[     info][0m Current commit [c42461e] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of llvm [a7d81ab] with -O0:
+0
+Output of llvm [a7d81ab] with -O1:
+0
+Output of llvm [a7d81ab] with -O2:
+Output of llvm [a7d81ab] with -O3:
+Output of llvm [a7d81ab] with -Os:
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

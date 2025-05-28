@@ -1,0 +1,1 @@
+0ba227b ifcvt.c (noce_can_store_speculate_p): New static function.

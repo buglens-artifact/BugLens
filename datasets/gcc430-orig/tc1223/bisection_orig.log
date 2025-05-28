@@ -1,0 +1,55 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 2af954a5
+Output of gcc-4.3.0 with -O3:
+checksum = 2af954a6
+Output of gcc-4.3.0 with -O0:
+checksum = 2af954a5
+====================================================================
+[32m[     info][0m Good version found: gcc-4.0.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[bd182be84e9c8ae8485ac7c392fa0b6678969e3c] re PR rtl-optimization/20117 (duplicated labels in PIC)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1223 orig
+[32m[     info][0m Testing commit: [bd182be]
++---------------------------------------- Current commit hash: [bd182be] ----------------------------------------+
+GCC for commit [bd182be] already exists. Using existing binary.
+/tmp/deduplication/scripts/r_wrongcode_gcc.sh: line 219: 1028165 Killed                  timeout -s 9 $TIMEOUT $test_binary > $test_output_opt1 2>&1
+Fail to run the binary compiled by gcc [bd182be] with -O3. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+The merge base bd182be84e9c8ae8485ac7c392fa0b6678969e3c is bad.
+This means the bug has been fixed between bd182be84e9c8ae8485ac7c392fa0b6678969e3c and [d89dab3130e93bf415da3719355e24ef4cd039ca].
+bisect run failed:
+'bisect_state bad' exited with error code 3
+[32m[     info][0m First bad commit: 
+Checking out files:  11% (5240/46200)   Checking out files:  12% (5544/46200)   Checking out files:  13% (6006/46200)   Checking out files:  14% (6468/46200)   Checking out files:  14% (6741/46200)   Checking out files:  15% (6930/46200)   Checking out files:  16% (7392/46200)   Checking out files:  17% (7854/46200)   Checking out files:  17% (8007/46200)   Checking out files:  18% (8316/46200)   Checking out files:  19% (8778/46200)   Checking out files:  19% (9187/46200)   Checking out files:  20% (9240/46200)   Checking out files:  21% (9702/46200)   Checking out files:  22% (10164/46200)   Checking out files:  23% (10626/46200)   Checking out files:  23% (10938/46200)   Checking out files:  24% (11088/46200)   Checking out files:  25% (11550/46200)   Checking out files:  26% (12012/46200)   Checking out files:  27% (12474/46200)   Checking out files:  28% (12936/46200)   Checking out files:  29% (13398/46200)   Checking out files:  29% (13500/46200)   Checking out files:  30% (13860/46200)   Checking out files:  31% (14322/46200)   Checking out files:  32% (14784/46200)   Checking out files:  33% (15246/46200)   Checking out files:  34% (15708/46200)   Checking out files:  35% (16170/46200)   Checking out files:  35% (16495/46200)   Checking out files:  36% (16632/46200)   Checking out files:  37% (17094/46200)   Checking out files:  38% (17556/46200)   Checking out files:  39% (18018/46200)   Checking out files:  39% (18274/46200)   Checking out files:  40% (18480/46200)   Checking out files:  41% (18942/46200)   Checking out files:  42% (19404/46200)   Checking out files:  43% (19866/46200)   Checking out files:  44% (20328/46200)   Checking out files:  44% (20528/46200)   Checking out files:  45% (20790/46200)   Checking out files:  46% (21252/46200)   Checking out files:  47% (21714/46200)   Checking out files:  48% (22176/46200)   Checking out files:  49% (22638/46200)   Checking out files:  50% (23100/46200)   Checking out files:  50% (23251/46200)   Checking out files:  51% (23562/46200)   Checking out files:  52% (24024/46200)   Checking out files:  53% (24486/46200)   Checking out files:  54% (24948/46200)   Checking out files:  55% (25410/46200)   Checking out files:  56% (25872/46200)   Checking out files:  57% (26334/46200)   Checking out files:  57% (26352/46200)   Checking out files:  58% (26796/46200)   Checking out files:  59% (27258/46200)   Checking out files:  60% (27720/46200)   Checking out files:  61% (28182/46200)   Checking out files:  62% (28644/46200)   Checking out files:  63% (29106/46200)   Checking out files:  64% (29568/46200)   Checking out files:  64% (29591/46200)   Checking out files:  65% (30030/46200)   Checking out files:  66% (30492/46200)   Checking out files:  67% (30954/46200)   Checking out files:  68% (31416/46200)   Checking out files:  69% (31878/46200)   Checking out files:  70% (32340/46200)   Checking out files:  70% (32620/46200)   Checking out files:  71% (32802/46200)   Checking out files:  72% (33264/46200)   Checking out files:  73% (33726/46200)   Checking out files:  74% (34188/46200)   Checking out files:  75% (34650/46200)   Checking out files:  76% (35112/46200)   Checking out files:  77% (35574/46200)   Checking out files:  77% (35587/46200)   Checking out files:  78% (36036/46200)   Checking out files:  79% (36498/46200)   Checking out files:  80% (36960/46200)   Checking out files:  81% (37422/46200)   Checking out files:  82% (37884/46200)   Checking out files:  83% (38346/46200)   Checking out files:  84% (38808/46200)   Checking out files:  84% (38845/46200)   Checking out files:  85% (39270/46200)   Checking out files:  86% (39732/46200)   Checking out files:  87% (40194/46200)   Checking out files:  88% (40656/46200)   Checking out files:  89% (41118/46200)   Checking out files:  90% (41580/46200)   Checking out files:  90% (41801/46200)   Checking out files:  91% (42042/46200)   Checking out files:  92% (42504/46200)   Checking out files:  93% (42966/46200)   Checking out files:  94% (43428/46200)   Checking out files:  95% (43890/46200)   Checking out files:  95% (44059/46200)   Checking out files:  96% (44352/46200)   Checking out files:  97% (44814/46200)   Checking out files:  98% (45276/46200)   Checking out files:  99% (45738/46200)   Checking out files: 100% (46200/46200)   Checking out files: 100% (46200/46200), done.
+Previous HEAD position was bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+HEAD is now at 3673b8c... Daily bump.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [3673b8c]
++---------------------------------------- Current commit hash: [3673b8c] ----------------------------------------+
+GCC for commit [3673b8c] already exists. Using existing binary.
+Compilation by gcc [3673b8c] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 3673b8c... Daily bump.
+fatal: ambiguous argument '^': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions
+[32m[     info][0m Testing commit: [3673b8c]
++---------------------------------------- Current commit hash: [3673b8c] ----------------------------------------+
+GCC for commit [3673b8c] already exists. Using existing binary.
+Compilation by gcc [3673b8c] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 3673b8c... Daily bump.
+Error: The first bad commit is not the correct one. [2]

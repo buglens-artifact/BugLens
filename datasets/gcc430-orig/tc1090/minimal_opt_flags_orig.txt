@@ -1,0 +1,8 @@
+early-inlining
+guess-branch-probability
+inline-small-functions
+ipa-reference
+strict-aliasing
+tree-ccp
+tree-dce
+tree-vrp

@@ -1,0 +1,4 @@
+inline-functions
+inline-small-functions
+ipa-reference
+unit-at-a-time

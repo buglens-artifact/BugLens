@@ -1,0 +1,1 @@
+e21aff8 cgraph.h (cgraph_node): Add 'lowered' state.

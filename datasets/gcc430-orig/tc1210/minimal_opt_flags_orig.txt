@@ -1,0 +1,12 @@
+guess-branch-probability
+inline-functions
+inline-small-functions
+tree-copyrename
+tree-dce
+tree-dse
+tree-fre
+tree-loop-im
+tree-loop-optimize
+tree-scev-cprop
+tree-vrp
+unit-at-a-time

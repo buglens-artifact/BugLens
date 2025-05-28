@@ -1,0 +1,1 @@
+c55f4e7 * opts.c (decode_options): Enable vectorization under -O3.

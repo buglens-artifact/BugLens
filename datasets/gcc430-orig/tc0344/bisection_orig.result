@@ -1,0 +1,1 @@
+a96681a re PR target/32893 (zlib segfault in inflate_table() compiled w/ -O -msse2 ftree-vectorize)

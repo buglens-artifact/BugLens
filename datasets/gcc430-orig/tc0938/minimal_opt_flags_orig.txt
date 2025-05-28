@@ -1,0 +1,7 @@
+crossjumping
+inline-functions
+inline-small-functions
+ipa-reference
+schedule-insns2
+unit-at-a-time
+unswitch-loops

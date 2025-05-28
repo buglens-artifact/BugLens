@@ -1,0 +1,7 @@
+scalarrepl
+ipsccp
+instcombine
+inline
+scalarrepl
+instcombine
+instcombine

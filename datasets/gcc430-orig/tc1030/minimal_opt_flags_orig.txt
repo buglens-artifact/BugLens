@@ -1,0 +1,4 @@
+inline-small-functions
+strict-aliasing
+tree-fre
+unit-at-a-time

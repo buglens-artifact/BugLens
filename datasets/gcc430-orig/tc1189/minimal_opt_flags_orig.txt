@@ -1,0 +1,16 @@
+early-inlining
+inline-functions-called-once
+inline-small-functions
+ipa-pure-const
+ipa-reference
+tree-ccp
+tree-copyrename
+tree-dce
+tree-dominator-opts
+tree-dse
+tree-fre
+tree-loop-im
+tree-loop-optimize
+tree-sink
+tree-store-ccp
+unit-at-a-time

@@ -1,0 +1,355 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+1
+Output of gcc-4.3.0 with -Os:
+0
+Output of gcc-4.3.0 with -O3:
+1
+====================================================================
+[32m[     info][0m Good version found: gcc-4.0.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[bd182be84e9c8ae8485ac7c392fa0b6678969e3c] re PR rtl-optimization/20117 (duplicated labels in PIC)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [bd182be]
++---------------------------------------- Current commit hash: [bd182be] ----------------------------------------+
+GCC for commit [bd182be] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-bd182be/bin/gcc with -Os:
+1
+Output of /tmp/gcc-bd182be/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+[32m[     info][0m Current commit [bd182be] is good. Return value: 0
+
+Bisecting: 9952 revisions left to test after this (roughly 13 steps)
+[9659ce8b6160434d90f8b7985921f0b05e74d2d7] re PR tree-optimization/24888 (duplication of local variables after versioning/inlining)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [9659ce8]
++---------------------------------------- Current commit hash: [9659ce8] ----------------------------------------+
+GCC for commit [9659ce8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-9659ce8/bin/gcc with -Os:
+0
+Output of /tmp/gcc-9659ce8/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9659ce8... re PR tree-optimization/24888 (duplication of local variables after versioning/inlining)
+[32m[     info][0m Current commit [9659ce8] is bad. Return value: 1
+
+Bisecting: 4976 revisions left to test after this (roughly 12 steps)
+[34d9dc2d292b832a428b97368fd7b1c3c019f625] cvsignore: Likewise.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [34d9dc2]
++---------------------------------------- Current commit hash: [34d9dc2] ----------------------------------------+
+GCC for commit [34d9dc2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-34d9dc2/bin/gcc with -Os:
+0
+Output of /tmp/gcc-34d9dc2/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 34d9dc2... cvsignore: Likewise.
+[32m[     info][0m Current commit [34d9dc2] is bad. Return value: 1
+
+Bisecting: 2487 revisions left to test after this (roughly 11 steps)
+[bd16f8f1525135a3d730a4cc8136aeb3328bdfb0] tweak comment
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [bd16f8f]
++---------------------------------------- Current commit hash: [bd16f8f] ----------------------------------------+
+GCC for commit [bd16f8f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-bd16f8f/bin/gcc with -Os:
+1
+Output of /tmp/gcc-bd16f8f/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd16f8f... tweak comment
+[32m[     info][0m Current commit [bd16f8f] is good. Return value: 0
+
+Bisecting: 1243 revisions left to test after this (roughly 10 steps)
+[94b00ee4e1126901db295a7223b3c6d7c5b1868d] re PR fortran/22417 (gfortran preprocessing regression: nonsense warning about file left but not entered)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [94b00ee]
++---------------------------------------- Current commit hash: [94b00ee] ----------------------------------------+
+GCC for commit [94b00ee] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-94b00ee/bin/gcc with -Os:
+1
+Output of /tmp/gcc-94b00ee/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 94b00ee... re PR fortran/22417 (gfortran preprocessing regression: nonsense warning about file left but not entered)
+[32m[     info][0m Current commit [94b00ee] is good. Return value: 0
+
+Bisecting: 621 revisions left to test after this (roughly 9 steps)
+[8858cd129e470142a04754fd14f6bf40710717c6] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [8858cd1]
++---------------------------------------- Current commit hash: [8858cd1] ----------------------------------------+
+GCC for commit [8858cd1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-8858cd1/bin/gcc with -Os:
+0
+Output of /tmp/gcc-8858cd1/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8858cd1... Daily bump.
+[32m[     info][0m Current commit [8858cd1] is bad. Return value: 1
+
+Bisecting: 310 revisions left to test after this (roughly 8 steps)
+[91d975b88eee06af82847fdb48c58e230506c72c] re PR c/23143 (parameter forward declarations broken)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [91d975b]
++---------------------------------------- Current commit hash: [91d975b] ----------------------------------------+
+GCC for commit [91d975b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-91d975b/bin/gcc with -Os:
+1
+Output of /tmp/gcc-91d975b/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 91d975b... re PR c/23143 (parameter forward declarations broken)
+[32m[     info][0m Current commit [91d975b] is good. Return value: 0
+
+Bisecting: 155 revisions left to test after this (roughly 7 steps)
+[61403f5e033cee00d4316596365df97de3f51a86] pr18299-1.c: Move to ...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [61403f5]
++---------------------------------------- Current commit hash: [61403f5] ----------------------------------------+
+GCC for commit [61403f5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-61403f5/bin/gcc with -Os:
+0
+Output of /tmp/gcc-61403f5/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 61403f5... pr18299-1.c: Move to ...
+[32m[     info][0m Current commit [61403f5] is bad. Return value: 1
+
+Bisecting: 77 revisions left to test after this (roughly 6 steps)
+[9ef524bac29974fbed968990aeb8ca887c228f13] update-cunroll.c: Fix mistakes in scan-tree-dump-times directive.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [9ef524b]
++---------------------------------------- Current commit hash: [9ef524b] ----------------------------------------+
+GCC for commit [9ef524b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-9ef524b/bin/gcc with -Os:
+1
+Output of /tmp/gcc-9ef524b/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9ef524b... update-cunroll.c: Fix mistakes in scan-tree-dump-times directive.
+[32m[     info][0m Current commit [9ef524b] is good. Return value: 0
+
+Bisecting: 38 revisions left to test after this (roughly 5 steps)
+[c633f011cb2b082c9ed6f864f3ce622857cbcf9d] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [c633f01]
++---------------------------------------- Current commit hash: [c633f01] ----------------------------------------+
+GCC for commit [c633f01] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-c633f01/bin/gcc with -Os:
+0
+Output of /tmp/gcc-c633f01/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at c633f01... Daily bump.
+[32m[     info][0m Current commit [c633f01] is bad. Return value: 1
+
+Bisecting: 19 revisions left to test after this (roughly 4 steps)
+[d8654d1a75fe2547398d7ee8338018dbdc2670ea] re PR c++/19063 (ICE on invalid template parameter)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [d8654d1]
++---------------------------------------- Current commit hash: [d8654d1] ----------------------------------------+
+GCC for commit [d8654d1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-d8654d1/bin/gcc with -Os:
+0
+Output of /tmp/gcc-d8654d1/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at d8654d1... re PR c++/19063 (ICE on invalid template parameter)
+[32m[     info][0m Current commit [d8654d1] is bad. Return value: 1
+
+Bisecting: 9 revisions left to test after this (roughly 3 steps)
+[ea78022d6890c305342a33050b38f5e531654dbb] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [ea78022]
++---------------------------------------- Current commit hash: [ea78022] ----------------------------------------+
+GCC for commit [ea78022] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-ea78022/bin/gcc with -Os:
+1
+Output of /tmp/gcc-ea78022/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at ea78022... Daily bump.
+[32m[     info][0m Current commit [ea78022] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[4c84c58eb9d3ec7fe186e764c016287c55a0cc7a] builtin-wctype-1.c: Use __WINT_TYPE__ for TEST_TO_WCTYPE.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [4c84c58]
++---------------------------------------- Current commit hash: [4c84c58] ----------------------------------------+
+GCC for commit [4c84c58] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-4c84c58/bin/gcc with -Os:
+0
+Output of /tmp/gcc-4c84c58/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4c84c58... builtin-wctype-1.c: Use __WINT_TYPE__ for TEST_TO_WCTYPE.
+[32m[     info][0m Current commit [4c84c58] is bad. Return value: 1
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[3f94bdecbc6657d7cba51c8e368f3d29f353723c] Fix problem pointed out by Gunther Nikl on gcc list.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [3f94bde]
++---------------------------------------- Current commit hash: [3f94bde] ----------------------------------------+
+GCC for commit [3f94bde] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-3f94bde/bin/gcc with -Os:
+0
+Output of /tmp/gcc-3f94bde/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3f94bde... Fix problem pointed out by Gunther Nikl on gcc list.
+[32m[     info][0m Current commit [3f94bde] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[460f84ed3d295f5bad049f989c355e6948d4052a] re PR middle-end/21529 (code size regression (+40%) with -Os from GCC-3.4.3 to 4.1)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0408 small
+[32m[     info][0m Testing commit: [460f84e]
++---------------------------------------- Current commit hash: [460f84e] ----------------------------------------+
+GCC for commit [460f84e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-460f84e/bin/gcc with -Os:
+0
+Output of /tmp/gcc-460f84e/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 460f84e... re PR middle-end/21529 (code size regression (+40%) with -Os from GCC-3.4.3 to 4.1)
+[32m[     info][0m Current commit [460f84e] is bad. Return value: 1
+
+460f84ed3d295f5bad049f989c355e6948d4052a is the first bad commit
+commit 460f84ed3d295f5bad049f989c355e6948d4052a
+Author: Richard Henderson <rth@redhat.com>
+Date:   Thu Aug 4 19:42:06 2005 -0700
+
+    re PR middle-end/21529 (code size regression (+40%) with -Os from GCC-3.4.3 to 4.1)
+    
+            PR 21529
+            * params.def (PARAM_SRA_MAX_STRUCTURE_COUNT): New.
+            * params.h (SRA_MAX_STRUCTURE_COUNT): New.
+            * tree-sra.c (decide_block_copy): Use it.  Disable element copy
+            if we'd have to instantiate too many members.
+    
+    From-SVN: r102761
+
+:040000 040000 e233771dcf137af6220c179339d2e8884611d04e 982d0fdf2e869749ec20d8de77e4d48a8d6a24c3 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 460f84e re PR middle-end/21529 (code size regression (+40%) with -Os from GCC-3.4.3 to 4.1)
+Checking out files:  24% (4820/19635)   Checking out files:  25% (4909/19635)   Checking out files:  26% (5106/19635)   Checking out files:  27% (5302/19635)   Checking out files:  28% (5498/19635)   Checking out files:  29% (5695/19635)   Checking out files:  30% (5891/19635)   Checking out files:  31% (6087/19635)   Checking out files:  32% (6284/19635)   Checking out files:  33% (6480/19635)   Checking out files:  34% (6676/19635)   Checking out files:  35% (6873/19635)   Checking out files:  36% (7069/19635)   Checking out files:  37% (7265/19635)   Checking out files:  37% (7394/19635)   Checking out files:  38% (7462/19635)   Checking out files:  39% (7658/19635)   Checking out files:  40% (7854/19635)   Checking out files:  41% (8051/19635)   Checking out files:  42% (8247/19635)   Checking out files:  43% (8444/19635)   Checking out files:  44% (8640/19635)   Checking out files:  45% (8836/19635)   Checking out files:  46% (9033/19635)   Checking out files:  47% (9229/19635)   Checking out files:  48% (9425/19635)   Checking out files:  49% (9622/19635)   Checking out files:  50% (9818/19635)   Checking out files:  51% (10014/19635)   Checking out files:  52% (10211/19635)   Checking out files:  53% (10407/19635)   Checking out files:  54% (10603/19635)   Checking out files:  55% (10800/19635)   Checking out files:  56% (10996/19635)   Checking out files:  57% (11192/19635)   Checking out files:  58% (11389/19635)   Checking out files:  59% (11585/19635)   Checking out files:  59% (11654/19635)   Checking out files:  60% (11781/19635)   Checking out files:  61% (11978/19635)   Checking out files:  62% (12174/19635)   Checking out files:  63% (12371/19635)   Checking out files:  64% (12567/19635)   Checking out files:  65% (12763/19635)   Checking out files:  66% (12960/19635)   Checking out files:  67% (13156/19635)   Checking out files:  68% (13352/19635)   Checking out files:  69% (13549/19635)   Checking out files:  70% (13745/19635)   Checking out files:  71% (13941/19635)   Checking out files:  72% (14138/19635)   Checking out files:  73% (14334/19635)   Checking out files:  74% (14530/19635)   Checking out files:  75% (14727/19635)   Checking out files:  76% (14923/19635)   Checking out files:  77% (15119/19635)   Checking out files:  78% (15316/19635)   Checking out files:  79% (15512/19635)   Checking out files:  79% (15577/19635)   Checking out files:  80% (15708/19635)   Checking out files:  81% (15905/19635)   Checking out files:  82% (16101/19635)   Checking out files:  83% (16298/19635)   Checking out files:  84% (16494/19635)   Checking out files:  85% (16690/19635)   Checking out files:  86% (16887/19635)   Checking out files:  87% (17083/19635)   Checking out files:  88% (17279/19635)   Checking out files:  89% (17476/19635)   Checking out files:  90% (17672/19635)   Checking out files:  91% (17868/19635)   Checking out files:  92% (18065/19635)   Checking out files:  93% (18261/19635)   Checking out files:  94% (18457/19635)   Checking out files:  95% (18654/19635)   Checking out files:  96% (18850/19635)   Checking out files:  97% (19046/19635)   Checking out files:  98% (19243/19635)   Checking out files:  98% (19331/19635)   Checking out files:  99% (19439/19635)   Checking out files: 100% (19635/19635)   Checking out files: 100% (19635/19635), done.
+Previous HEAD position was 460f84e... re PR middle-end/21529 (code size regression (+40%) with -Os from GCC-3.4.3 to 4.1)
+HEAD is now at 669353d... gfortran.texi: Update Fortran 2003 section.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [460f84e]
++---------------------------------------- Current commit hash: [460f84e] ----------------------------------------+
+GCC for commit [460f84e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-460f84e/bin/gcc with -Os:
+0
+Output of /tmp/gcc-460f84e/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 460f84e... re PR middle-end/21529 (code size regression (+40%) with -Os from GCC-3.4.3 to 4.1)
+[32m[     info][0m Current commit [460f84e] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [ea78022]
++---------------------------------------- Current commit hash: [ea78022] ----------------------------------------+
+GCC for commit [ea78022] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-ea78022/bin/gcc with -Os:
+1
+Output of /tmp/gcc-ea78022/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at ea78022... Daily bump.
+[32m[     info][0m Current commit [ea78022] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [460f84e] with -O0:
+1
+Output of gcc [460f84e] with -O1:
+1
+Output of gcc [460f84e] with -O2:
+1
+Output of gcc [460f84e] with -O3:
+1
+Output of gcc [460f84e] with -Os:
+0
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

@@ -1,0 +1,11 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 11e8f810
+Output of gcc-4.3.0 with -Os:
+checksum = 11e8fc89
+Output of gcc-4.3.0 with -O0:
+checksum = 11e8f810
+====================================================================
+[31m[    error][0m No good compiler version found.

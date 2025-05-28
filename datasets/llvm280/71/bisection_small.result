@@ -1,0 +1,1 @@
+1bf7ff7 Implement PR1143 (at -m64) by making basicaa look through extensions.  We previously already handled it at -m32 because there were no i32->i64 extensions for addressing.

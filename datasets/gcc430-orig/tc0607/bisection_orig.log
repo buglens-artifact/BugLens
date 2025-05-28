@@ -1,0 +1,350 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = db242a21
+Output of gcc-4.3.0 with -Os:
+checksum = db242a7d
+Output of gcc-4.3.0 with -O0:
+checksum = db242a21
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-b23987e/bin/gcc with -Os:
+checksum = db242a21
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-b718216/bin/gcc with -Os:
+checksum = db242a21
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is good. Return value: 0
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[448d2cd2f73e2e16e2bdd5c407174afebf3ed845] re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [448d2cd]
++---------------------------------------- Current commit hash: [448d2cd] ----------------------------------------+
+GCC for commit [448d2cd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-448d2cd/bin/gcc with -Os:
+checksum = db242a7d
+Output of /tmp/gcc-448d2cd/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at 448d2cd... re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+[32m[     info][0m Current commit [448d2cd] is bad. Return value: 1
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[6812b99bfefb741cadac6c5eba5a7446af820b62] impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [6812b99]
++---------------------------------------- Current commit hash: [6812b99] ----------------------------------------+
+GCC for commit [6812b99] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-6812b99/bin/gcc with -Os:
+checksum = db242a21
+Output of /tmp/gcc-6812b99/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6812b99... impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+[32m[     info][0m Current commit [6812b99] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[bc211e05e3379205a808c2f2fa050ba6cc03cf22] darwin.c (machopic_indirect_data_reference): Avoid invalid sharing.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [bc211e0]
++---------------------------------------- Current commit hash: [bc211e0] ----------------------------------------+
+GCC for commit [bc211e0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-bc211e0/bin/gcc with -Os:
+checksum = db242a7d
+Output of /tmp/gcc-bc211e0/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at bc211e0... darwin.c (machopic_indirect_data_reference): Avoid invalid sharing.
+[32m[     info][0m Current commit [bc211e0] is bad. Return value: 1
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[b29ee02b34c3fe06df62dae38f75b0efcfe38704] * c-pretty-print.c (pp_c_constant): Handle COMPLEX_CST.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [b29ee02]
++---------------------------------------- Current commit hash: [b29ee02] ----------------------------------------+
+GCC for commit [b29ee02] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-b29ee02/bin/gcc with -Os:
+checksum = db242a7d
+Output of /tmp/gcc-b29ee02/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at b29ee02... * c-pretty-print.c (pp_c_constant): Handle COMPLEX_CST.
+[32m[     info][0m Current commit [b29ee02] is bad. Return value: 1
+
+Bisecting: 139 revisions left to test after this (roughly 7 steps)
+[ff7637ef1d8ab07702005ddba765a2d5fba4c071] c-typeck.c (convert_for_assignment): Use the type of the member for the initialization.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [ff7637e]
++---------------------------------------- Current commit hash: [ff7637e] ----------------------------------------+
+GCC for commit [ff7637e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-ff7637e/bin/gcc with -Os:
+checksum = db242a7d
+Output of /tmp/gcc-ff7637e/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at ff7637e... c-typeck.c (convert_for_assignment): Use the type of the member for the initialization.
+[32m[     info][0m Current commit [ff7637e] is bad. Return value: 1
+
+Bisecting: 69 revisions left to test after this (roughly 6 steps)
+[369925233a003cf92489080ed0a0bcb94629b08b] sem_ch12.adb (Copy_Generic_Node): A reference to a child unit of the generic for an enclosing instance is a...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [3699252]
++---------------------------------------- Current commit hash: [3699252] ----------------------------------------+
+GCC for commit [3699252] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-3699252/bin/gcc with -Os:
+checksum = db242a7d
+Output of /tmp/gcc-3699252/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3699252... sem_ch12.adb (Copy_Generic_Node): A reference to a child unit of the generic for an enclosing instance is a...
+[32m[     info][0m Current commit [3699252] is bad. Return value: 1
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[991df44f3a392709a7bbaf30d618582e9ab62a2b] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [991df44]
++---------------------------------------- Current commit hash: [991df44] ----------------------------------------+
+GCC for commit [991df44] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-991df44/bin/gcc with -Os:
+checksum = db242a7d
+Output of /tmp/gcc-991df44/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at 991df44... Daily bump.
+[32m[     info][0m Current commit [991df44] is bad. Return value: 1
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[434632cea8746ceca0d253bd3283495e9ac37b3f] (Check_References.Publicly_Referenceable): A formal parameter is never publicly referenceable outside of its body.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [434632c]
++---------------------------------------- Current commit hash: [434632c] ----------------------------------------+
+GCC for commit [434632c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-434632c/bin/gcc with -Os:
+checksum = db242a21
+Output of /tmp/gcc-434632c/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at 434632c... (Check_References.Publicly_Referenceable): A formal parameter is never publicly referenceable outside of its body.
+[32m[     info][0m Current commit [434632c] is good. Return value: 0
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[22ea9ec0e8acfd6a8e42aba3437bf61fd6fd04c3] alias.c (component_uses_parent_alias_set): Constify.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [22ea9ec]
++---------------------------------------- Current commit hash: [22ea9ec] ----------------------------------------+
+GCC for commit [22ea9ec] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-22ea9ec/bin/gcc with -Os:
+checksum = db242a21
+Output of /tmp/gcc-22ea9ec/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at 22ea9ec... alias.c (component_uses_parent_alias_set): Constify.
+[32m[     info][0m Current commit [22ea9ec] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[f8c3b097ed6ce43f64f9dfceac2698b0727969ac] re PR c++/27211 (Bogus error "template definition of non-template" when there is no non-template)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [f8c3b09]
++---------------------------------------- Current commit hash: [f8c3b09] ----------------------------------------+
+GCC for commit [f8c3b09] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-f8c3b09/bin/gcc with -Os:
+checksum = db242a7d
+Output of /tmp/gcc-f8c3b09/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at f8c3b09... re PR c++/27211 (Bogus error "template definition of non-template" when there is no non-template)
+[32m[     info][0m Current commit [f8c3b09] is bad. Return value: 1
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[ea2666ba5e7bd79860e585dd09092bbcb0dd23c9] i386.c: (legitimize_address): Move dllimported variable check infront of legitimizing...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [ea2666b]
++---------------------------------------- Current commit hash: [ea2666b] ----------------------------------------+
+GCC for commit [ea2666b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-ea2666b/bin/gcc with -Os:
+checksum = db242a21
+Output of /tmp/gcc-ea2666b/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at ea2666b... i386.c: (legitimize_address): Move dllimported variable check infront of legitimizing...
+[32m[     info][0m Current commit [ea2666b] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[7b0e48fb44b44241ae79e34a666edc87fdfbeb78] tree-pass.h (PROP_pta): Removed.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0607 orig
+[32m[     info][0m Testing commit: [7b0e48f]
++---------------------------------------- Current commit hash: [7b0e48f] ----------------------------------------+
+GCC for commit [7b0e48f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-7b0e48f/bin/gcc with -Os:
+checksum = db242a7d
+Output of /tmp/gcc-7b0e48f/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7b0e48f... tree-pass.h (PROP_pta): Removed.
+[32m[     info][0m Current commit [7b0e48f] is bad. Return value: 1
+
+7b0e48fb44b44241ae79e34a666edc87fdfbeb78 is the first bad commit
+commit 7b0e48fb44b44241ae79e34a666edc87fdfbeb78
+Author: Daniel Berlin <dberlin@gcc.gnu.org>
+Date:   Tue Aug 14 20:52:47 2007 +0000
+
+    tree-pass.h (PROP_pta): Removed.
+    
+    2007-08-14  Daniel Berlin  <dberlin@dberlin.org>
+    
+    	* tree-pass.h (PROP_pta): Removed.
+    	(TODO_rebuild_alias): New.
+    	(pass_may_alias): Removed.
+    	* tree-ssa-ccp.c (execute_fold_all_builtins): Only rebuild
+    	aliasing if we changed something.
+    	* tree-ssa-alias.c (compute_may_aliases): Make non-static.  Update
+    	SSA internally.
+    	(pass_may_alias): Removed.
+    	(create_structure_vars): Return TODO_rebuild_alias.
+    	* tree-ssa-pre.c (do_pre): Return TODO_rebuild_alias.
+    	* tree-sra.c (tree_sra): Only rebuild aliasing if something
+    	changed.
+    	(tree_sra_early): We never affect aliasing right now.
+    	* tree-flow.h (compute_may_aliases): New prototype.
+    	* passes.c: Remove pass_may_alias from the passes.
+    	(execute_function_todo): Support TODO_rebuild_alias.
+    
+    From-SVN: r127491
+
+:040000 040000 c068dcf22178619545caf507f3992d011c754837 9903a6626d3bfc7560483f4d1b1a42a8398f42fb M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 7b0e48f tree-pass.h (PROP_pta): Removed.
+Checking out files:  38% (4081/10711)   Checking out files:  39% (4178/10711)   Checking out files:  40% (4285/10711)   Checking out files:  41% (4392/10711)   Checking out files:  42% (4499/10711)   Checking out files:  43% (4606/10711)   Checking out files:  44% (4713/10711)   Checking out files:  45% (4820/10711)   Checking out files:  46% (4928/10711)   Checking out files:  47% (5035/10711)   Checking out files:  48% (5142/10711)   Checking out files:  48% (5156/10711)   Checking out files:  49% (5249/10711)   Checking out files:  50% (5356/10711)   Checking out files:  51% (5463/10711)   Checking out files:  52% (5570/10711)   Checking out files:  53% (5677/10711)   Checking out files:  54% (5784/10711)   Checking out files:  55% (5892/10711)   Checking out files:  55% (5979/10711)   Checking out files:  56% (5999/10711)   Checking out files:  57% (6106/10711)   Checking out files:  58% (6213/10711)   Checking out files:  59% (6320/10711)   Checking out files:  60% (6427/10711)   Checking out files:  61% (6534/10711)   Checking out files:  62% (6641/10711)   Checking out files:  63% (6748/10711)   Checking out files:  64% (6856/10711)   Checking out files:  65% (6963/10711)   Checking out files:  66% (7070/10711)   Checking out files:  67% (7177/10711)   Checking out files:  67% (7205/10711)   Checking out files:  68% (7284/10711)   Checking out files:  69% (7391/10711)   Checking out files:  70% (7498/10711)   Checking out files:  71% (7605/10711)   Checking out files:  72% (7712/10711)   Checking out files:  73% (7820/10711)   Checking out files:  74% (7927/10711)   Checking out files:  75% (8034/10711)   Checking out files:  76% (8141/10711)   Checking out files:  77% (8248/10711)   Checking out files:  78% (8355/10711)   Checking out files:  79% (8462/10711)   Checking out files:  80% (8569/10711)   Checking out files:  81% (8676/10711)   Checking out files:  82% (8784/10711)   Checking out files:  82% (8820/10711)   Checking out files:  83% (8891/10711)   Checking out files:  84% (8998/10711)   Checking out files:  85% (9105/10711)   Checking out files:  86% (9212/10711)   Checking out files:  87% (9319/10711)   Checking out files:  88% (9426/10711)   Checking out files:  89% (9533/10711)   Checking out files:  90% (9640/10711)   Checking out files:  91% (9748/10711)   Checking out files:  92% (9855/10711)   Checking out files:  93% (9962/10711)   Checking out files:  94% (10069/10711)   Checking out files:  95% (10176/10711)   Checking out files:  96% (10283/10711)   Checking out files:  96% (10332/10711)   Checking out files:  97% (10390/10711)   Checking out files:  98% (10497/10711)   Checking out files:  99% (10604/10711)   Checking out files: 100% (10711/10711)   Checking out files: 100% (10711/10711), done.
+Previous HEAD position was 7b0e48f... tree-pass.h (PROP_pta): Removed.
+HEAD is now at 891fc5e... re PR tree-optimization/31715 (Array calculation done incorrectly)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [7b0e48f]
++---------------------------------------- Current commit hash: [7b0e48f] ----------------------------------------+
+GCC for commit [7b0e48f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-7b0e48f/bin/gcc with -Os:
+checksum = db242a7d
+Output of /tmp/gcc-7b0e48f/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7b0e48f... tree-pass.h (PROP_pta): Removed.
+[32m[     info][0m Current commit [7b0e48f] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [ea2666b]
++---------------------------------------- Current commit hash: [ea2666b] ----------------------------------------+
+GCC for commit [ea2666b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = db242a21
+Output of /tmp/gcc-ea2666b/bin/gcc with -Os:
+checksum = db242a21
+Output of /tmp/gcc-ea2666b/bin/gcc with -O0:
+checksum = db242a21
+----------------------------------------------------
+No local changes to save
+HEAD is now at ea2666b... i386.c: (legitimize_address): Move dllimported variable check infront of legitimizing...
+[32m[     info][0m Current commit [ea2666b] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [7b0e48f] with -O0:
+checksum = db242a21
+Output of gcc [7b0e48f] with -O1:
+checksum = db242a21
+Output of gcc [7b0e48f] with -O2:
+checksum = db242a21
+Output of gcc [7b0e48f] with -O3:
+checksum = db242a21
+Output of gcc [7b0e48f] with -Os:
+checksum = db242a7d
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

@@ -1,0 +1,8 @@
+caller-saves
+if-conversion
+move-loop-invariants
+tree-copy-prop
+tree-fre
+tree-loop-ivcanon
+tree-loop-optimize
+tree-sra

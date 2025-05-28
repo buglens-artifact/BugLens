@@ -1,0 +1,1 @@
+45f94ec tree-sra.c (instantiate_missing_elements): Canonicalize bit-field types.

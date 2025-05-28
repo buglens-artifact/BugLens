@@ -1,0 +1,11 @@
+dse
+early-inlining
+inline-functions-called-once
+inline-small-functions
+ipa-pure-const
+ipa-reference
+strict-aliasing
+tree-dominator-opts
+tree-dse
+tree-sra
+unit-at-a-time

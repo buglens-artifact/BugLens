@@ -1,0 +1,1 @@
+1e20413 c-common.c (c_common_signed_or_unsigned_type): Delay the check for INTEGRAL_TYPE_P and TYPE_UNSIGNED.

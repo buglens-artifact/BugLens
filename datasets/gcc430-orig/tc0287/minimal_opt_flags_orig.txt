@@ -1,0 +1,5 @@
+inline-functions-called-once
+inline-small-functions
+ipa-reference
+tree-ccp
+unit-at-a-time

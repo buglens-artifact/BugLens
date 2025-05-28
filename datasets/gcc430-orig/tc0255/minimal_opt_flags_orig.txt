@@ -1,0 +1,10 @@
+inline-functions-called-once
+inline-small-functions
+tree-dce
+tree-dominator-opts
+tree-dse
+tree-loop-optimize
+tree-salias
+tree-sra
+tree-vrp
+unit-at-a-time

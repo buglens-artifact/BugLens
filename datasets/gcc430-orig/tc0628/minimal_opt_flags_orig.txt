@@ -1,0 +1,8 @@
+early-inlining
+guess-branch-probability
+inline-small-functions
+ipa-reference
+strict-aliasing
+tree-dse
+tree-salias
+unit-at-a-time

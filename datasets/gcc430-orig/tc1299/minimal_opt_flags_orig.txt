@@ -1,0 +1,9 @@
+early-inlining
+inline-functions-called-once
+inline-small-functions
+tree-ccp
+tree-dce
+tree-dominator-opts
+tree-pre
+tree-sra
+unit-at-a-time

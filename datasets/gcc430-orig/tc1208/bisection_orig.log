@@ -1,0 +1,75 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = e2d6bc35
+Output of gcc-4.3.0 with -Os:
+checksum = c3e76524
+Output of gcc-4.3.0 with -O0:
+checksum = e2d6bc35
+====================================================================
+[32m[     info][0m Good version found: gcc-4.0.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[bd182be84e9c8ae8485ac7c392fa0b6678969e3c] re PR rtl-optimization/20117 (duplicated labels in PIC)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1208 orig
+[32m[     info][0m Testing commit: [bd182be]
++---------------------------------------- Current commit hash: [bd182be] ----------------------------------------+
+GCC for commit [bd182be] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = e2d6bc35
+Output of /tmp/gcc-bd182be/bin/gcc with -Os:
+checksum = e2d6bc34
+Output of /tmp/gcc-bd182be/bin/gcc with -O0:
+checksum = e2d6bc35
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+[32m[     info][0m Current commit [bd182be] is bad. Return value: 1
+
+The merge base bd182be84e9c8ae8485ac7c392fa0b6678969e3c is bad.
+This means the bug has been fixed between bd182be84e9c8ae8485ac7c392fa0b6678969e3c and [d89dab3130e93bf415da3719355e24ef4cd039ca].
+bisect run failed:
+'bisect_state bad' exited with error code 3
+[32m[     info][0m First bad commit: 
+Checking out files:  19% (5225/26710)   Checking out files:  20% (5342/26710)   Checking out files:  21% (5610/26710)   Checking out files:  22% (5877/26710)   Checking out files:  23% (6144/26710)   Checking out files:  24% (6411/26710)   Checking out files:  24% (6461/26710)   Checking out files:  25% (6678/26710)   Checking out files:  26% (6945/26710)   Checking out files:  27% (7212/26710)   Checking out files:  28% (7479/26710)   Checking out files:  29% (7746/26710)   Checking out files:  29% (7781/26710)   Checking out files:  30% (8013/26710)   Checking out files:  31% (8281/26710)   Checking out files:  32% (8548/26710)   Checking out files:  32% (8741/26710)   Checking out files:  33% (8815/26710)   Checking out files:  34% (9082/26710)   Checking out files:  35% (9349/26710)   Checking out files:  36% (9616/26710)   Checking out files:  37% (9883/26710)   Checking out files:  38% (10150/26710)   Checking out files:  39% (10417/26710)   Checking out files:  40% (10684/26710)   Checking out files:  41% (10952/26710)   Checking out files:  42% (11219/26710)   Checking out files:  42% (11289/26710)   Checking out files:  43% (11486/26710)   Checking out files:  44% (11753/26710)   Checking out files:  45% (12020/26710)   Checking out files:  46% (12287/26710)   Checking out files:  47% (12554/26710)   Checking out files:  48% (12821/26710)   Checking out files:  49% (13088/26710)   Checking out files:  50% (13355/26710)   Checking out files:  51% (13623/26710)   Checking out files:  52% (13890/26710)   Checking out files:  53% (14157/26710)   Checking out files:  53% (14195/26710)   Checking out files:  54% (14424/26710)   Checking out files:  55% (14691/26710)   Checking out files:  56% (14958/26710)   Checking out files:  57% (15225/26710)   Checking out files:  58% (15492/26710)   Checking out files:  59% (15759/26710)   Checking out files:  59% (15842/26710)   Checking out files:  60% (16026/26710)   Checking out files:  61% (16294/26710)   Checking out files:  62% (16561/26710)   Checking out files:  63% (16828/26710)   Checking out files:  64% (17095/26710)   Checking out files:  65% (17362/26710)   Checking out files:  66% (17629/26710)   Checking out files:  67% (17896/26710)   Checking out files:  68% (18163/26710)   Checking out files:  69% (18430/26710)   Checking out files:  69% (18445/26710)   Checking out files:  70% (18697/26710)   Checking out files:  71% (18965/26710)   Checking out files:  72% (19232/26710)   Checking out files:  73% (19499/26710)   Checking out files:  74% (19766/26710)   Checking out files:  75% (20033/26710)   Checking out files:  76% (20300/26710)   Checking out files:  77% (20567/26710)   Checking out files:  78% (20834/26710)   Checking out files:  78% (21023/26710)   Checking out files:  79% (21101/26710)   Checking out files:  80% (21368/26710)   Checking out files:  81% (21636/26710)   Checking out files:  82% (21903/26710)   Checking out files:  83% (22170/26710)   Checking out files:  84% (22437/26710)   Checking out files:  85% (22704/26710)   Checking out files:  86% (22971/26710)   Checking out files:  86% (23052/26710)   Checking out files:  87% (23238/26710)   Checking out files:  88% (23505/26710)   Checking out files:  89% (23772/26710)   Checking out files:  90% (24039/26710)   Checking out files:  91% (24307/26710)   Checking out files:  92% (24574/26710)   Checking out files:  93% (24841/26710)   Checking out files:  94% (25108/26710)   Checking out files:  94% (25138/26710)   Checking out files:  95% (25375/26710)   Checking out files:  96% (25642/26710)   Checking out files:  97% (25909/26710)   Checking out files:  98% (26176/26710)   Checking out files:  99% (26443/26710)   Checking out files: 100% (26710/26710)   Checking out files: 100% (26710/26710), done.
+Previous HEAD position was bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+HEAD is now at 870aa1e... re PR middle-end/30322 (((-i-1) + i) +1) is turned into ~i + (i+1) and never into 0 on the tree level)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [870aa1e]
++---------------------------------------- Current commit hash: [870aa1e] ----------------------------------------+
+GCC for commit [870aa1e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = e2d6bc35
+Output of /tmp/gcc-870aa1e/bin/gcc with -Os:
+checksum = c3e76524
+Output of /tmp/gcc-870aa1e/bin/gcc with -O0:
+checksum = e2d6bc35
+----------------------------------------------------
+No local changes to save
+HEAD is now at 870aa1e... re PR middle-end/30322 (((-i-1) + i) +1) is turned into ~i + (i+1) and never into 0 on the tree level)
+[32m[     info][0m Current commit [870aa1e] is bad. Return value: 1
+
+fatal: ambiguous argument '^': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions
+[32m[     info][0m Testing commit: [870aa1e]
++---------------------------------------- Current commit hash: [870aa1e] ----------------------------------------+
+GCC for commit [870aa1e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = e2d6bc35
+Output of /tmp/gcc-870aa1e/bin/gcc with -Os:
+checksum = c3e76524
+Output of /tmp/gcc-870aa1e/bin/gcc with -O0:
+checksum = e2d6bc35
+----------------------------------------------------
+No local changes to save
+HEAD is now at 870aa1e... re PR middle-end/30322 (((-i-1) + i) +1) is turned into ~i + (i+1) and never into 0 on the tree level)
+[32m[     info][0m Current commit [870aa1e] is bad. Return value: 1
+
+Error: The first bad commit is not the correct one. [2]

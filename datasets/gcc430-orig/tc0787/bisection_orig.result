@@ -1,0 +1,1 @@
+305a132 re PR tree-optimization/22000 (Read from volatile member of struct is optimized away)

@@ -1,0 +1,12 @@
+early-inlining
+inline-functions
+inline-small-functions
+tree-ccp
+tree-copyrename
+tree-dce
+tree-dominator-opts
+tree-loop-optimize
+tree-pre
+tree-salias
+tree-vrp
+vect-cost-model

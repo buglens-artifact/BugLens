@@ -1,0 +1,3 @@
+inline-functions-called-once
+tree-salias
+tree-vrp

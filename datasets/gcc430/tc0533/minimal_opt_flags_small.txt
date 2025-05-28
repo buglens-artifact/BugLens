@@ -1,0 +1,5 @@
+inline-functions
+inline-small-functions
+strict-aliasing
+tree-sink
+unit-at-a-time

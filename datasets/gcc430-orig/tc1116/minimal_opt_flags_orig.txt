@@ -1,0 +1,6 @@
+inline-functions-called-once
+tree-dce
+tree-dominator-opts
+tree-salias
+tree-sink
+unit-at-a-time

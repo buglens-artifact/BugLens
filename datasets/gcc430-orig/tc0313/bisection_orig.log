@@ -1,0 +1,359 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 6c706790
+Output of gcc-4.3.0 with -O3:
+checksum = 6c70680a
+Output of gcc-4.3.0 with -O0:
+checksum = 6c706790
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+checksum = 6c706790
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+checksum = 6c706790
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is good. Return value: 0
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[448d2cd2f73e2e16e2bdd5c407174afebf3ed845] re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [448d2cd]
++---------------------------------------- Current commit hash: [448d2cd] ----------------------------------------+
+GCC for commit [448d2cd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-448d2cd/bin/gcc with -O3:
+checksum = 6c706790
+Output of /tmp/gcc-448d2cd/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at 448d2cd... re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+[32m[     info][0m Current commit [448d2cd] is good. Return value: 0
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[502630f495cd78b97fd3788e049640210bce8ddb] dwarf2out.c (gen_array_type_die, [...]): For Fortran multi-dimensional arrays use DW_AT_ordering DW_ORD_col_major.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [502630f]
++---------------------------------------- Current commit hash: [502630f] ----------------------------------------+
+GCC for commit [502630f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-502630f/bin/gcc with -O3:
+checksum = 6c70680a
+Output of /tmp/gcc-502630f/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at 502630f... dwarf2out.c (gen_array_type_die, [...]): For Fortran multi-dimensional arrays use DW_AT_ordering DW_ORD_col_major.
+[32m[     info][0m Current commit [502630f] is bad. Return value: 1
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[241b92c8c5fd4ef847b99284126de8e3349b926b] re PR libfortran/24685 (real(16) formatted input is broken for huge values (gfortran.dg/default_format_2.f90))
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [241b92c]
++---------------------------------------- Current commit hash: [241b92c] ----------------------------------------+
+GCC for commit [241b92c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-241b92c/bin/gcc with -O3:
+checksum = 6c706790
+Output of /tmp/gcc-241b92c/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at 241b92c... re PR libfortran/24685 (real(16) formatted input is broken for huge values (gfortran.dg/default_format_2.f90))
+[32m[     info][0m Current commit [241b92c] is good. Return value: 0
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[207e08e0b50051091070f6d1ecd0ca9065253079] C++STYLE: Fix typos.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [207e08e]
++---------------------------------------- Current commit hash: [207e08e] ----------------------------------------+
+GCC for commit [207e08e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-207e08e/bin/gcc with -O3:
+checksum = 6c70680a
+Output of /tmp/gcc-207e08e/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at 207e08e... C++STYLE: Fix typos.
+[32m[     info][0m Current commit [207e08e] is bad. Return value: 1
+
+Bisecting: 139 revisions left to test after this (roughly 7 steps)
+[ffbf581329701d6d61b843c950a6809156dfd49d] re PR c++/29225 (ICE in gimplify_expr, at gimplify.c:4513)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [ffbf581]
++---------------------------------------- Current commit hash: [ffbf581] ----------------------------------------+
+GCC for commit [ffbf581] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-ffbf581/bin/gcc with -O3:
+checksum = 6c706790
+Output of /tmp/gcc-ffbf581/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at ffbf581... re PR c++/29225 (ICE in gimplify_expr, at gimplify.c:4513)
+[32m[     info][0m Current commit [ffbf581] is good. Return value: 0
+
+Bisecting: 69 revisions left to test after this (roughly 6 steps)
+[f5fd0cf12def6df8ac3c6a95e886c73debc21677] re PR fortran/33957 (gfortran rejects valid initialization expression)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [f5fd0cf]
++---------------------------------------- Current commit hash: [f5fd0cf] ----------------------------------------+
+GCC for commit [f5fd0cf] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-f5fd0cf/bin/gcc with -O3:
+checksum = 6c70680a
+Output of /tmp/gcc-f5fd0cf/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at f5fd0cf... re PR fortran/33957 (gfortran rejects valid initialization expression)
+[32m[     info][0m Current commit [f5fd0cf] is bad. Return value: 1
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[f83ca2512f522d26fd9282b0e803e1a0afeb935d] tree-ssa-structalias.c (set_uids_in_ptset): Use the pointed-to type for TBAA pruning.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [f83ca25]
++---------------------------------------- Current commit hash: [f83ca25] ----------------------------------------+
+GCC for commit [f83ca25] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-f83ca25/bin/gcc with -O3:
+checksum = 6c706790
+Output of /tmp/gcc-f83ca25/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at f83ca25... tree-ssa-structalias.c (set_uids_in_ptset): Use the pointed-to type for TBAA pruning.
+[32m[     info][0m Current commit [f83ca25] is good. Return value: 0
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[823e5f7f9fb52d8e6a9bb2c97164cc593ae18e11] re PR c++/34100 (ICE with vector attribute)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [823e5f7]
++---------------------------------------- Current commit hash: [823e5f7] ----------------------------------------+
+GCC for commit [823e5f7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-823e5f7/bin/gcc with -O3:
+checksum = 6c706790
+Output of /tmp/gcc-823e5f7/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at 823e5f7... re PR c++/34100 (ICE with vector attribute)
+[32m[     info][0m Current commit [823e5f7] is good. Return value: 0
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[bf3bde19e0bf954db21ec98ee179262ec68c5ded] * de.po: Update.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [bf3bde1]
++---------------------------------------- Current commit hash: [bf3bde1] ----------------------------------------+
+GCC for commit [bf3bde1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-bf3bde1/bin/gcc with -O3:
+checksum = 6c706790
+Output of /tmp/gcc-bf3bde1/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at bf3bde1... * de.po: Update.
+[32m[     info][0m Current commit [bf3bde1] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[f6dfe2fc46ac63fafbfdd9c5a505e72e8fe2b861] locale_facets.cc: Fix typo in Copyright.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [f6dfe2f]
++---------------------------------------- Current commit hash: [f6dfe2f] ----------------------------------------+
+GCC for commit [f6dfe2f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-f6dfe2f/bin/gcc with -O3:
+checksum = 6c70680a
+Output of /tmp/gcc-f6dfe2f/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at f6dfe2f... locale_facets.cc: Fix typo in Copyright.
+[32m[     info][0m Current commit [f6dfe2f] is bad. Return value: 1
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[06bcd7510e792c17a6a5354c612cf288b37a08c4] re PR fortran/34008 (ICE in gfc_trans_call, at fortran/trans-stmt.c:389 on elemental assignment)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [06bcd75]
++---------------------------------------- Current commit hash: [06bcd75] ----------------------------------------+
+GCC for commit [06bcd75] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-06bcd75/bin/gcc with -O3:
+checksum = 6c70680a
+Output of /tmp/gcc-06bcd75/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at 06bcd75... re PR fortran/34008 (ICE in gfc_trans_call, at fortran/trans-stmt.c:389 on elemental assignment)
+[32m[     info][0m Current commit [06bcd75] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[99739a3e63eb906c77b8acdb76d4f40485eb56fe] re PR tree-optimization/33870 (miscompiles sqlite)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0313 orig
+[32m[     info][0m Testing commit: [99739a3]
++---------------------------------------- Current commit hash: [99739a3] ----------------------------------------+
+GCC for commit [99739a3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-99739a3/bin/gcc with -O3:
+checksum = 6c70680a
+Output of /tmp/gcc-99739a3/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at 99739a3... re PR tree-optimization/33870 (miscompiles sqlite)
+[32m[     info][0m Current commit [99739a3] is bad. Return value: 1
+
+99739a3e63eb906c77b8acdb76d4f40485eb56fe is the first bad commit
+commit 99739a3e63eb906c77b8acdb76d4f40485eb56fe
+Author: Richard Guenther <rguenther@suse.de>
+Date:   Fri Nov 16 14:40:04 2007 +0000
+
+    re PR tree-optimization/33870 (miscompiles sqlite)
+    
+    2007-11-16  Richard Guenther  <rguenther@suse.de>
+    
+    	PR tree-optimization/33870
+    	* tree.h (struct tree_memory_tag): Add base_for_components flag.
+    	(struct tree_struct_field_tag): Remove nesting_level field.
+    	(SFT_NESTING_LEVEL): Remove.
+    	(SFT_BASE_FOR_COMPONENTS_P): Add.
+    	* tree-flow.h (struct fieldoff): Remove nesting_level field.  Add
+    	base_for_components flag.
+    	(push_fields_onto_fieldstack): Remove nesting_level parameter.
+    	* tree-ssa-alias.c (create_sft): Likewise.  Add base_for_components
+    	parameter.
+    	(create_overlap_variables_for): Deal with it.
+    	* tree-dfa.c (dump_subvars_for): Likewise.
+    	(dump_variable): Likewise.
+    	* tree-ssa-structalias.c (push_fields_onto_fieldstack): Likewise.
+    	Set base_for_components for first elements of sub-structures.
+    	(create_variable_info_for): Handle base_for_components.
+    	(set_uids_in_ptset): Always set SFT_UNPARTITIONABLE_P for
+    	pointed-to SFTs if SFT_BASE_FOR_COMPONENTS_P is set.
+    	* tree-ssa-operands.c (ref_nesting_level): Remove.
+    	(add_vars_for_offset): Remove full_ref parameter, always add
+    	the offset of the pointed-to SFT.
+    	(add_virtual_operand): Adjust for changed signature of
+    	add_vars_for_offset.
+    
+    	* gcc.dg/torture/pr33870.c: New testcase.
+    
+    From-SVN: r130231
+
+:040000 040000 baf0d5bc704060322da35b83197591e37dd2ded1 2e5b00b17c343852fde0296cf38e759b8d2303f8 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 99739a3 re PR tree-optimization/33870 (miscompiles sqlite)
+Checking out files:  33% (5694/17217)   Checking out files:  34% (5854/17217)   Checking out files:  35% (6026/17217)   Checking out files:  36% (6199/17217)   Checking out files:  37% (6371/17217)   Checking out files:  38% (6543/17217)   Checking out files:  39% (6715/17217)   Checking out files:  40% (6887/17217)   Checking out files:  41% (7059/17217)   Checking out files:  42% (7232/17217)   Checking out files:  43% (7404/17217)   Checking out files:  44% (7576/17217)   Checking out files:  44% (7720/17217)   Checking out files:  45% (7748/17217)   Checking out files:  46% (7920/17217)   Checking out files:  47% (8092/17217)   Checking out files:  48% (8265/17217)   Checking out files:  49% (8437/17217)   Checking out files:  50% (8609/17217)   Checking out files:  51% (8781/17217)   Checking out files:  52% (8953/17217)   Checking out files:  52% (8984/17217)   Checking out files:  53% (9126/17217)   Checking out files:  54% (9298/17217)   Checking out files:  55% (9470/17217)   Checking out files:  56% (9642/17217)   Checking out files:  57% (9814/17217)   Checking out files:  57% (9829/17217)   Checking out files:  58% (9986/17217)   Checking out files:  59% (10159/17217)   Checking out files:  60% (10331/17217)   Checking out files:  61% (10503/17217)   Checking out files:  62% (10675/17217)   Checking out files:  63% (10847/17217)   Checking out files:  64% (11019/17217)   Checking out files:  65% (11192/17217)   Checking out files:  66% (11364/17217)   Checking out files:  67% (11536/17217)   Checking out files:  67% (11544/17217)   Checking out files:  68% (11708/17217)   Checking out files:  69% (11880/17217)   Checking out files:  70% (12052/17217)   Checking out files:  71% (12225/17217)   Checking out files:  72% (12397/17217)   Checking out files:  73% (12569/17217)   Checking out files:  74% (12741/17217)   Checking out files:  75% (12913/17217)   Checking out files:  75% (13035/17217)   Checking out files:  76% (13085/17217)   Checking out files:  77% (13258/17217)   Checking out files:  78% (13430/17217)   Checking out files:  79% (13602/17217)   Checking out files:  80% (13774/17217)   Checking out files:  81% (13946/17217)   Checking out files:  82% (14118/17217)   Checking out files:  83% (14291/17217)   Checking out files:  84% (14463/17217)   Checking out files:  85% (14635/17217)   Checking out files:  86% (14807/17217)   Checking out files:  86% (14926/17217)   Checking out files:  87% (14979/17217)   Checking out files:  88% (15151/17217)   Checking out files:  89% (15324/17217)   Checking out files:  90% (15496/17217)   Checking out files:  91% (15668/17217)   Checking out files:  92% (15840/17217)   Checking out files:  93% (16012/17217)   Checking out files:  94% (16184/17217)   Checking out files:  95% (16357/17217)   Checking out files:  96% (16529/17217)   Checking out files:  96% (16654/17217)   Checking out files:  97% (16701/17217)   Checking out files:  98% (16873/17217)   Checking out files:  99% (17045/17217)   Checking out files: 100% (17217/17217)   Checking out files: 100% (17217/17217), done.
+Previous HEAD position was 99739a3... re PR tree-optimization/33870 (miscompiles sqlite)
+HEAD is now at 18d5e41... re PR tree-optimization/1046 (gcc less efficient than jdk for recursion with -finline-functions)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [99739a3]
++---------------------------------------- Current commit hash: [99739a3] ----------------------------------------+
+GCC for commit [99739a3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-99739a3/bin/gcc with -O3:
+checksum = 6c70680a
+Output of /tmp/gcc-99739a3/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at 99739a3... re PR tree-optimization/33870 (miscompiles sqlite)
+[32m[     info][0m Current commit [99739a3] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [bf3bde1]
++---------------------------------------- Current commit hash: [bf3bde1] ----------------------------------------+
+GCC for commit [bf3bde1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 6c706790
+Output of /tmp/gcc-bf3bde1/bin/gcc with -O3:
+checksum = 6c706790
+Output of /tmp/gcc-bf3bde1/bin/gcc with -O0:
+checksum = 6c706790
+----------------------------------------------------
+No local changes to save
+HEAD is now at bf3bde1... * de.po: Update.
+[32m[     info][0m Current commit [bf3bde1] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [99739a3] with -O0:
+checksum = 6c706790
+Output of gcc [99739a3] with -O1:
+checksum = 6c706790
+Output of gcc [99739a3] with -O2:
+checksum = 6c706790
+Output of gcc [99739a3] with -O3:
+checksum = 6c70680a
+Output of gcc [99739a3] with -Os:
+checksum = 6c706790
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

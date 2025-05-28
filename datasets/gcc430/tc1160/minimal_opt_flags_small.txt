@@ -1,0 +1,8 @@
+tree-copyrename
+tree-dce
+tree-dominator-opts
+tree-loop-optimize
+tree-pre
+tree-salias
+tree-sra
+tree-vrp

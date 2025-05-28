@@ -1,0 +1,391 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+1
+Output of gcc-4.3.0 with -O3:
+0
+Output of gcc-4.3.0 with -O0:
+1
+====================================================================
+[32m[     info][0m Good version found: gcc-4.0.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[bd182be84e9c8ae8485ac7c392fa0b6678969e3c] re PR rtl-optimization/20117 (duplicated labels in PIC)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [bd182be]
++---------------------------------------- Current commit hash: [bd182be] ----------------------------------------+
+GCC for commit [bd182be] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-bd182be/bin/gcc with -O3:
+1
+Output of /tmp/gcc-bd182be/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+[32m[     info][0m Current commit [bd182be] is good. Return value: 0
+
+Bisecting: 9952 revisions left to test after this (roughly 13 steps)
+[9659ce8b6160434d90f8b7985921f0b05e74d2d7] re PR tree-optimization/24888 (duplication of local variables after versioning/inlining)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [9659ce8]
++---------------------------------------- Current commit hash: [9659ce8] ----------------------------------------+
+GCC for commit [9659ce8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-9659ce8/bin/gcc with -O3:
+0
+Output of /tmp/gcc-9659ce8/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9659ce8... re PR tree-optimization/24888 (duplication of local variables after versioning/inlining)
+[32m[     info][0m Current commit [9659ce8] is bad. Return value: 1
+
+Bisecting: 4976 revisions left to test after this (roughly 12 steps)
+[34d9dc2d292b832a428b97368fd7b1c3c019f625] cvsignore: Likewise.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [34d9dc2]
++---------------------------------------- Current commit hash: [34d9dc2] ----------------------------------------+
+GCC for commit [34d9dc2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-34d9dc2/bin/gcc with -O3:
+0
+Output of /tmp/gcc-34d9dc2/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 34d9dc2... cvsignore: Likewise.
+[32m[     info][0m Current commit [34d9dc2] is bad. Return value: 1
+
+Bisecting: 2487 revisions left to test after this (roughly 11 steps)
+[bd16f8f1525135a3d730a4cc8136aeb3328bdfb0] tweak comment
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [bd16f8f]
++---------------------------------------- Current commit hash: [bd16f8f] ----------------------------------------+
+GCC for commit [bd16f8f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-bd16f8f/bin/gcc with -O3:
+0
+Output of /tmp/gcc-bd16f8f/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd16f8f... tweak comment
+[32m[     info][0m Current commit [bd16f8f] is bad. Return value: 1
+
+Bisecting: 1243 revisions left to test after this (roughly 10 steps)
+[eac02e59606def2611a7bc53ea29dbb28f860f1c] * cp-tree.h (DECL_ARRAY_DELETE_OPERATOR_P): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [eac02e59]
++---------------------------------------- Current commit hash: [eac02e59] ----------------------------------------+
+GCC for commit [eac02e59] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-eac02e59/bin/gcc with -O3:
+0
+Output of /tmp/gcc-eac02e59/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at eac02e59... * cp-tree.h (DECL_ARRAY_DELETE_OPERATOR_P): Remove.
+[32m[     info][0m Current commit [eac02e59] is bad. Return value: 1
+
+Bisecting: 621 revisions left to test after this (roughly 9 steps)
+[9439ae414f662f6923a4067e0906b11baab5fa7c] re PR fortran/18525 (ICE on valid code in gfc_get_symbol_decl())
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [9439ae4]
++---------------------------------------- Current commit hash: [9439ae4] ----------------------------------------+
+GCC for commit [9439ae4] already exists. Using existing binary.
+Compilation by gcc [9439ae4] with -O3 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+Compilation by gcc [9439ae4] with -O0 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-9439ae4/bin/gcc with -O3:
+0
+Output of /tmp/gcc-9439ae4/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9439ae4... re PR fortran/18525 (ICE on valid code in gfc_get_symbol_decl())
+[32m[     info][0m Current commit [9439ae4] is bad. Return value: 1
+
+Bisecting: 310 revisions left to test after this (roughly 8 steps)
+[02bab9db99a4b27a1f486dfc299053d103032ce3] re PR c++/20208 (No array-to-pointer decay happens for template functions)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [02bab9d]
++---------------------------------------- Current commit hash: [02bab9d] ----------------------------------------+
+GCC for commit [02bab9d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-02bab9d/bin/gcc with -O3:
+0
+Output of /tmp/gcc-02bab9d/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 02bab9d... re PR c++/20208 (No array-to-pointer decay happens for template functions)
+[32m[     info][0m Current commit [02bab9d] is bad. Return value: 1
+
+Bisecting: 155 revisions left to test after this (roughly 7 steps)
+[3ea2c2646ec0a5d38f8bef076db2903bda3c2402] fold-const.c (fold_ternary): Unroll the "for" loop to extract operands.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [3ea2c26]
++---------------------------------------- Current commit hash: [3ea2c26] ----------------------------------------+
+GCC for commit [3ea2c26] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-3ea2c26/bin/gcc with -O3:
+0
+Output of /tmp/gcc-3ea2c26/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3ea2c26... fold-const.c (fold_ternary): Unroll the "for" loop to extract operands.
+[32m[     info][0m Current commit [3ea2c26] is bad. Return value: 1
+
+Bisecting: 77 revisions left to test after this (roughly 6 steps)
+[65f527e0a581ca9563784ce6f7725fbb119893b7] linux.h (MD_EXEC_PREFIX, [...]): Don't undefine here.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [65f527e]
++---------------------------------------- Current commit hash: [65f527e] ----------------------------------------+
+GCC for commit [65f527e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-65f527e/bin/gcc with -O3:
+1
+Output of /tmp/gcc-65f527e/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 65f527e... linux.h (MD_EXEC_PREFIX, [...]): Don't undefine here.
+[32m[     info][0m Current commit [65f527e] is good. Return value: 0
+
+Bisecting: 38 revisions left to test after this (roughly 5 steps)
+[0aca3a61454e79c3e103b878c5ea31dd2adc5421] * config/darwin8.h (LIB_SPEC): Switch -lmx and -lSystem.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [0aca3a6]
++---------------------------------------- Current commit hash: [0aca3a6] ----------------------------------------+
+GCC for commit [0aca3a6] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-0aca3a6/bin/gcc with -O3:
+0
+Output of /tmp/gcc-0aca3a6/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0aca3a6... * config/darwin8.h (LIB_SPEC): Switch -lmx and -lSystem.
+[32m[     info][0m Current commit [0aca3a6] is bad. Return value: 1
+
+Bisecting: 19 revisions left to test after this (roughly 4 steps)
+[58a30fef7ba4677d35b6f756d3484f6a846991d1] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [58a30fe]
++---------------------------------------- Current commit hash: [58a30fe] ----------------------------------------+
+GCC for commit [58a30fe] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-58a30fe/bin/gcc with -O3:
+0
+Output of /tmp/gcc-58a30fe/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 58a30fe... Daily bump.
+[32m[     info][0m Current commit [58a30fe] is bad. Return value: 1
+
+Bisecting: 9 revisions left to test after this (roughly 3 steps)
+[027b7c36fb7019602b59ecec252afa15b721ced0] java-tree.h (IDENTIFIER_HANDLECLASS_VALUE): Remove ancient macro.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [027b7c3]
++---------------------------------------- Current commit hash: [027b7c3] ----------------------------------------+
+GCC for commit [027b7c3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-027b7c3/bin/gcc with -O3:
+1
+Output of /tmp/gcc-027b7c3/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 027b7c3... java-tree.h (IDENTIFIER_HANDLECLASS_VALUE): Remove ancient macro.
+[32m[     info][0m Current commit [027b7c3] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[4a80dc82134278316098f463dfbaf41dc9c409a4] predicates.md (branch_comparison_operator): Change to define_special_predicate.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [4a80dc8]
++---------------------------------------- Current commit hash: [4a80dc8] ----------------------------------------+
+GCC for commit [4a80dc8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-4a80dc8/bin/gcc with -O3:
+0
+Output of /tmp/gcc-4a80dc8/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4a80dc8... predicates.md (branch_comparison_operator): Change to define_special_predicate.
+[32m[     info][0m Current commit [4a80dc8] is bad. Return value: 1
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[7cea62b4f5bef517d8d5aab0a2afdba000810693] re PR java/8608 (segmentation fault on compiling bad program)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [7cea62b]
++---------------------------------------- Current commit hash: [7cea62b] ----------------------------------------+
+GCC for commit [7cea62b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-7cea62b/bin/gcc with -O3:
+1
+Output of /tmp/gcc-7cea62b/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7cea62b... re PR java/8608 (segmentation fault on compiling bad program)
+[32m[     info][0m Current commit [7cea62b] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[ec1e9f7c14b1fab314544d07709ba32a58323d9b] Grrr, stupid patch program
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [ec1e9f7]
++---------------------------------------- Current commit hash: [ec1e9f7] ----------------------------------------+
+GCC for commit [ec1e9f7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-ec1e9f7/bin/gcc with -O3:
+0
+Output of /tmp/gcc-ec1e9f7/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at ec1e9f7... Grrr, stupid patch program
+[32m[     info][0m Current commit [ec1e9f7] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[fa55525216546e41650f27058aecb62a2456613a] Makefile.in (tree-ssa-sink.o): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0996 small
+[32m[     info][0m Testing commit: [fa55525]
++---------------------------------------- Current commit hash: [fa55525] ----------------------------------------+
+GCC for commit [fa55525] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-fa55525/bin/gcc with -O3:
+0
+Output of /tmp/gcc-fa55525/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at fa55525... Makefile.in (tree-ssa-sink.o): New.
+[32m[     info][0m Current commit [fa55525] is bad. Return value: 1
+
+fa55525216546e41650f27058aecb62a2456613a is the first bad commit
+commit fa55525216546e41650f27058aecb62a2456613a
+Author: Daniel Berlin <dberlin@dberlin.org>
+Date:   Tue Mar 1 17:59:06 2005 +0000
+
+    Makefile.in (tree-ssa-sink.o): New.
+    
+    2005-03-01  Daniel Berlin <dberlin@dberlin.org>
+    
+    	* Makefile.in (tree-ssa-sink.o): New.
+    	(OBJS-common): Add tree-ssa-sink.o.
+    	* common.opt: Add -ftree-sink
+    	* opts.c (decode_options): flag_tree_sink is set at O1 or higher.
+    	* timevar.def (TV_TREE_SINK): new timevar.
+    	* tree-flow.h (is_hidden_global_store): Prototype.
+    	* tree-optimize.c (init_tree_optimization_passes): Add
+    	pass_sink_code.
+    	* tree-pass.h (pass_sink_code): New.
+    	* tree-ssa-dce.c (mark_stmt_if_obviously_necessary): Move checking
+    	for non-obvious global store store to is_hidden_global_store, and
+    	call that new function.
+    	* tree-ssa-sink.c: New file.
+    	* doc/invoke.texi: Document -fdump-tree-sink and -ftree-sink.
+    	* doc/passes.texi: Document forward store motion.
+    	* testsuite/gcc.dg/tree-ssa/ssa-sink-1.c: New test
+    	* testsuite/gcc.dg/tree-ssa/ssa-sink-2.c: New test
+    	* testsuite/gcc.dg/tree-ssa/ssa-sink-3.c: New test
+    	* testsuite/gcc.dg/tree-ssa/ssa-sink-4.c: New test
+    
+    From-SVN: r95750
+
+:040000 040000 98eb2b76a3f0509bb23738b5ee2a2971fdf7b05f b77591631bb613eb5a894e7a6e63d1429c2d8fe4 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: fa55525 Makefile.in (tree-ssa-sink.o): New.
+Checking out files:  25% (6790/26688)   Checking out files:  26% (6939/26688)   Checking out files:  27% (7206/26688)   Checking out files:  28% (7473/26688)   Checking out files:  29% (7740/26688)   Checking out files:  30% (8007/26688)   Checking out files:  31% (8274/26688)   Checking out files:  32% (8541/26688)   Checking out files:  32% (8779/26688)   Checking out files:  33% (8808/26688)   Checking out files:  34% (9074/26688)   Checking out files:  35% (9341/26688)   Checking out files:  36% (9608/26688)   Checking out files:  37% (9875/26688)   Checking out files:  38% (10142/26688)   Checking out files:  39% (10409/26688)   Checking out files:  40% (10676/26688)   Checking out files:  41% (10943/26688)   Checking out files:  42% (11209/26688)   Checking out files:  43% (11476/26688)   Checking out files:  44% (11743/26688)   Checking out files:  45% (12010/26688)   Checking out files:  46% (12277/26688)   Checking out files:  47% (12544/26688)   Checking out files:  48% (12811/26688)   Checking out files:  49% (13078/26688)   Checking out files:  50% (13344/26688)   Checking out files:  51% (13611/26688)   Checking out files:  52% (13878/26688)   Checking out files:  53% (14145/26688)   Checking out files:  54% (14412/26688)   Checking out files:  54% (14579/26688)   Checking out files:  55% (14679/26688)   Checking out files:  56% (14946/26688)   Checking out files:  57% (15213/26688)   Checking out files:  58% (15480/26688)   Checking out files:  59% (15746/26688)   Checking out files:  60% (16013/26688)   Checking out files:  61% (16280/26688)   Checking out files:  62% (16547/26688)   Checking out files:  63% (16814/26688)   Checking out files:  64% (17081/26688)   Checking out files:  65% (17348/26688)   Checking out files:  66% (17615/26688)   Checking out files:  67% (17881/26688)   Checking out files:  68% (18148/26688)   Checking out files:  69% (18415/26688)   Checking out files:  70% (18682/26688)   Checking out files:  71% (18949/26688)   Checking out files:  72% (19216/26688)   Checking out files:  72% (19243/26688)   Checking out files:  73% (19483/26688)   Checking out files:  74% (19750/26688)   Checking out files:  75% (20016/26688)   Checking out files:  76% (20283/26688)   Checking out files:  77% (20550/26688)   Checking out files:  78% (20817/26688)   Checking out files:  79% (21084/26688)   Checking out files:  80% (21351/26688)   Checking out files:  81% (21618/26688)   Checking out files:  82% (21885/26688)   Checking out files:  83% (22152/26688)   Checking out files:  84% (22418/26688)   Checking out files:  85% (22685/26688)   Checking out files:  86% (22952/26688)   Checking out files:  87% (23219/26688)   Checking out files:  88% (23486/26688)   Checking out files:  88% (23738/26688)   Checking out files:  89% (23753/26688)   Checking out files:  90% (24020/26688)   Checking out files:  91% (24287/26688)   Checking out files:  92% (24553/26688)   Checking out files:  93% (24820/26688)   Checking out files:  94% (25087/26688)   Checking out files:  95% (25354/26688)   Checking out files:  96% (25621/26688)   Checking out files:  97% (25888/26688)   Checking out files:  98% (26155/26688)   Checking out files:  99% (26422/26688)   Checking out files: 100% (26688/26688)   Checking out files: 100% (26688/26688), done.
+Previous HEAD position was fa55525... Makefile.in (tree-ssa-sink.o): New.
+HEAD is now at 870aa1e... re PR middle-end/30322 (((-i-1) + i) +1) is turned into ~i + (i+1) and never into 0 on the tree level)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [fa55525]
++---------------------------------------- Current commit hash: [fa55525] ----------------------------------------+
+GCC for commit [fa55525] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-fa55525/bin/gcc with -O3:
+0
+Output of /tmp/gcc-fa55525/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at fa55525... Makefile.in (tree-ssa-sink.o): New.
+[32m[     info][0m Current commit [fa55525] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [7cea62b]
++---------------------------------------- Current commit hash: [7cea62b] ----------------------------------------+
+GCC for commit [7cea62b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-7cea62b/bin/gcc with -O3:
+1
+Output of /tmp/gcc-7cea62b/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7cea62b... re PR java/8608 (segmentation fault on compiling bad program)
+[32m[     info][0m Current commit [7cea62b] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [fa55525] with -O0:
+1
+Output of gcc [fa55525] with -O1:
+0
+Output of gcc [fa55525] with -O2:
+0
+Output of gcc [fa55525] with -O3:
+0
+Output of gcc [fa55525] with -Os:
+0
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

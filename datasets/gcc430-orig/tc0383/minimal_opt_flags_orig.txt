@@ -1,0 +1,11 @@
+inline-functions-called-once
+inline-small-functions
+ipa-reference
+tree-copyrename
+tree-dce
+tree-dse
+tree-loop-im
+tree-loop-optimize
+tree-salias
+tree-store-ccp
+unit-at-a-time

@@ -1,0 +1,356 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+Output of gcc-4.3.0 with -Os:
+1
+Output of gcc-4.3.0 with -O0:
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b23987e/bin/gcc with -Os:
+0
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b718216/bin/gcc with -Os:
+1
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is bad. Return value: 1
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[2b5e5642e38e17dc60ca6408f4c2bba651e1a9f7] builtins.c (fold_builtin_load_exponent): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [2b5e564]
++---------------------------------------- Current commit hash: [2b5e564] ----------------------------------------+
+GCC for commit [2b5e564] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-2b5e564/bin/gcc with -Os:
+0
+Output of /tmp/gcc-2b5e564/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2b5e564... builtins.c (fold_builtin_load_exponent): New.
+[32m[     info][0m Current commit [2b5e564] is good. Return value: 0
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[a97dcb4c3690f2b6fa294c8931998c7a7daed883] warnings_are_errors_1.f90: Add -std=f95 to options.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [a97dcb4]
++---------------------------------------- Current commit hash: [a97dcb4] ----------------------------------------+
+GCC for commit [a97dcb4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-a97dcb4/bin/gcc with -Os:
+0
+Output of /tmp/gcc-a97dcb4/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a97dcb4... warnings_are_errors_1.f90: Add -std=f95 to options.
+[32m[     info][0m Current commit [a97dcb4] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[538639f4ab33f1a9f8c347a8f1e2369fdc4989e4] VMFrame.java (<init>): Add parameter for "this" pointer.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [538639f]
++---------------------------------------- Current commit hash: [538639f] ----------------------------------------+
+GCC for commit [538639f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-538639f/bin/gcc with -Os:
+0
+Output of /tmp/gcc-538639f/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 538639f... VMFrame.java (<init>): Add parameter for "this" pointer.
+[32m[     info][0m Current commit [538639f] is good. Return value: 0
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[8cdf2fb9d64bd37bc90c3c1980d82f5e702dc7bc] Fix a typo in ChangeLog.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [8cdf2fb]
++---------------------------------------- Current commit hash: [8cdf2fb] ----------------------------------------+
+GCC for commit [8cdf2fb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-8cdf2fb/bin/gcc with -Os:
+1
+Output of /tmp/gcc-8cdf2fb/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8cdf2fb... Fix a typo in ChangeLog.
+[32m[     info][0m Current commit [8cdf2fb] is bad. Return value: 1
+
+Bisecting: 139 revisions left to test after this (roughly 7 steps)
+[eb89f88cb853ff9e2604c9414360a312a39263ab] semantics.c (finish_member_declaration): Fix a typo in the last checkin.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [eb89f88]
++---------------------------------------- Current commit hash: [eb89f88] ----------------------------------------+
+GCC for commit [eb89f88] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-eb89f88/bin/gcc with -Os:
+1
+Output of /tmp/gcc-eb89f88/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at eb89f88... semantics.c (finish_member_declaration): Fix a typo in the last checkin.
+[32m[     info][0m Current commit [eb89f88] is bad. Return value: 1
+
+Bisecting: 69 revisions left to test after this (roughly 6 steps)
+[c099916d6224e9775b4a43969901ed8688f32e5b] re PR fortran/31627 ([4.1/4.2 only] -bounds-check doesn't check lower bound of assumed-sized array)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [c099916]
++---------------------------------------- Current commit hash: [c099916] ----------------------------------------+
+GCC for commit [c099916] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-c099916/bin/gcc with -Os:
+0
+Output of /tmp/gcc-c099916/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at c099916... re PR fortran/31627 ([4.1/4.2 only] -bounds-check doesn't check lower bound of assumed-sized array)
+[32m[     info][0m Current commit [c099916] is good. Return value: 0
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[1505f3b58e776fb2865ae9b41d492f3d6b5504a7] re PR fortran/31716 (segfault with real array bounds)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [1505f3b]
++---------------------------------------- Current commit hash: [1505f3b] ----------------------------------------+
+GCC for commit [1505f3b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-1505f3b/bin/gcc with -Os:
+1
+Output of /tmp/gcc-1505f3b/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1505f3b... re PR fortran/31716 (segfault with real array bounds)
+[32m[     info][0m Current commit [1505f3b] is bad. Return value: 1
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[a9535314cace94ac446568e3003668b263309aa9] sse4_1-check.h: Don't include <stdio.h>.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [a953531]
++---------------------------------------- Current commit hash: [a953531] ----------------------------------------+
+GCC for commit [a953531] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-a953531/bin/gcc with -Os:
+0
+Output of /tmp/gcc-a953531/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a953531... sse4_1-check.h: Don't include <stdio.h>.
+[32m[     info][0m Current commit [a953531] is good. Return value: 0
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[7e25695e8c916edb4e51bf1da21d45c48a2de362] re PR bootstrap/32009 (building gcc4-4.3/4.4.0-20070518 failed on OSX 10.3.9)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [7e25695]
++---------------------------------------- Current commit hash: [7e25695] ----------------------------------------+
+GCC for commit [7e25695] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-7e25695/bin/gcc with -Os:
+0
+Output of /tmp/gcc-7e25695/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7e25695... re PR bootstrap/32009 (building gcc4-4.3/4.4.0-20070518 failed on OSX 10.3.9)
+[32m[     info][0m Current commit [7e25695] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[a38e0142a8424e5d53b673ecaaa2976982a84834] Fix up MIPS16 hard float and add support for complex.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [a38e014]
++---------------------------------------- Current commit hash: [a38e014] ----------------------------------------+
+GCC for commit [a38e014] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-a38e014/bin/gcc with -Os:
+0
+Output of /tmp/gcc-a38e014/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a38e014... Fix up MIPS16 hard float and add support for complex.
+[32m[     info][0m Current commit [a38e014] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[b9a97851b5cbf9d615dbced763ff1cd81cb5482a] * g++.dg/other/vrp1.C: New test.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [b9a9785]
++---------------------------------------- Current commit hash: [b9a9785] ----------------------------------------+
+GCC for commit [b9a9785] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b9a9785/bin/gcc with -Os:
+0
+Output of /tmp/gcc-b9a9785/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b9a9785... * g++.dg/other/vrp1.C: New test.
+[32m[     info][0m Current commit [b9a9785] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[1e2041330fd0997c734a1a8d48ebaadb2037cb32] c-common.c (c_common_signed_or_unsigned_type): Delay the check for INTEGRAL_TYPE_P and TYPE_UNSIGNED.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [1e20413]
++---------------------------------------- Current commit hash: [1e20413] ----------------------------------------+
+GCC for commit [1e20413] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-1e20413/bin/gcc with -Os:
+1
+Output of /tmp/gcc-1e20413/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1e20413... c-common.c (c_common_signed_or_unsigned_type): Delay the check for INTEGRAL_TYPE_P and TYPE_UNSIGNED.
+[32m[     info][0m Current commit [1e20413] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[b9061212faa98367a5a69d66074aeb0f6837d62c] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1066 small
+[32m[     info][0m Testing commit: [b906121]
++---------------------------------------- Current commit hash: [b906121] ----------------------------------------+
+GCC for commit [b906121] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b906121/bin/gcc with -Os:
+0
+Output of /tmp/gcc-b906121/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b906121... Daily bump.
+[32m[     info][0m Current commit [b906121] is good. Return value: 0
+
+1e2041330fd0997c734a1a8d48ebaadb2037cb32 is the first bad commit
+commit 1e2041330fd0997c734a1a8d48ebaadb2037cb32
+Author: Rafael Avila de Espindola <espindola@google.com>
+Date:   Thu May 24 04:38:27 2007 +0000
+
+    c-common.c (c_common_signed_or_unsigned_type): Delay the check for INTEGRAL_TYPE_P and TYPE_UNSIGNED.
+    
+           * c-common.c (c_common_signed_or_unsigned_type): Delay the check for
+           INTEGRAL_TYPE_P and TYPE_UNSIGNED.
+           * langhooks.c (get_signed_or_unsigned_type): Don't check for
+           INTEGRAL_TYPE_P or TYPE_UNSIGNED.
+           (lhd_signed_or_unsigned_type): Check for INTEGRAL_TYPE_P and
+           TYPE_UNSIGNED.
+    
+    From-SVN: r125012
+
+:040000 040000 1935b859ddf045d50b2165b92b86a6f2f681af2a 9c49f4cbf7b54d0a5798d90514828b9ebad79939 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 1e20413 c-common.c (c_common_signed_or_unsigned_type): Delay the check for INTEGRAL_TYPE_P and TYPE_UNSIGNED.
+Checking out files:  19% (2998/15334)   Checking out files:  20% (3067/15334)   Checking out files:  21% (3221/15334)   Checking out files:  22% (3374/15334)   Checking out files:  23% (3527/15334)   Checking out files:  24% (3681/15334)   Checking out files:  25% (3834/15334)   Checking out files:  26% (3987/15334)   Checking out files:  27% (4141/15334)   Checking out files:  28% (4294/15334)   Checking out files:  29% (4447/15334)   Checking out files:  30% (4601/15334)   Checking out files:  31% (4754/15334)   Checking out files:  32% (4907/15334)   Checking out files:  33% (5061/15334)   Checking out files:  34% (5214/15334)   Checking out files:  35% (5367/15334)   Checking out files:  36% (5521/15334)   Checking out files:  37% (5674/15334)   Checking out files:  38% (5827/15334)   Checking out files:  39% (5981/15334)   Checking out files:  40% (6134/15334)   Checking out files:  41% (6287/15334)   Checking out files:  42% (6441/15334)   Checking out files:  43% (6594/15334)   Checking out files:  44% (6747/15334)   Checking out files:  45% (6901/15334)   Checking out files:  46% (7054/15334)   Checking out files:  47% (7207/15334)   Checking out files:  48% (7361/15334)   Checking out files:  49% (7514/15334)   Checking out files:  50% (7667/15334)   Checking out files:  50% (7671/15334)   Checking out files:  51% (7821/15334)   Checking out files:  52% (7974/15334)   Checking out files:  53% (8128/15334)   Checking out files:  54% (8281/15334)   Checking out files:  55% (8434/15334)   Checking out files:  56% (8588/15334)   Checking out files:  57% (8741/15334)   Checking out files:  58% (8894/15334)   Checking out files:  59% (9048/15334)   Checking out files:  60% (9201/15334)   Checking out files:  61% (9354/15334)   Checking out files:  62% (9508/15334)   Checking out files:  63% (9661/15334)   Checking out files:  64% (9814/15334)   Checking out files:  65% (9968/15334)   Checking out files:  66% (10121/15334)   Checking out files:  67% (10274/15334)   Checking out files:  68% (10428/15334)   Checking out files:  69% (10581/15334)   Checking out files:  70% (10734/15334)   Checking out files:  71% (10888/15334)   Checking out files:  72% (11041/15334)   Checking out files:  73% (11194/15334)   Checking out files:  74% (11348/15334)   Checking out files:  75% (11501/15334)   Checking out files:  76% (11654/15334)   Checking out files:  77% (11808/15334)   Checking out files:  78% (11961/15334)   Checking out files:  79% (12114/15334)   Checking out files:  79% (12148/15334)   Checking out files:  80% (12268/15334)   Checking out files:  81% (12421/15334)   Checking out files:  82% (12574/15334)   Checking out files:  83% (12728/15334)   Checking out files:  84% (12881/15334)   Checking out files:  85% (13034/15334)   Checking out files:  86% (13188/15334)   Checking out files:  87% (13341/15334)   Checking out files:  88% (13494/15334)   Checking out files:  89% (13648/15334)   Checking out files:  90% (13801/15334)   Checking out files:  91% (13954/15334)   Checking out files:  92% (14108/15334)   Checking out files:  93% (14261/15334)   Checking out files:  94% (14414/15334)   Checking out files:  95% (14568/15334)   Checking out files:  96% (14721/15334)   Checking out files:  97% (14874/15334)   Checking out files:  98% (15028/15334)   Checking out files:  99% (15181/15334)   Checking out files: 100% (15334/15334)   Checking out files: 100% (15334/15334), done.
+Previous HEAD position was b906121... Daily bump.
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [1e20413]
++---------------------------------------- Current commit hash: [1e20413] ----------------------------------------+
+GCC for commit [1e20413] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-1e20413/bin/gcc with -Os:
+1
+Output of /tmp/gcc-1e20413/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1e20413... c-common.c (c_common_signed_or_unsigned_type): Delay the check for INTEGRAL_TYPE_P and TYPE_UNSIGNED.
+[32m[     info][0m Current commit [1e20413] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [b906121]
++---------------------------------------- Current commit hash: [b906121] ----------------------------------------+
+GCC for commit [b906121] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b906121/bin/gcc with -Os:
+0
+Output of /tmp/gcc-b906121/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b906121... Daily bump.
+[32m[     info][0m Current commit [b906121] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [1e20413] with -O0:
+0
+Output of gcc [1e20413] with -O1:
+0
+Output of gcc [1e20413] with -O2:
+1
+Output of gcc [1e20413] with -O3:
+1
+Output of gcc [1e20413] with -Os:
+1
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

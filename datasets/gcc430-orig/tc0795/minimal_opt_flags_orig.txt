@@ -1,0 +1,3 @@
+inline-functions-called-once
+inline-small-functions
+unit-at-a-time

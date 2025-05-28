@@ -1,0 +1,406 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 28692958
+Output of gcc-4.3.0 with -O3:
+checksum = 28692959
+Output of gcc-4.3.0 with -O0:
+checksum = 28692958
+====================================================================
+[32m[     info][0m Good version found: gcc-4.1.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[abc088aad79d47b40da8a26e87815db09ab2d6eb] re PR c++/8355 (befriending a template specialization in another namespace)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [abc088a]
++---------------------------------------- Current commit hash: [abc088a] ----------------------------------------+
+GCC for commit [abc088a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-abc088a/bin/gcc with -O3:
+checksum = 28692958
+Output of /tmp/gcc-abc088a/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at abc088a... re PR c++/8355 (befriending a template specialization in another namespace)
+[32m[     info][0m Current commit [abc088a] is good. Return value: 0
+
+Bisecting: 6978 revisions left to test after this (roughly 13 steps)
+[ad8e8d0b465e6dd9d9db4988de7b5c524bb4d85d] re PR inline-asm/28686 (ebp from clobber list used as operand)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [ad8e8d0]
++---------------------------------------- Current commit hash: [ad8e8d0] ----------------------------------------+
+GCC for commit [ad8e8d0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -O3:
+checksum = 28692959
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at ad8e8d0... re PR inline-asm/28686 (ebp from clobber list used as operand)
+[32m[     info][0m Current commit [ad8e8d0] is bad. Return value: 1
+
+Bisecting: 3489 revisions left to test after this (roughly 12 steps)
+[3c618f8732814407a5c98146fa24761ba7dddd78] random (xor_combine<>::operator<<): Fix typo.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [3c618f8]
++---------------------------------------- Current commit hash: [3c618f8] ----------------------------------------+
+GCC for commit [3c618f8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-3c618f8/bin/gcc with -O3:
+checksum = 28692959
+Output of /tmp/gcc-3c618f8/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3c618f8... random (xor_combine<>::operator<<): Fix typo.
+[32m[     info][0m Current commit [3c618f8] is bad. Return value: 1
+
+Bisecting: 1744 revisions left to test after this (roughly 11 steps)
+[2003abbddeed761ee8ce5442a84b4502656433f5] re PR middle-end/26316 (loop-invariant miscompiles openmp.c)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [2003abb]
++---------------------------------------- Current commit hash: [2003abb] ----------------------------------------+
+GCC for commit [2003abb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-2003abb/bin/gcc with -O3:
+checksum = 28692958
+Output of /tmp/gcc-2003abb/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2003abb... re PR middle-end/26316 (loop-invariant miscompiles openmp.c)
+[32m[     info][0m Current commit [2003abb] is good. Return value: 0
+
+Bisecting: 872 revisions left to test after this (roughly 10 steps)
+[503b5c9f9ef343640c86afe451a2d98e326f139e] t-symbian: Add rule to build sh-c.o
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [503b5c9]
++---------------------------------------- Current commit hash: [503b5c9] ----------------------------------------+
+Building GCC for commit [503b5c9]...
+Switched to a new branch 'temp-test-branch'
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+No local changes to save
+Note: checking out '503b5c9'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 503b5c9... t-symbian: Add rule to build sh-c.o
+Deleted branch temp-test-branch (was 503b5c9).
+Fail to build gcc for commit [503b5c9], skip this commit. Return 125.
+Bisecting: 872 revisions left to test after this (roughly 10 steps)
+[597d6703b871bde0af2768fb0a3d917da082e348] Makefile.in (GTFILES): Move functions.h after tree.h.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [597d670]
++---------------------------------------- Current commit hash: [597d670] ----------------------------------------+
+GCC for commit [597d670] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-597d670/bin/gcc with -O3:
+checksum = 28692959
+Output of /tmp/gcc-597d670/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at 597d670... Makefile.in (GTFILES): Move functions.h after tree.h.
+[32m[     info][0m Current commit [597d670] is bad. Return value: 1
+
+Bisecting: 402 revisions left to test after this (roughly 9 steps)
+[716019c0ad646715c24467a80bf0595a1a2ad7cb] rs6000.opt (mdlmzb): New option.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [716019c]
++---------------------------------------- Current commit hash: [716019c] ----------------------------------------+
+GCC for commit [716019c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-716019c/bin/gcc with -O3:
+checksum = 28692958
+Output of /tmp/gcc-716019c/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at 716019c... rs6000.opt (mdlmzb): New option.
+[32m[     info][0m Current commit [716019c] is good. Return value: 0
+
+Bisecting: 200 revisions left to test after this (roughly 8 steps)
+[93dec1d186c0eceafc0343cf2947013d7296eb4d] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [93dec1d]
++---------------------------------------- Current commit hash: [93dec1d] ----------------------------------------+
+GCC for commit [93dec1d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-93dec1d/bin/gcc with -O3:
+checksum = 28692958
+Output of /tmp/gcc-93dec1d/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at 93dec1d... Daily bump.
+[32m[     info][0m Current commit [93dec1d] is good. Return value: 0
+
+Bisecting: 99 revisions left to test after this (roughly 7 steps)
+[4b1c1f6fc2f1ed0d5e4315ef6b788bf84755a5ee] i386.c (machopic_output_stub): Output \t between instructions and operands.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [4b1c1f6]
++---------------------------------------- Current commit hash: [4b1c1f6] ----------------------------------------+
+GCC for commit [4b1c1f6] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-4b1c1f6/bin/gcc with -O3:
+checksum = 28692958
+Output of /tmp/gcc-4b1c1f6/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4b1c1f6... i386.c (machopic_output_stub): Output \t between instructions and operands.
+[32m[     info][0m Current commit [4b1c1f6] is good. Return value: 0
+
+Bisecting: 49 revisions left to test after this (roughly 6 steps)
+[e0f931d27f9e0b7daee2d05a89ccf99c814f0429] Fix whitespacing.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [e0f931d]
++---------------------------------------- Current commit hash: [e0f931d] ----------------------------------------+
+Building GCC for commit [e0f931d]...
+Switched to a new branch 'temp-test-branch'
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+No local changes to save
+Note: checking out 'e0f931d'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at e0f931d... Fix whitespacing.
+Deleted branch temp-test-branch (was e0f931d).
+Fail to build gcc for commit [e0f931d], skip this commit. Return 125.
+Bisecting: 49 revisions left to test after this (roughly 6 steps)
+[11279bd9e4cfe78234fed8c829e5cb27b5643ba4] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [11279bd]
++---------------------------------------- Current commit hash: [11279bd] ----------------------------------------+
+GCC for commit [11279bd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-11279bd/bin/gcc with -O3:
+checksum = 28692959
+Output of /tmp/gcc-11279bd/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at 11279bd... Daily bump.
+[32m[     info][0m Current commit [11279bd] is bad. Return value: 1
+
+Bisecting: 44 revisions left to test after this (roughly 6 steps)
+[917f1b7ea3e4737fccda44b8dfb5c868b3d5fed4] builtins.c, [...]: Fix comment typos.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [917f1b7]
++---------------------------------------- Current commit hash: [917f1b7] ----------------------------------------+
+GCC for commit [917f1b7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-917f1b7/bin/gcc with -O3:
+checksum = 28692959
+Output of /tmp/gcc-917f1b7/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at 917f1b7... builtins.c, [...]: Fix comment typos.
+[32m[     info][0m Current commit [917f1b7] is bad. Return value: 1
+
+Bisecting: 22 revisions left to test after this (roughly 5 steps)
+[0f681872e02f455fe4b6956175d9ba45c38cccf5] m32c.h (INCOMING_FRAME_SP_OFFSET): Adjust for m16c vs m32c.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [0f68187]
++---------------------------------------- Current commit hash: [0f68187] ----------------------------------------+
+GCC for commit [0f68187] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-0f68187/bin/gcc with -O3:
+checksum = 28692958
+Output of /tmp/gcc-0f68187/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0f68187... m32c.h (INCOMING_FRAME_SP_OFFSET): Adjust for m16c vs m32c.
+[32m[     info][0m Current commit [0f68187] is good. Return value: 0
+
+Bisecting: 10 revisions left to test after this (roughly 4 steps)
+[44cfd8f6d4899c497b9218d68db636bc88a61bf5] * ipa-inline.c (cgraph_early_inlining): Collect garbage.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [44cfd8f]
++---------------------------------------- Current commit hash: [44cfd8f] ----------------------------------------+
+GCC for commit [44cfd8f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-44cfd8f/bin/gcc with -O3:
+checksum = 28692959
+Output of /tmp/gcc-44cfd8f/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at 44cfd8f... * ipa-inline.c (cgraph_early_inlining): Collect garbage.
+[32m[     info][0m Current commit [44cfd8f] is bad. Return value: 1
+
+Bisecting: 5 revisions left to test after this (roughly 3 steps)
+[8224ee206c7125ad57440cbe2f020024ae3f1e3f] linux.h: Add a comment to mark macros that are being overriden in config/k*bsd-gnu.h.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [8224ee2]
++---------------------------------------- Current commit hash: [8224ee2] ----------------------------------------+
+GCC for commit [8224ee2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-8224ee2/bin/gcc with -O3:
+checksum = 28692958
+Output of /tmp/gcc-8224ee2/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8224ee2... linux.h: Add a comment to mark macros that are being overriden in config/k*bsd-gnu.h.
+[32m[     info][0m Current commit [8224ee2] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[fcfa143ae553d1e83f7c32a15f615d02afd94b6c] re PR tree-optimization/26135 (store copyprop not effective)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [fcfa143]
++---------------------------------------- Current commit hash: [fcfa143] ----------------------------------------+
+GCC for commit [fcfa143] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-fcfa143/bin/gcc with -O3:
+checksum = 28692959
+Output of /tmp/gcc-fcfa143/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at fcfa143... re PR tree-optimization/26135 (store copyprop not effective)
+[32m[     info][0m Current commit [fcfa143] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[b8cf62e42fc5ea65ba7da8ebe2e990486ce588d3] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0691 orig
+[32m[     info][0m Testing commit: [b8cf62e]
++---------------------------------------- Current commit hash: [b8cf62e] ----------------------------------------+
+GCC for commit [b8cf62e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-b8cf62e/bin/gcc with -O3:
+checksum = 28692958
+Output of /tmp/gcc-b8cf62e/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at b8cf62e... Daily bump.
+[32m[     info][0m Current commit [b8cf62e] is good. Return value: 0
+
+fcfa143ae553d1e83f7c32a15f615d02afd94b6c is the first bad commit
+commit fcfa143ae553d1e83f7c32a15f615d02afd94b6c
+Author: Richard Biener <rguenth@gcc.gnu.org>
+Date:   Fri Apr 7 08:04:26 2006 +0000
+
+    re PR tree-optimization/26135 (store copyprop not effective)
+    
+    2006-04-07  Richard Guenther  <rguenther@suse.de>
+    
+    	PR tree-optimization/26135
+    	* tree-ssa-copy.c (stmt_may_generate_copy): Handle memory
+    	loads for store copy-prop.
+    	(copy_prop_visit_stmt): Likewise.
+    
+    	* gcc.dg/tree-ssa/ssa-copyprop-1.c: New testcase.
+    
+    From-SVN: r112749
+
+:040000 040000 7094568d88cc8dbc3881affb29d4c19594dde770 25a824528d62a06c6582621014ef91e49c80ba29 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: fcfa143 re PR tree-optimization/26135 (store copyprop not effective)
+Checking out files:   7% (2362/31341)   Checking out files:   8% (2508/31341)   Checking out files:   9% (2821/31341)   Checking out files:  10% (3135/31341)   Checking out files:  11% (3448/31341)   Checking out files:  11% (3500/31341)   Checking out files:  12% (3761/31341)   Checking out files:  13% (4075/31341)   Checking out files:  14% (4388/31341)   Checking out files:  14% (4635/31341)   Checking out files:  15% (4702/31341)   Checking out files:  16% (5015/31341)   Checking out files:  17% (5328/31341)   Checking out files:  18% (5642/31341)   Checking out files:  19% (5955/31341)   Checking out files:  20% (6269/31341)   Checking out files:  21% (6582/31341)   Checking out files:  22% (6896/31341)   Checking out files:  23% (7209/31341)   Checking out files:  23% (7349/31341)   Checking out files:  24% (7522/31341)   Checking out files:  25% (7836/31341)   Checking out files:  26% (8149/31341)   Checking out files:  27% (8463/31341)   Checking out files:  28% (8776/31341)   Checking out files:  28% (9023/31341)   Checking out files:  29% (9089/31341)   Checking out files:  30% (9403/31341)   Checking out files:  31% (9716/31341)   Checking out files:  32% (10030/31341)   Checking out files:  33% (10343/31341)   Checking out files:  34% (10656/31341)   Checking out files:  34% (10832/31341)   Checking out files:  35% (10970/31341)   Checking out files:  36% (11283/31341)   Checking out files:  37% (11597/31341)   Checking out files:  38% (11910/31341)   Checking out files:  39% (12223/31341)   Checking out files:  40% (12537/31341)   Checking out files:  41% (12850/31341)   Checking out files:  42% (13164/31341)   Checking out files:  42% (13321/31341)   Checking out files:  43% (13477/31341)   Checking out files:  44% (13791/31341)   Checking out files:  45% (14104/31341)   Checking out files:  46% (14417/31341)   Checking out files:  47% (14731/31341)   Checking out files:  48% (15044/31341)   Checking out files:  49% (15358/31341)   Checking out files:  50% (15671/31341)   Checking out files:  51% (15984/31341)   Checking out files:  52% (16298/31341)   Checking out files:  52% (16489/31341)   Checking out files:  53% (16611/31341)   Checking out files:  54% (16925/31341)   Checking out files:  55% (17238/31341)   Checking out files:  56% (17551/31341)   Checking out files:  57% (17865/31341)   Checking out files:  58% (18178/31341)   Checking out files:  59% (18492/31341)   Checking out files:  60% (18805/31341)   Checking out files:  61% (19119/31341)   Checking out files:  61% (19361/31341)   Checking out files:  62% (19432/31341)   Checking out files:  63% (19745/31341)   Checking out files:  64% (20059/31341)   Checking out files:  65% (20372/31341)   Checking out files:  66% (20686/31341)   Checking out files:  67% (20999/31341)   Checking out files:  68% (21312/31341)   Checking out files:  69% (21626/31341)   Checking out files:  70% (21939/31341)   Checking out files:  71% (22253/31341)   Checking out files:  71% (22362/31341)   Checking out files:  72% (22566/31341)   Checking out files:  73% (22879/31341)   Checking out files:  74% (23193/31341)   Checking out files:  75% (23506/31341)   Checking out files:  76% (23820/31341)   Checking out files:  77% (24133/31341)   Checking out files:  78% (24446/31341)   Checking out files:  79% (24760/31341)   Checking out files:  80% (25073/31341)   Checking out files:  81% (25387/31341)   Checking out files:  81% (25645/31341)   Checking out files:  82% (25700/31341)   Checking out files:  83% (26014/31341)   Checking out files:  84% (26327/31341)   Checking out files:  85% (26640/31341)   Checking out files:  86% (26954/31341)   Checking out files:  87% (27267/31341)   Checking out files:  88% (27581/31341)   Checking out files:  89% (27894/31341)   Checking out files:  90% (28207/31341)   Checking out files:  91% (28521/31341)   Checking out files:  91% (28663/31341)   Checking out files:  92% (28834/31341)   Checking out files:  93% (29148/31341)   Checking out files:  94% (29461/31341)   Checking out files:  95% (29774/31341)   Checking out files:  96% (30088/31341)   Checking out files:  97% (30401/31341)   Checking out files:  98% (30715/31341)   Checking out files:  98% (30778/31341)   Checking out files:  99% (31028/31341)   Checking out files: 100% (31341/31341)   Checking out files: 100% (31341/31341), done.
+Previous HEAD position was b8cf62e... Daily bump.
+HEAD is now at 3673b8c... Daily bump.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [fcfa143]
++---------------------------------------- Current commit hash: [fcfa143] ----------------------------------------+
+GCC for commit [fcfa143] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-fcfa143/bin/gcc with -O3:
+checksum = 28692959
+Output of /tmp/gcc-fcfa143/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at fcfa143... re PR tree-optimization/26135 (store copyprop not effective)
+[32m[     info][0m Current commit [fcfa143] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [b8cf62e]
++---------------------------------------- Current commit hash: [b8cf62e] ----------------------------------------+
+GCC for commit [b8cf62e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 28692958
+Output of /tmp/gcc-b8cf62e/bin/gcc with -O3:
+checksum = 28692958
+Output of /tmp/gcc-b8cf62e/bin/gcc with -O0:
+checksum = 28692958
+----------------------------------------------------
+No local changes to save
+HEAD is now at b8cf62e... Daily bump.
+[32m[     info][0m Current commit [b8cf62e] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [fcfa143] with -O0:
+checksum = 28692958
+Output of gcc [fcfa143] with -O1:
+checksum = 28692958
+Output of gcc [fcfa143] with -O2:
+checksum = 28692959
+Output of gcc [fcfa143] with -O3:
+checksum = 28692959
+Output of gcc [fcfa143] with -Os:
+checksum = 28692959
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

@@ -1,0 +1,3 @@
+strict-aliasing
+tree-dce
+tree-sink

@@ -1,0 +1,335 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+1
+Output of gcc-4.3.0 with -O1:
+0
+Output of gcc-4.3.0 with -O3:
+1
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Checking out files:  22% (4151/18486)   Checking out files:  23% (4252/18486)   Checking out files:  24% (4437/18486)   Checking out files:  25% (4622/18486)   Checking out files:  26% (4807/18486)   Checking out files:  27% (4992/18486)   Checking out files:  28% (5177/18486)   Checking out files:  29% (5361/18486)   Checking out files:  30% (5546/18486)   Checking out files:  31% (5731/18486)   Checking out files:  32% (5916/18486)   Checking out files:  33% (6101/18486)   Checking out files:  34% (6286/18486)   Checking out files:  35% (6471/18486)   Checking out files:  36% (6655/18486)   Checking out files:  37% (6840/18486)   Checking out files:  38% (7025/18486)   Checking out files:  38% (7134/18486)   Checking out files:  39% (7210/18486)   Checking out files:  40% (7395/18486)   Checking out files:  41% (7580/18486)   Checking out files:  42% (7765/18486)   Checking out files:  43% (7949/18486)   Checking out files:  44% (8134/18486)   Checking out files:  45% (8319/18486)   Checking out files:  46% (8504/18486)   Checking out files:  47% (8689/18486)   Checking out files:  47% (8796/18486)   Checking out files:  48% (8874/18486)   Checking out files:  49% (9059/18486)   Checking out files:  50% (9243/18486)   Checking out files:  51% (9428/18486)   Checking out files:  52% (9613/18486)   Checking out files:  53% (9798/18486)   Checking out files:  54% (9983/18486)   Checking out files:  54% (10102/18486)   Checking out files:  55% (10168/18486)   Checking out files:  56% (10353/18486)   Checking out files:  57% (10538/18486)   Checking out files:  58% (10722/18486)   Checking out files:  59% (10907/18486)   Checking out files:  60% (11092/18486)   Checking out files:  61% (11277/18486)   Checking out files:  61% (11281/18486)   Checking out files:  62% (11462/18486)   Checking out files:  63% (11647/18486)   Checking out files:  64% (11832/18486)   Checking out files:  65% (12016/18486)   Checking out files:  66% (12201/18486)   Checking out files:  67% (12386/18486)   Checking out files:  68% (12571/18486)   Checking out files:  69% (12756/18486)   Checking out files:  70% (12941/18486)   Checking out files:  71% (13126/18486)   Checking out files:  71% (13132/18486)   Checking out files:  72% (13310/18486)   Checking out files:  73% (13495/18486)   Checking out files:  74% (13680/18486)   Checking out files:  75% (13865/18486)   Checking out files:  76% (14050/18486)   Checking out files:  77% (14235/18486)   Checking out files:  78% (14420/18486)   Checking out files:  79% (14604/18486)   Checking out files:  80% (14789/18486)   Checking out files:  80% (14893/18486)   Checking out files:  81% (14974/18486)   Checking out files:  82% (15159/18486)   Checking out files:  83% (15344/18486)   Checking out files:  84% (15529/18486)   Checking out files:  85% (15714/18486)   Checking out files:  86% (15898/18486)   Checking out files:  87% (16083/18486)   Checking out files:  88% (16268/18486)   Checking out files:  89% (16453/18486)   Checking out files:  90% (16638/18486)   Checking out files:  90% (16771/18486)   Checking out files:  91% (16823/18486)   Checking out files:  92% (17008/18486)   Checking out files:  93% (17192/18486)   Checking out files:  94% (17377/18486)   Checking out files:  95% (17562/18486)   Checking out files:  96% (17747/18486)   Checking out files:  97% (17932/18486)   Checking out files:  98% (18117/18486)   Checking out files:  99% (18302/18486)   Checking out files: 100% (18486/18486)   Checking out files: 100% (18486/18486), done.
+Previous HEAD position was 22199fd... re PR middle-end/33631 (auto structure not initialized correctly)
+HEAD is now at 4838bfc... re PR libgcj/30513 (Bootstrap failure with libgcj on sparc-sun-solaris2.10)
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-b23987e/bin/gcc with -O1:
+1
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-b718216/bin/gcc with -O1:
+1
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is bad. Return value: 1
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[2b5e5642e38e17dc60ca6408f4c2bba651e1a9f7] builtins.c (fold_builtin_load_exponent): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [2b5e564]
++---------------------------------------- Current commit hash: [2b5e564] ----------------------------------------+
+GCC for commit [2b5e564] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-2b5e564/bin/gcc with -O1:
+1
+Output of /tmp/gcc-2b5e564/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2b5e564... builtins.c (fold_builtin_load_exponent): New.
+[32m[     info][0m Current commit [2b5e564] is good. Return value: 0
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[a97dcb4c3690f2b6fa294c8931998c7a7daed883] warnings_are_errors_1.f90: Add -std=f95 to options.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [a97dcb4]
++---------------------------------------- Current commit hash: [a97dcb4] ----------------------------------------+
+GCC for commit [a97dcb4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-a97dcb4/bin/gcc with -O1:
+1
+Output of /tmp/gcc-a97dcb4/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at a97dcb4... warnings_are_errors_1.f90: Add -std=f95 to options.
+[32m[     info][0m Current commit [a97dcb4] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[538639f4ab33f1a9f8c347a8f1e2369fdc4989e4] VMFrame.java (<init>): Add parameter for "this" pointer.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [538639f]
++---------------------------------------- Current commit hash: [538639f] ----------------------------------------+
+GCC for commit [538639f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-538639f/bin/gcc with -O1:
+1
+Output of /tmp/gcc-538639f/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 538639f... VMFrame.java (<init>): Add parameter for "this" pointer.
+[32m[     info][0m Current commit [538639f] is good. Return value: 0
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[8cdf2fb9d64bd37bc90c3c1980d82f5e702dc7bc] Fix a typo in ChangeLog.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [8cdf2fb]
++---------------------------------------- Current commit hash: [8cdf2fb] ----------------------------------------+
+GCC for commit [8cdf2fb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-8cdf2fb/bin/gcc with -O1:
+1
+Output of /tmp/gcc-8cdf2fb/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8cdf2fb... Fix a typo in ChangeLog.
+[32m[     info][0m Current commit [8cdf2fb] is good. Return value: 0
+
+Bisecting: 140 revisions left to test after this (roughly 7 steps)
+[495d6dd6da24802c0c1aaacb7ea77fa7ccbf1a20] sem_ch7.adb (Check_Anonymous_Access_Types): Fix error for null body
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [495d6dd]
++---------------------------------------- Current commit hash: [495d6dd] ----------------------------------------+
+GCC for commit [495d6dd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-495d6dd/bin/gcc with -O1:
+1
+Output of /tmp/gcc-495d6dd/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 495d6dd... sem_ch7.adb (Check_Anonymous_Access_Types): Fix error for null body
+[32m[     info][0m Current commit [495d6dd] is good. Return value: 0
+
+Bisecting: 70 revisions left to test after this (roughly 6 steps)
+[1fc3998daa162619e2826523d2b9efad2a3c7725] re PR middle-end/32209 (Boot failure  Comparing stages 2 and 3 with --disable-checking)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [1fc3998]
++---------------------------------------- Current commit hash: [1fc3998] ----------------------------------------+
+GCC for commit [1fc3998] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-1fc3998/bin/gcc with -O1:
+1
+Output of /tmp/gcc-1fc3998/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1fc3998... re PR middle-end/32209 (Boot failure  Comparing stages 2 and 3 with --disable-checking)
+[32m[     info][0m Current commit [1fc3998] is good. Return value: 0
+
+Bisecting: 35 revisions left to test after this (roughly 5 steps)
+[69c553ef2aa52adbaeab79751c1d421cc61f5216] re PR target/32280 (_mm_srli_si128, heinous code for some shifts)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [69c553e]
++---------------------------------------- Current commit hash: [69c553e] ----------------------------------------+
+GCC for commit [69c553e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-69c553e/bin/gcc with -O1:
+1
+Output of /tmp/gcc-69c553e/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 69c553e... re PR target/32280 (_mm_srli_si128, heinous code for some shifts)
+[32m[     info][0m Current commit [69c553e] is good. Return value: 0
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[a472f54655e536be1feaf214ac4e3e200fb21071] Fix a few nits.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [a472f54]
++---------------------------------------- Current commit hash: [a472f54] ----------------------------------------+
+GCC for commit [a472f54] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-a472f54/bin/gcc with -O1:
+1
+Output of /tmp/gcc-a472f54/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a472f54... Fix a few nits.
+[32m[     info][0m Current commit [a472f54] is bad. Return value: 1
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[6fb5fa3cbc0d78cf9f4ff7cac5e1d8af1e65c5bb] Merge dataflow branch into mainline
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [6fb5fa3]
++---------------------------------------- Current commit hash: [6fb5fa3] ----------------------------------------+
+GCC for commit [6fb5fa3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-6fb5fa3/bin/gcc with -O1:
+1
+Output of /tmp/gcc-6fb5fa3/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6fb5fa3... Merge dataflow branch into mainline
+[32m[     info][0m Current commit [6fb5fa3] is bad. Return value: 1
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[afcc986d03991b070c7ab76159f5b792b94c0a80] arm.c (arm_output_dwarf_dtprel, [...]): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [afcc986]
++---------------------------------------- Current commit hash: [afcc986] ----------------------------------------+
+GCC for commit [afcc986] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-afcc986/bin/gcc with -O1:
+1
+Output of /tmp/gcc-afcc986/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at afcc986... arm.c (arm_output_dwarf_dtprel, [...]): New.
+[32m[     info][0m Current commit [afcc986] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[12753674ec3e75275eca8b704c36d6dc3762ade6] really remove signed(_or_unsigned)?_type langhooks
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [1275367]
++---------------------------------------- Current commit hash: [1275367] ----------------------------------------+
+GCC for commit [1275367] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-1275367/bin/gcc with -O1:
+1
+Output of /tmp/gcc-1275367/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1275367... really remove signed(_or_unsigned)?_type langhooks
+[32m[     info][0m Current commit [1275367] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[a91d32a4a65d54cccf639a1541417e39cb7b7deb] i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0633 small
+[32m[     info][0m Testing commit: [a91d32a]
++---------------------------------------- Current commit hash: [a91d32a] ----------------------------------------+
+GCC for commit [a91d32a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-a91d32a/bin/gcc with -O1:
+1
+Output of /tmp/gcc-a91d32a/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at a91d32a... i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+[32m[     info][0m Current commit [a91d32a] is good. Return value: 0
+
+6fb5fa3cbc0d78cf9f4ff7cac5e1d8af1e65c5bb is the first bad commit
+commit 6fb5fa3cbc0d78cf9f4ff7cac5e1d8af1e65c5bb
+Author: Daniel Berlin <dberlin@gcc.gnu.org>
+Date:   Mon Jun 11 18:02:15 2007 +0000
+
+    Merge dataflow branch into mainline
+    
+    From-SVN: r125624
+
+:100644 100644 b68b4a36f62b2c48083ea2f4400490059e6d56e6 873677ddd6011f38e38556d465c766329adbe899 M	MAINTAINERS
+:040000 040000 631c08b4d496052b5411837aa99a752368ff9cff 59bc23bb68f87d9680160fd53405c9bbd11a0de5 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 6fb5fa3 Merge dataflow branch into mainline
+Checking out files:  42% (4039/9520)   Checking out files:  43% (4094/9520)   Checking out files:  44% (4189/9520)   Checking out files:  45% (4284/9520)   Checking out files:  46% (4380/9520)   Checking out files:  47% (4475/9520)   Checking out files:  48% (4570/9520)   Checking out files:  49% (4665/9520)   Checking out files:  50% (4760/9520)   Checking out files:  51% (4856/9520)   Checking out files:  52% (4951/9520)   Checking out files:  53% (5046/9520)   Checking out files:  54% (5141/9520)   Checking out files:  55% (5236/9520)   Checking out files:  56% (5332/9520)   Checking out files:  57% (5427/9520)   Checking out files:  58% (5522/9520)   Checking out files:  59% (5617/9520)   Checking out files:  60% (5712/9520)   Checking out files:  61% (5808/9520)   Checking out files:  62% (5903/9520)   Checking out files:  63% (5998/9520)   Checking out files:  63% (6020/9520)   Checking out files:  64% (6093/9520)   Checking out files:  65% (6188/9520)   Checking out files:  66% (6284/9520)   Checking out files:  67% (6379/9520)   Checking out files:  68% (6474/9520)   Checking out files:  69% (6569/9520)   Checking out files:  70% (6664/9520)   Checking out files:  71% (6760/9520)   Checking out files:  72% (6855/9520)   Checking out files:  73% (6950/9520)   Checking out files:  74% (7045/9520)   Checking out files:  75% (7140/9520)   Checking out files:  76% (7236/9520)   Checking out files:  77% (7331/9520)   Checking out files:  78% (7426/9520)   Checking out files:  79% (7521/9520)   Checking out files:  80% (7616/9520)   Checking out files:  81% (7712/9520)   Checking out files:  82% (7807/9520)   Checking out files:  83% (7902/9520)   Checking out files:  84% (7997/9520)   Checking out files:  85% (8092/9520)   Checking out files:  86% (8188/9520)   Checking out files:  87% (8283/9520)   Checking out files:  88% (8378/9520)   Checking out files:  89% (8473/9520)   Checking out files:  90% (8568/9520)   Checking out files:  91% (8664/9520)   Checking out files:  92% (8759/9520)   Checking out files:  93% (8854/9520)   Checking out files:  94% (8949/9520)   Checking out files:  95% (9044/9520)   Checking out files:  95% (9089/9520)   Checking out files:  96% (9140/9520)   Checking out files:  97% (9235/9520)   Checking out files:  98% (9330/9520)   Checking out files:  99% (9425/9520)   Checking out files: 100% (9520/9520)   Checking out files: 100% (9520/9520), done.
+Previous HEAD position was a91d32a... i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+HEAD is now at 4838bfc... re PR libgcj/30513 (Bootstrap failure with libgcj on sparc-sun-solaris2.10)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [6fb5fa3]
++---------------------------------------- Current commit hash: [6fb5fa3] ----------------------------------------+
+GCC for commit [6fb5fa3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-6fb5fa3/bin/gcc with -O1:
+1
+Output of /tmp/gcc-6fb5fa3/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6fb5fa3... Merge dataflow branch into mainline
+[32m[     info][0m Current commit [6fb5fa3] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [a91d32a]
++---------------------------------------- Current commit hash: [a91d32a] ----------------------------------------+
+GCC for commit [a91d32a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-a91d32a/bin/gcc with -O1:
+1
+Output of /tmp/gcc-a91d32a/bin/gcc with -O3:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at a91d32a... i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+[32m[     info][0m Current commit [a91d32a] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [6fb5fa3] with -O0:
+1
+Output of gcc [6fb5fa3] with -O1:
+1
+Output of gcc [6fb5fa3] with -O2:
+0
+Output of gcc [6fb5fa3] with -O3:
+0
+Output of gcc [6fb5fa3] with -Os:
+0
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

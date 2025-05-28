@@ -1,0 +1,1 @@
+efd7f9c Reorder the contents of various getAnalysisUsage functions, eliminating a redundant loopsimplify run from the default -O2 sequence.

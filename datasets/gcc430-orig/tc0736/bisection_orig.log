@@ -1,0 +1,424 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = fe9c2764
+Output of gcc-4.3.0 with -O3:
+checksum = a8454a76
+Output of gcc-4.3.0 with -O0:
+checksum = fe9c2764
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+checksum = fe9c2764
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+checksum = a8454a76
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is bad. Return value: 1
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[2b5e5642e38e17dc60ca6408f4c2bba651e1a9f7] builtins.c (fold_builtin_load_exponent): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [2b5e564]
++---------------------------------------- Current commit hash: [2b5e564] ----------------------------------------+
+GCC for commit [2b5e564] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-2b5e564/bin/gcc with -O3:
+checksum = fe9c2764
+Output of /tmp/gcc-2b5e564/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2b5e564... builtins.c (fold_builtin_load_exponent): New.
+[32m[     info][0m Current commit [2b5e564] is good. Return value: 0
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[a97dcb4c3690f2b6fa294c8931998c7a7daed883] warnings_are_errors_1.f90: Add -std=f95 to options.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [a97dcb4]
++---------------------------------------- Current commit hash: [a97dcb4] ----------------------------------------+
+GCC for commit [a97dcb4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-a97dcb4/bin/gcc with -O3:
+checksum = a8454a76
+Output of /tmp/gcc-a97dcb4/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at a97dcb4... warnings_are_errors_1.f90: Add -std=f95 to options.
+[32m[     info][0m Current commit [a97dcb4] is bad. Return value: 1
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[7453378e3d16d7b048668ec46ab93f7bb9043308] re PR fortran/30531 ([4.2 only] allocatable component and intent(out) yield ICE in fold_convert)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [7453378]
++---------------------------------------- Current commit hash: [7453378] ----------------------------------------+
+GCC for commit [7453378] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-7453378/bin/gcc with -O3:
+checksum = fe9c2764
+Output of /tmp/gcc-7453378/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7453378... re PR fortran/30531 ([4.2 only] allocatable component and intent(out) yield ICE in fold_convert)
+[32m[     info][0m Current commit [7453378] is good. Return value: 0
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[696fbee71016c152278c38048421cf291e1566a4] jvgenmain.c (main): Change main to use class$, not class$$.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [696fbee]
++---------------------------------------- Current commit hash: [696fbee] ----------------------------------------+
+GCC for commit [696fbee] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-696fbee/bin/gcc with -O3:
+checksum = fe9c2764
+Output of /tmp/gcc-696fbee/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at 696fbee... jvgenmain.c (main): Change main to use class$, not class$$.
+[32m[     info][0m Current commit [696fbee] is good. Return value: 0
+
+Bisecting: 140 revisions left to test after this (roughly 7 steps)
+[270c60bb5f93889717d18a7835069897a7ce3e16] 2007-04-07  Daniel Berlin  <dberlin@dberlin.org>
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [270c60b]
++---------------------------------------- Current commit hash: [270c60b] ----------------------------------------+
+GCC for commit [270c60b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-270c60b/bin/gcc with -O3:
+checksum = fe9c2764
+Output of /tmp/gcc-270c60b/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at 270c60b... 2007-04-07  Daniel Berlin  <dberlin@dberlin.org>
+[32m[     info][0m Current commit [270c60b] is good. Return value: 0
+
+Bisecting: 70 revisions left to test after this (roughly 6 steps)
+[08e7ceb3d3d4d3763bdb5cfbb1dd0a78b27f0e5d] mips-protos.h (SYMBOL_GOT_LOCAL): Rename to...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [08e7ceb]
++---------------------------------------- Current commit hash: [08e7ceb] ----------------------------------------+
+GCC for commit [08e7ceb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-08e7ceb/bin/gcc with -O3:
+checksum = a8454a76
+Output of /tmp/gcc-08e7ceb/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at 08e7ceb... mips-protos.h (SYMBOL_GOT_LOCAL): Rename to...
+[32m[     info][0m Current commit [08e7ceb] is bad. Return value: 1
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[113008b54b1405325b472e7eef9811c1340560f3] cc_hash_max_collision_check_resize_trigger_imp.hpp: Qualify namespace std members.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [113008b]
++---------------------------------------- Current commit hash: [113008b] ----------------------------------------+
+GCC for commit [113008b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-113008b/bin/gcc with -O3:
+checksum = fe9c2764
+Output of /tmp/gcc-113008b/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at 113008b... cc_hash_max_collision_check_resize_trigger_imp.hpp: Qualify namespace std members.
+[32m[     info][0m Current commit [113008b] is good. Return value: 0
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[55a700ac1f1421af8c732ed92d278c6f93336726] tree-data-ref.c (chrec_steps_divide_constant_p): Removed.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [55a700a]
++---------------------------------------- Current commit hash: [55a700a] ----------------------------------------+
+GCC for commit [55a700a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-55a700a/bin/gcc with -O3:
+checksum = a8454a76
+Output of /tmp/gcc-55a700a/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at 55a700a... tree-data-ref.c (chrec_steps_divide_constant_p): Removed.
+[32m[     info][0m Current commit [55a700a] is bad. Return value: 1
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[574e75f5fb8c1ee2e38d6da90a88bb6c546ebb84] istream (class basic_istream<>): Remove unneded friend declarations.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [574e75f]
++---------------------------------------- Current commit hash: [574e75f] ----------------------------------------+
+GCC for commit [574e75f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-574e75f/bin/gcc with -O3:
+checksum = fe9c2764
+Output of /tmp/gcc-574e75f/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at 574e75f... istream (class basic_istream<>): Remove unneded friend declarations.
+[32m[     info][0m Current commit [574e75f] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[017133fdc11f47bbaff2932171c6818baf27df56] argv.c: Use ANSI C declarations.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [017133f]
++---------------------------------------- Current commit hash: [017133f] ----------------------------------------+
+GCC for commit [017133f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-017133f/bin/gcc with -O3:
+checksum = a8454a76
+Output of /tmp/gcc-017133f/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at 017133f... argv.c: Use ANSI C declarations.
+[32m[     info][0m Current commit [017133f] is bad. Return value: 1
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[0ca2faee4f6194686a8121f76ffb7036614e259d] tree-data-ref.c (add_multivariate_self_dist): Force the distance vector to be positive.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [0ca2fae]
++---------------------------------------- Current commit hash: [0ca2fae] ----------------------------------------+
+GCC for commit [0ca2fae] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-0ca2fae/bin/gcc with -O3:
+checksum = a8454a76
+Output of /tmp/gcc-0ca2fae/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0ca2fae... tree-data-ref.c (add_multivariate_self_dist): Force the distance vector to be positive.
+[32m[     info][0m Current commit [0ca2fae] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[e9e0aa2c9677074a7912521f4fa1aebf53640198] re PR tree-optimization/30735 (50% slow down due to mem-ssa merge)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0736 orig
+[32m[     info][0m Testing commit: [e9e0aa2]
++---------------------------------------- Current commit hash: [e9e0aa2] ----------------------------------------+
+GCC for commit [e9e0aa2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-e9e0aa2/bin/gcc with -O3:
+checksum = a8454a76
+Output of /tmp/gcc-e9e0aa2/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at e9e0aa2... re PR tree-optimization/30735 (50% slow down due to mem-ssa merge)
+[32m[     info][0m Current commit [e9e0aa2] is bad. Return value: 1
+
+e9e0aa2c9677074a7912521f4fa1aebf53640198 is the first bad commit
+commit e9e0aa2c9677074a7912521f4fa1aebf53640198
+Author: Diego Novillo <dnovillo@redhat.com>
+Date:   Wed Apr 11 16:14:06 2007 +0000
+
+    re PR tree-optimization/30735 (50% slow down due to mem-ssa merge)
+    
+    
+    	PR 30735
+    	PR 31090
+    	* doc/invoke.texi: Document --params max-aliased-vops and
+    	avg-aliased-vops.
+    	* tree-ssa-operands.h (get_mpt_for, dump_memory_partitions,
+    	debug_memory_partitions): Move to tree-flow.h
+    	* params.h (AVG_ALIASED_VOPS): Define.
+    	* tree-ssa-alias.c (struct mp_info_def): Remove.  Update all
+    	users.
+    	(mp_info_t): Likewise.
+    	(get_mem_sym_stats_for): New.
+    	(set_memory_partition): Move from tree-flow-inline.h.
+    	(mark_non_addressable): Only clear the set of symbols for the
+    	partition if it exists.
+    	(dump_memory_partitions): Move from tree-ssa-operands.c
+    	(debug_memory_partitions): Likewise.
+    	(need_to_partition_p): New.
+    	(dump_mem_ref_stats): New.
+    	(debug_mem_ref_stats): New.
+    	(dump_mem_sym_stats): New.
+    	(debug_mem_sym_stats): New.
+    	(update_mem_sym_stats_from_stmt): New.
+    	(compare_mp_info_entries): New.
+    	(mp_info_cmp): Call it.
+    	(sort_mp_info): Change argument to a list of mem_sym_stats_t
+    	objects.
+    	(get_mpt_for): Move from tree-ssa-operands.c.
+    	(find_partition_for): New.
+    	(create_partition_for): Remove.
+    	(estimate_vop_reduction): New.
+    	(update_reference_counts): New.
+    	(build_mp_info): New.
+    	(compute_memory_partitions): Refactor.
+    	Document new heuristic.
+    	Call build_mp_info, update_reference_counts,
+    	find_partition_for and estimate_vop_reduction.
+    	(compute_may_aliases): Populate virtual operands before
+    	calling debugging dumps.
+    	(delete_mem_sym_stats): New.
+    	(delete_mem_ref_stats): New.
+    	(init_mem_ref_stats): New.
+    	(init_alias_info): Call it.
+    	(maybe_create_global_var): Remove alias_info argument.
+    	Get number of call sites and number of pure/const call sites
+    	from gimple_mem_ref_stats().
+    	(dump_alias_info): Call dump_memory_partitions first.
+    	(dump_points_to_info_for): Show how many times a pointer has
+    	been dereferenced.
+    	* opts.c (decode_options): For -O2 set --param
+    	max-aliased-vops to 500.
+    	For -O3 set --param max-aliased-vops to 1000 and --param
+    	avg-aliased-vops to 3.
+    	* fortran/options.c (gfc_init_options): Remove assignment to
+    	MAX_ALIASED_VOPS.
+    	* tree-flow-inline.h (gimple_mem_ref_stats): New.
+    	* tree-dfa.c (dump_variable): Dump memory reference
+    	statistics.
+    	Dump NO_ALIAS* settings.
+    	(referenced_var_lookup): Tidy.
+    	(mem_sym_stats): New.
+    	* tree-ssa-copy.c (may_propagate_copy): Return true if DEST
+    	and ORIG are different SSA names for a memory partition.
+    	* tree-ssa.c (delete_tree_ssa): Call delete_mem_ref_stats.
+    	* tree-flow.h (struct mem_sym_stats_d): Define.
+    	(mem_sym_stats_t): Define.
+    	(struct mem_ref_stats_d): Define.
+    	(struct gimple_df): Add field mem_ref_stats.
+    	(enum noalias_state): Define.
+    	(struct var_ann_d): Add bitfield noalias_state.
+    	(mem_sym_stats, delete_mem_ref_stats, dump_mem_ref_stats,
+    	debug_mem_ref_stats, debug_memory_partitions,
+    	debug_mem_sym_stats): Declare.
+    	* tree-ssa-structalias.c (update_alias_info): Update call
+    	sites, pure/const call sites and asm sites in structure
+    	returned by gimple_mem_ref_stats.
+    	Remove local variable IS_POTENTIAL_DEREF.
+    	Increase NUM_DEREFS if the memory expression is a potential
+    	dereference.
+    	Call update_mem_sym_stats_from_stmt.
+    	If the memory references memory, call
+    	update_mem_sym_stats_from_stmt for all the direct memory
+    	symbol references found.
+    	(intra_create_variable_infos): Set noalias_state field for
+    	pointer arguments according to the value of
+    	flag_argument_noalias.
+    	* tree-ssa-structalias.h (struct alias_info): Remove fields
+    	num_calls_found and num_pure_const_calls_found.
+    	(update_mem_sym_stats_from_stmt): Declare.
+    	* params.def (PARAM_MAX_ALIASED_VOPS): Change description.
+    	Set default value to 100.
+    	(PARAM_AVG_ALIASED_VOPS): Define.
+    
+    From-SVN: r123719
+
+:040000 040000 43c050a0a64d761c14ec5527779f517bd2388a32 427abab95ea981178ebcbeeffed9b82f85618d4b M	gcc
+bisect run success
+[32m[     info][0m First bad commit: e9e0aa2 re PR tree-optimization/30735 (50% slow down due to mem-ssa merge)
+Checking out files:  13% (5860/43556)   Checking out files:  14% (6098/43556)   Checking out files:  15% (6534/43556)   Checking out files:  16% (6969/43556)   Checking out files:  17% (7405/43556)   Checking out files:  18% (7841/43556)   Checking out files:  19% (8276/43556)   Checking out files:  20% (8712/43556)   Checking out files:  21% (9147/43556)   Checking out files:  22% (9583/43556)   Checking out files:  23% (10018/43556)   Checking out files:  24% (10454/43556)   Checking out files:  25% (10889/43556)   Checking out files:  26% (11325/43556)   Checking out files:  26% (11685/43556)   Checking out files:  27% (11761/43556)   Checking out files:  28% (12196/43556)   Checking out files:  29% (12632/43556)   Checking out files:  30% (13067/43556)   Checking out files:  31% (13503/43556)   Checking out files:  32% (13938/43556)   Checking out files:  33% (14374/43556)   Checking out files:  34% (14810/43556)   Checking out files:  35% (15245/43556)   Checking out files:  36% (15681/43556)   Checking out files:  37% (16116/43556)   Checking out files:  38% (16552/43556)   Checking out files:  39% (16987/43556)   Checking out files:  40% (17423/43556)   Checking out files:  40% (17719/43556)   Checking out files:  41% (17858/43556)   Checking out files:  42% (18294/43556)   Checking out files:  43% (18730/43556)   Checking out files:  44% (19165/43556)   Checking out files:  45% (19601/43556)   Checking out files:  46% (20036/43556)   Checking out files:  47% (20472/43556)   Checking out files:  48% (20907/43556)   Checking out files:  49% (21343/43556)   Checking out files:  50% (21778/43556)   Checking out files:  51% (22214/43556)   Checking out files:  52% (22650/43556)   Checking out files:  52% (22979/43556)   Checking out files:  53% (23085/43556)   Checking out files:  54% (23521/43556)   Checking out files:  55% (23956/43556)   Checking out files:  56% (24392/43556)   Checking out files:  57% (24827/43556)   Checking out files:  58% (25263/43556)   Checking out files:  59% (25699/43556)   Checking out files:  60% (26134/43556)   Checking out files:  61% (26570/43556)   Checking out files:  62% (27005/43556)   Checking out files:  63% (27441/43556)   Checking out files:  64% (27876/43556)   Checking out files:  65% (28312/43556)   Checking out files:  65% (28542/43556)   Checking out files:  66% (28747/43556)   Checking out files:  67% (29183/43556)   Checking out files:  68% (29619/43556)   Checking out files:  69% (30054/43556)   Checking out files:  70% (30490/43556)   Checking out files:  71% (30925/43556)   Checking out files:  71% (30929/43556)   Checking out files:  72% (31361/43556)   Checking out files:  73% (31796/43556)   Checking out files:  74% (32232/43556)   Checking out files:  74% (32269/43556)   Checking out files:  75% (32667/43556)   Checking out files:  76% (33103/43556)   Checking out files:  76% (33385/43556)   Checking out files:  77% (33539/43556)   Checking out files:  78% (33974/43556)   Checking out files:  79% (34410/43556)   Checking out files:  80% (34845/43556)   Checking out files:  81% (35281/43556)   Checking out files:  82% (35716/43556)   Checking out files:  82% (35846/43556)   Checking out files:  83% (36152/43556)   Checking out files:  84% (36588/43556)   Checking out files:  85% (37023/43556)   Checking out files:  86% (37459/43556)   Checking out files:  86% (37592/43556)   Checking out files:  87% (37894/43556)   Checking out files:  88% (38330/43556)   Checking out files:  89% (38765/43556)   Checking out files:  90% (39201/43556)   Checking out files:  91% (39636/43556)   Checking out files:  92% (40072/43556)   Checking out files:  92% (40276/43556)   Checking out files:  93% (40508/43556)   Checking out files:  94% (40943/43556)   Checking out files:  95% (41379/43556)   Checking out files:  96% (41814/43556)   Checking out files:  96% (42136/43556)   Checking out files:  97% (42250/43556)   Checking out files:  98% (42685/43556)   Checking out files:  99% (43121/43556)   Checking out files: 100% (43556/43556)   Checking out files: 100% (43556/43556), done.
+Previous HEAD position was e9e0aa2... re PR tree-optimization/30735 (50% slow down due to mem-ssa merge)
+HEAD is now at 89a590b... target-supports.exp (check_effective_target_sync_int_long): Add s390 and s390x targets.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [e9e0aa2]
++---------------------------------------- Current commit hash: [e9e0aa2] ----------------------------------------+
+GCC for commit [e9e0aa2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-e9e0aa2/bin/gcc with -O3:
+checksum = a8454a76
+Output of /tmp/gcc-e9e0aa2/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at e9e0aa2... re PR tree-optimization/30735 (50% slow down due to mem-ssa merge)
+[32m[     info][0m Current commit [e9e0aa2] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [574e75f]
++---------------------------------------- Current commit hash: [574e75f] ----------------------------------------+
+GCC for commit [574e75f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fe9c2764
+Output of /tmp/gcc-574e75f/bin/gcc with -O3:
+checksum = fe9c2764
+Output of /tmp/gcc-574e75f/bin/gcc with -O0:
+checksum = fe9c2764
+----------------------------------------------------
+No local changes to save
+HEAD is now at 574e75f... istream (class basic_istream<>): Remove unneded friend declarations.
+[32m[     info][0m Current commit [574e75f] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [e9e0aa2] with -O0:
+checksum = fe9c2764
+Output of gcc [e9e0aa2] with -O1:
+checksum = fe9c2764
+Output of gcc [e9e0aa2] with -O2:
+checksum = a8454a76
+Output of gcc [e9e0aa2] with -O3:
+checksum = a8454a76
+Output of gcc [e9e0aa2] with -Os:
+checksum = fe9c2764
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

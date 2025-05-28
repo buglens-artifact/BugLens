@@ -1,0 +1,3 @@
+inline-functions-called-once
+tree-dse
+unit-at-a-time

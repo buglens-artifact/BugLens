@@ -1,0 +1,1 @@
+5cda34b tree-inline.c (estimate_num_insns_1): Treat CONVERT_EXPR the same as NOP_EXPR.

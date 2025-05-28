@@ -1,0 +1,4 @@
+inline-small-functions
+tree-ccp
+tree-copy-prop
+tree-dce

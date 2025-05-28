@@ -1,0 +1,10 @@
+int printf(const char *, ...);
+union {
+  int a;
+  signed b : 27;
+} const c = {705541779};
+int main() {
+  printf("", c.a);
+  printf("%d\n", c.b);
+  return 0;
+}

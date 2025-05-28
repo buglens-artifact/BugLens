@@ -1,0 +1,7 @@
+dce
+forward-propagate
+inline-functions
+regmove
+tree-dse
+tree-salias
+tree-vect-loop-version

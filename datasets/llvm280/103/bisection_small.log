@@ -1,0 +1,309 @@
+[32m[     info][0m Compiler type: llvm
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/llvm-2.8.0/bin/clang
+====================Ground truth & buggy output:====================
+Correct output:
+1
+Output of llvm-2.8.0 with -O3:
+0
+Output of llvm-2.8.0 with -Os:
+1
+====================================================================
+[32m[     info][0m Good version found: llvm-2.6.0
+[32m[     info][0m Start Bisection...
+Removing llvm/tools/clang/
+No local changes to save
+Bisecting: a merge base must be tested
+[56d60eaa616498200d8090f45c2602e42e7c5385] revert r79708 + r79711
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [56d60ea]
++---------------------------------------- Current commit hash: [56d60ea] ----------------------------------------+
+[32m[     info][0m LLVM with commit [56d60ea] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-56d60ea/bin/clang with -O3:
+1
+Output of /tmp/llvm-56d60ea/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [56d60ea] is good. Return value: 0
+
+Bisecting: 12261 revisions left to test after this (roughly 14 steps)
+[56ec7895210b6b488d9915963927489085000278] fix two bugs in OPC_EmitRegister, which makes ppc happier.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [56ec789]
++---------------------------------------- Current commit hash: [56ec789] ----------------------------------------+
+[32m[     info][0m LLVM with commit [56ec789] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-56ec789/bin/clang with -O3:
+1
+Output of /tmp/llvm-56ec789/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [56ec789] is good. Return value: 0
+
+Bisecting: 6130 revisions left to test after this (roughly 13 steps)
+[4cdcf59c6d00f049df1416bccbeac2a23bdd287c] Testing commit access.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [4cdcf59]
++---------------------------------------- Current commit hash: [4cdcf59] ----------------------------------------+
+[32m[     info][0m LLVM with commit [4cdcf59] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-4cdcf59/bin/clang with -O3:
+1
+Output of /tmp/llvm-4cdcf59/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [4cdcf59] is good. Return value: 0
+
+Bisecting: 3065 revisions left to test after this (roughly 12 steps)
+[268b576b723810d06e971f7f49b6723da256d429] Mangle enum constant expressions.  Fixes rdar://problem/8204122
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [268b576]
++---------------------------------------- Current commit hash: [268b576] ----------------------------------------+
+[32m[     info][0m LLVM with commit [268b576] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-268b576/bin/clang with -O3:
+1
+Output of /tmp/llvm-268b576/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [268b576] is good. Return value: 0
+
+Bisecting: 1532 revisions left to test after this (roughly 11 steps)
+[2a2a468d1aabd8c72f903415bb67616658bfdc70] zap dead code.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [2a2a468]
++---------------------------------------- Current commit hash: [2a2a468] ----------------------------------------+
+[32m[     info][0m LLVM with commit [2a2a468] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-2a2a468/bin/clang with -O3:
+0
+Output of /tmp/llvm-2a2a468/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [2a2a468] is bad. Return value: 1
+
+Bisecting: 766 revisions left to test after this (roughly 10 steps)
+[c503e784c7c8b27912c6aedf989023576ac5a959] Fixed namespace issues that were breaking the SWIG wrappers on a non-internal SnowLeopard system.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [c503e78]
++---------------------------------------- Current commit hash: [c503e78] ----------------------------------------+
+[32m[     info][0m LLVM with commit [c503e78] already built. Use existing binary.
+[31m[    error][0m Error: Compilation of /tmp/deduplication/benchmarks/llvm280/103/small.c with -O3 failed.
+[31m[    error][0m -n Build output:
+clang: error: clang frontend command failed due to signal 11 (use -v to see invocation)
+Bisecting: 382 revisions left to test after this (roughly 9 steps)
+[ed5b6899ab52ec19721b6432cc6c33dca48ebd24] Fixed typedef inside extern "C".
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [ed5b689]
++---------------------------------------- Current commit hash: [ed5b689] ----------------------------------------+
+[32m[     info][0m LLVM with commit [ed5b689] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-ed5b689/bin/clang with -O3:
+1
+Output of /tmp/llvm-ed5b689/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [ed5b689] is good. Return value: 0
+
+Bisecting: 191 revisions left to test after this (roughly 8 steps)
+[8601a7511869e0f91f16c60a45e07bca9b5b8593] Do a very simple pass over every function we emit to infer whether we can mark it nounwind based on whether it contains any non-nounwind calls. <rdar://problem/8087431>
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [8601a75]
++---------------------------------------- Current commit hash: [8601a75] ----------------------------------------+
+[32m[     info][0m LLVM with commit [8601a75] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-8601a75/bin/clang with -O3:
+1
+Output of /tmp/llvm-8601a75/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [8601a75] is good. Return value: 0
+
+Bisecting: 95 revisions left to test after this (roughly 7 steps)
+[315190b28c63daf0de54859e4bf543a5403da447] Make EmitProgressBitcode const and add a Module argument to runPasses. Use that argument to simplify runPassesOn.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [315190b]
++---------------------------------------- Current commit hash: [315190b] ----------------------------------------+
+[32m[     info][0m LLVM with commit [315190b] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-315190b/bin/clang with -O3:
+0
+Output of /tmp/llvm-315190b/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [315190b] is bad. Return value: 1
+
+Bisecting: 47 revisions left to test after this (roughly 6 steps)
+[ba81fc16a580940c5cbac21d608b2a4296916583] Fix whitespace.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [ba81fc1]
++---------------------------------------- Current commit hash: [ba81fc1] ----------------------------------------+
+[32m[     info][0m LLVM with commit [ba81fc1] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-ba81fc1/bin/clang with -O3:
+1
+Output of /tmp/llvm-ba81fc1/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [ba81fc1] is good. Return value: 0
+
+Bisecting: 23 revisions left to test after this (roughly 5 steps)
+[dc96e28d70dc19427a38e47032b196f49ff67925] Checkpoint SplitKit progress.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [dc96e28]
++---------------------------------------- Current commit hash: [dc96e28] ----------------------------------------+
+[32m[     info][0m LLVM with commit [dc96e28] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-dc96e28/bin/clang with -O3:
+0
+Output of /tmp/llvm-dc96e28/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [dc96e28] is bad. Return value: 1
+
+Bisecting: 11 revisions left to test after this (roughly 4 steps)
+[db764c6e3bf3d9f3be4e658e8218b45bc774ab95] Fix a minor bug which resulted in intermediate calculations using wider types than are necessary.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [db764c6]
++---------------------------------------- Current commit hash: [db764c6] ----------------------------------------+
+[32m[     info][0m LLVM with commit [db764c6] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-db764c6/bin/clang with -O3:
+0
+Output of /tmp/llvm-db764c6/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [db764c6] is bad. Return value: 1
+
+Bisecting: 5 revisions left to test after this (roughly 3 steps)
+[9f2bca02d7e7b7eaa9227007639f489fd416357a] Experiments show that we can safely increase our unrolling threshold without unduly impacting code size, particularly since unrolling is not enabled at -Os.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [9f2bca0]
++---------------------------------------- Current commit hash: [9f2bca0] ----------------------------------------+
+[32m[     info][0m LLVM with commit [9f2bca0] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-9f2bca0/bin/clang with -O3:
+0
+Output of /tmp/llvm-9f2bca0/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [9f2bca0] is bad. Return value: 1
+
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[d95a56e50d7ff18106dfa2d1eaa953e412ad1910] When chaining, only write interesting selectors to the PCH.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [d95a56e]
++---------------------------------------- Current commit hash: [d95a56e] ----------------------------------------+
+[32m[     info][0m LLVM with commit [d95a56e] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-d95a56e/bin/clang with -O3:
+1
+Output of /tmp/llvm-d95a56e/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [d95a56e] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[f16eb37b5483bf10dfe1e94eea5653c73b70b6b9] Add a note about the changing pass registration interface.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/103 small
+[32m[     info][0m Testing commit: [f16eb37]
++---------------------------------------- Current commit hash: [f16eb37] ----------------------------------------+
+[32m[     info][0m LLVM with commit [f16eb37] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-f16eb37/bin/clang with -O3:
+1
+Output of /tmp/llvm-f16eb37/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [f16eb37] is good. Return value: 0
+
+9f2bca02d7e7b7eaa9227007639f489fd416357a is the first bad commit
+commit 9f2bca02d7e7b7eaa9227007639f489fd416357a
+Author: Owen Anderson <resistor@mac.com>
+Date:   Wed Aug 4 18:32:46 2010 +0000
+
+    Experiments show that we can safely increase our unrolling threshold without unduly impacting code size, particularly
+    since unrolling is not enabled at -Os.
+    
+    llvm-svn: 110233
+
+:040000 040000 3ab5bdad12389234e8d594039b2c24a8ee1eaf64 fd6565396d20b0aebeb2d1bcdf2c71c5e127cba3 M	llvm
+bisect run success
+[32m[     info][0m First bad commit: 9f2bca0 Experiments show that we can safely increase our unrolling threshold without unduly impacting code size, particularly since unrolling is not enabled at -Os.
+Previous HEAD position was f16eb37... Add a note about the changing pass registration interface.
+HEAD is now at 7be315c... For t2LDRT, t2LDRBT, t2LDRHT, t2LDRSBT, and t2LDRSHT, if Rn(Inst{19-16})=='1111', transform the Opcode to the corresponding t2LDR*pci counterpart.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [9f2bca0]
++---------------------------------------- Current commit hash: [9f2bca0] ----------------------------------------+
+[32m[     info][0m LLVM with commit [9f2bca0] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-9f2bca0/bin/clang with -O3:
+0
+Output of /tmp/llvm-9f2bca0/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [9f2bca0] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [f16eb37]
++---------------------------------------- Current commit hash: [f16eb37] ----------------------------------------+
+[32m[     info][0m LLVM with commit [f16eb37] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-f16eb37/bin/clang with -O3:
+1
+Output of /tmp/llvm-f16eb37/bin/clang with -Os:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [f16eb37] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of llvm [9f2bca0] with -O0:
+1
+Output of llvm [9f2bca0] with -O1:
+1
+Output of llvm [9f2bca0] with -O2:
+0
+Output of llvm [9f2bca0] with -O3:
+0
+Output of llvm [9f2bca0] with -Os:
+1
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

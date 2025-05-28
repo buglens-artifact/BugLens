@@ -1,0 +1,1 @@
+a7d81ab X86-64: pass/return structs of float/int as float/i32 instead of double/i64 to make the code generated for ABI cleaner.  Passing in the low part of a double is the same as passing in a float.

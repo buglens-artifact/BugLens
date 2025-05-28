@@ -1,0 +1,9 @@
+inline-functions
+inline-small-functions
+ipa-reference
+tree-copyrename
+tree-dse
+tree-loop-ivcanon
+tree-loop-optimize
+tree-store-ccp
+unit-at-a-time

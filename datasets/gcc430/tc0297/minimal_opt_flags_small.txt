@@ -1,0 +1,4 @@
+inline-functions
+inline-small-functions
+tree-fre
+unit-at-a-time

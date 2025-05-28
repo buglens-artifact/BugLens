@@ -1,0 +1,357 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+1
+Output of gcc-4.3.0 with -O3:
+0
+Output of gcc-4.3.0 with -O0:
+1
+====================================================================
+[32m[     info][0m Good version found: gcc-4.1.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[abc088aad79d47b40da8a26e87815db09ab2d6eb] re PR c++/8355 (befriending a template specialization in another namespace)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [abc088a]
++---------------------------------------- Current commit hash: [abc088a] ----------------------------------------+
+GCC for commit [abc088a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-abc088a/bin/gcc with -O3:
+1
+Output of /tmp/gcc-abc088a/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at abc088a... re PR c++/8355 (befriending a template specialization in another namespace)
+[32m[     info][0m Current commit [abc088a] is good. Return value: 0
+
+Bisecting: 6978 revisions left to test after this (roughly 13 steps)
+[ad8e8d0b465e6dd9d9db4988de7b5c524bb4d85d] re PR inline-asm/28686 (ebp from clobber list used as operand)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [ad8e8d0]
++---------------------------------------- Current commit hash: [ad8e8d0] ----------------------------------------+
+GCC for commit [ad8e8d0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -O3:
+1
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at ad8e8d0... re PR inline-asm/28686 (ebp from clobber list used as operand)
+[32m[     info][0m Current commit [ad8e8d0] is good. Return value: 0
+
+Bisecting: 3489 revisions left to test after this (roughly 12 steps)
+[390ea488c1753eaf9c747ead8f653c9023058109] mips-protos.h (mips_split_symbol): Add a mode and an "rtx *" argument.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [390ea48]
++---------------------------------------- Current commit hash: [390ea48] ----------------------------------------+
+GCC for commit [390ea48] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-390ea48/bin/gcc with -O3:
+1
+Output of /tmp/gcc-390ea48/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 390ea48... mips-protos.h (mips_split_symbol): Add a mode and an "rtx *" argument.
+[32m[     info][0m Current commit [390ea48] is good. Return value: 0
+
+Bisecting: 1744 revisions left to test after this (roughly 11 steps)
+[e1332188a4c377db70d82b8e6a5df3961b1a4499] re PR fortran/33596 (ICE with simplified ISNAN)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [e133218]
++---------------------------------------- Current commit hash: [e133218] ----------------------------------------+
+GCC for commit [e133218] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-e133218/bin/gcc with -O3:
+1
+Output of /tmp/gcc-e133218/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at e133218... re PR fortran/33596 (ICE with simplified ISNAN)
+[32m[     info][0m Current commit [e133218] is good. Return value: 0
+
+Bisecting: 872 revisions left to test after this (roughly 10 steps)
+[20e8cdd795e6d426ff4b7750d6fbe9f2f866fd38] re PR ada/34149 (GNAT crash - deeply inrerited function)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [20e8cdd]
++---------------------------------------- Current commit hash: [20e8cdd] ----------------------------------------+
+GCC for commit [20e8cdd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-20e8cdd/bin/gcc with -O3:
+1
+Output of /tmp/gcc-20e8cdd/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 20e8cdd... re PR ada/34149 (GNAT crash - deeply inrerited function)
+[32m[     info][0m Current commit [20e8cdd] is good. Return value: 0
+
+Bisecting: 436 revisions left to test after this (roughly 9 steps)
+[c8e9554201d899b32e677b6196c3367fe9d1410c] Fix date.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [c8e9554]
++---------------------------------------- Current commit hash: [c8e9554] ----------------------------------------+
+GCC for commit [c8e9554] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-c8e9554/bin/gcc with -O3:
+1
+Output of /tmp/gcc-c8e9554/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at c8e9554... Fix date.
+[32m[     info][0m Current commit [c8e9554] is good. Return value: 0
+
+Bisecting: 218 revisions left to test after this (roughly 8 steps)
+[2c54cb7931e8a8ab6525088ab119c16ed951e1aa] re PR testsuite/35047 (some vectorisation tests fail with --with-arch=core2 or on  i386-apple-darwin8.11.1)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [2c54cb7]
++---------------------------------------- Current commit hash: [2c54cb7] ----------------------------------------+
+GCC for commit [2c54cb7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-2c54cb7/bin/gcc with -O3:
+1
+Output of /tmp/gcc-2c54cb7/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2c54cb7... re PR testsuite/35047 (some vectorisation tests fail with --with-arch=core2 or on  i386-apple-darwin8.11.1)
+[32m[     info][0m Current commit [2c54cb7] is good. Return value: 0
+
+Bisecting: 109 revisions left to test after this (roughly 7 steps)
+[37f753ff054c5340028164c1b2d6f1f4cd936d6c] * DEV-PHASE: Mark as prerelease.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [37f753f]
++---------------------------------------- Current commit hash: [37f753f] ----------------------------------------+
+GCC for commit [37f753f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-37f753f/bin/gcc with -O3:
+0
+Output of /tmp/gcc-37f753f/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 37f753f... * DEV-PHASE: Mark as prerelease.
+[32m[     info][0m Current commit [37f753f] is bad. Return value: 1
+
+Bisecting: 54 revisions left to test after this (roughly 6 steps)
+[346341a4e2cbb8fd5b94dc5b883c79cca3856861] bugreport.texi: Update copyright years.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [346341a]
++---------------------------------------- Current commit hash: [346341a] ----------------------------------------+
+GCC for commit [346341a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-346341a/bin/gcc with -O3:
+0
+Output of /tmp/gcc-346341a/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 346341a... bugreport.texi: Update copyright years.
+[32m[     info][0m Current commit [346341a] is bad. Return value: 1
+
+Bisecting: 26 revisions left to test after this (roughly 5 steps)
+[2e250fa218c90851d585ee46240201fcdec857f9] configure.ac: Add amd64-*-freebsd* target.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [2e250fa]
++---------------------------------------- Current commit hash: [2e250fa] ----------------------------------------+
+GCC for commit [2e250fa] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-2e250fa/bin/gcc with -O3:
+1
+Output of /tmp/gcc-2e250fa/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2e250fa... configure.ac: Add amd64-*-freebsd* target.
+[32m[     info][0m Current commit [2e250fa] is good. Return value: 0
+
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[be71b673519ca207b2d8c1eeb5ec104587d55f9a] re PR debug/35065 (infinite loop while compiling VLC media player in vt_find_locations)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [be71b67]
++---------------------------------------- Current commit hash: [be71b67] ----------------------------------------+
+GCC for commit [be71b67] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-be71b67/bin/gcc with -O3:
+0
+Output of /tmp/gcc-be71b67/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at be71b67... re PR debug/35065 (infinite loop while compiling VLC media player in vt_find_locations)
+[32m[     info][0m Current commit [be71b67] is bad. Return value: 1
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[d2a18787b75b66176fac5a33be4c630054f26127] * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [d2a1878]
++---------------------------------------- Current commit hash: [d2a1878] ----------------------------------------+
+GCC for commit [d2a1878] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-d2a1878/bin/gcc with -O3:
+1
+Output of /tmp/gcc-d2a1878/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+[32m[     info][0m Current commit [d2a1878] is good. Return value: 0
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[7f7682fe3dd7d4515f83d2ba93cfb604c57b8446] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [7f7682f]
++---------------------------------------- Current commit hash: [7f7682f] ----------------------------------------+
+GCC for commit [7f7682f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-7f7682f/bin/gcc with -O3:
+0
+Output of /tmp/gcc-7f7682f/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7f7682f... Daily bump.
+[32m[     info][0m Current commit [7f7682f] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[8665227f25053105244d452d86fbfa9b5f7b174d] re PR tree-optimization/35171 (ICE in vect_recog_dot_prod_pattern)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [8665227]
++---------------------------------------- Current commit hash: [8665227] ----------------------------------------+
+GCC for commit [8665227] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-8665227/bin/gcc with -O3:
+0
+Output of /tmp/gcc-8665227/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8665227... re PR tree-optimization/35171 (ICE in vect_recog_dot_prod_pattern)
+[32m[     info][0m Current commit [8665227] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[8f768a5a18a47ce412c6455a6e802d4b703fcf26] re PR middle-end/35163 (folding comparison loses cast)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0794 small
+[32m[     info][0m Testing commit: [8f768a5]
++---------------------------------------- Current commit hash: [8f768a5] ----------------------------------------+
+GCC for commit [8f768a5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-8f768a5/bin/gcc with -O3:
+0
+Output of /tmp/gcc-8f768a5/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8f768a5... re PR middle-end/35163 (folding comparison loses cast)
+[32m[     info][0m Current commit [8f768a5] is bad. Return value: 1
+
+8f768a5a18a47ce412c6455a6e802d4b703fcf26 is the first bad commit
+commit 8f768a5a18a47ce412c6455a6e802d4b703fcf26
+Author: Richard Guenther <rguenther@suse.de>
+Date:   Tue Feb 12 21:26:49 2008 +0000
+
+    re PR middle-end/35163 (folding comparison loses cast)
+    
+    2008-02-12  Richard Guenther  <rguenther@suse.de>
+    
+    	PR middle-end/35163
+    	* fold-const.c (fold_widened_comparison): Use get_unwidened in
+    	value-preserving mode.  Disallow final truncation.
+    
+    	* gcc.c-torture/execute/pr35163.c: New testcase.
+    
+    From-SVN: r132269
+
+:040000 040000 db9df7c26091cd23475524d8c54da8e1b9fdff53 e578ef3d8c97e4f2b9b5ef17147beea830144a0d M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 8f768a5 re PR middle-end/35163 (folding comparison loses cast)
+Checking out files:  34% (15823/45534)   Checking out files:  35% (15937/45534)   Checking out files:  36% (16393/45534)   Checking out files:  37% (16848/45534)   Checking out files:  38% (17303/45534)   Checking out files:  39% (17759/45534)   Checking out files:  40% (18214/45534)   Checking out files:  41% (18669/45534)   Checking out files:  42% (19125/45534)   Checking out files:  43% (19580/45534)   Checking out files:  44% (20035/45534)   Checking out files:  45% (20491/45534)   Checking out files:  46% (20946/45534)   Checking out files:  47% (21401/45534)   Checking out files:  48% (21857/45534)   Checking out files:  49% (22312/45534)   Checking out files:  50% (22767/45534)   Checking out files:  51% (23223/45534)   Checking out files:  52% (23678/45534)   Checking out files:  53% (24134/45534)   Checking out files:  54% (24589/45534)   Checking out files:  55% (25044/45534)   Checking out files:  56% (25500/45534)   Checking out files:  57% (25955/45534)   Checking out files:  58% (26410/45534)   Checking out files:  59% (26866/45534)   Checking out files:  60% (27321/45534)   Checking out files:  61% (27776/45534)   Checking out files:  62% (28232/45534)   Checking out files:  63% (28687/45534)   Checking out files:  64% (29142/45534)   Checking out files:  64% (29283/45534)   Checking out files:  65% (29598/45534)   Checking out files:  66% (30053/45534)   Checking out files:  67% (30508/45534)   Checking out files:  68% (30964/45534)   Checking out files:  69% (31419/45534)   Checking out files:  70% (31874/45534)   Checking out files:  71% (32330/45534)   Checking out files:  72% (32785/45534)   Checking out files:  72% (33162/45534)   Checking out files:  73% (33240/45534)   Checking out files:  74% (33696/45534)   Checking out files:  75% (34151/45534)   Checking out files:  76% (34606/45534)   Checking out files:  77% (35062/45534)   Checking out files:  78% (35517/45534)   Checking out files:  78% (35526/45534)   Checking out files:  79% (35972/45534)   Checking out files:  80% (36428/45534)   Checking out files:  81% (36883/45534)   Checking out files:  82% (37338/45534)   Checking out files:  83% (37794/45534)   Checking out files:  84% (38249/45534)   Checking out files:  85% (38704/45534)   Checking out files:  86% (39160/45534)   Checking out files:  86% (39290/45534)   Checking out files:  87% (39615/45534)   Checking out files:  88% (40070/45534)   Checking out files:  89% (40526/45534)   Checking out files:  90% (40981/45534)   Checking out files:  91% (41436/45534)   Checking out files:  92% (41892/45534)   Checking out files:  93% (42347/45534)   Checking out files:  93% (42749/45534)   Checking out files:  94% (42802/45534)   Checking out files:  95% (43258/45534)   Checking out files:  96% (43713/45534)   Checking out files:  97% (44168/45534)   Checking out files:  98% (44624/45534)   Checking out files:  99% (45079/45534)   Checking out files: 100% (45534/45534)   Checking out files: 100% (45534/45534), done.
+Previous HEAD position was 8f768a5... re PR middle-end/35163 (folding comparison loses cast)
+HEAD is now at ea78022... Daily bump.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [8f768a5]
++---------------------------------------- Current commit hash: [8f768a5] ----------------------------------------+
+GCC for commit [8f768a5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-8f768a5/bin/gcc with -O3:
+0
+Output of /tmp/gcc-8f768a5/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8f768a5... re PR middle-end/35163 (folding comparison loses cast)
+[32m[     info][0m Current commit [8f768a5] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [d2a1878]
++---------------------------------------- Current commit hash: [d2a1878] ----------------------------------------+
+GCC for commit [d2a1878] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-d2a1878/bin/gcc with -O3:
+1
+Output of /tmp/gcc-d2a1878/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+[32m[     info][0m Current commit [d2a1878] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [8f768a5] with -O0:
+1
+Output of gcc [8f768a5] with -O1:
+1
+Output of gcc [8f768a5] with -O2:
+0
+Output of gcc [8f768a5] with -O3:
+0
+Output of gcc [8f768a5] with -Os:
+0
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

@@ -1,0 +1,1 @@
+1dc98b4 completely rewrite the memory promotion algorithm in LICM. Among other things, this uses SSAUpdater instead of PromoteMemToReg.

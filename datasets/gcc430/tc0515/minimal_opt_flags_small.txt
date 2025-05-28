@@ -1,0 +1,5 @@
+dse
+inline-small-functions
+ipa-reference
+tree-sra
+unit-at-a-time

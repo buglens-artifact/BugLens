@@ -1,0 +1,11 @@
+early-inlining
+inline-functions
+inline-functions-called-once
+inline-small-functions
+ivopts
+tree-loop-im
+tree-loop-optimize
+tree-salias
+tree-sra
+tree-vrp
+unit-at-a-time

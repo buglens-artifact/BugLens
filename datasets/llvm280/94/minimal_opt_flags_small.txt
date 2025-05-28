@@ -1,0 +1,4 @@
+scalarrepl
+sccp
+simplify-libcalls
+strip-dead-prototypes

@@ -1,0 +1,14 @@
+inline-functions
+inline-functions-called-once
+inline-small-functions
+ipa-reference
+tree-copy-prop
+tree-copyrename
+tree-dce
+tree-dominator-opts
+tree-dse
+tree-loop-im
+tree-loop-optimize
+tree-sra
+tree-vrp
+unit-at-a-time

@@ -1,0 +1,3 @@
+inline-functions-called-once
+tree-sra
+unit-at-a-time

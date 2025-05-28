@@ -1,0 +1,8 @@
+if-conversion
+inline-functions
+inline-small-functions
+ipa-reference
+tree-copyrename
+tree-loop-optimize
+unit-at-a-time
+unswitch-loops

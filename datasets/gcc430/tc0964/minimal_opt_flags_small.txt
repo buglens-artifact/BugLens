@@ -1,0 +1,5 @@
+strict-aliasing
+tree-ch
+tree-loop-im
+tree-loop-optimize
+tree-vrp

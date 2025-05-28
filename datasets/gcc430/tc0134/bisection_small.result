@@ -1,0 +1,1 @@
+b8a00a4 tree-inline.c (copy_bb): Insert new statements to statements_to_fold set.

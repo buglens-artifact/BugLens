@@ -1,0 +1,1 @@
+inline-small-functions

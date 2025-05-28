@@ -1,0 +1,888 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.4.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 5D0D8274
+Output of gcc-4.4.0 with -O3:
+checksum = C0E683DA
+Output of gcc-4.4.0 with -Os:
+checksum = 5D0D8274
+====================================================================
+[32m[     info][0m Good version found: gcc-4.1.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[abc088aad79d47b40da8a26e87815db09ab2d6eb] re PR c++/8355 (befriending a template specialization in another namespace)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [abc088a]
++---------------------------------------- Current commit hash: [abc088a] ----------------------------------------+
+GCC for commit [abc088a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-abc088a/bin/gcc with -O3:
+checksum = 5D0D8274
+Output of /tmp/gcc-abc088a/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at abc088a... re PR c++/8355 (befriending a template specialization in another namespace)
+[32m[     info][0m Current commit [abc088a] is good. Return value: 0
+
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[6616f810b4b19462fe580217ddac8370e58bf09c] Corrected filename from previous commit.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [6616f81]
++---------------------------------------- Current commit hash: [6616f81] ----------------------------------------+
+GCC for commit [6616f81] already exists. Using existing binary.
+Compilation by gcc [6616f81] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 6616f81... Corrected filename from previous commit.
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[554cd17b8d4df5ad1f58a68fdce3e9d8c5d56566] acinclude.m4 ([GLIBCXX_CHECK_CLOCK_GETTIME]): Define GLIBCXX_LIBS.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [554cd17]
++---------------------------------------- Current commit hash: [554cd17] ----------------------------------------+
+GCC for commit [554cd17] already exists. Using existing binary.
+Compilation by gcc [554cd17] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 554cd17... acinclude.m4 ([GLIBCXX_CHECK_CLOCK_GETTIME]): Define GLIBCXX_LIBS.
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[7cff41e8917d88a6a56b151edc71cb5be689e423] file-format.exp (gcc_target_object_format): Use remote_exec to call objdump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [7cff41e]
++---------------------------------------- Current commit hash: [7cff41e] ----------------------------------------+
+GCC for commit [7cff41e] already exists. Using existing binary.
+Compilation by gcc [7cff41e] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 7cff41e... file-format.exp (gcc_target_object_format): Use remote_exec to call objdump.
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[d0f53cbc80c79f9a296ca7fb2c9b6c2f5ba9bb44] re PR middle-end/28724 (atomic produces type mismatches)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [d0f53cb]
++---------------------------------------- Current commit hash: [d0f53cb] ----------------------------------------+
+GCC for commit [d0f53cb] already exists. Using existing binary.
+Compilation by gcc [d0f53cb] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at d0f53cb... re PR middle-end/28724 (atomic produces type mismatches)
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[b1d5455a5efad3f380671cf818515a1a6ec94546] system.h (CONST_CAST2, [...]): New macros for type-specific casts.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [b1d5455]
++---------------------------------------- Current commit hash: [b1d5455] ----------------------------------------+
+GCC for commit [b1d5455] already exists. Using existing binary.
+Compilation by gcc [b1d5455] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at b1d5455... system.h (CONST_CAST2, [...]): New macros for type-specific casts.
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[b598cb381a6f4edc08cc31ec33b6625e8b5ecccf] re PR target/22223 (New testsuite failure on Tru64 UNIX V5.1B: gcc.c-torture/compile/20050622-1.c)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [b598cb3]
++---------------------------------------- Current commit hash: [b598cb3] ----------------------------------------+
+GCC for commit [b598cb3] already exists. Using existing binary.
+Compilation by gcc [b598cb3] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at b598cb3... re PR target/22223 (New testsuite failure on Tru64 UNIX V5.1B: gcc.c-torture/compile/20050622-1.c)
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[7b89fb3c289c42d6963933a055305088d5d454e7] re PR fortran/31298 ([F03] use mod, operator(+) => operator(.userOp.) not supported)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [7b89fb3]
++---------------------------------------- Current commit hash: [7b89fb3] ----------------------------------------+
+GCC for commit [7b89fb3] already exists. Using existing binary.
+Compilation by gcc [7b89fb3] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 7b89fb3... re PR fortran/31298 ([F03] use mod, operator(+) => operator(.userOp.) not supported)
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[0d331e1a8c6d1e774d7ae68f73321343bbd3d217] re PR testsuite/22523 (template/inline1.C does not test correctly on all targerts)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [0d331e1]
++---------------------------------------- Current commit hash: [0d331e1] ----------------------------------------+
+GCC for commit [0d331e1] already exists. Using existing binary.
+Compilation by gcc [0d331e1] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 0d331e1... re PR testsuite/22523 (template/inline1.C does not test correctly on all targerts)
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[49e308f8c34eeaef4f32699067e9712606ceede0] Add new tests.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [49e308f]
++---------------------------------------- Current commit hash: [49e308f] ----------------------------------------+
+GCC for commit [49e308f] already exists. Using existing binary.
+Compilation by gcc [49e308f] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 49e308f... Add new tests.
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[4317a2fa5139e7c4398e15213d73ad66e0f98c32] re PR target/35657 (Alignments of DFP types aren't consistent)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [4317a2f]
++---------------------------------------- Current commit hash: [4317a2f] ----------------------------------------+
+GCC for commit [4317a2f] already exists. Using existing binary.
+Compilation by gcc [4317a2f] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 4317a2f... re PR target/35657 (Alignments of DFP types aren't consistent)
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[8b0a512570d45a1d42195c588ccf4c669d0e57d8] re PR tree-optimization/32571 (ICE in set_ssa_val_to, at tree-ssa-sccvn.c:1011)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [8b0a512]
++---------------------------------------- Current commit hash: [8b0a512] ----------------------------------------+
+GCC for commit [8b0a512] already exists. Using existing binary.
+Compilation by gcc [8b0a512] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 8b0a512... re PR tree-optimization/32571 (ICE in set_ssa_val_to, at tree-ssa-sccvn.c:1011)
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[2efcad9f79ca7e4708a3f029b88e83b15eaa0727] sem_prag.adb (Analyze_Pragma, [...]): Extend error to every non-object and change error message.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [2efcad9]
++---------------------------------------- Current commit hash: [2efcad9] ----------------------------------------+
+GCC for commit [2efcad9] already exists. Using existing binary.
+Compilation by gcc [2efcad9] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 2efcad9... sem_prag.adb (Analyze_Pragma, [...]): Extend error to every non-object and change error message.
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[7475160c8db55a1893abbfcdb9c926a5c0370c41] loop-1.c: Skip on powerpc targets if -mlongcall.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [7475160]
++---------------------------------------- Current commit hash: [7475160] ----------------------------------------+
+GCC for commit [7475160] already exists. Using existing binary.
+Compilation by gcc [7475160] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 7475160... loop-1.c: Skip on powerpc targets if -mlongcall.
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[5f65db9f8c8e8353f5c765223be6b9d45c9a4373] fix testcase from previous commit
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [5f65db9]
++---------------------------------------- Current commit hash: [5f65db9] ----------------------------------------+
+GCC for commit [5f65db9] already exists. Using existing binary.
+Compilation by gcc [5f65db9] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 5f65db9... fix testcase from previous commit
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[dd52ecb0f6c235dc9a4e41af0dac74f00d372b63] re PR fortran/32909 (Replace gfc_c_int_type_node with integer_type_node)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [dd52ecb]
++---------------------------------------- Current commit hash: [dd52ecb] ----------------------------------------+
+GCC for commit [dd52ecb] already exists. Using existing binary.
+Compilation by gcc [dd52ecb] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at dd52ecb... re PR fortran/32909 (Replace gfc_c_int_type_node with integer_type_node)
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[30e257e5442d40427d6c0fd082251aeae0fe747a] langhooks-def.h (LANG_HOOKS_CLEAR_BINDING_STACK): Delete.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [30e257e]
++---------------------------------------- Current commit hash: [30e257e] ----------------------------------------+
+GCC for commit [30e257e] already exists. Using existing binary.
+Compilation by gcc [30e257e] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 30e257e... langhooks-def.h (LANG_HOOKS_CLEAR_BINDING_STACK): Delete.
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[fb0671a8c248afc08b858cfe85e9035f5898e46b] darwin-fallback.c (interpret_libc): Change CR2_REGNO to R_CR2.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [fb0671a]
++---------------------------------------- Current commit hash: [fb0671a] ----------------------------------------+
+GCC for commit [fb0671a] already exists. Using existing binary.
+Compilation by gcc [fb0671a] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at fb0671a... darwin-fallback.c (interpret_libc): Change CR2_REGNO to R_CR2.
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[e32883d1a20e755d07956165d0f0362728c749f4] re PR libfortran/35132 (Formatted stream I/O write should truncate)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [e32883d]
++---------------------------------------- Current commit hash: [e32883d] ----------------------------------------+
+GCC for commit [e32883d] already exists. Using existing binary.
+Compilation by gcc [e32883d] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at e32883d... re PR libfortran/35132 (Formatted stream I/O write should truncate)
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[9143267b2119f7cded46e34402ec37665a9f045a] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [9143267]
++---------------------------------------- Current commit hash: [9143267] ----------------------------------------+
+GCC for commit [9143267] already exists. Using existing binary.
+Compilation by gcc [9143267] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 9143267... Daily bump.
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[54654d29cb254b75a486c33b0a2bbdbddb526f33] lex.c (D_CPP0X): Rename.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [54654d2]
++---------------------------------------- Current commit hash: [54654d2] ----------------------------------------+
+GCC for commit [54654d2] already exists. Using existing binary.
+Compilation by gcc [54654d2] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 54654d2... lex.c (D_CPP0X): Rename.
+Bisecting: 10142 revisions left to test after this (roughly 13 steps)
+[99b54b33b4a01fe8a49502779a2ea90d902704cc] re PR fortran/39309 (.mod file versioning causes error instead of overwritting the file)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [99b54b3]
++---------------------------------------- Current commit hash: [99b54b3] ----------------------------------------+
+GCC for commit [99b54b3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-99b54b3/bin/gcc with -O3:
+checksum = C0E683DA
+Output of /tmp/gcc-99b54b3/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 99b54b3... re PR fortran/39309 (.mod file versioning causes error instead of overwritting the file)
+[32m[     info][0m Current commit [99b54b3] is bad. Return value: 1
+
+Bisecting: 9931 revisions left to test after this (roughly 13 steps)
+[e9bd9cf340129729a451df77baee39f5b2978226] re PR middle-end/23488 (GCSE load PRE does not work with non sets (or missing load PRE with plain decls))
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [e9bd9cf]
++---------------------------------------- Current commit hash: [e9bd9cf] ----------------------------------------+
+GCC for commit [e9bd9cf] already exists. Using existing binary.
+Compilation by gcc [e9bd9cf] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at e9bd9cf... re PR middle-end/23488 (GCSE load PRE does not work with non sets (or missing load PRE with plain decls))
+Bisecting: 9931 revisions left to test after this (roughly 13 steps)
+[529c27463ff465aa6bf336aac3602c759df05010] par-ch3.adb (P_Range_Or_Subtype_Mark): Check for bad parentheses
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [529c274]
++---------------------------------------- Current commit hash: [529c274] ----------------------------------------+
+GCC for commit [529c274] already exists. Using existing binary.
+Compilation by gcc [529c274] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 529c274... par-ch3.adb (P_Range_Or_Subtype_Mark): Check for bad parentheses
+Bisecting: 9931 revisions left to test after this (roughly 13 steps)
+[bedd4d06f71d04b78cfada71c527ae49a91433ef] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [bedd4d0]
++---------------------------------------- Current commit hash: [bedd4d0] ----------------------------------------+
+GCC for commit [bedd4d0] already exists. Using existing binary.
+Compilation by gcc [bedd4d0] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at bedd4d0... Daily bump.
+Bisecting: 9931 revisions left to test after this (roughly 13 steps)
+[ecaf6f07808d7d2f5a3929de189d8799e8a085f5] arm.md (abssi2): Allow Thumb as well.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [ecaf6f0]
++---------------------------------------- Current commit hash: [ecaf6f0] ----------------------------------------+
+GCC for commit [ecaf6f0] already exists. Using existing binary.
+Compilation by gcc [ecaf6f0] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at ecaf6f0... arm.md (abssi2): Allow Thumb as well.
+Bisecting: 9931 revisions left to test after this (roughly 13 steps)
+[d56b9f12225da2bdee2c3b2b5da3a1482784ce36] mips.h (TUNE_24K): Define.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [d56b9f1]
++---------------------------------------- Current commit hash: [d56b9f1] ----------------------------------------+
+GCC for commit [d56b9f1] already exists. Using existing binary.
+Compilation by gcc [d56b9f1] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at d56b9f1... mips.h (TUNE_24K): Define.
+Bisecting: 9931 revisions left to test after this (roughly 13 steps)
+[68642e419f1806c17c8d31a04eefa41083d7afd0] * gcc.dg/bf-ms-attrib.c (main): Return 0.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [68642e4]
++---------------------------------------- Current commit hash: [68642e4] ----------------------------------------+
+GCC for commit [68642e4] already exists. Using existing binary.
+Compilation by gcc [68642e4] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 68642e4... * gcc.dg/bf-ms-attrib.c (main): Return 0.
+Bisecting: 9931 revisions left to test after this (roughly 13 steps)
+[4da8e29dfcc32dc3d06f9f340e75985e3bc0b762] interpret.cc (get_local_var_table): Make sure the method is compiled.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [4da8e29]
++---------------------------------------- Current commit hash: [4da8e29] ----------------------------------------+
+GCC for commit [4da8e29] already exists. Using existing binary.
+Compilation by gcc [4da8e29] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 4da8e29... interpret.cc (get_local_var_table): Make sure the method is compiled.
+Bisecting: 9931 revisions left to test after this (roughly 13 steps)
+[97508a6b314c76302a6b71f3ca8c09488a6f2850] sbitmap.c (BITMAP_DEBUGGING): New macro.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [97508a6]
++---------------------------------------- Current commit hash: [97508a6] ----------------------------------------+
+GCC for commit [97508a6] already exists. Using existing binary.
+Compilation by gcc [97508a6] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 97508a6... sbitmap.c (BITMAP_DEBUGGING): New macro.
+Bisecting: 9931 revisions left to test after this (roughly 13 steps)
+[9f06d330799bf43ac81f138175143542a99f4e14] * doc/invoke.texi (DEC Alpha/VMS Options): Fix typo.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [9f06d33]
++---------------------------------------- Current commit hash: [9f06d33] ----------------------------------------+
+GCC for commit [9f06d33] already exists. Using existing binary.
+Compilation by gcc [9f06d33] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 9f06d33... * doc/invoke.texi (DEC Alpha/VMS Options): Fix typo.
+Bisecting: 9931 revisions left to test after this (roughly 13 steps)
+[37fc8424ac5a0896dc43a0d506d434b60c55452d] re PR target/30413 (%z produces ICE for char operands)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [37fc842]
++---------------------------------------- Current commit hash: [37fc842] ----------------------------------------+
+GCC for commit [37fc842] already exists. Using existing binary.
+Compilation by gcc [37fc842] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 37fc842... re PR target/30413 (%z produces ICE for char operands)
+Bisecting: 9931 revisions left to test after this (roughly 13 steps)
+[00f97e5a1a7fed19d2f305010369d4e356bc5d4d] * ssp.c (_PATH_TTY): Define as "CONOUT$" for _WIN32.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [00f97e5]
++---------------------------------------- Current commit hash: [00f97e5] ----------------------------------------+
+GCC for commit [00f97e5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-00f97e5/bin/gcc with -O3:
+checksum = C0E683DA
+Output of /tmp/gcc-00f97e5/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 00f97e5... * ssp.c (_PATH_TTY): Define as "CONOUT$" for _WIN32.
+[32m[     info][0m Current commit [00f97e5] is bad. Return value: 1
+
+Bisecting: 9803 revisions left to test after this (roughly 13 steps)
+[2f575701c6a6764813d3ee420d9f2805c35b7481] re PR middle-end/32176 (ICE tree-type mismatch: expected integer_cst, have plus_expr in int_cst_value, at tree.c:7720)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [2f57570]
++---------------------------------------- Current commit hash: [2f57570] ----------------------------------------+
+GCC for commit [2f57570] already exists. Using existing binary.
+Compilation by gcc [2f57570] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 2f57570... re PR middle-end/32176 (ICE tree-type mismatch: expected integer_cst, have plus_expr in int_cst_value, at tree.c:7720)
+Bisecting: 9803 revisions left to test after this (roughly 13 steps)
+[78e075d40b285015c0a316b6c0c039a516a6117e] [multiple changes]
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [78e075d]
++---------------------------------------- Current commit hash: [78e075d] ----------------------------------------+
+GCC for commit [78e075d] already exists. Using existing binary.
+Compilation by gcc [78e075d] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 78e075d... [multiple changes]
+Bisecting: 9803 revisions left to test after this (roughly 13 steps)
+[ede7cba0dd81777994a1d22b582ddb785b949224] cfghooks.c (split_block): Set BB_IRREDUCIBLE_LOOP and EDGE_IRREDUCIBLE_LOOP.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [ede7cba]
++---------------------------------------- Current commit hash: [ede7cba] ----------------------------------------+
+GCC for commit [ede7cba] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-ede7cba/bin/gcc with -O3:
+checksum = C0E683DA
+Output of /tmp/gcc-ede7cba/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at ede7cba... cfghooks.c (split_block): Set BB_IRREDUCIBLE_LOOP and EDGE_IRREDUCIBLE_LOOP.
+[32m[     info][0m Current commit [ede7cba] is bad. Return value: 1
+
+Bisecting: 9222 revisions left to test after this (roughly 13 steps)
+[b08f991d9127706927d639bb51173e4474b976df] decl.c (grokdeclarator): Readability change.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [b08f991]
++---------------------------------------- Current commit hash: [b08f991] ----------------------------------------+
+GCC for commit [b08f991] already exists. Using existing binary.
+Compilation by gcc [b08f991] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at b08f991... decl.c (grokdeclarator): Readability change.
+Bisecting: 9222 revisions left to test after this (roughly 13 steps)
+[4f72054bca49e903fd3e01ad86f25d0c5ae391e8] re PR libgcj/26858 (NullPointerException not generated for large classes...)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [4f72054]
++---------------------------------------- Current commit hash: [4f72054] ----------------------------------------+
+GCC for commit [4f72054] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-4f72054/bin/gcc with -O3:
+checksum = 5D0D8274
+Output of /tmp/gcc-4f72054/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4f72054... re PR libgcj/26858 (NullPointerException not generated for large classes...)
+[32m[     info][0m Current commit [4f72054] is good. Return value: 0
+
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[049e4fb094d3639d4ef65959e98d143ae44a57ae] re PR fortran/29459 (Spurious warnings about anonymous variables)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [049e4fb]
++---------------------------------------- Current commit hash: [049e4fb] ----------------------------------------+
+GCC for commit [049e4fb] already exists. Using existing binary.
+Compilation by gcc [049e4fb] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 049e4fb... re PR fortran/29459 (Spurious warnings about anonymous variables)
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[d973ac5a9f35cbb79c6c2457f48159f1541f79c4] sh.c (sh_secondary_reload): Handle loading a float constant to fpul.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [d973ac5]
++---------------------------------------- Current commit hash: [d973ac5] ----------------------------------------+
+GCC for commit [d973ac5] already exists. Using existing binary.
+Compilation by gcc [d973ac5] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at d973ac5... sh.c (sh_secondary_reload): Handle loading a float constant to fpul.
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[fab75691f337b3184596a3ca0de95dff5a4348cf] pr32912-1.c: Add -w to options.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [fab7569]
++---------------------------------------- Current commit hash: [fab7569] ----------------------------------------+
+GCC for commit [fab7569] already exists. Using existing binary.
+Compilation by gcc [fab7569] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at fab7569... pr32912-1.c: Add -w to options.
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[3af836867fc2213cd3b93ced426ba2d5ffc55e9a] c_by_val.c: Use _Complex instead of a struct.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [3af8368]
++---------------------------------------- Current commit hash: [3af8368] ----------------------------------------+
+GCC for commit [3af8368] already exists. Using existing binary.
+Compilation by gcc [3af8368] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 3af8368... c_by_val.c: Use _Complex instead of a struct.
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[b79f09ac80dd67134e2b9b0926601cbebed2db42] re PR middle-end/32970 (C++ frontend can not handle vector pointer constant parameter)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [b79f09a]
++---------------------------------------- Current commit hash: [b79f09a] ----------------------------------------+
+Building GCC for commit [b79f09a]...
+Switched to a new branch 'temp-test-branch'
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+No local changes to save
+Note: checking out 'b79f09a'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at b79f09a... re PR middle-end/32970 (C++ frontend can not handle vector pointer constant parameter)
+Deleted branch temp-test-branch (was b79f09a).
+Fail to build gcc for commit [b79f09a], skip this commit. Return 125.
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[e9f646295d8d233b95d43a60cf2e596f38469c3e] Fix 31018 -- move TARGET_xxx in i386.md to tuning options
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [e9f6462]
++---------------------------------------- Current commit hash: [e9f6462] ----------------------------------------+
+GCC for commit [e9f6462] already exists. Using existing binary.
+Compilation by gcc [e9f6462] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at e9f6462... Fix 31018 -- move TARGET_xxx in i386.md to tuning options
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[b413c535af276684074dee54eb322168f52689a8] Class.java (internalGetFields): Use LinkedHashSet.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [b413c53]
++---------------------------------------- Current commit hash: [b413c53] ----------------------------------------+
+GCC for commit [b413c53] already exists. Using existing binary.
+Compilation by gcc [b413c53] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at b413c53... Class.java (internalGetFields): Use LinkedHashSet.
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[eeb77d993d4ee82eb43cfabc3e7bb48a0dec66d3] tree.h: Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [eeb77d9]
++---------------------------------------- Current commit hash: [eeb77d9] ----------------------------------------+
+GCC for commit [eeb77d9] already exists. Using existing binary.
+Compilation by gcc [eeb77d9] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at eeb77d9... tree.h: Remove.
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[694fea202c39e93f438c9f700e1dae4aa99028de] re PR c/27420 (ICE on invalid function definition)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [694fea2]
++---------------------------------------- Current commit hash: [694fea2] ----------------------------------------+
+GCC for commit [694fea2] already exists. Using existing binary.
+Compilation by gcc [694fea2] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 694fea2... re PR c/27420 (ICE on invalid function definition)
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[f90dd02db58085d6b750cc002f5ba1b971657d9b] mips.exp (setup_mips_tests): Fix _MIPS_SIM conditions.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [f90dd02]
++---------------------------------------- Current commit hash: [f90dd02] ----------------------------------------+
+GCC for commit [f90dd02] already exists. Using existing binary.
+Compilation by gcc [f90dd02] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at f90dd02... mips.exp (setup_mips_tests): Fix _MIPS_SIM conditions.
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[d02f34e7df05181cad0bb8057ce3c5d8d5c307c8] Correct typo: initialize_constant_valid_p => initializer_constant_valid_p.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [d02f34e]
++---------------------------------------- Current commit hash: [d02f34e] ----------------------------------------+
+GCC for commit [d02f34e] already exists. Using existing binary.
+Compilation by gcc [d02f34e] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at d02f34e... Correct typo: initialize_constant_valid_p => initializer_constant_valid_p.
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[c092b0457f310ebea7526702dbb68216ae447550] rs6000.c (rs6000_hard_regno_mode_ok): Force TDmode regnos into even/odd register pairs.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [c092b04]
++---------------------------------------- Current commit hash: [c092b04] ----------------------------------------+
+GCC for commit [c092b04] already exists. Using existing binary.
+Compilation by gcc [c092b04] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 125.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at c092b04... rs6000.c (rs6000_hard_regno_mode_ok): Force TDmode regnos into even/odd register pairs.
+Bisecting: 7808 revisions left to test after this (roughly 13 steps)
+[0006def8b8fe2028a741147b016d5508ab384f45] re PR fortran/36895 (Namelist writting to internal files:  Control characters wrong?)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [0006def]
++---------------------------------------- Current commit hash: [0006def] ----------------------------------------+
+GCC for commit [0006def] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-0006def/bin/gcc with -O3:
+checksum = 5D0D8274
+Output of /tmp/gcc-0006def/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0006def... re PR fortran/36895 (Namelist writting to internal files:  Control characters wrong?)
+[32m[     info][0m Current commit [0006def] is good. Return value: 0
+
+Bisecting: 458 revisions left to test after this (roughly 9 steps)
+[b6a9bc4d4eae8717086d909f5010db3d6650a93f] 37547.cc: Return void to avoid warnings.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [b6a9bc4]
++---------------------------------------- Current commit hash: [b6a9bc4] ----------------------------------------+
+GCC for commit [b6a9bc4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-b6a9bc4/bin/gcc with -O3:
+checksum = C0E683DA
+Output of /tmp/gcc-b6a9bc4/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at b6a9bc4... 37547.cc: Return void to avoid warnings.
+[32m[     info][0m Current commit [b6a9bc4] is bad. Return value: 1
+
+Bisecting: 228 revisions left to test after this (roughly 8 steps)
+[701e903a76b3e1401b2a01c28504b21bf6a578fa] re PR c++/37417 (error: type mismatch in binary expression, verify_gimple failed)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [701e903]
++---------------------------------------- Current commit hash: [701e903] ----------------------------------------+
+GCC for commit [701e903] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-701e903/bin/gcc with -O3:
+checksum = 5D0D8274
+Output of /tmp/gcc-701e903/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 701e903... re PR c++/37417 (error: type mismatch in binary expression, verify_gimple failed)
+[32m[     info][0m Current commit [701e903] is good. Return value: 0
+
+Bisecting: 113 revisions left to test after this (roughly 7 steps)
+[03e74118561be5f560dad6c09836d93b9f77205d] re PR ada/21327 (gnat_ugn.texi invalid @direntry)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [03e7411]
++---------------------------------------- Current commit hash: [03e7411] ----------------------------------------+
+GCC for commit [03e7411] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-03e7411/bin/gcc with -O3:
+checksum = 5D0D8274
+Output of /tmp/gcc-03e7411/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 03e7411... re PR ada/21327 (gnat_ugn.texi invalid @direntry)
+[32m[     info][0m Current commit [03e7411] is good. Return value: 0
+
+Bisecting: 56 revisions left to test after this (roughly 6 steps)
+[398857e4fbe5915a0d9a946ed6db4ac5c693ed77] * config/xtensa/xtensa.md (reload<mode>_literal): Handle MEM operands.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [398857e]
++---------------------------------------- Current commit hash: [398857e] ----------------------------------------+
+GCC for commit [398857e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-398857e/bin/gcc with -O3:
+checksum = 5D0D8274
+Output of /tmp/gcc-398857e/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 398857e... * config/xtensa/xtensa.md (reload<mode>_literal): Handle MEM operands.
+[32m[     info][0m Current commit [398857e] is good. Return value: 0
+
+Bisecting: 27 revisions left to test after this (roughly 5 steps)
+[7fd30be84b511123c09d99ad9ed40733b5f68c37] lwg-closed.html: Update to Revision R59.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [7fd30be]
++---------------------------------------- Current commit hash: [7fd30be] ----------------------------------------+
+GCC for commit [7fd30be] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-7fd30be/bin/gcc with -O3:
+checksum = 5D0D8274
+Output of /tmp/gcc-7fd30be/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7fd30be... lwg-closed.html: Update to Revision R59.
+[32m[     info][0m Current commit [7fd30be] is good. Return value: 0
+
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[47854fae8e239df95cf1bce15c3505077bf92bb9] cmdlne-dU-16.c: Specify -std=c89 on Solaris.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [47854fa]
++---------------------------------------- Current commit hash: [47854fa] ----------------------------------------+
+GCC for commit [47854fa] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-47854fa/bin/gcc with -O3:
+checksum = C0E683DA
+Output of /tmp/gcc-47854fa/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 47854fa... cmdlne-dU-16.c: Specify -std=c89 on Solaris.
+[32m[     info][0m Current commit [47854fa] is bad. Return value: 1
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[1ae64b0f2a8551088477416a279d69659b5e54ec] ira-color.c (start_allocno_priorities): Rename to setup_allocno_priorities.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [1ae64b0]
++---------------------------------------- Current commit hash: [1ae64b0] ----------------------------------------+
+GCC for commit [1ae64b0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-1ae64b0/bin/gcc with -O3:
+checksum = C0E683DA
+Output of /tmp/gcc-1ae64b0/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1ae64b0... ira-color.c (start_allocno_priorities): Rename to setup_allocno_priorities.
+[32m[     info][0m Current commit [1ae64b0] is bad. Return value: 1
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[880f8ea3bd9ca8e4d1acf5083760da66b05fea59] user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [880f8ea]
++---------------------------------------- Current commit hash: [880f8ea] ----------------------------------------+
+GCC for commit [880f8ea] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-880f8ea/bin/gcc with -O3:
+checksum = 5D0D8274
+Output of /tmp/gcc-880f8ea/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+[32m[     info][0m Current commit [880f8ea] is good. Return value: 0
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[61debb780ec6a9d5e2d4bfecc5dccaddcfe1bd5d] re PR target/37593 (-mlong-calls doesn't affect calls to _mcount generated with -pg)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [61debb7]
++---------------------------------------- Current commit hash: [61debb7] ----------------------------------------+
+GCC for commit [61debb7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-61debb7/bin/gcc with -O3:
+checksum = C0E683DA
+Output of /tmp/gcc-61debb7/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 61debb7... re PR target/37593 (-mlong-calls doesn't affect calls to _mcount generated with -pg)
+[32m[     info][0m Current commit [61debb7] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[ecb4e37b73d7649a447fe63f33dc20826fce0bb6] re PR tree-optimization/37145 (XFAILs from PRE rewrite, SCCVN union optimization disabled)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/318 small
+[32m[     info][0m Testing commit: [ecb4e37]
++---------------------------------------- Current commit hash: [ecb4e37] ----------------------------------------+
+GCC for commit [ecb4e37] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-ecb4e37/bin/gcc with -O3:
+checksum = C0E683DA
+Output of /tmp/gcc-ecb4e37/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at ecb4e37... re PR tree-optimization/37145 (XFAILs from PRE rewrite, SCCVN union optimization disabled)
+[32m[     info][0m Current commit [ecb4e37] is bad. Return value: 1
+
+ecb4e37b73d7649a447fe63f33dc20826fce0bb6 is the first bad commit
+commit ecb4e37b73d7649a447fe63f33dc20826fce0bb6
+Author: Richard Guenther <rguenther@suse.de>
+Date:   Mon Sep 22 19:15:43 2008 +0000
+
+    re PR tree-optimization/37145 (XFAILs from PRE rewrite, SCCVN union optimization disabled)
+    
+    2008-09-22  Richard Guenther  <rguenther@suse.de>
+    
+    	PR tree-optimization/37145
+    	* tree-ssa-sccvn.c (copy_reference_ops_from_ref): Re-enable
+    	value-numbering union accesses with their offset and size only.
+    	(visit_reference_op_load): Fix simplification of inserted conversions.
+    	* tree-ssa-pre.c (find_or_generate_expression): Do not
+    	recursively generate expressions if running FRE.
+    
+    	* gcc.c-torture/compile/20080922-1.c: New testcase.
+    	* gcc.dg/tree-ssa/ssa-fre-7.c: Remove XFAIL.
+    	* gcc.dg/tree-ssa/ssa-fre-8.c: Likewise.
+    	* gcc.dg/tree-ssa/ssa-fre-9.c: Likewise.
+    
+    From-SVN: r140562
+
+:040000 040000 1e3b2ed559832cb7ada4f2161b5cf22f356b5c87 78951a21cfe23019112ceed86f8f0d47f64eb667 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: ecb4e37 re PR tree-optimization/37145 (XFAILs from PRE rewrite, SCCVN union optimization disabled)
+Previous HEAD position was ecb4e37... re PR tree-optimization/37145 (XFAILs from PRE rewrite, SCCVN union optimization disabled)
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [ecb4e37]
++---------------------------------------- Current commit hash: [ecb4e37] ----------------------------------------+
+GCC for commit [ecb4e37] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-ecb4e37/bin/gcc with -O3:
+checksum = C0E683DA
+Output of /tmp/gcc-ecb4e37/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at ecb4e37... re PR tree-optimization/37145 (XFAILs from PRE rewrite, SCCVN union optimization disabled)
+[32m[     info][0m Current commit [ecb4e37] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [880f8ea]
++---------------------------------------- Current commit hash: [880f8ea] ----------------------------------------+
+GCC for commit [880f8ea] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 5D0D8274
+Output of /tmp/gcc-880f8ea/bin/gcc with -O3:
+checksum = 5D0D8274
+Output of /tmp/gcc-880f8ea/bin/gcc with -Os:
+checksum = 5D0D8274
+----------------------------------------------------
+No local changes to save
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+[32m[     info][0m Current commit [880f8ea] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [ecb4e37] with -O0:
+checksum = 5D0D8274
+Output of gcc [ecb4e37] with -O1:
+checksum = C0E683DA
+Output of gcc [ecb4e37] with -O2:
+checksum = 5D0D8274
+Output of gcc [ecb4e37] with -O3:
+checksum = C0E683DA
+Output of gcc [ecb4e37] with -Os:
+checksum = 5D0D8274
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

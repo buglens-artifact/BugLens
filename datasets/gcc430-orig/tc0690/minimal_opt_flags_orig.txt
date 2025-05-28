@@ -1,0 +1,7 @@
+dse
+inline-small-functions
+ipa-reference
+tree-loop-im
+tree-loop-optimize
+tree-scev-cprop
+unit-at-a-time

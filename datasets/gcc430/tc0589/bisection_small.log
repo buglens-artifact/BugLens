@@ -1,0 +1,336 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+Output of gcc-4.3.0 with -Os:
+4195552
+Output of gcc-4.3.0 with -O0:
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b23987e/bin/gcc with -Os:
+0
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b718216/bin/gcc with -Os:
+4195552
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is bad. Return value: 1
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[2b5e5642e38e17dc60ca6408f4c2bba651e1a9f7] builtins.c (fold_builtin_load_exponent): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [2b5e564]
++---------------------------------------- Current commit hash: [2b5e564] ----------------------------------------+
+GCC for commit [2b5e564] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-2b5e564/bin/gcc with -Os:
+0
+Output of /tmp/gcc-2b5e564/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2b5e564... builtins.c (fold_builtin_load_exponent): New.
+[32m[     info][0m Current commit [2b5e564] is good. Return value: 0
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[a97dcb4c3690f2b6fa294c8931998c7a7daed883] warnings_are_errors_1.f90: Add -std=f95 to options.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [a97dcb4]
++---------------------------------------- Current commit hash: [a97dcb4] ----------------------------------------+
+GCC for commit [a97dcb4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-a97dcb4/bin/gcc with -Os:
+0
+Output of /tmp/gcc-a97dcb4/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a97dcb4... warnings_are_errors_1.f90: Add -std=f95 to options.
+[32m[     info][0m Current commit [a97dcb4] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[538639f4ab33f1a9f8c347a8f1e2369fdc4989e4] VMFrame.java (<init>): Add parameter for "this" pointer.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [538639f]
++---------------------------------------- Current commit hash: [538639f] ----------------------------------------+
+GCC for commit [538639f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-538639f/bin/gcc with -Os:
+0
+Output of /tmp/gcc-538639f/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 538639f... VMFrame.java (<init>): Add parameter for "this" pointer.
+[32m[     info][0m Current commit [538639f] is good. Return value: 0
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[8cdf2fb9d64bd37bc90c3c1980d82f5e702dc7bc] Fix a typo in ChangeLog.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [8cdf2fb]
++---------------------------------------- Current commit hash: [8cdf2fb] ----------------------------------------+
+GCC for commit [8cdf2fb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-8cdf2fb/bin/gcc with -Os:
+0
+Output of /tmp/gcc-8cdf2fb/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8cdf2fb... Fix a typo in ChangeLog.
+[32m[     info][0m Current commit [8cdf2fb] is good. Return value: 0
+
+Bisecting: 140 revisions left to test after this (roughly 7 steps)
+[495d6dd6da24802c0c1aaacb7ea77fa7ccbf1a20] sem_ch7.adb (Check_Anonymous_Access_Types): Fix error for null body
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [495d6dd]
++---------------------------------------- Current commit hash: [495d6dd] ----------------------------------------+
+GCC for commit [495d6dd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-495d6dd/bin/gcc with -Os:
+0
+Output of /tmp/gcc-495d6dd/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 495d6dd... sem_ch7.adb (Check_Anonymous_Access_Types): Fix error for null body
+[32m[     info][0m Current commit [495d6dd] is good. Return value: 0
+
+Bisecting: 70 revisions left to test after this (roughly 6 steps)
+[1fc3998daa162619e2826523d2b9efad2a3c7725] re PR middle-end/32209 (Boot failure  Comparing stages 2 and 3 with --disable-checking)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [1fc3998]
++---------------------------------------- Current commit hash: [1fc3998] ----------------------------------------+
+GCC for commit [1fc3998] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-1fc3998/bin/gcc with -Os:
+0
+Output of /tmp/gcc-1fc3998/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1fc3998... re PR middle-end/32209 (Boot failure  Comparing stages 2 and 3 with --disable-checking)
+[32m[     info][0m Current commit [1fc3998] is good. Return value: 0
+
+Bisecting: 35 revisions left to test after this (roughly 5 steps)
+[69c553ef2aa52adbaeab79751c1d421cc61f5216] re PR target/32280 (_mm_srli_si128, heinous code for some shifts)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [69c553e]
++---------------------------------------- Current commit hash: [69c553e] ----------------------------------------+
+GCC for commit [69c553e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-69c553e/bin/gcc with -Os:
+4195552
+Output of /tmp/gcc-69c553e/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 69c553e... re PR target/32280 (_mm_srli_si128, heinous code for some shifts)
+[32m[     info][0m Current commit [69c553e] is bad. Return value: 1
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[84152c25a53201930fd73cb13a905d8335367971] cppfiles.c (open_file): Account for the fact that on windows, opening a directory gives EACCES.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [84152c2]
++---------------------------------------- Current commit hash: [84152c2] ----------------------------------------+
+GCC for commit [84152c2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-84152c2/bin/gcc with -Os:
+0
+Output of /tmp/gcc-84152c2/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 84152c2... cppfiles.c (open_file): Account for the fact that on windows, opening a directory gives EACCES.
+[32m[     info][0m Current commit [84152c2] is good. Return value: 0
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[6bdff197e6b8397129441e85a53fbb3c738c3d57] tree-ssa-structalias.c (set_uids_in_ptset): Add is_deref'd parameter, use it.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [6bdff19]
++---------------------------------------- Current commit hash: [6bdff19] ----------------------------------------+
+GCC for commit [6bdff19] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-6bdff19/bin/gcc with -Os:
+4195552
+Output of /tmp/gcc-6bdff19/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6bdff19... tree-ssa-structalias.c (set_uids_in_ptset): Add is_deref'd parameter, use it.
+[32m[     info][0m Current commit [6bdff19] is bad. Return value: 1
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[9e824336e5ae0b5e293a778dcec78cb01d1bd953] tree-scalar-evolution.c (follow_ssa_edge_in_rhs, [...]): Keep more precise track of the size of the expression.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [9e82433]
++---------------------------------------- Current commit hash: [9e82433] ----------------------------------------+
+GCC for commit [9e82433] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-9e82433/bin/gcc with -Os:
+0
+Output of /tmp/gcc-9e82433/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9e82433... tree-scalar-evolution.c (follow_ssa_edge_in_rhs, [...]): Keep more precise track of the size of the expression.
+[32m[     info][0m Current commit [9e82433] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[28ec62e0a776f2b19c3c989448534fcee641e020] testsuite_performance.h: Add cstring include for memset.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [28ec62e]
++---------------------------------------- Current commit hash: [28ec62e] ----------------------------------------+
+GCC for commit [28ec62e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-28ec62e/bin/gcc with -Os:
+0
+Output of /tmp/gcc-28ec62e/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 28ec62e... testsuite_performance.h: Add cstring include for memset.
+[32m[     info][0m Current commit [28ec62e] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[1bbf850280fd2a435aea5321ad3f79977dbc595c] decl.c (gnat_to_gnu_entity): Use pointers to dummy nodes...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0589 small
+[32m[     info][0m Testing commit: [1bbf850]
++---------------------------------------- Current commit hash: [1bbf850] ----------------------------------------+
+GCC for commit [1bbf850] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-1bbf850/bin/gcc with -Os:
+0
+Output of /tmp/gcc-1bbf850/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1bbf850... decl.c (gnat_to_gnu_entity): Use pointers to dummy nodes...
+[32m[     info][0m Current commit [1bbf850] is good. Return value: 0
+
+6bdff197e6b8397129441e85a53fbb3c738c3d57 is the first bad commit
+commit 6bdff197e6b8397129441e85a53fbb3c738c3d57
+Author: Daniel Berlin <dberlin@dberlin.org>
+Date:   Sun Jun 10 20:21:48 2007 +0000
+
+    tree-ssa-structalias.c (set_uids_in_ptset): Add is_deref'd parameter, use it.
+    
+    2007-06-09  Daniel Berlin  <dberlin@dberlin.org>
+    
+    	* tree-ssa-structalias.c (set_uids_in_ptset): Add is_deref'd
+    	parameter, use it.
+    	(find_what_p_points_to): Pass new parameter to set_uids_in_ptset.
+    
+    From-SVN: r125603
+
+:040000 040000 febae189a8286b4c73594aa1c0d522dc9d9666c5 2d58607bbfb0079a12aa5a77b34e74915f1737b6 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 6bdff19 tree-ssa-structalias.c (set_uids_in_ptset): Add is_deref'd parameter, use it.
+Previous HEAD position was 1bbf850... decl.c (gnat_to_gnu_entity): Use pointers to dummy nodes...
+HEAD is now at 870aa1e... re PR middle-end/30322 (((-i-1) + i) +1) is turned into ~i + (i+1) and never into 0 on the tree level)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [6bdff19]
++---------------------------------------- Current commit hash: [6bdff19] ----------------------------------------+
+GCC for commit [6bdff19] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-6bdff19/bin/gcc with -Os:
+4195552
+Output of /tmp/gcc-6bdff19/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6bdff19... tree-ssa-structalias.c (set_uids_in_ptset): Add is_deref'd parameter, use it.
+[32m[     info][0m Current commit [6bdff19] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [1bbf850]
++---------------------------------------- Current commit hash: [1bbf850] ----------------------------------------+
+GCC for commit [1bbf850] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-1bbf850/bin/gcc with -Os:
+0
+Output of /tmp/gcc-1bbf850/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1bbf850... decl.c (gnat_to_gnu_entity): Use pointers to dummy nodes...
+[32m[     info][0m Current commit [1bbf850] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [6bdff19] with -O0:
+0
+Output of gcc [6bdff19] with -O1:
+4195536
+Output of gcc [6bdff19] with -O2:
+4195621
+Output of gcc [6bdff19] with -O3:
+4195552
+Output of gcc [6bdff19] with -Os:
+4195552
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

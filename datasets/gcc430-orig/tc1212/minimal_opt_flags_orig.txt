@@ -1,0 +1,6 @@
+early-inlining
+inline-functions-called-once
+inline-small-functions
+tree-ccp
+tree-fre
+unit-at-a-time

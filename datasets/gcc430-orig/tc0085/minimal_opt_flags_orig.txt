@@ -1,0 +1,4 @@
+inline-small-functions
+tree-dse
+tree-salias
+tree-sra

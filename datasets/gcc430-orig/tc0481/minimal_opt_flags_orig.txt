@@ -1,0 +1,12 @@
+inline-functions
+inline-small-functions
+ipa-reference
+strict-aliasing
+tree-ccp
+tree-copyrename
+tree-dce
+tree-dse
+tree-fre
+tree-loop-im
+tree-loop-optimize
+unit-at-a-time

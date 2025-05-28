@@ -1,0 +1,4 @@
+early-inlining
+inline-small-functions
+tree-dse
+unit-at-a-time

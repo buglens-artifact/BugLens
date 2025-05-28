@@ -1,0 +1,1 @@
+e9e0aa2 re PR tree-optimization/30735 (50% slow down due to mem-ssa merge)

@@ -1,0 +1,4 @@
+early-inlining
+inline-small-functions
+tree-copy-prop
+tree-vrp

@@ -1,0 +1,8 @@
+inline-small-functions
+ipa-pure-const
+tree-dce
+tree-dse
+tree-salias
+tree-sra
+tree-store-ccp
+unit-at-a-time

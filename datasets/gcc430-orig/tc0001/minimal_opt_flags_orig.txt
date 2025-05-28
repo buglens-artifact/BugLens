@@ -1,0 +1,8 @@
+guess-branch-probability
+inline-functions-called-once
+ipa-reference
+strict-aliasing
+toplevel-reorder
+tree-pre
+tree-sink
+unit-at-a-time

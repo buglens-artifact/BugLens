@@ -1,0 +1,13 @@
+inline-functions
+inline-small-functions
+ipa-reference
+tree-ccp
+tree-copy-prop
+tree-dce
+tree-dominator-opts
+tree-fre
+tree-loop-optimize
+tree-pre
+tree-vrp
+unit-at-a-time
+unswitch-loops

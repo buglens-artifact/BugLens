@@ -1,0 +1,1 @@
+e36711f re PR tree-optimization/16876 (ICE on testcase with -O3 in fold-const)

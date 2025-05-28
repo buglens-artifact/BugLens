@@ -1,0 +1,7 @@
+early-inlining
+inline-small-functions
+tree-copyrename
+tree-dominator-opts
+tree-loop-im
+tree-loop-optimize
+tree-store-ccp

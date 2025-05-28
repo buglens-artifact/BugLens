@@ -1,0 +1,4 @@
+inline-functions-called-once
+tree-sra
+tree-store-ccp
+unit-at-a-time

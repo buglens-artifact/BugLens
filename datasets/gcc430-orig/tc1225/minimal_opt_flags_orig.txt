@@ -1,0 +1,11 @@
+inline-functions
+inline-small-functions
+tree-ccp
+tree-copyrename
+tree-dce
+tree-loop-im
+tree-loop-optimize
+tree-sra
+tree-store-ccp
+tree-vrp
+unit-at-a-time

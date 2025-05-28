@@ -1,0 +1,8 @@
+inline-functions-called-once
+inline-small-functions
+ipa-reference
+toplevel-reorder
+tree-dominator-opts
+tree-sra
+tree-store-ccp
+unit-at-a-time

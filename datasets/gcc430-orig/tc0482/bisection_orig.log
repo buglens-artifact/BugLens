@@ -1,0 +1,332 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 749ecdc1
+Output of gcc-4.3.0 with -O3:
+checksum = 749ecdc5
+Output of gcc-4.3.0 with -O0:
+checksum = 749ecdc1
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+checksum = 749ecdc1
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+checksum = 749ecdc5
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is bad. Return value: 1
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[2b5e5642e38e17dc60ca6408f4c2bba651e1a9f7] builtins.c (fold_builtin_load_exponent): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [2b5e564]
++---------------------------------------- Current commit hash: [2b5e564] ----------------------------------------+
+GCC for commit [2b5e564] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-2b5e564/bin/gcc with -O3:
+checksum = 749ecdc1
+Output of /tmp/gcc-2b5e564/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2b5e564... builtins.c (fold_builtin_load_exponent): New.
+[32m[     info][0m Current commit [2b5e564] is good. Return value: 0
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[a97dcb4c3690f2b6fa294c8931998c7a7daed883] warnings_are_errors_1.f90: Add -std=f95 to options.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [a97dcb4]
++---------------------------------------- Current commit hash: [a97dcb4] ----------------------------------------+
+GCC for commit [a97dcb4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-a97dcb4/bin/gcc with -O3:
+checksum = 749ecdc1
+Output of /tmp/gcc-a97dcb4/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at a97dcb4... warnings_are_errors_1.f90: Add -std=f95 to options.
+[32m[     info][0m Current commit [a97dcb4] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[538639f4ab33f1a9f8c347a8f1e2369fdc4989e4] VMFrame.java (<init>): Add parameter for "this" pointer.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [538639f]
++---------------------------------------- Current commit hash: [538639f] ----------------------------------------+
+GCC for commit [538639f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-538639f/bin/gcc with -O3:
+checksum = 749ecdc1
+Output of /tmp/gcc-538639f/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 538639f... VMFrame.java (<init>): Add parameter for "this" pointer.
+[32m[     info][0m Current commit [538639f] is good. Return value: 0
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[8cdf2fb9d64bd37bc90c3c1980d82f5e702dc7bc] Fix a typo in ChangeLog.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [8cdf2fb]
++---------------------------------------- Current commit hash: [8cdf2fb] ----------------------------------------+
+GCC for commit [8cdf2fb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-8cdf2fb/bin/gcc with -O3:
+checksum = 749ecdc1
+Output of /tmp/gcc-8cdf2fb/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8cdf2fb... Fix a typo in ChangeLog.
+[32m[     info][0m Current commit [8cdf2fb] is good. Return value: 0
+
+Bisecting: 140 revisions left to test after this (roughly 7 steps)
+[495d6dd6da24802c0c1aaacb7ea77fa7ccbf1a20] sem_ch7.adb (Check_Anonymous_Access_Types): Fix error for null body
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [495d6dd]
++---------------------------------------- Current commit hash: [495d6dd] ----------------------------------------+
+GCC for commit [495d6dd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-495d6dd/bin/gcc with -O3:
+checksum = 749ecdc1
+Output of /tmp/gcc-495d6dd/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 495d6dd... sem_ch7.adb (Check_Anonymous_Access_Types): Fix error for null body
+[32m[     info][0m Current commit [495d6dd] is good. Return value: 0
+
+Bisecting: 70 revisions left to test after this (roughly 6 steps)
+[1fc3998daa162619e2826523d2b9efad2a3c7725] re PR middle-end/32209 (Boot failure  Comparing stages 2 and 3 with --disable-checking)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [1fc3998]
++---------------------------------------- Current commit hash: [1fc3998] ----------------------------------------+
+GCC for commit [1fc3998] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-1fc3998/bin/gcc with -O3:
+checksum = 749ecdc1
+Output of /tmp/gcc-1fc3998/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1fc3998... re PR middle-end/32209 (Boot failure  Comparing stages 2 and 3 with --disable-checking)
+[32m[     info][0m Current commit [1fc3998] is good. Return value: 0
+
+Bisecting: 35 revisions left to test after this (roughly 5 steps)
+[69c553ef2aa52adbaeab79751c1d421cc61f5216] re PR target/32280 (_mm_srli_si128, heinous code for some shifts)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [69c553e]
++---------------------------------------- Current commit hash: [69c553e] ----------------------------------------+
+GCC for commit [69c553e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-69c553e/bin/gcc with -O3:
+checksum = 749ecdc1
+Output of /tmp/gcc-69c553e/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 69c553e... re PR target/32280 (_mm_srli_si128, heinous code for some shifts)
+[32m[     info][0m Current commit [69c553e] is good. Return value: 0
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[a472f54655e536be1feaf214ac4e3e200fb21071] Fix a few nits.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [a472f54]
++---------------------------------------- Current commit hash: [a472f54] ----------------------------------------+
+GCC for commit [a472f54] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-a472f54/bin/gcc with -O3:
+checksum = 749ecdc5
+Output of /tmp/gcc-a472f54/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at a472f54... Fix a few nits.
+[32m[     info][0m Current commit [a472f54] is bad. Return value: 1
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[6fb5fa3cbc0d78cf9f4ff7cac5e1d8af1e65c5bb] Merge dataflow branch into mainline
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [6fb5fa3]
++---------------------------------------- Current commit hash: [6fb5fa3] ----------------------------------------+
+GCC for commit [6fb5fa3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-6fb5fa3/bin/gcc with -O3:
+checksum = 749ecdc5
+Output of /tmp/gcc-6fb5fa3/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6fb5fa3... Merge dataflow branch into mainline
+[32m[     info][0m Current commit [6fb5fa3] is bad. Return value: 1
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[afcc986d03991b070c7ab76159f5b792b94c0a80] arm.c (arm_output_dwarf_dtprel, [...]): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [afcc986]
++---------------------------------------- Current commit hash: [afcc986] ----------------------------------------+
+GCC for commit [afcc986] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-afcc986/bin/gcc with -O3:
+checksum = 749ecdc1
+Output of /tmp/gcc-afcc986/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at afcc986... arm.c (arm_output_dwarf_dtprel, [...]): New.
+[32m[     info][0m Current commit [afcc986] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[12753674ec3e75275eca8b704c36d6dc3762ade6] really remove signed(_or_unsigned)?_type langhooks
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [1275367]
++---------------------------------------- Current commit hash: [1275367] ----------------------------------------+
+GCC for commit [1275367] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-1275367/bin/gcc with -O3:
+checksum = 749ecdc1
+Output of /tmp/gcc-1275367/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1275367... really remove signed(_or_unsigned)?_type langhooks
+[32m[     info][0m Current commit [1275367] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[a91d32a4a65d54cccf639a1541417e39cb7b7deb] i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0482 orig
+[32m[     info][0m Testing commit: [a91d32a]
++---------------------------------------- Current commit hash: [a91d32a] ----------------------------------------+
+GCC for commit [a91d32a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-a91d32a/bin/gcc with -O3:
+checksum = 749ecdc1
+Output of /tmp/gcc-a91d32a/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at a91d32a... i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+[32m[     info][0m Current commit [a91d32a] is good. Return value: 0
+
+6fb5fa3cbc0d78cf9f4ff7cac5e1d8af1e65c5bb is the first bad commit
+commit 6fb5fa3cbc0d78cf9f4ff7cac5e1d8af1e65c5bb
+Author: Daniel Berlin <dberlin@gcc.gnu.org>
+Date:   Mon Jun 11 18:02:15 2007 +0000
+
+    Merge dataflow branch into mainline
+    
+    From-SVN: r125624
+
+:100644 100644 b68b4a36f62b2c48083ea2f4400490059e6d56e6 873677ddd6011f38e38556d465c766329adbe899 M	MAINTAINERS
+:040000 040000 631c08b4d496052b5411837aa99a752368ff9cff 59bc23bb68f87d9680160fd53405c9bbd11a0de5 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 6fb5fa3 Merge dataflow branch into mainline
+Checking out files:  12% (1023/7885)   Checking out files:  13% (1026/7885)   Checking out files:  14% (1104/7885)   Checking out files:  15% (1183/7885)   Checking out files:  16% (1262/7885)   Checking out files:  17% (1341/7885)   Checking out files:  18% (1420/7885)   Checking out files:  19% (1499/7885)   Checking out files:  20% (1577/7885)   Checking out files:  21% (1656/7885)   Checking out files:  22% (1735/7885)   Checking out files:  23% (1814/7885)   Checking out files:  24% (1893/7885)   Checking out files:  24% (1906/7885)   Checking out files:  25% (1972/7885)   Checking out files:  26% (2051/7885)   Checking out files:  27% (2129/7885)   Checking out files:  28% (2208/7885)   Checking out files:  29% (2287/7885)   Checking out files:  30% (2366/7885)   Checking out files:  31% (2445/7885)   Checking out files:  32% (2524/7885)   Checking out files:  33% (2603/7885)   Checking out files:  34% (2681/7885)   Checking out files:  35% (2760/7885)   Checking out files:  36% (2839/7885)   Checking out files:  37% (2918/7885)   Checking out files:  38% (2997/7885)   Checking out files:  39% (3076/7885)   Checking out files:  40% (3154/7885)   Checking out files:  41% (3233/7885)   Checking out files:  42% (3312/7885)   Checking out files:  43% (3391/7885)   Checking out files:  44% (3470/7885)   Checking out files:  45% (3549/7885)   Checking out files:  46% (3628/7885)   Checking out files:  47% (3706/7885)   Checking out files:  48% (3785/7885)   Checking out files:  49% (3864/7885)   Checking out files:  50% (3943/7885)   Checking out files:  51% (4022/7885)   Checking out files:  52% (4101/7885)   Checking out files:  53% (4180/7885)   Checking out files:  54% (4258/7885)   Checking out files:  54% (4313/7885)   Checking out files:  55% (4337/7885)   Checking out files:  56% (4416/7885)   Checking out files:  57% (4495/7885)   Checking out files:  58% (4574/7885)   Checking out files:  59% (4653/7885)   Checking out files:  60% (4731/7885)   Checking out files:  61% (4810/7885)   Checking out files:  62% (4889/7885)   Checking out files:  63% (4968/7885)   Checking out files:  64% (5047/7885)   Checking out files:  65% (5126/7885)   Checking out files:  66% (5205/7885)   Checking out files:  67% (5283/7885)   Checking out files:  68% (5362/7885)   Checking out files:  69% (5441/7885)   Checking out files:  70% (5520/7885)   Checking out files:  71% (5599/7885)   Checking out files:  72% (5678/7885)   Checking out files:  73% (5757/7885)   Checking out files:  74% (5835/7885)   Checking out files:  75% (5914/7885)   Checking out files:  76% (5993/7885)   Checking out files:  77% (6072/7885)   Checking out files:  78% (6151/7885)   Checking out files:  79% (6230/7885)   Checking out files:  80% (6308/7885)   Checking out files:  81% (6387/7885)   Checking out files:  81% (6393/7885)   Checking out files:  82% (6466/7885)   Checking out files:  83% (6545/7885)   Checking out files:  84% (6624/7885)   Checking out files:  85% (6703/7885)   Checking out files:  86% (6782/7885)   Checking out files:  87% (6860/7885)   Checking out files:  88% (6939/7885)   Checking out files:  89% (7018/7885)   Checking out files:  90% (7097/7885)   Checking out files:  91% (7176/7885)   Checking out files:  92% (7255/7885)   Checking out files:  93% (7334/7885)   Checking out files:  94% (7412/7885)   Checking out files:  95% (7491/7885)   Checking out files:  96% (7570/7885)   Checking out files:  97% (7649/7885)   Checking out files:  98% (7728/7885)   Checking out files:  98% (7790/7885)   Checking out files:  99% (7807/7885)   Checking out files: 100% (7885/7885)   Checking out files: 100% (7885/7885), done.
+Previous HEAD position was a91d32a... i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+HEAD is now at f85138b... re PR middle-end/33321 (gcc manpage contains "@option<-Wstrict-overflow=1>")
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [6fb5fa3]
++---------------------------------------- Current commit hash: [6fb5fa3] ----------------------------------------+
+GCC for commit [6fb5fa3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-6fb5fa3/bin/gcc with -O3:
+checksum = 749ecdc5
+Output of /tmp/gcc-6fb5fa3/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6fb5fa3... Merge dataflow branch into mainline
+[32m[     info][0m Current commit [6fb5fa3] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [a91d32a]
++---------------------------------------- Current commit hash: [a91d32a] ----------------------------------------+
+GCC for commit [a91d32a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 749ecdc1
+Output of /tmp/gcc-a91d32a/bin/gcc with -O3:
+checksum = 749ecdc1
+Output of /tmp/gcc-a91d32a/bin/gcc with -O0:
+checksum = 749ecdc1
+----------------------------------------------------
+No local changes to save
+HEAD is now at a91d32a... i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+[32m[     info][0m Current commit [a91d32a] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [6fb5fa3] with -O0:
+checksum = 749ecdc1
+Output of gcc [6fb5fa3] with -O1:
+checksum = 749ecdc1
+Output of gcc [6fb5fa3] with -O2:
+checksum = 749ecdc1
+Output of gcc [6fb5fa3] with -O3:
+checksum = 749ecdc5
+Output of gcc [6fb5fa3] with -Os:
+checksum = 749ecdc5
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

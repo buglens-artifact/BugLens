@@ -1,0 +1,4 @@
+inline-functions-called-once
+inline-small-functions
+tree-sink
+unit-at-a-time

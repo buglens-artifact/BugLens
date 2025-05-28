@@ -1,0 +1,8 @@
+inline-functions
+inline-small-functions
+tree-ccp
+tree-dce
+tree-dse
+tree-loop-optimize
+tree-salias
+unit-at-a-time

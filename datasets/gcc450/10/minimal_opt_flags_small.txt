@@ -1,0 +1,3 @@
+caller-saves
+if-conversion
+move-loop-invariants

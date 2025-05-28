@@ -1,0 +1,6 @@
+inline-functions-called-once
+inline-small-functions
+tree-fre
+tree-sra
+tree-vrp
+unit-at-a-time

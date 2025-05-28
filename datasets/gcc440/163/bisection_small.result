@@ -1,0 +1,1 @@
+06ea1b8 opts.c (decode_options): Do not fiddle with inlining parameters in case of optimizing for size.

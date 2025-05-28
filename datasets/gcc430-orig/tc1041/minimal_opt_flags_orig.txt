@@ -1,0 +1,6 @@
+inline-small-functions
+ipa-reference
+tree-dce
+tree-fre
+tree-store-ccp
+unit-at-a-time

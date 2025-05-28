@@ -1,0 +1,6 @@
+dse
+inline-functions-called-once
+inline-small-functions
+move-loop-invariants
+tree-dominator-opts
+unit-at-a-time

@@ -1,0 +1,499 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.5.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+0
+0
+Output of gcc-4.5.0 with -Os:
+2
+2
+2
+Output of gcc-4.5.0 with -O3:
+0
+0
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.3.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[0802ae58ae482688b0177086598bc10469645333] cp-tools.texinfo (@direntry): Prefix info name with cp-.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [0802ae5]
++---------------------------------------- Current commit hash: [0802ae5] ----------------------------------------+
+GCC for commit [0802ae5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-0802ae5/bin/gcc with -Os:
+0
+0
+0
+Output of /tmp/gcc-0802ae5/bin/gcc with -O3:
+0
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0802ae5... cp-tools.texinfo (@direntry): Prefix info name with cp-.
+[32m[     info][0m Current commit [0802ae5] is good. Return value: 0
+
+Bisecting: 6706 revisions left to test after this (roughly 13 steps)
+[3764bb000eb4685cd38ae2eb75c133cb8c87c982] sem.ads, [...]: Minor comment fixes.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [3764bb0]
++---------------------------------------- Current commit hash: [3764bb0] ----------------------------------------+
+GCC for commit [3764bb0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-3764bb0/bin/gcc with -Os:
+2
+2
+2
+Output of /tmp/gcc-3764bb0/bin/gcc with -O3:
+0
+2
+2
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3764bb0... sem.ads, [...]: Minor comment fixes.
+[32m[     info][0m Current commit [3764bb0] is bad. Return value: 1
+
+Bisecting: 3353 revisions left to test after this (roughly 12 steps)
+[f7bc085cf155e800fe6ec86e01f2afd69ade6a2e] mcf.c: Really add it.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [f7bc085]
++---------------------------------------- Current commit hash: [f7bc085] ----------------------------------------+
+Building GCC for commit [f7bc085]...
+Switched to a new branch 'temp-test-branch'
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+No local changes to save
+Note: checking out 'f7bc085'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at f7bc085... mcf.c: Really add it.
+Deleted branch temp-test-branch (was f7bc085).
+Fail to build gcc for commit [f7bc085], skip this commit. Return 125.
+Bisecting: 3352 revisions left to test after this (roughly 12 steps)
+[3aa71f9da012bd82ee327edeb03723d9ef951955] profile.h: Really add it.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [3aa71f9]
++---------------------------------------- Current commit hash: [3aa71f9] ----------------------------------------+
+GCC for commit [3aa71f9] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-3aa71f9/bin/gcc with -Os:
+0
+0
+0
+Output of /tmp/gcc-3aa71f9/bin/gcc with -O3:
+0
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3aa71f9... profile.h: Really add it.
+[32m[     info][0m Current commit [3aa71f9] is good. Return value: 0
+
+Bisecting: 1675 revisions left to test after this (roughly 11 steps)
+[3ecaae52245d4044b089e56ef3f48b43f53a86ec] PR libstdc++/38365 (cont)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [3ecaae5]
++---------------------------------------- Current commit hash: [3ecaae5] ----------------------------------------+
+GCC for commit [3ecaae5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-3ecaae5/bin/gcc with -Os:
+2
+2
+2
+Output of /tmp/gcc-3ecaae5/bin/gcc with -O3:
+0
+2
+2
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3ecaae5... PR libstdc++/38365 (cont)
+[32m[     info][0m Current commit [3ecaae5] is bad. Return value: 1
+
+Bisecting: 837 revisions left to test after this (roughly 10 steps)
+[711428147bde634fd58bd7c2da96d919189d81da] re PR middle-end/37576 (-v --help ICEs)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [7114281]
++---------------------------------------- Current commit hash: [7114281] ----------------------------------------+
+GCC for commit [7114281] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-7114281/bin/gcc with -Os:
+0
+0
+0
+Output of /tmp/gcc-7114281/bin/gcc with -O3:
+0
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7114281... re PR middle-end/37576 (-v --help ICEs)
+[32m[     info][0m Current commit [7114281] is good. Return value: 0
+
+Bisecting: 418 revisions left to test after this (roughly 9 steps)
+[f61d4b67ff5a1dd89acba91b3f5389128ceb929d] re PR libfortran/37839 (st_parameter_dt has unwanted padding, is out of sync with compiler)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [f61d4b6]
++---------------------------------------- Current commit hash: [f61d4b6] ----------------------------------------+
+GCC for commit [f61d4b6] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-f61d4b6/bin/gcc with -Os:
+2
+2
+2
+Output of /tmp/gcc-f61d4b6/bin/gcc with -O3:
+0
+2
+2
+----------------------------------------------------
+No local changes to save
+HEAD is now at f61d4b6... re PR libfortran/37839 (st_parameter_dt has unwanted padding, is out of sync with compiler)
+[32m[     info][0m Current commit [f61d4b6] is bad. Return value: 1
+
+Bisecting: 209 revisions left to test after this (roughly 8 steps)
+[6bb760348681ba40cd1f94eb0b36024592f4948e] forward_list.h: Remove pointless const qualifiers in const_casts.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [6bb7603]
++---------------------------------------- Current commit hash: [6bb7603] ----------------------------------------+
+GCC for commit [6bb7603] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-6bb7603/bin/gcc with -Os:
+2
+2
+2
+Output of /tmp/gcc-6bb7603/bin/gcc with -O3:
+0
+2
+2
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6bb7603... forward_list.h: Remove pointless const qualifiers in const_casts.
+[32m[     info][0m Current commit [6bb7603] is bad. Return value: 1
+
+Bisecting: 104 revisions left to test after this (roughly 7 steps)
+[a76e62c8959ddc39034518435975aad4000f9079] struct-layout-1_generate.c (dg_options): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [a76e62c]
++---------------------------------------- Current commit hash: [a76e62c] ----------------------------------------+
+GCC for commit [a76e62c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-a76e62c/bin/gcc with -Os:
+0
+0
+0
+Output of /tmp/gcc-a76e62c/bin/gcc with -O3:
+0
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a76e62c... struct-layout-1_generate.c (dg_options): New.
+[32m[     info][0m Current commit [a76e62c] is good. Return value: 0
+
+Bisecting: 52 revisions left to test after this (roughly 6 steps)
+[0bb7b92ee98354451d52a934b4ce1770c22887bd] rs6000.c (rs6000_parse_fpu_option): Interpret -mfpu options.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [0bb7b92]
++---------------------------------------- Current commit hash: [0bb7b92] ----------------------------------------+
+GCC for commit [0bb7b92] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-0bb7b92/bin/gcc with -Os:
+2
+2
+2
+Output of /tmp/gcc-0bb7b92/bin/gcc with -O3:
+0
+2
+2
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0bb7b92... rs6000.c (rs6000_parse_fpu_option): Interpret -mfpu options.
+[32m[     info][0m Current commit [0bb7b92] is bad. Return value: 1
+
+Bisecting: 25 revisions left to test after this (roughly 5 steps)
+[8a332c1196c59f6f6ec54368549bd20a37cbddcb] ggc-pr37574.c: Cleanup "vect" tree dump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [8a332c1]
++---------------------------------------- Current commit hash: [8a332c1] ----------------------------------------+
+GCC for commit [8a332c1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-8a332c1/bin/gcc with -Os:
+0
+0
+0
+Output of /tmp/gcc-8a332c1/bin/gcc with -O3:
+0
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8a332c1... ggc-pr37574.c: Cleanup "vect" tree dump.
+[32m[     info][0m Current commit [8a332c1] is good. Return value: 0
+
+Bisecting: 12 revisions left to test after this (roughly 4 steps)
+[6d5d3adfbd3a23331aaf8e5d585a593564508923] 2008-10-08  Jerry DeLisle  <jvdelisle@gcc.gnu.org
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [6d5d3ad]
++---------------------------------------- Current commit hash: [6d5d3ad] ----------------------------------------+
+GCC for commit [6d5d3ad] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-6d5d3ad/bin/gcc with -Os:
+2
+2
+2
+Output of /tmp/gcc-6d5d3ad/bin/gcc with -O3:
+0
+2
+2
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6d5d3ad... 2008-10-08  Jerry DeLisle  <jvdelisle@gcc.gnu.org
+[32m[     info][0m Current commit [6d5d3ad] is bad. Return value: 1
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[cc2a64dd80513c1155fad3370bc639daa97b7404] tree-ssa-live.c (remove_unused_locals): Mark all edge's goto_block as used.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [cc2a64d]
++---------------------------------------- Current commit hash: [cc2a64d] ----------------------------------------+
+GCC for commit [cc2a64d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-cc2a64d/bin/gcc with -Os:
+0
+0
+0
+Output of /tmp/gcc-cc2a64d/bin/gcc with -O3:
+0
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at cc2a64d... tree-ssa-live.c (remove_unused_locals): Mark all edge's goto_block as used.
+[32m[     info][0m Current commit [cc2a64d] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[1692ae7eda60ea567bcd8e8bae40b6f20db5d82a] rtl.h (locator_eq): New decl.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [1692ae7]
++---------------------------------------- Current commit hash: [1692ae7] ----------------------------------------+
+GCC for commit [1692ae7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-1692ae7/bin/gcc with -Os:
+2
+2
+2
+Output of /tmp/gcc-1692ae7/bin/gcc with -O3:
+0
+2
+2
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1692ae7... rtl.h (locator_eq): New decl.
+[32m[     info][0m Current commit [1692ae7] is bad. Return value: 1
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[c0451df7148578f75d0722ca57be15b437d57d90] config.host: Fold `*-*-gnu*' cases into the Linux ones.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [c0451df]
++---------------------------------------- Current commit hash: [c0451df] ----------------------------------------+
+GCC for commit [c0451df] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-c0451df/bin/gcc with -Os:
+2
+2
+2
+Output of /tmp/gcc-c0451df/bin/gcc with -O3:
+0
+2
+2
+----------------------------------------------------
+No local changes to save
+HEAD is now at c0451df... config.host: Fold `*-*-gnu*' cases into the Linux ones.
+[32m[     info][0m Current commit [c0451df] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[df96b059470a8ede40342b4b19c6da1a82851aaf] re PR middle-end/37774 (Alignment information is lost for ARRAY_REFs)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/2 small
+[32m[     info][0m Testing commit: [df96b05]
++---------------------------------------- Current commit hash: [df96b05] ----------------------------------------+
+GCC for commit [df96b05] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-df96b05/bin/gcc with -Os:
+2
+2
+2
+Output of /tmp/gcc-df96b05/bin/gcc with -O3:
+0
+2
+2
+----------------------------------------------------
+No local changes to save
+HEAD is now at df96b05... re PR middle-end/37774 (Alignment information is lost for ARRAY_REFs)
+[32m[     info][0m Current commit [df96b05] is bad. Return value: 1
+
+df96b059470a8ede40342b4b19c6da1a82851aaf is the first bad commit
+commit df96b059470a8ede40342b4b19c6da1a82851aaf
+Author: Jakub Jelinek <jakub@redhat.com>
+Date:   Thu Oct 9 10:17:08 2008 +0200
+
+    re PR middle-end/37774 (Alignment information is lost for ARRAY_REFs)
+    
+    	PR middle-end/37774
+    	* tree.h (get_object_alignment): Declare.
+    	* emit-rtl.c (set_mem_attributes_minus_bitpos): Call
+    	get_object_alignment if needed.
+    	* builtins.c (get_pointer_alignment): Move ADDR_EXPR operand handling
+    	to ...
+    	(get_object_alignment): ... here.  New function.  Try harder to
+    	determine alignment from get_inner_reference returned offset.
+    
+    From-SVN: r141003
+
+:040000 040000 e89eb391de8dcf6eda268acfc78f24b066657453 9160250fda8ed8b5650a7592165bcf369a1340df M	gcc
+bisect run success
+[32m[     info][0m First bad commit: df96b05 re PR middle-end/37774 (Alignment information is lost for ARRAY_REFs)
+Previous HEAD position was df96b05... re PR middle-end/37774 (Alignment information is lost for ARRAY_REFs)
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [df96b05]
++---------------------------------------- Current commit hash: [df96b05] ----------------------------------------+
+GCC for commit [df96b05] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-df96b05/bin/gcc with -Os:
+2
+2
+2
+Output of /tmp/gcc-df96b05/bin/gcc with -O3:
+0
+2
+2
+----------------------------------------------------
+No local changes to save
+HEAD is now at df96b05... re PR middle-end/37774 (Alignment information is lost for ARRAY_REFs)
+[32m[     info][0m Current commit [df96b05] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [cc2a64d]
++---------------------------------------- Current commit hash: [cc2a64d] ----------------------------------------+
+GCC for commit [cc2a64d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+Output of /tmp/gcc-cc2a64d/bin/gcc with -Os:
+0
+0
+0
+Output of /tmp/gcc-cc2a64d/bin/gcc with -O3:
+0
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at cc2a64d... tree-ssa-live.c (remove_unused_locals): Mark all edge's goto_block as used.
+[32m[     info][0m Current commit [cc2a64d] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [df96b05] with -O0:
+0
+0
+0
+Output of gcc [df96b05] with -O1:
+0
+0
+0
+Output of gcc [df96b05] with -O2:
+0
+2
+2
+Output of gcc [df96b05] with -O3:
+0
+2
+2
+Output of gcc [df96b05] with -Os:
+2
+2
+2
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

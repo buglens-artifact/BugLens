@@ -1,0 +1,4 @@
+inline-small-functions
+ipa-reference
+tree-store-ccp
+unit-at-a-time

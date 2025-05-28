@@ -1,0 +1,68 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 31887c5d
+Output of gcc-4.3.0 with -O3:
+checksum = 31887c5e
+Output of gcc-4.3.0 with -O0:
+checksum = 31887c5d
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1042 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+Compilation by gcc [b23987e] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+The merge base b23987ec2f0f24c38c78f7cf63c91a699da681bd is bad.
+This means the bug has been fixed between b23987ec2f0f24c38c78f7cf63c91a699da681bd and [bfbec2aae3586d0aed03b24e2b5998b8a1a844a0].
+bisect run failed:
+'bisect_state bad' exited with error code 3
+[32m[     info][0m First bad commit: 
+Checking out files:   6% (2073/34238)   Checking out files:   7% (2397/34238)   Checking out files:   8% (2740/34238)   Checking out files:   9% (3082/34238)   Checking out files:   9% (3122/34238)   Checking out files:  10% (3424/34238)   Checking out files:  11% (3767/34238)   Checking out files:  12% (4109/34238)   Checking out files:  12% (4122/34238)   Checking out files:  13% (4451/34238)   Checking out files:  14% (4794/34238)   Checking out files:  15% (5136/34238)   Checking out files:  15% (5243/34238)   Checking out files:  16% (5479/34238)   Checking out files:  17% (5821/34238)   Checking out files:  18% (6163/34238)   Checking out files:  19% (6506/34238)   Checking out files:  20% (6848/34238)   Checking out files:  21% (7190/34238)   Checking out files:  22% (7533/34238)   Checking out files:  22% (7726/34238)   Checking out files:  23% (7875/34238)   Checking out files:  24% (8218/34238)   Checking out files:  25% (8560/34238)   Checking out files:  26% (8902/34238)   Checking out files:  27% (9245/34238)   Checking out files:  28% (9587/34238)   Checking out files:  29% (9930/34238)   Checking out files:  30% (10272/34238)   Checking out files:  31% (10614/34238)   Checking out files:  31% (10667/34238)   Checking out files:  32% (10957/34238)   Checking out files:  33% (11299/34238)   Checking out files:  34% (11641/34238)   Checking out files:  35% (11984/34238)   Checking out files:  36% (12326/34238)   Checking out files:  36% (12380/34238)   Checking out files:  37% (12669/34238)   Checking out files:  38% (13011/34238)   Checking out files:  39% (13353/34238)   Checking out files:  40% (13696/34238)   Checking out files:  40% (13822/34238)   Checking out files:  41% (14038/34238)   Checking out files:  42% (14380/34238)   Checking out files:  43% (14723/34238)   Checking out files:  44% (15065/34238)   Checking out files:  45% (15408/34238)   Checking out files:  46% (15750/34238)   Checking out files:  46% (15801/34238)   Checking out files:  47% (16092/34238)   Checking out files:  48% (16435/34238)   Checking out files:  49% (16777/34238)   Checking out files:  50% (17119/34238)   Checking out files:  51% (17462/34238)   Checking out files:  52% (17804/34238)   Checking out files:  53% (18147/34238)   Checking out files:  54% (18489/34238)   Checking out files:  54% (18756/34238)   Checking out files:  55% (18831/34238)   Checking out files:  56% (19174/34238)   Checking out files:  57% (19516/34238)   Checking out files:  58% (19859/34238)   Checking out files:  59% (20201/34238)   Checking out files:  60% (20543/34238)   Checking out files:  61% (20886/34238)   Checking out files:  62% (21228/34238)   Checking out files:  63% (21570/34238)   Checking out files:  63% (21742/34238)   Checking out files:  64% (21913/34238)   Checking out files:  65% (22255/34238)   Checking out files:  66% (22598/34238)   Checking out files:  67% (22940/34238)   Checking out files:  68% (23282/34238)   Checking out files:  69% (23625/34238)   Checking out files:  69% (23822/34238)   Checking out files:  70% (23967/34238)   Checking out files:  71% (24309/34238)   Checking out files:  72% (24652/34238)   Checking out files:  73% (24994/34238)   Checking out files:  74% (25337/34238)   Checking out files:  75% (25679/34238)   Checking out files:  76% (26021/34238)   Checking out files:  77% (26364/34238)   Checking out files:  78% (26706/34238)   Checking out files:  78% (26841/34238)   Checking out files:  79% (27049/34238)   Checking out files:  80% (27391/34238)   Checking out files:  81% (27733/34238)   Checking out files:  82% (28076/34238)   Checking out files:  83% (28418/34238)   Checking out files:  84% (28760/34238)   Checking out files:  85% (29103/34238)   Checking out files:  86% (29445/34238)   Checking out files:  87% (29788/34238)   Checking out files:  88% (30130/34238)   Checking out files:  88% (30234/34238)   Checking out files:  89% (30472/34238)   Checking out files:  90% (30815/34238)   Checking out files:  91% (31157/34238)   Checking out files:  92% (31499/34238)   Checking out files:  93% (31842/34238)   Checking out files:  94% (32184/34238)   Checking out files:  94% (32253/34238)   Checking out files:  95% (32527/34238)   Checking out files:  96% (32869/34238)   Checking out files:  97% (33211/34238)   Checking out files:  98% (33554/34238)   Checking out files:  99% (33896/34238)   Checking out files:  99% (34236/34238)   Checking out files: 100% (34238/34238)   Checking out files: 100% (34238/34238), done.
+Previous HEAD position was b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [d2a1878]
++---------------------------------------- Current commit hash: [d2a1878] ----------------------------------------+
+GCC for commit [d2a1878] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 31887c5d
+Output of /tmp/gcc-d2a1878/bin/gcc with -O3:
+checksum = 31887c5e
+Output of /tmp/gcc-d2a1878/bin/gcc with -O0:
+checksum = 31887c5d
+----------------------------------------------------
+No local changes to save
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+[32m[     info][0m Current commit [d2a1878] is bad. Return value: 1
+
+fatal: ambiguous argument '^': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions
+[32m[     info][0m Testing commit: [d2a1878]
++---------------------------------------- Current commit hash: [d2a1878] ----------------------------------------+
+GCC for commit [d2a1878] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 31887c5d
+Output of /tmp/gcc-d2a1878/bin/gcc with -O3:
+checksum = 31887c5e
+Output of /tmp/gcc-d2a1878/bin/gcc with -O0:
+checksum = 31887c5d
+----------------------------------------------------
+No local changes to save
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+[32m[     info][0m Current commit [d2a1878] is bad. Return value: 1
+
+Error: The first bad commit is not the correct one. [2]

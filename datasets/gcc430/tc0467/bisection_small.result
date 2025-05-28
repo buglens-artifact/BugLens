@@ -1,0 +1,1 @@
+460f84e re PR middle-end/21529 (code size regression (+40%) with -Os from GCC-3.4.3 to 4.1)

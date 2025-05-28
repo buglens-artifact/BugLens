@@ -1,0 +1,5 @@
+dse
+inline-small-functions
+move-loop-invariants
+rerun-cse-after-loop
+unit-at-a-time

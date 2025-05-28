@@ -1,0 +1,10 @@
+inline-functions
+inline-small-functions
+tree-copyrename
+tree-dce
+tree-dominator-opts
+tree-dse
+tree-fre
+tree-pre
+tree-vrp
+unit-at-a-time

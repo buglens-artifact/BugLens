@@ -1,0 +1,350 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.4.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+Output of gcc-4.4.0 with -Os:
+5
+Output of gcc-4.4.0 with -O0:
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b23987e/bin/gcc with -Os:
+0
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 7651 revisions left to test after this (roughly 13 steps)
+[be0c460344d0077ede335b6121785f8cda2c7224] re PR target/34215 (ICE in assign_386_stack_local, at config/i386/i386.c:13481)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [be0c460]
++---------------------------------------- Current commit hash: [be0c460] ----------------------------------------+
+GCC for commit [be0c460] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-be0c460/bin/gcc with -Os:
+5
+Output of /tmp/gcc-be0c460/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at be0c460... re PR target/34215 (ICE in assign_386_stack_local, at config/i386/i386.c:13481)
+[32m[     info][0m Current commit [be0c460] is bad. Return value: 1
+
+Bisecting: 3825 revisions left to test after this (roughly 12 steps)
+[31b40480a461ba486b17ad808fd0266546fabddf] 20070507-1.c: Disable for non-pic targets.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [31b4048]
++---------------------------------------- Current commit hash: [31b4048] ----------------------------------------+
+GCC for commit [31b4048] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-31b4048/bin/gcc with -Os:
+0
+Output of /tmp/gcc-31b4048/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 31b4048... 20070507-1.c: Disable for non-pic targets.
+[32m[     info][0m Current commit [31b4048] is good. Return value: 0
+
+Bisecting: 1912 revisions left to test after this (roughly 11 steps)
+[001231ffe06dbadfc7c0568d4af869f7e9014e67] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [001231f]
++---------------------------------------- Current commit hash: [001231f] ----------------------------------------+
+GCC for commit [001231f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-001231f/bin/gcc with -Os:
+5
+Output of /tmp/gcc-001231f/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 001231f... Daily bump.
+[32m[     info][0m Current commit [001231f] is bad. Return value: 1
+
+Bisecting: 956 revisions left to test after this (roughly 10 steps)
+[901119aedeb8c8dae26e21d0853cadc882b2f9a0] Makefile.def: Add windmc tool to build.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [901119a]
++---------------------------------------- Current commit hash: [901119a] ----------------------------------------+
+GCC for commit [901119a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-901119a/bin/gcc with -Os:
+5
+Output of /tmp/gcc-901119a/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 901119a... Makefile.def: Add windmc tool to build.
+[32m[     info][0m Current commit [901119a] is bad. Return value: 1
+
+Bisecting: 477 revisions left to test after this (roughly 9 steps)
+[2ed216d057acc16f81871e00f710361e1f38c6ec] exp_strm.adb (Make_Field_Attributes): Avoid _Parent components that are interface type.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [2ed216d]
++---------------------------------------- Current commit hash: [2ed216d] ----------------------------------------+
+GCC for commit [2ed216d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-2ed216d/bin/gcc with -Os:
+0
+Output of /tmp/gcc-2ed216d/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2ed216d... exp_strm.adb (Make_Field_Attributes): Avoid _Parent components that are interface type.
+[32m[     info][0m Current commit [2ed216d] is good. Return value: 0
+
+Bisecting: 238 revisions left to test after this (roughly 8 steps)
+[e9f9692b8e2fc785122da79746837e7e42b39f7b] extend.texi: Document behavior of __attribute__((aligned)) on typedefs.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [e9f9692]
++---------------------------------------- Current commit hash: [e9f9692] ----------------------------------------+
+GCC for commit [e9f9692] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-e9f9692/bin/gcc with -Os:
+5
+Output of /tmp/gcc-e9f9692/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at e9f9692... extend.texi: Document behavior of __attribute__((aligned)) on typedefs.
+[32m[     info][0m Current commit [e9f9692] is bad. Return value: 1
+
+Bisecting: 119 revisions left to test after this (roughly 7 steps)
+[5513e23973024b809c1327807c1c1ac2197bf4e8] extend.texi (X86 Built-in Functions): Document __builtin_fabsq, __builtin_copysignq and __builtin_infq built-in functions.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [5513e23]
++---------------------------------------- Current commit hash: [5513e23] ----------------------------------------+
+GCC for commit [5513e23] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-5513e23/bin/gcc with -Os:
+0
+Output of /tmp/gcc-5513e23/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5513e23... extend.texi (X86 Built-in Functions): Document __builtin_fabsq, __builtin_copysignq and __builtin_infq built-in functions.
+[32m[     info][0m Current commit [5513e23] is good. Return value: 0
+
+Bisecting: 59 revisions left to test after this (roughly 6 steps)
+[058dcc25b74ed4d171182311a12d27272844ee16] re PR libstdc++/29286 (placement new does not change the dynamic type as it should)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [058dcc2]
++---------------------------------------- Current commit hash: [058dcc2] ----------------------------------------+
+GCC for commit [058dcc2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-058dcc2/bin/gcc with -Os:
+5
+Output of /tmp/gcc-058dcc2/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 058dcc2... re PR libstdc++/29286 (placement new does not change the dynamic type as it should)
+[32m[     info][0m Current commit [058dcc2] is bad. Return value: 1
+
+Bisecting: 29 revisions left to test after this (roughly 5 steps)
+[b0464c88979442236689310d43ee38b6579bc1e2] remove signed(_or_unsigned)?_type langhooks
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [b0464c8]
++---------------------------------------- Current commit hash: [b0464c8] ----------------------------------------+
+GCC for commit [b0464c8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b0464c8/bin/gcc with -Os:
+0
+Output of /tmp/gcc-b0464c8/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b0464c8... remove signed(_or_unsigned)?_type langhooks
+[32m[     info][0m Current commit [b0464c8] is good. Return value: 0
+
+Bisecting: 14 revisions left to test after this (roughly 4 steps)
+[467f79e82daa62411868d430d14fb983a8a5ece9] combine.c (subst): Fix typo.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [467f79e]
++---------------------------------------- Current commit hash: [467f79e] ----------------------------------------+
+GCC for commit [467f79e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-467f79e/bin/gcc with -Os:
+5
+Output of /tmp/gcc-467f79e/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 467f79e... combine.c (subst): Fix typo.
+[32m[     info][0m Current commit [467f79e] is bad. Return value: 1
+
+Bisecting: 7 revisions left to test after this (roughly 3 steps)
+[a91d32a4a65d54cccf639a1541417e39cb7b7deb] i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [a91d32a]
++---------------------------------------- Current commit hash: [a91d32a] ----------------------------------------+
+GCC for commit [a91d32a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-a91d32a/bin/gcc with -Os:
+0
+Output of /tmp/gcc-a91d32a/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a91d32a... i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+[32m[     info][0m Current commit [a91d32a] is good. Return value: 0
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[b0384c544e7484c7b5b4721cf914600f9f71b65b] reload1.c (mark_home_live_1): Use the mode parameter.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [b0384c5]
++---------------------------------------- Current commit hash: [b0384c5] ----------------------------------------+
+GCC for commit [b0384c5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b0384c5/bin/gcc with -Os:
+5
+Output of /tmp/gcc-b0384c5/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b0384c5... reload1.c (mark_home_live_1): Use the mode parameter.
+[32m[     info][0m Current commit [b0384c5] is bad. Return value: 1
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[0a41f3b2c87015471c1bf6d585e65f5219954a78] df-scan.c (df_insn_delete, [...]): Fixed spelling of word "deferred".
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [0a41f3b]
++---------------------------------------- Current commit hash: [0a41f3b] ----------------------------------------+
+GCC for commit [0a41f3b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-0a41f3b/bin/gcc with -Os:
+5
+Output of /tmp/gcc-0a41f3b/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0a41f3b... df-scan.c (df_insn_delete, [...]): Fixed spelling of word "deferred".
+[32m[     info][0m Current commit [0a41f3b] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[6fb5fa3cbc0d78cf9f4ff7cac5e1d8af1e65c5bb] Merge dataflow branch into mainline
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/537 small
+[32m[     info][0m Testing commit: [6fb5fa3]
++---------------------------------------- Current commit hash: [6fb5fa3] ----------------------------------------+
+GCC for commit [6fb5fa3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-6fb5fa3/bin/gcc with -Os:
+5
+Output of /tmp/gcc-6fb5fa3/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6fb5fa3... Merge dataflow branch into mainline
+[32m[     info][0m Current commit [6fb5fa3] is bad. Return value: 1
+
+6fb5fa3cbc0d78cf9f4ff7cac5e1d8af1e65c5bb is the first bad commit
+commit 6fb5fa3cbc0d78cf9f4ff7cac5e1d8af1e65c5bb
+Author: Daniel Berlin <dberlin@gcc.gnu.org>
+Date:   Mon Jun 11 18:02:15 2007 +0000
+
+    Merge dataflow branch into mainline
+    
+    From-SVN: r125624
+
+:100644 100644 b68b4a36f62b2c48083ea2f4400490059e6d56e6 873677ddd6011f38e38556d465c766329adbe899 M	MAINTAINERS
+:040000 040000 631c08b4d496052b5411837aa99a752368ff9cff 59bc23bb68f87d9680160fd53405c9bbd11a0de5 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 6fb5fa3 Merge dataflow branch into mainline
+Checking out files:  18% (3440/18656)   Checking out files:  19% (3545/18656)   Checking out files:  20% (3732/18656)   Checking out files:  21% (3918/18656)   Checking out files:  22% (4105/18656)   Checking out files:  23% (4291/18656)   Checking out files:  24% (4478/18656)   Checking out files:  25% (4664/18656)   Checking out files:  26% (4851/18656)   Checking out files:  27% (5038/18656)   Checking out files:  28% (5224/18656)   Checking out files:  29% (5411/18656)   Checking out files:  30% (5597/18656)   Checking out files:  31% (5784/18656)   Checking out files:  32% (5970/18656)   Checking out files:  33% (6157/18656)   Checking out files:  34% (6344/18656)   Checking out files:  34% (6487/18656)   Checking out files:  35% (6530/18656)   Checking out files:  36% (6717/18656)   Checking out files:  37% (6903/18656)   Checking out files:  38% (7090/18656)   Checking out files:  39% (7276/18656)   Checking out files:  40% (7463/18656)   Checking out files:  41% (7649/18656)   Checking out files:  42% (7836/18656)   Checking out files:  43% (8023/18656)   Checking out files:  44% (8209/18656)   Checking out files:  45% (8396/18656)   Checking out files:  46% (8582/18656)   Checking out files:  47% (8769/18656)   Checking out files:  48% (8955/18656)   Checking out files:  49% (9142/18656)   Checking out files:  50% (9328/18656)   Checking out files:  51% (9515/18656)   Checking out files:  52% (9702/18656)   Checking out files:  53% (9888/18656)   Checking out files:  54% (10075/18656)   Checking out files:  55% (10261/18656)   Checking out files:  56% (10448/18656)   Checking out files:  57% (10634/18656)   Checking out files:  58% (10821/18656)   Checking out files:  59% (11008/18656)   Checking out files:  60% (11194/18656)   Checking out files:  61% (11381/18656)   Checking out files:  62% (11567/18656)   Checking out files:  63% (11754/18656)   Checking out files:  64% (11940/18656)   Checking out files:  65% (12127/18656)   Checking out files:  66% (12313/18656)   Checking out files:  67% (12500/18656)   Checking out files:  68% (12687/18656)   Checking out files:  69% (12873/18656)   Checking out files:  70% (13060/18656)   Checking out files:  71% (13246/18656)   Checking out files:  71% (13263/18656)   Checking out files:  72% (13433/18656)   Checking out files:  73% (13619/18656)   Checking out files:  74% (13806/18656)   Checking out files:  75% (13992/18656)   Checking out files:  76% (14179/18656)   Checking out files:  77% (14366/18656)   Checking out files:  78% (14552/18656)   Checking out files:  79% (14739/18656)   Checking out files:  80% (14925/18656)   Checking out files:  81% (15112/18656)   Checking out files:  82% (15298/18656)   Checking out files:  83% (15485/18656)   Checking out files:  84% (15672/18656)   Checking out files:  85% (15858/18656)   Checking out files:  86% (16045/18656)   Checking out files:  87% (16231/18656)   Checking out files:  88% (16418/18656)   Checking out files:  88% (16576/18656)   Checking out files:  89% (16604/18656)   Checking out files:  90% (16791/18656)   Checking out files:  91% (16977/18656)   Checking out files:  92% (17164/18656)   Checking out files:  93% (17351/18656)   Checking out files:  94% (17537/18656)   Checking out files:  95% (17724/18656)   Checking out files:  96% (17910/18656)   Checking out files:  97% (18097/18656)   Checking out files:  98% (18283/18656)   Checking out files:  99% (18470/18656)   Checking out files: 100% (18656/18656)   Checking out files: 100% (18656/18656), done.
+Previous HEAD position was 6fb5fa3... Merge dataflow branch into mainline
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [6fb5fa3]
++---------------------------------------- Current commit hash: [6fb5fa3] ----------------------------------------+
+GCC for commit [6fb5fa3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-6fb5fa3/bin/gcc with -Os:
+5
+Output of /tmp/gcc-6fb5fa3/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6fb5fa3... Merge dataflow branch into mainline
+[32m[     info][0m Current commit [6fb5fa3] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [a91d32a]
++---------------------------------------- Current commit hash: [a91d32a] ----------------------------------------+
+GCC for commit [a91d32a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-a91d32a/bin/gcc with -Os:
+0
+Output of /tmp/gcc-a91d32a/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a91d32a... i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+[32m[     info][0m Current commit [a91d32a] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [6fb5fa3] with -O0:
+0
+Output of gcc [6fb5fa3] with -O1:
+5
+Output of gcc [6fb5fa3] with -O2:
+5
+Output of gcc [6fb5fa3] with -O3:
+5
+Output of gcc [6fb5fa3] with -Os:
+5
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

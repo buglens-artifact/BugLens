@@ -1,0 +1,320 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = b1b8469
+Output of gcc-4.3.0 with -O1:
+checksum = 137c2340
+Output of gcc-4.3.0 with -O0:
+checksum = b1b8469
+====================================================================
+[32m[     info][0m Good version found: gcc-4.0.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[bd182be84e9c8ae8485ac7c392fa0b6678969e3c] re PR rtl-optimization/20117 (duplicated labels in PIC)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [bd182be]
++---------------------------------------- Current commit hash: [bd182be] ----------------------------------------+
+GCC for commit [bd182be] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = b1b8469
+Output of /tmp/gcc-bd182be/bin/gcc with -O1:
+checksum = b1b8469
+Output of /tmp/gcc-bd182be/bin/gcc with -O0:
+checksum = b1b8469
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+[32m[     info][0m Current commit [bd182be] is good. Return value: 0
+
+Bisecting: 9952 revisions left to test after this (roughly 13 steps)
+[9659ce8b6160434d90f8b7985921f0b05e74d2d7] re PR tree-optimization/24888 (duplication of local variables after versioning/inlining)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [9659ce8]
++---------------------------------------- Current commit hash: [9659ce8] ----------------------------------------+
+GCC for commit [9659ce8] already exists. Using existing binary.
+Compilation by gcc [9659ce8] with -O1 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 9659ce8... re PR tree-optimization/24888 (duplication of local variables after versioning/inlining)
+Bisecting: 4976 revisions left to test after this (roughly 12 steps)
+[34d9dc2d292b832a428b97368fd7b1c3c019f625] cvsignore: Likewise.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [34d9dc2]
++---------------------------------------- Current commit hash: [34d9dc2] ----------------------------------------+
+GCC for commit [34d9dc2] already exists. Using existing binary.
+Compilation by gcc [34d9dc2] with -O1 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 34d9dc2... cvsignore: Likewise.
+Bisecting: 2487 revisions left to test after this (roughly 11 steps)
+[bd16f8f1525135a3d730a4cc8136aeb3328bdfb0] tweak comment
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [bd16f8f]
++---------------------------------------- Current commit hash: [bd16f8f] ----------------------------------------+
+GCC for commit [bd16f8f] already exists. Using existing binary.
+Compilation by gcc [bd16f8f] with -O1 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at bd16f8f... tweak comment
+Bisecting: 1243 revisions left to test after this (roughly 10 steps)
+[eac02e59606def2611a7bc53ea29dbb28f860f1c] * cp-tree.h (DECL_ARRAY_DELETE_OPERATOR_P): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [eac02e59]
++---------------------------------------- Current commit hash: [eac02e59] ----------------------------------------+
+GCC for commit [eac02e59] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = b1b8469
+Output of /tmp/gcc-eac02e59/bin/gcc with -O1:
+checksum = b1b8469
+Output of /tmp/gcc-eac02e59/bin/gcc with -O0:
+checksum = b1b8469
+----------------------------------------------------
+No local changes to save
+HEAD is now at eac02e59... * cp-tree.h (DECL_ARRAY_DELETE_OPERATOR_P): Remove.
+[32m[     info][0m Current commit [eac02e59] is good. Return value: 0
+
+Bisecting: 621 revisions left to test after this (roughly 9 steps)
+[1fb2002d69c09edb91d88e99a21a86f908b7b85b] configure.ac: Check for ftruncate and chsize.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [1fb2002]
++---------------------------------------- Current commit hash: [1fb2002] ----------------------------------------+
+GCC for commit [1fb2002] already exists. Using existing binary.
+Compilation by gcc [1fb2002] with -O1 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 1fb2002... configure.ac: Check for ftruncate and chsize.
+Bisecting: 310 revisions left to test after this (roughly 8 steps)
+[6c08eb63c58c512aee3df5db5ffb98955ca54a18] trans-const.c (gfc_conv_mpz_to_tree): Fix comment.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [6c08eb6]
++---------------------------------------- Current commit hash: [6c08eb6] ----------------------------------------+
+GCC for commit [6c08eb6] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = b1b8469
+Output of /tmp/gcc-6c08eb6/bin/gcc with -O1:
+checksum = b1b8469
+Output of /tmp/gcc-6c08eb6/bin/gcc with -O0:
+checksum = b1b8469
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6c08eb6... trans-const.c (gfc_conv_mpz_to_tree): Fix comment.
+[32m[     info][0m Current commit [6c08eb6] is good. Return value: 0
+
+Bisecting: 155 revisions left to test after this (roughly 7 steps)
+[9469878ca1988a9d9a7266efc221639eace96f61] config.gcc (avr-*-*): Remove redundant "case".
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [9469878]
++---------------------------------------- Current commit hash: [9469878] ----------------------------------------+
+GCC for commit [9469878] already exists. Using existing binary.
+Compilation by gcc [9469878] with -O1 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 9469878... config.gcc (avr-*-*): Remove redundant "case".
+Bisecting: 77 revisions left to test after this (roughly 6 steps)
+[144d51f9df000e9be80c419cb73f3823b50e85eb] pa.c (legitimize_pic_address): Use gcc_assert and gcc_unreachable as appropriate.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [144d51f]
++---------------------------------------- Current commit hash: [144d51f] ----------------------------------------+
+GCC for commit [144d51f] already exists. Using existing binary.
+Compilation by gcc [144d51f] with -O1 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 144d51f... pa.c (legitimize_pic_address): Use gcc_assert and gcc_unreachable as appropriate.
+Bisecting: 38 revisions left to test after this (roughly 5 steps)
+[d3e53108dde9a1c1826fbd227339bbc51a84909f] check_allocate_max_size.cpp: Add explicit instantiations for systems without weak symbols.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [d3e5310]
++---------------------------------------- Current commit hash: [d3e5310] ----------------------------------------+
+GCC for commit [d3e5310] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = b1b8469
+Output of /tmp/gcc-d3e5310/bin/gcc with -O1:
+checksum = b1b8469
+Output of /tmp/gcc-d3e5310/bin/gcc with -O0:
+checksum = b1b8469
+----------------------------------------------------
+No local changes to save
+HEAD is now at d3e5310... check_allocate_max_size.cpp: Add explicit instantiations for systems without weak symbols.
+[32m[     info][0m Current commit [d3e5310] is good. Return value: 0
+
+Bisecting: 19 revisions left to test after this (roughly 4 steps)
+[c1fc50476ce2f2cf7f376a7824e0e25a803837f6] re PR preprocessor/20907 (long comments throw off line numbers)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [c1fc504]
++---------------------------------------- Current commit hash: [c1fc504] ----------------------------------------+
+GCC for commit [c1fc504] already exists. Using existing binary.
+Compilation by gcc [c1fc504] with -O1 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at c1fc504... re PR preprocessor/20907 (long comments throw off line numbers)
+Bisecting: 9 revisions left to test after this (roughly 3 steps)
+[b48610900e267a7335dd1315e32733d8ef4092dc] cgraphunit.c: Include tree-pass.h (cgraph_decide_recursive_inlining...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [b486109]
++---------------------------------------- Current commit hash: [b486109] ----------------------------------------+
+GCC for commit [b486109] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = b1b8469
+Output of /tmp/gcc-b486109/bin/gcc with -O1:
+checksum = b1b8469
+Output of /tmp/gcc-b486109/bin/gcc with -O0:
+checksum = b1b8469
+----------------------------------------------------
+No local changes to save
+HEAD is now at b486109... cgraphunit.c: Include tree-pass.h (cgraph_decide_recursive_inlining...
+[32m[     info][0m Current commit [b486109] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[41806d92af91cf26e52aa00a536cf3094ef2648b] alias.c (true_dependence): Remove 'abort' from comments.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [41806d9]
++---------------------------------------- Current commit hash: [41806d9] ----------------------------------------+
+GCC for commit [41806d9] already exists. Using existing binary.
+Compilation by gcc [41806d9] with -O1 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 41806d9... alias.c (true_dependence): Remove 'abort' from comments.
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[44e97417bf5097620f99dfbd93d147fd424aa466] Add me under obj-c/c++.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [44e9741]
++---------------------------------------- Current commit hash: [44e9741] ----------------------------------------+
+GCC for commit [44e9741] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = b1b8469
+Output of /tmp/gcc-44e9741/bin/gcc with -O1:
+checksum = b1b8469
+Output of /tmp/gcc-44e9741/bin/gcc with -O0:
+checksum = b1b8469
+----------------------------------------------------
+No local changes to save
+HEAD is now at 44e9741... Add me under obj-c/c++.
+[32m[     info][0m Current commit [44e9741] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[ac7e839c63bfb19d83e6c81aee68c4435c1915c2] Fix for latent bug in splitting arguments exposed by rs6000_arg_partial_bytes rewrite.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0525 orig
+[32m[     info][0m Testing commit: [ac7e839]
++---------------------------------------- Current commit hash: [ac7e839] ----------------------------------------+
+GCC for commit [ac7e839] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = b1b8469
+Output of /tmp/gcc-ac7e839/bin/gcc with -O1:
+checksum = b1b8469
+Output of /tmp/gcc-ac7e839/bin/gcc with -O0:
+checksum = b1b8469
+----------------------------------------------------
+No local changes to save
+HEAD is now at ac7e839... Fix for latent bug in splitting arguments exposed by rs6000_arg_partial_bytes rewrite.
+[32m[     info][0m Current commit [ac7e839] is good. Return value: 0
+
+41806d92af91cf26e52aa00a536cf3094ef2648b is the first bad commit
+commit 41806d92af91cf26e52aa00a536cf3094ef2648b
+Author: Nathan Sidwell <nathan@gcc.gnu.org>
+Date:   Thu Apr 21 15:47:33 2005 +0000
+
+    alias.c (true_dependence): Remove 'abort' from comments.
+    
+    	* alias.c (true_dependence): Remove 'abort' from comments. Use
+    	gcc_assert and gcc_unreachable as appropriate.
+    	(canon_true_dependence): Likewise.
+    	* bb-reorder.c (connect_traces): Likewise.
+    	* c-common.c (c_add_case_label): Likewise.
+    	* c-decl.c (finish_function): Likewise.
+    	* caller-save.c (insert_restore, insert_save): Likewise.
+    	* cfg.c (update_bb_profile_for_threading): Likewise.
+    	* cfganal.c (flow_active_insn_p): Likewise.
+    	* cfgexpand.c (add_reg_br_prob_note): Likewise.
+    	* cfgrtl.c (rtl_redirect_edge_and_branch_force, rtl_split_edge,
+    	cfg_layout_merge_blocks): Likewise.
+    	* ifcvt.c (cond_exec_process_insns, merge_if_block,
+    	find_if_block): Likewise.
+    	* integrate.c (allocate_initial_values): Likewise.
+    	* jump.c (reverse_condition, reverse_condition_maybe_unordered,
+    	swap_condition, unsigned_condition, signed_condition,
+    	mark_jump_label, invert_jump_1, rtx_renumbered_equal_p,
+    	reg_or_subregno): Likewise.
+    	* lambda-code.c (lambda_compute_auxillary_space,
+    	lambda_transform_legal_p): Likewise.
+    	* lambda-mat.c (lambda_matrix_inverse_hard): Likewise.
+    	* langhooks.c (lhd_set_decl_assembler_name, lhd_type_promotes_to,
+    	lhd_incomplete_type_error, lhd_expand_expr,
+    	lhd_types_compatible_p, lhd_tree_size): Likewise.
+    	* lcm.c (create_pre_exit, optimize_mode_switching): Likewise.
+    	* local-alloc.c (update_equiv_regs): Likewise.
+    	* loop-unroll.c (peel_loop_completely
+    	unroll_loop_constant_iterations, unroll_loop_runtime_iterations,
+    	peel_loop_simple, unroll_loop_stupid,
+    	analyze_iv_to_split_insn): Likewise.
+    	* loop.c (gen_prefetch, find_and_verify_loops,
+    	basic_induction_var): Likewise.
+    	* modulo-sched.c (normalize_sched_times, check_nodes_order): Likewise.
+    	* value-prof.c (tree_find_values_to_profile): Likewise.
+    	* varasm.c (named_section, default_assemble_integer,
+    	decode_addr_const): Likewise.
+    
+    From-SVN: r98508
+
+:040000 040000 e8fb97670c019779ddcd809bd91050304fb239c3 4be4f539bcd6193c220f79091a03c9190a406f1a M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 41806d9 alias.c (true_dependence): Remove 'abort' from comments.
+Checking out files:  10% (4724/45354)   Checking out files:  11% (4989/45354)   Checking out files:  12% (5443/45354)   Checking out files:  13% (5897/45354)   Checking out files:  14% (6350/45354)   Checking out files:  14% (6595/45354)   Checking out files:  15% (6804/45354)   Checking out files:  16% (7257/45354)   Checking out files:  17% (7711/45354)   Checking out files:  17% (7792/45354)   Checking out files:  18% (8164/45354)   Checking out files:  19% (8618/45354)   Checking out files:  19% (9034/45354)   Checking out files:  20% (9071/45354)   Checking out files:  21% (9525/45354)   Checking out files:  21% (9956/45354)   Checking out files:  22% (9978/45354)   Checking out files:  23% (10432/45354)   Checking out files:  24% (10885/45354)   Checking out files:  25% (11339/45354)   Checking out files:  26% (11793/45354)   Checking out files:  27% (12246/45354)   Checking out files:  27% (12619/45354)   Checking out files:  28% (12700/45354)   Checking out files:  29% (13153/45354)   Checking out files:  30% (13607/45354)   Checking out files:  31% (14060/45354)   Checking out files:  32% (14514/45354)   Checking out files:  33% (14967/45354)   Checking out files:  34% (15421/45354)   Checking out files:  34% (15587/45354)   Checking out files:  35% (15874/45354)   Checking out files:  36% (16328/45354)   Checking out files:  37% (16781/45354)   Checking out files:  38% (17235/45354)   Checking out files:  38% (17583/45354)   Checking out files:  39% (17689/45354)   Checking out files:  40% (18142/45354)   Checking out files:  41% (18596/45354)   Checking out files:  42% (19049/45354)   Checking out files:  43% (19503/45354)   Checking out files:  43% (19848/45354)   Checking out files:  44% (19956/45354)   Checking out files:  45% (20410/45354)   Checking out files:  46% (20863/45354)   Checking out files:  47% (21317/45354)   Checking out files:  48% (21770/45354)   Checking out files:  49% (22224/45354)   Checking out files:  49% (22623/45354)   Checking out files:  50% (22677/45354)   Checking out files:  51% (23131/45354)   Checking out files:  52% (23585/45354)   Checking out files:  53% (24038/45354)   Checking out files:  54% (24492/45354)   Checking out files:  55% (24945/45354)   Checking out files:  56% (25399/45354)   Checking out files:  57% (25852/45354)   Checking out files:  57% (25896/45354)   Checking out files:  58% (26306/45354)   Checking out files:  59% (26759/45354)   Checking out files:  60% (27213/45354)   Checking out files:  61% (27666/45354)   Checking out files:  62% (28120/45354)   Checking out files:  63% (28574/45354)   Checking out files:  64% (29027/45354)   Checking out files:  64% (29124/45354)   Checking out files:  65% (29481/45354)   Checking out files:  66% (29934/45354)   Checking out files:  67% (30388/45354)   Checking out files:  68% (30841/45354)   Checking out files:  69% (31295/45354)   Checking out files:  70% (31748/45354)   Checking out files:  70% (32064/45354)   Checking out files:  71% (32202/45354)   Checking out files:  72% (32655/45354)   Checking out files:  73% (33109/45354)   Checking out files:  74% (33562/45354)   Checking out files:  75% (34016/45354)   Checking out files:  76% (34470/45354)   Checking out files:  77% (34923/45354)   Checking out files:  77% (35119/45354)   Checking out files:  78% (35377/45354)   Checking out files:  79% (35830/45354)   Checking out files:  80% (36284/45354)   Checking out files:  81% (36737/45354)   Checking out files:  82% (37191/45354)   Checking out files:  83% (37644/45354)   Checking out files:  84% (38098/45354)   Checking out files:  84% (38456/45354)   Checking out files:  85% (38551/45354)   Checking out files:  86% (39005/45354)   Checking out files:  87% (39458/45354)   Checking out files:  88% (39912/45354)   Checking out files:  89% (40366/45354)   Checking out files:  90% (40819/45354)   Checking out files:  90% (41210/45354)   Checking out files:  91% (41273/45354)   Checking out files:  92% (41726/45354)   Checking out files:  93% (42180/45354)   Checking out files:  94% (42633/45354)   Checking out files:  95% (43087/45354)   Checking out files:  95% (43461/45354)   Checking out files:  96% (43540/45354)   Checking out files:  97% (43994/45354)   Checking out files:  98% (44447/45354)   Checking out files:  99% (44901/45354)   Checking out files: 100% (45354/45354)   Checking out files: 100% (45354/45354), done.
+Previous HEAD position was ac7e839... Fix for latent bug in splitting arguments exposed by rs6000_arg_partial_bytes rewrite.
+HEAD is now at 11147af... re PR fortran/32472 (ICE in trans-const.c:106 for REPEAT initialization expression of non-parameter)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [41806d9]
++---------------------------------------- Current commit hash: [41806d9] ----------------------------------------+
+GCC for commit [41806d9] already exists. Using existing binary.
+Compilation by gcc [41806d9] with -O1 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 41806d9... alias.c (true_dependence): Remove 'abort' from comments.
+[32m[     info][0m Testing commit: [ac7e839]
++---------------------------------------- Current commit hash: [ac7e839] ----------------------------------------+
+GCC for commit [ac7e839] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = b1b8469
+Output of /tmp/gcc-ac7e839/bin/gcc with -O1:
+checksum = b1b8469
+Output of /tmp/gcc-ac7e839/bin/gcc with -O0:
+checksum = b1b8469
+----------------------------------------------------
+No local changes to save
+HEAD is now at ac7e839... Fix for latent bug in splitting arguments exposed by rs6000_arg_partial_bytes rewrite.
+[32m[     info][0m Current commit [ac7e839] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [41806d9] with -O0:
+checksum = b1b8469
+[31m[  warning][0m Compilation by gcc [41806d9] with -O1 failed. Continue...
+[31m[  warning][0m Compilation by gcc [41806d9] with -O2 failed. Continue...
+[31m[  warning][0m Compilation by gcc [41806d9] with -O3 failed. Continue...
+[31m[  warning][0m Compilation by gcc [41806d9] with -Os failed. Continue...
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

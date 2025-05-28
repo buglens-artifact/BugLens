@@ -1,0 +1,397 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 15367260
+Output of gcc-4.3.0 with -O3:
+checksum = 1536725f
+Output of gcc-4.3.0 with -O0:
+checksum = 15367260
+====================================================================
+[32m[     info][0m Good version found: gcc-4.1.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[abc088aad79d47b40da8a26e87815db09ab2d6eb] re PR c++/8355 (befriending a template specialization in another namespace)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [abc088a]
++---------------------------------------- Current commit hash: [abc088a] ----------------------------------------+
+GCC for commit [abc088a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-abc088a/bin/gcc with -O3:
+checksum = 15367260
+Output of /tmp/gcc-abc088a/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at abc088a... re PR c++/8355 (befriending a template specialization in another namespace)
+[32m[     info][0m Current commit [abc088a] is good. Return value: 0
+
+Bisecting: 6978 revisions left to test after this (roughly 13 steps)
+[ad8e8d0b465e6dd9d9db4988de7b5c524bb4d85d] re PR inline-asm/28686 (ebp from clobber list used as operand)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [ad8e8d0]
++---------------------------------------- Current commit hash: [ad8e8d0] ----------------------------------------+
+GCC for commit [ad8e8d0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -O3:
+checksum = 15367260
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at ad8e8d0... re PR inline-asm/28686 (ebp from clobber list used as operand)
+[32m[     info][0m Current commit [ad8e8d0] is good. Return value: 0
+
+Bisecting: 3489 revisions left to test after this (roughly 12 steps)
+[390ea488c1753eaf9c747ead8f653c9023058109] mips-protos.h (mips_split_symbol): Add a mode and an "rtx *" argument.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [390ea48]
++---------------------------------------- Current commit hash: [390ea48] ----------------------------------------+
+GCC for commit [390ea48] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-390ea48/bin/gcc with -O3:
+checksum = 15367260
+Output of /tmp/gcc-390ea48/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at 390ea48... mips-protos.h (mips_split_symbol): Add a mode and an "rtx *" argument.
+[32m[     info][0m Current commit [390ea48] is good. Return value: 0
+
+Bisecting: 1744 revisions left to test after this (roughly 11 steps)
+[e1332188a4c377db70d82b8e6a5df3961b1a4499] re PR fortran/33596 (ICE with simplified ISNAN)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [e133218]
++---------------------------------------- Current commit hash: [e133218] ----------------------------------------+
+GCC for commit [e133218] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-e133218/bin/gcc with -O3:
+checksum = 1536725f
+Output of /tmp/gcc-e133218/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at e133218... re PR fortran/33596 (ICE with simplified ISNAN)
+[32m[     info][0m Current commit [e133218] is bad. Return value: 1
+
+Bisecting: 872 revisions left to test after this (roughly 10 steps)
+[22083efc5482e1124ea088b301e167d37f107e07] configure.host: Enable interpreter for mips64.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [22083ef]
++---------------------------------------- Current commit hash: [22083ef] ----------------------------------------+
+GCC for commit [22083ef] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-22083ef/bin/gcc with -O3:
+checksum = 15367260
+Output of /tmp/gcc-22083ef/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at 22083ef... configure.host: Enable interpreter for mips64.
+[32m[     info][0m Current commit [22083ef] is good. Return value: 0
+
+Bisecting: 436 revisions left to test after this (roughly 9 steps)
+[049d24222dcadcf2d3d5c24005992d83303c3743] re PR libstdc++/33678 (__do_catch, __do_upcast ABI change)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [049d242]
++---------------------------------------- Current commit hash: [049d242] ----------------------------------------+
+GCC for commit [049d242] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-049d242/bin/gcc with -O3:
+checksum = 1536725f
+Output of /tmp/gcc-049d242/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at 049d242... re PR libstdc++/33678 (__do_catch, __do_upcast ABI change)
+[32m[     info][0m Current commit [049d242] is bad. Return value: 1
+
+Bisecting: 217 revisions left to test after this (roughly 8 steps)
+[bd7993c83c1716e191b5788e8fa54454c49ef1bf] config/m68k/linux.h (PREFERRED_STACK_BOUNDARY): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [bd7993c]
++---------------------------------------- Current commit hash: [bd7993c] ----------------------------------------+
+GCC for commit [bd7993c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-bd7993c/bin/gcc with -O3:
+checksum = 15367260
+Output of /tmp/gcc-bd7993c/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd7993c... config/m68k/linux.h (PREFERRED_STACK_BOUNDARY): New.
+[32m[     info][0m Current commit [bd7993c] is good. Return value: 0
+
+Bisecting: 108 revisions left to test after this (roughly 7 steps)
+[94a73152cc79020dbcb1f6874bdd0661c2a4a30b] re PR tree-optimization/33597 (Internal compiler error while compiling libswscale from ffmpeg)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [94a7315]
++---------------------------------------- Current commit hash: [94a7315] ----------------------------------------+
+GCC for commit [94a7315] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-94a7315/bin/gcc with -O3:
+checksum = 15367260
+Output of /tmp/gcc-94a7315/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at 94a7315... re PR tree-optimization/33597 (Internal compiler error while compiling libswscale from ffmpeg)
+[32m[     info][0m Current commit [94a7315] is good. Return value: 0
+
+Bisecting: 54 revisions left to test after this (roughly 6 steps)
+[02a4823b8650a920d78f6b1bac89587b8b1f5374] gcse.c (hash_scan_set): Insert set in insn before note at the end of basic block.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [02a4823]
++---------------------------------------- Current commit hash: [02a4823] ----------------------------------------+
+GCC for commit [02a4823] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-02a4823/bin/gcc with -O3:
+checksum = 1536725f
+Output of /tmp/gcc-02a4823/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at 02a4823... gcse.c (hash_scan_set): Insert set in insn before note at the end of basic block.
+[32m[     info][0m Current commit [02a4823] is bad. Return value: 1
+
+Bisecting: 26 revisions left to test after this (roughly 5 steps)
+[f502740976e81bd3971ebc1e345af93540755b85] Add vec_init support for 750CL paired vectors and fix movv2sf_paired
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [f502740]
++---------------------------------------- Current commit hash: [f502740] ----------------------------------------+
+GCC for commit [f502740] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-f502740/bin/gcc with -O3:
+checksum = 1536725f
+Output of /tmp/gcc-f502740/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at f502740... Add vec_init support for 750CL paired vectors and fix movv2sf_paired
+[32m[     info][0m Current commit [f502740] is bad. Return value: 1
+
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[11cd03c125e9db2eaf866bde79d141d69bc5289d] check_jni_methods.sh: Don't depend on diff -b ignoring a single trailing whitespace.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [11cd03c]
++---------------------------------------- Current commit hash: [11cd03c] ----------------------------------------+
+GCC for commit [11cd03c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-11cd03c/bin/gcc with -O3:
+checksum = 1536725f
+Output of /tmp/gcc-11cd03c/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at 11cd03c... check_jni_methods.sh: Don't depend on diff -b ignoring a single trailing whitespace.
+[32m[     info][0m Current commit [11cd03c] is bad. Return value: 1
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[a1e6d1ce6cdf021a79783e18fab1410604f63fe0] re PR other/33585 (make html does not work for install files)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [a1e6d1c]
++---------------------------------------- Current commit hash: [a1e6d1c] ----------------------------------------+
+GCC for commit [a1e6d1c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-a1e6d1c/bin/gcc with -O3:
+checksum = 15367260
+Output of /tmp/gcc-a1e6d1c/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at a1e6d1c... re PR other/33585 (make html does not work for install files)
+[32m[     info][0m Current commit [a1e6d1c] is good. Return value: 0
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[fe644092f52890890262703d3de227a9fe07e257] Fix test to work with 16-bit targets
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [fe64409]
++---------------------------------------- Current commit hash: [fe64409] ----------------------------------------+
+GCC for commit [fe64409] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-fe64409/bin/gcc with -O3:
+checksum = 15367260
+Output of /tmp/gcc-fe64409/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at fe64409... Fix test to work with 16-bit targets
+[32m[     info][0m Current commit [fe64409] is good. Return value: 0
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[510335c8b641b778807e0cdb23ee5d838a56b1d9] re PR middle-end/22156 (bit-field copying regressed)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [510335c]
++---------------------------------------- Current commit hash: [510335c] ----------------------------------------+
+GCC for commit [510335c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-510335c/bin/gcc with -O3:
+checksum = 1536725f
+Output of /tmp/gcc-510335c/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at 510335c... re PR middle-end/22156 (bit-field copying regressed)
+[32m[     info][0m Current commit [510335c] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[a567207e7133ad025029c1869e6ec292acd93f4a] simplify-rtx.c (comparison_result, [...]): Rename CR_* constants to CMP_*.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0010 orig
+[32m[     info][0m Testing commit: [a567207]
++---------------------------------------- Current commit hash: [a567207] ----------------------------------------+
+GCC for commit [a567207] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-a567207/bin/gcc with -O3:
+checksum = 15367260
+Output of /tmp/gcc-a567207/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at a567207... simplify-rtx.c (comparison_result, [...]): Rename CR_* constants to CMP_*.
+[32m[     info][0m Current commit [a567207] is good. Return value: 0
+
+510335c8b641b778807e0cdb23ee5d838a56b1d9 is the first bad commit
+commit 510335c8b641b778807e0cdb23ee5d838a56b1d9
+Author: Alexandre Oliva <aoliva@redhat.com>
+Date:   Mon Oct 1 16:35:55 2007 +0000
+
+    re PR middle-end/22156 (bit-field copying regressed)
+    
+    PR middle-end/22156
+    * tree-sra.c (struct sra_elt): Add in_bitfld_block.
+    (sra_hash_tree): Handle BIT_FIELD_REFs.
+    (sra_elt_hash): Don't hash bitfld blocks.
+    (sra_elt_eq): Skip them in parent compares as well.  Handle
+    BIT_FIELD_REFs.
+    (build_element_name_1): Handle BIT_FIELD_REFs.
+    (instantiate_element): Propagate nowarn from parents.  Create
+    BIT_FIELD_REF for variables that are widened by scalarization.
+    Gimple-zero-initialize all bit-field variables that are not
+    part of parameters that are going to be scalarized on entry.
+    (instantiate_missing_elements_1): Return the sra_elt.
+    (canon_type_for_field): New.
+    (try_instantiate_multiple_fields): New.  Infer widest possible
+    access mode from decl or member type, but clip it at word
+    size, and only widen it if a field crosses an alignment
+    boundary.
+    (instantiate_missing_elements): Use them.
+    (generate_one_element_ref): Handle BIT_FIELD_REFs.
+    (scalar_bitfield_p): New.
+    (sra_build_assignment): Optimize assignments from scalarizable
+    BIT_FIELD_REFs.  Use BITS_BIG_ENDIAN to determine shift
+    counts.
+    (REPLDUP): New.
+    (sra_build_bf_assignment): New.  Optimize assignments to
+    scalarizable BIT_FIELD_REFs.
+    (sra_build_elt_assignment): New.  Optimize BIT_FIELD_REF
+    assignments to full variables.
+    (generate_copy_inout): Use the new macros and functions.
+    (generate_element_copy): Likewise.  Handle bitfld differences.
+    (generate_element_zero): Don't recurse for blocks.  Use
+    sra_build_elt_assignment.
+    (generate_one_element_init): Take elt instead of var.  Use
+    sra_build_elt_assignment.
+    (generate_element_init_1): Adjust.
+    (bitfield_overlap_info): New struct.
+    (bitfield_overlaps_p): New.
+    (sra_explode_bitfield_assignment): New.  Adjust widened
+    variables to account for endianness.
+    (sra_sync_for_bitfield_assignment): New.
+    (scalarize_use): Re-expand assignment to/from scalarized
+    BIT_FIELD_REFs.  Explode or sync needed members for
+    BIT_FIELD_REFs accesses or assignments.  Use REPLDUP.
+    (scalarize_copy): Use REPLDUP.
+    (scalarize_ldst): Move assert before dereference.  Adjust EH
+    handling.
+    (dump_sra_elt_name): Handle BIT_FIELD_REFs.
+    
+    From-SVN: r128908
+
+:040000 040000 6775209472675f308fd8d67fb7d7dfa76184939d 994f4bb72ebea5fb6fd31a09c14052a16f2f46fa M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 510335c re PR middle-end/22156 (bit-field copying regressed)
+Checking out files:  31% (5252/16520)   Checking out files:  32% (5287/16520)   Checking out files:  33% (5452/16520)   Checking out files:  34% (5617/16520)   Checking out files:  35% (5782/16520)   Checking out files:  36% (5948/16520)   Checking out files:  37% (6113/16520)   Checking out files:  38% (6278/16520)   Checking out files:  39% (6443/16520)   Checking out files:  40% (6608/16520)   Checking out files:  41% (6774/16520)   Checking out files:  42% (6939/16520)   Checking out files:  43% (7104/16520)   Checking out files:  43% (7208/16520)   Checking out files:  44% (7269/16520)   Checking out files:  45% (7434/16520)   Checking out files:  46% (7600/16520)   Checking out files:  47% (7765/16520)   Checking out files:  48% (7930/16520)   Checking out files:  49% (8095/16520)   Checking out files:  50% (8260/16520)   Checking out files:  50% (8316/16520)   Checking out files:  51% (8426/16520)   Checking out files:  52% (8591/16520)   Checking out files:  53% (8756/16520)   Checking out files:  54% (8921/16520)   Checking out files:  55% (9086/16520)   Checking out files:  55% (9194/16520)   Checking out files:  56% (9252/16520)   Checking out files:  57% (9417/16520)   Checking out files:  58% (9582/16520)   Checking out files:  59% (9747/16520)   Checking out files:  60% (9912/16520)   Checking out files:  61% (10078/16520)   Checking out files:  62% (10243/16520)   Checking out files:  63% (10408/16520)   Checking out files:  64% (10573/16520)   Checking out files:  65% (10738/16520)   Checking out files:  66% (10904/16520)   Checking out files:  66% (10947/16520)   Checking out files:  67% (11069/16520)   Checking out files:  68% (11234/16520)   Checking out files:  69% (11399/16520)   Checking out files:  70% (11564/16520)   Checking out files:  71% (11730/16520)   Checking out files:  72% (11895/16520)   Checking out files:  73% (12060/16520)   Checking out files:  74% (12225/16520)   Checking out files:  75% (12390/16520)   Checking out files:  75% (12396/16520)   Checking out files:  76% (12556/16520)   Checking out files:  77% (12721/16520)   Checking out files:  78% (12886/16520)   Checking out files:  79% (13051/16520)   Checking out files:  80% (13216/16520)   Checking out files:  81% (13382/16520)   Checking out files:  82% (13547/16520)   Checking out files:  83% (13712/16520)   Checking out files:  84% (13877/16520)   Checking out files:  85% (14042/16520)   Checking out files:  86% (14208/16520)   Checking out files:  86% (14274/16520)   Checking out files:  87% (14373/16520)   Checking out files:  88% (14538/16520)   Checking out files:  89% (14703/16520)   Checking out files:  90% (14868/16520)   Checking out files:  91% (15034/16520)   Checking out files:  92% (15199/16520)   Checking out files:  93% (15364/16520)   Checking out files:  94% (15529/16520)   Checking out files:  95% (15694/16520)   Checking out files:  96% (15860/16520)   Checking out files:  97% (16025/16520)   Checking out files:  97% (16080/16520)   Checking out files:  98% (16190/16520)   Checking out files:  99% (16355/16520)   Checking out files: 100% (16520/16520)   Checking out files: 100% (16520/16520), done.
+Previous HEAD position was a567207... simplify-rtx.c (comparison_result, [...]): Rename CR_* constants to CMP_*.
+HEAD is now at 18d5e41... re PR tree-optimization/1046 (gcc less efficient than jdk for recursion with -finline-functions)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [510335c]
++---------------------------------------- Current commit hash: [510335c] ----------------------------------------+
+GCC for commit [510335c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-510335c/bin/gcc with -O3:
+checksum = 1536725f
+Output of /tmp/gcc-510335c/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at 510335c... re PR middle-end/22156 (bit-field copying regressed)
+[32m[     info][0m Current commit [510335c] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [a567207]
++---------------------------------------- Current commit hash: [a567207] ----------------------------------------+
+GCC for commit [a567207] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 15367260
+Output of /tmp/gcc-a567207/bin/gcc with -O3:
+checksum = 15367260
+Output of /tmp/gcc-a567207/bin/gcc with -O0:
+checksum = 15367260
+----------------------------------------------------
+No local changes to save
+HEAD is now at a567207... simplify-rtx.c (comparison_result, [...]): Rename CR_* constants to CMP_*.
+[32m[     info][0m Current commit [a567207] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [510335c] with -O0:
+checksum = 15367260
+Output of gcc [510335c] with -O1:
+checksum = 15367260
+Output of gcc [510335c] with -O2:
+checksum = 15367260
+Output of gcc [510335c] with -O3:
+checksum = 1536725f
+Output of gcc [510335c] with -Os:
+checksum = 15367260
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

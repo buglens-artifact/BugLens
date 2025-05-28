@@ -1,0 +1,1 @@
+9a28759 tree-ssa-sink.c (sink_code_in_bb): Don't stop sinking after sinking the last stmt in a BB.

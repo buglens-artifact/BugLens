@@ -1,0 +1,6 @@
+caller-saves
+forward-propagate
+if-conversion
+inline-small-functions
+ipa-pure-const
+move-loop-invariants

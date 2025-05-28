@@ -1,0 +1,338 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+1
+Output of gcc-4.3.0 with -O3:
+0
+Output of gcc-4.3.0 with -O0:
+1
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Previous HEAD position was 99c1f1c... re PR c++/30854 (Wrong number of arguments printed for constructor)
+HEAD is now at 11147af... re PR fortran/32472 (ICE in trans-const.c:106 for REPEAT initialization expression of non-parameter)
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+1
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+1
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is good. Return value: 0
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[448d2cd2f73e2e16e2bdd5c407174afebf3ed845] re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [448d2cd]
++---------------------------------------- Current commit hash: [448d2cd] ----------------------------------------+
+GCC for commit [448d2cd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-448d2cd/bin/gcc with -O3:
+0
+Output of /tmp/gcc-448d2cd/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 448d2cd... re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+[32m[     info][0m Current commit [448d2cd] is bad. Return value: 1
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[6812b99bfefb741cadac6c5eba5a7446af820b62] impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [6812b99]
++---------------------------------------- Current commit hash: [6812b99] ----------------------------------------+
+GCC for commit [6812b99] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-6812b99/bin/gcc with -O3:
+0
+Output of /tmp/gcc-6812b99/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6812b99... impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+[32m[     info][0m Current commit [6812b99] is bad. Return value: 1
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[99c1f1ceed0d85eb785cb6f49ef23cad965922d2] re PR c++/30854 (Wrong number of arguments printed for constructor)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [99c1f1c]
++---------------------------------------- Current commit hash: [99c1f1c] ----------------------------------------+
+GCC for commit [99c1f1c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-99c1f1c/bin/gcc with -O3:
+1
+Output of /tmp/gcc-99c1f1c/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 99c1f1c... re PR c++/30854 (Wrong number of arguments printed for constructor)
+[32m[     info][0m Current commit [99c1f1c] is good. Return value: 0
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[d8163f5cc068347dfd74cb03c9e7b6cfcd3a8460] re PR libfortran/32858 (printf-capabilities for runtime_error())
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [d8163f5]
++---------------------------------------- Current commit hash: [d8163f5] ----------------------------------------+
+GCC for commit [d8163f5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-d8163f5/bin/gcc with -O3:
+0
+Output of /tmp/gcc-d8163f5/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at d8163f5... re PR libfortran/32858 (printf-capabilities for runtime_error())
+[32m[     info][0m Current commit [d8163f5] is bad. Return value: 1
+
+Bisecting: 139 revisions left to test after this (roughly 7 steps)
+[f348741d28f3036bbef62bf072fe212fa02b15e2] constraints.md (ks): New constraint.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [f348741]
++---------------------------------------- Current commit hash: [f348741] ----------------------------------------+
+GCC for commit [f348741] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-f348741/bin/gcc with -O3:
+0
+Output of /tmp/gcc-f348741/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at f348741... constraints.md (ks): New constraint.
+[32m[     info][0m Current commit [f348741] is bad. Return value: 1
+
+Bisecting: 69 revisions left to test after this (roughly 6 steps)
+[dab0324ad7ec3f30d09eb8646b4bf872e58960c1] re PR target/32753 (building a crosscompiler for arm-elf fails because of an error in cirrus.md)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [dab0324]
++---------------------------------------- Current commit hash: [dab0324] ----------------------------------------+
+GCC for commit [dab0324] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-dab0324/bin/gcc with -O3:
+1
+Output of /tmp/gcc-dab0324/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at dab0324... re PR target/32753 (building a crosscompiler for arm-elf fails because of an error in cirrus.md)
+[32m[     info][0m Current commit [dab0324] is good. Return value: 0
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[0ef0421e82f875cdb88620605dbd7ff42e9c5632] Fix bootstrap on ia64, PR32764
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [0ef0421]
++---------------------------------------- Current commit hash: [0ef0421] ----------------------------------------+
+GCC for commit [0ef0421] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-0ef0421/bin/gcc with -O3:
+0
+Output of /tmp/gcc-0ef0421/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0ef0421... Fix bootstrap on ia64, PR32764
+[32m[     info][0m Current commit [0ef0421] is bad. Return value: 1
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[28114dadadfeedf9de14b51e8e2a5e5859d619e3] re PR fortran/31320 (Illegal read with gfortran.dg/alloc_comp_assign_2.f90 and *_3.f90)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [28114da]
++---------------------------------------- Current commit hash: [28114da] ----------------------------------------+
+GCC for commit [28114da] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-28114da/bin/gcc with -O3:
+1
+Output of /tmp/gcc-28114da/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 28114da... re PR fortran/31320 (Illegal read with gfortran.dg/alloc_comp_assign_2.f90 and *_3.f90)
+[32m[     info][0m Current commit [28114da] is good. Return value: 0
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[b8a1094360a08b81f7ce63e48fdef03f12241b43] PR/other 30335
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [b8a1094]
++---------------------------------------- Current commit hash: [b8a1094] ----------------------------------------+
+GCC for commit [b8a1094] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-b8a1094/bin/gcc with -O3:
+1
+Output of /tmp/gcc-b8a1094/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at b8a1094... PR/other 30335
+[32m[     info][0m Current commit [b8a1094] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[7faa1bbb5d0206cc83f20c1145f612f7754fdcf3] re PR target/30652 (SSE expansion is missing for isinf() and other fpclassify functions)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [7faa1bb]
++---------------------------------------- Current commit hash: [7faa1bb] ----------------------------------------+
+GCC for commit [7faa1bb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-7faa1bb/bin/gcc with -O3:
+0
+Output of /tmp/gcc-7faa1bb/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7faa1bb... re PR target/30652 (SSE expansion is missing for isinf() and other fpclassify functions)
+[32m[     info][0m Current commit [7faa1bb] is bad. Return value: 1
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[c3e4e34df939059960b03bf4a4dc0dcaf548e31b] tree-ssa-sccvn.c (try_to_simplify): Use valid_gimple_expression
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [c3e4e34]
++---------------------------------------- Current commit hash: [c3e4e34] ----------------------------------------+
+GCC for commit [c3e4e34] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-c3e4e34/bin/gcc with -O3:
+0
+Output of /tmp/gcc-c3e4e34/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at c3e4e34... tree-ssa-sccvn.c (try_to_simplify): Use valid_gimple_expression
+[32m[     info][0m Current commit [c3e4e34] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[9e19a50c89c2323781a390922f9cde317327231d] re PR target/32808 (cris: ICE: RTL check: expected elt 0 type 'e' or 'u', have 'w' (rtx const_int) in cris_print_index, at config/cris/cris.c:499)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0210 small
+[32m[     info][0m Testing commit: [9e19a50]
++---------------------------------------- Current commit hash: [9e19a50] ----------------------------------------+
+GCC for commit [9e19a50] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-9e19a50/bin/gcc with -O3:
+1
+Output of /tmp/gcc-9e19a50/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9e19a50... re PR target/32808 (cris: ICE: RTL check: expected elt 0 type 'e' or 'u', have 'w' (rtx const_int) in cris_print_index, at config/cris/cris.c:499)
+[32m[     info][0m Current commit [9e19a50] is good. Return value: 0
+
+c3e4e34df939059960b03bf4a4dc0dcaf548e31b is the first bad commit
+commit c3e4e34df939059960b03bf4a4dc0dcaf548e31b
+Author: Daniel Berlin <dberlin@dberlin.org>
+Date:   Wed Jul 18 15:44:28 2007 +0000
+
+    tree-ssa-sccvn.c (try_to_simplify): Use valid_gimple_expression
+    
+    2007-07-18  Daniel Berlin  <dberlin@dberlin.org>
+    
+    	* tree-ssa-sccvn.c (try_to_simplify): Use valid_gimple_expression
+    	* tree-ssa-propagate (valid_gimple_expression): Handle ADDR_EXPR
+    	properly.
+    
+    From-SVN: r126721
+
+:040000 040000 2b223dd73f18f316bd3ea9bd4e34257ef8d16cf2 e5b5f25d7b2e503f5550007036bd1e1b35a4bab8 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: c3e4e34 tree-ssa-sccvn.c (try_to_simplify): Use valid_gimple_expression
+Previous HEAD position was 9e19a50... re PR target/32808 (cris: ICE: RTL check: expected elt 0 type 'e' or 'u', have 'w' (rtx const_int) in cris_print_index, at config/cris/cris.c:499)
+HEAD is now at 11147af... re PR fortran/32472 (ICE in trans-const.c:106 for REPEAT initialization expression of non-parameter)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [c3e4e34]
++---------------------------------------- Current commit hash: [c3e4e34] ----------------------------------------+
+GCC for commit [c3e4e34] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-c3e4e34/bin/gcc with -O3:
+0
+Output of /tmp/gcc-c3e4e34/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at c3e4e34... tree-ssa-sccvn.c (try_to_simplify): Use valid_gimple_expression
+[32m[     info][0m Current commit [c3e4e34] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [9e19a50]
++---------------------------------------- Current commit hash: [9e19a50] ----------------------------------------+
+GCC for commit [9e19a50] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/gcc-9e19a50/bin/gcc with -O3:
+1
+Output of /tmp/gcc-9e19a50/bin/gcc with -O0:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9e19a50... re PR target/32808 (cris: ICE: RTL check: expected elt 0 type 'e' or 'u', have 'w' (rtx const_int) in cris_print_index, at config/cris/cris.c:499)
+[32m[     info][0m Current commit [9e19a50] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [c3e4e34] with -O0:
+1
+Output of gcc [c3e4e34] with -O1:
+0
+Output of gcc [c3e4e34] with -O2:
+0
+Output of gcc [c3e4e34] with -O3:
+0
+Output of gcc [c3e4e34] with -Os:
+0
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

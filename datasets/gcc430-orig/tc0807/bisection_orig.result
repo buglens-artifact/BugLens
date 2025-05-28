@@ -1,0 +1,1 @@
+7fbb9a4 tree-sra.c (sra_walk_function): Don't rely on aliases being build.

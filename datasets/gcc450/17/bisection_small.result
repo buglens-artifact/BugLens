@@ -1,0 +1,1 @@
+02f0b13 loop-36.c: Reduce amount of iterations to 2 so unrolling still happens.

@@ -1,0 +1,3 @@
+inline-functions-called-once
+tree-fre
+unit-at-a-time

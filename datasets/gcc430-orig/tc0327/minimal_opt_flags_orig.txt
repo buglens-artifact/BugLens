@@ -1,0 +1,4 @@
+early-inlining
+inline-small-functions
+tree-fre
+unit-at-a-time

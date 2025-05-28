@@ -1,0 +1,4 @@
+dse
+ipa-reference
+strict-aliasing
+unit-at-a-time

@@ -1,0 +1,1 @@
+7a388ee pr16194.c: We now output error on all three functions, not just first one.

@@ -1,0 +1,1 @@
+ab8907e expr.c (expand_expr_real_1): Don't handle non-local variables.

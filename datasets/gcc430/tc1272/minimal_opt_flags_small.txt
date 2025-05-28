@@ -1,0 +1,4 @@
+tree-copyrename
+tree-dce
+tree-dse
+tree-loop-optimize

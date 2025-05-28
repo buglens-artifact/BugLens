@@ -1,0 +1,1 @@
+f83ca25 tree-ssa-structalias.c (set_uids_in_ptset): Use the pointed-to type for TBAA pruning.

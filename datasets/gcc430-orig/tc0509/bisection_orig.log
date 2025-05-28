@@ -1,0 +1,351 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 8ec8818a
+Output of gcc-4.3.0 with -O1:
+checksum = 8ec7b1d8
+Output of gcc-4.3.0 with -O0:
+checksum = 8ec8818a
+====================================================================
+[32m[     info][0m Good version found: gcc-4.1.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[abc088aad79d47b40da8a26e87815db09ab2d6eb] re PR c++/8355 (befriending a template specialization in another namespace)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [abc088a]
++---------------------------------------- Current commit hash: [abc088a] ----------------------------------------+
+GCC for commit [abc088a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-abc088a/bin/gcc with -O1:
+checksum = 8ec8818a
+Output of /tmp/gcc-abc088a/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at abc088a... re PR c++/8355 (befriending a template specialization in another namespace)
+[32m[     info][0m Current commit [abc088a] is good. Return value: 0
+
+Bisecting: 6978 revisions left to test after this (roughly 13 steps)
+[ad8e8d0b465e6dd9d9db4988de7b5c524bb4d85d] re PR inline-asm/28686 (ebp from clobber list used as operand)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [ad8e8d0]
++---------------------------------------- Current commit hash: [ad8e8d0] ----------------------------------------+
+GCC for commit [ad8e8d0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -O1:
+checksum = 8ec8818a
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at ad8e8d0... re PR inline-asm/28686 (ebp from clobber list used as operand)
+[32m[     info][0m Current commit [ad8e8d0] is good. Return value: 0
+
+Bisecting: 3489 revisions left to test after this (roughly 12 steps)
+[390ea488c1753eaf9c747ead8f653c9023058109] mips-protos.h (mips_split_symbol): Add a mode and an "rtx *" argument.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [390ea48]
++---------------------------------------- Current commit hash: [390ea48] ----------------------------------------+
+GCC for commit [390ea48] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-390ea48/bin/gcc with -O1:
+checksum = 8ec7b1d8
+Output of /tmp/gcc-390ea48/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 390ea48... mips-protos.h (mips_split_symbol): Add a mode and an "rtx *" argument.
+[32m[     info][0m Current commit [390ea48] is bad. Return value: 1
+
+Bisecting: 1744 revisions left to test after this (roughly 11 steps)
+[ddd3985ef531626ad904f1f2b7d72a07d72b6cd5] natVMVirtualMachine.cc (getClassMethod): Change to use JVMTI.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [ddd3985]
++---------------------------------------- Current commit hash: [ddd3985] ----------------------------------------+
+GCC for commit [ddd3985] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-ddd3985/bin/gcc with -O1:
+checksum = 8ec7b1d8
+Output of /tmp/gcc-ddd3985/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at ddd3985... natVMVirtualMachine.cc (getClassMethod): Change to use JVMTI.
+[32m[     info][0m Current commit [ddd3985] is bad. Return value: 1
+
+Bisecting: 871 revisions left to test after this (roughly 10 steps)
+[46ecc2bc5c8455615f9739847277cbc5fe746c25] re PR libgcj/31228 (Race condition between setting close-on-exec and Runtime.exec())
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [46ecc2b]
++---------------------------------------- Current commit hash: [46ecc2b] ----------------------------------------+
+GCC for commit [46ecc2b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-46ecc2b/bin/gcc with -O1:
+checksum = 8ec7b1d8
+Output of /tmp/gcc-46ecc2b/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 46ecc2b... re PR libgcj/31228 (Race condition between setting close-on-exec and Runtime.exec())
+[32m[     info][0m Current commit [46ecc2b] is bad. Return value: 1
+
+Bisecting: 435 revisions left to test after this (roughly 9 steps)
+[ceca734e8f8b368ab4087ce3970118775735f593] expr.c (emit_move_complex_push): Export.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [ceca734]
++---------------------------------------- Current commit hash: [ceca734] ----------------------------------------+
+GCC for commit [ceca734] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-ceca734/bin/gcc with -O1:
+checksum = 8ec8818a
+Output of /tmp/gcc-ceca734/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at ceca734... expr.c (emit_move_complex_push): Export.
+[32m[     info][0m Current commit [ceca734] is good. Return value: 0
+
+Bisecting: 217 revisions left to test after this (roughly 8 steps)
+[9eeea7612d055f00ce21fd1442411c838d82b452] Makefile.in: Regenerate.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [9eeea76]
++---------------------------------------- Current commit hash: [9eeea76] ----------------------------------------+
+GCC for commit [9eeea76] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-9eeea76/bin/gcc with -O1:
+checksum = 8ec7b1d8
+Output of /tmp/gcc-9eeea76/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9eeea76... Makefile.in: Regenerate.
+[32m[     info][0m Current commit [9eeea76] is bad. Return value: 1
+
+Bisecting: 108 revisions left to test after this (roughly 7 steps)
+[090021e9a0289b670d14509935a1cea8cf61346e] * match.c (gfc_match_name): Expanded comment.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [090021e]
++---------------------------------------- Current commit hash: [090021e] ----------------------------------------+
+GCC for commit [090021e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-090021e/bin/gcc with -O1:
+checksum = 8ec7b1d8
+Output of /tmp/gcc-090021e/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 090021e... * match.c (gfc_match_name): Expanded comment.
+[32m[     info][0m Current commit [090021e] is bad. Return value: 1
+
+Bisecting: 54 revisions left to test after this (roughly 6 steps)
+[5115f4aab159775eb45a293e01908d716b73eeea] re PR fortran/30873 ([4.1 only] ENTRY without explict RESULT does not work for recursive functions)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [5115f4a]
++---------------------------------------- Current commit hash: [5115f4a] ----------------------------------------+
+GCC for commit [5115f4a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-5115f4a/bin/gcc with -O1:
+checksum = 8ec7b1d8
+Output of /tmp/gcc-5115f4a/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5115f4a... re PR fortran/30873 ([4.1 only] ENTRY without explict RESULT does not work for recursive functions)
+[32m[     info][0m Current commit [5115f4a] is bad. Return value: 1
+
+Bisecting: 26 revisions left to test after this (roughly 5 steps)
+[b7826893221649ba6e085e383f98fd113f6de63f] Make-lang.in: Add install-pdf target as copied from automake v1.10 rules.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [b782689]
++---------------------------------------- Current commit hash: [b782689] ----------------------------------------+
+GCC for commit [b782689] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-b782689/bin/gcc with -O1:
+checksum = 8ec8818a
+Output of /tmp/gcc-b782689/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at b782689... Make-lang.in: Add install-pdf target as copied from automake v1.10 rules.
+[32m[     info][0m Current commit [b782689] is good. Return value: 0
+
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[7393f7f8d04844ab976238ceffcc8f8c00214c92] dfp.md: New file.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [7393f7f]
++---------------------------------------- Current commit hash: [7393f7f] ----------------------------------------+
+GCC for commit [7393f7f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-7393f7f/bin/gcc with -O1:
+checksum = 8ec8818a
+Output of /tmp/gcc-7393f7f/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7393f7f... dfp.md: New file.
+[32m[     info][0m Current commit [7393f7f] is good. Return value: 0
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[386e9d408b56891b27b419e89f67320ff36f71aa] AnnotationInvocationHandler.java: Generify in a few places.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [386e9d4]
++---------------------------------------- Current commit hash: [386e9d4] ----------------------------------------+
+GCC for commit [386e9d4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-386e9d4/bin/gcc with -O1:
+checksum = 8ec8818a
+Output of /tmp/gcc-386e9d4/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 386e9d4... AnnotationInvocationHandler.java: Generify in a few places.
+[32m[     info][0m Current commit [386e9d4] is good. Return value: 0
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[49fedf5af48d844f32b942fc00f4de155e736f34] re PR c++/28253 (ICE with invalid covariant return)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [49fedf5]
++---------------------------------------- Current commit hash: [49fedf5] ----------------------------------------+
+GCC for commit [49fedf5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-49fedf5/bin/gcc with -O1:
+checksum = 8ec8818a
+Output of /tmp/gcc-49fedf5/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 49fedf5... re PR c++/28253 (ICE with invalid covariant return)
+[32m[     info][0m Current commit [49fedf5] is good. Return value: 0
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[9700224802151e26d4fadbf9eba9038f73006203] tree-sra.c (sra_walk_fns): Document new restriction.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [9700224]
++---------------------------------------- Current commit hash: [9700224] ----------------------------------------+
+GCC for commit [9700224] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-9700224/bin/gcc with -O1:
+checksum = 8ec7b1d8
+Output of /tmp/gcc-9700224/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9700224... tree-sra.c (sra_walk_fns): Document new restriction.
+[32m[     info][0m Current commit [9700224] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[e39e8c363b440515ff778e4141634af5cc4b5815] i386.h (TUNEMASK): Remove define.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0509 orig
+[32m[     info][0m Testing commit: [e39e8c3]
++---------------------------------------- Current commit hash: [e39e8c3] ----------------------------------------+
+GCC for commit [e39e8c3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-e39e8c3/bin/gcc with -O1:
+checksum = 8ec8818a
+Output of /tmp/gcc-e39e8c3/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at e39e8c3... i386.h (TUNEMASK): Remove define.
+[32m[     info][0m Current commit [e39e8c3] is good. Return value: 0
+
+9700224802151e26d4fadbf9eba9038f73006203 is the first bad commit
+commit 9700224802151e26d4fadbf9eba9038f73006203
+Author: Eric Botcazou <ebotcazou@gcc.gnu.org>
+Date:   Fri Mar 2 22:30:32 2007 +0000
+
+    tree-sra.c (sra_walk_fns): Document new restriction.
+    
+    	* tree-sra.c (sra_walk_fns) <ldst>: Document new restriction.
+    	(sra_walk_modify_expr) <rhs_elt>: Treat the reference as a use
+    	if the lhs has side-effects.
+    	<lhs_elt>: Treat the reference as a use if the rhs has side-effects.
+    
+    From-SVN: r122492
+
+:040000 040000 2a5bccfbdc3c70d74a52ac081d242caa3648deab e047333f266d26b58fbcdbab584301e6f202e470 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 9700224 tree-sra.c (sra_walk_fns): Document new restriction.
+Checking out files:  10% (1398/13951)   Checking out files:  11% (1535/13951)   Checking out files:  12% (1675/13951)   Checking out files:  13% (1814/13951)   Checking out files:  14% (1954/13951)   Checking out files:  15% (2093/13951)   Checking out files:  16% (2233/13951)   Checking out files:  17% (2372/13951)   Checking out files:  17% (2480/13951)   Checking out files:  18% (2512/13951)   Checking out files:  19% (2651/13951)   Checking out files:  20% (2791/13951)   Checking out files:  21% (2930/13951)   Checking out files:  22% (3070/13951)   Checking out files:  23% (3209/13951)   Checking out files:  24% (3349/13951)   Checking out files:  25% (3488/13951)   Checking out files:  25% (3514/13951)   Checking out files:  26% (3628/13951)   Checking out files:  27% (3767/13951)   Checking out files:  28% (3907/13951)   Checking out files:  29% (4046/13951)   Checking out files:  30% (4186/13951)   Checking out files:  31% (4325/13951)   Checking out files:  32% (4465/13951)   Checking out files:  33% (4604/13951)   Checking out files:  34% (4744/13951)   Checking out files:  35% (4883/13951)   Checking out files:  36% (5023/13951)   Checking out files:  37% (5162/13951)   Checking out files:  38% (5302/13951)   Checking out files:  39% (5441/13951)   Checking out files:  40% (5581/13951)   Checking out files:  41% (5720/13951)   Checking out files:  42% (5860/13951)   Checking out files:  43% (5999/13951)   Checking out files:  44% (6139/13951)   Checking out files:  44% (6154/13951)   Checking out files:  45% (6278/13951)   Checking out files:  46% (6418/13951)   Checking out files:  47% (6557/13951)   Checking out files:  48% (6697/13951)   Checking out files:  49% (6836/13951)   Checking out files:  50% (6976/13951)   Checking out files:  51% (7116/13951)   Checking out files:  52% (7255/13951)   Checking out files:  53% (7395/13951)   Checking out files:  54% (7534/13951)   Checking out files:  55% (7674/13951)   Checking out files:  56% (7813/13951)   Checking out files:  57% (7953/13951)   Checking out files:  58% (8092/13951)   Checking out files:  59% (8232/13951)   Checking out files:  60% (8371/13951)   Checking out files:  61% (8511/13951)   Checking out files:  61% (8536/13951)   Checking out files:  62% (8650/13951)   Checking out files:  63% (8790/13951)   Checking out files:  64% (8929/13951)   Checking out files:  65% (9069/13951)   Checking out files:  66% (9208/13951)   Checking out files:  67% (9348/13951)   Checking out files:  68% (9487/13951)   Checking out files:  69% (9627/13951)   Checking out files:  70% (9766/13951)   Checking out files:  71% (9906/13951)   Checking out files:  71% (10022/13951)   Checking out files:  72% (10045/13951)   Checking out files:  73% (10185/13951)   Checking out files:  74% (10324/13951)   Checking out files:  75% (10464/13951)   Checking out files:  76% (10603/13951)   Checking out files:  77% (10743/13951)   Checking out files:  78% (10882/13951)   Checking out files:  79% (11022/13951)   Checking out files:  80% (11161/13951)   Checking out files:  81% (11301/13951)   Checking out files:  82% (11440/13951)   Checking out files:  83% (11580/13951)   Checking out files:  84% (11719/13951)   Checking out files:  85% (11859/13951)   Checking out files:  85% (11912/13951)   Checking out files:  86% (11998/13951)   Checking out files:  87% (12138/13951)   Checking out files:  88% (12277/13951)   Checking out files:  89% (12417/13951)   Checking out files:  90% (12556/13951)   Checking out files:  91% (12696/13951)   Checking out files:  92% (12835/13951)   Checking out files:  93% (12975/13951)   Checking out files:  94% (13114/13951)   Checking out files:  95% (13254/13951)   Checking out files:  96% (13393/13951)   Checking out files:  97% (13533/13951)   Checking out files:  97% (13637/13951)   Checking out files:  98% (13672/13951)   Checking out files:  99% (13812/13951)   Checking out files: 100% (13951/13951)   Checking out files: 100% (13951/13951), done.
+Previous HEAD position was e39e8c3... i386.h (TUNEMASK): Remove define.
+HEAD is now at 1f5a6b8... re PR target/33281 (gfortran crt2.o not found under Vista)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [9700224]
++---------------------------------------- Current commit hash: [9700224] ----------------------------------------+
+GCC for commit [9700224] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-9700224/bin/gcc with -O1:
+checksum = 8ec7b1d8
+Output of /tmp/gcc-9700224/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9700224... tree-sra.c (sra_walk_fns): Document new restriction.
+[32m[     info][0m Current commit [9700224] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [e39e8c3]
++---------------------------------------- Current commit hash: [e39e8c3] ----------------------------------------+
+GCC for commit [e39e8c3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 8ec8818a
+Output of /tmp/gcc-e39e8c3/bin/gcc with -O1:
+checksum = 8ec8818a
+Output of /tmp/gcc-e39e8c3/bin/gcc with -O0:
+checksum = 8ec8818a
+----------------------------------------------------
+No local changes to save
+HEAD is now at e39e8c3... i386.h (TUNEMASK): Remove define.
+[32m[     info][0m Current commit [e39e8c3] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [9700224] with -O0:
+checksum = 8ec8818a
+Output of gcc [9700224] with -O1:
+checksum = 8ec7b1d8
+[31m[  warning][0m Compilation by gcc [9700224] with -O2 failed. Continue...
+[31m[  warning][0m Compilation by gcc [9700224] with -O3 failed. Continue...
+[31m[  warning][0m Compilation by gcc [9700224] with -Os failed. Continue...
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

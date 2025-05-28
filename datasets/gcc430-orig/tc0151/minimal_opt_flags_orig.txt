@@ -1,0 +1,7 @@
+inline-small-functions
+ipa-reference
+tree-dce
+tree-dominator-opts
+tree-dse
+tree-pre
+unit-at-a-time

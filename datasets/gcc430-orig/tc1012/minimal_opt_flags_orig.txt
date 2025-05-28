@@ -1,0 +1,10 @@
+guess-branch-probability
+inline-functions-called-once
+ipa-reference
+strict-aliasing
+tree-ccp
+tree-pre
+tree-salias
+tree-sink
+tree-sra
+unit-at-a-time

@@ -1,0 +1,1 @@
+15caa2a re PR tree-optimization/30375 (tree-ssa-dse incorrectly removes struct initialization)

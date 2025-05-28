@@ -1,0 +1,656 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.4.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+-1
+Output of gcc-4.4.0 with -Os:
+1
+Output of gcc-4.4.0 with -O0:
+-1
+====================================================================
+[32m[     info][0m Good version found: gcc-4.0.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[bd182be84e9c8ae8485ac7c392fa0b6678969e3c] re PR rtl-optimization/20117 (duplicated labels in PIC)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [bd182be]
++---------------------------------------- Current commit hash: [bd182be] ----------------------------------------+
+GCC for commit [bd182be] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-bd182be/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-bd182be/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+[32m[     info][0m Current commit [bd182be] is good. Return value: 0
+
+Bisecting: 13116 revisions left to test after this (roughly 14 steps)
+[31429fbc3c70716cb375dc73d1d151ed769d945e] PlainSocketImpl.h: Regenerate.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [31429fb]
++---------------------------------------- Current commit hash: [31429fb] ----------------------------------------+
+GCC for commit [31429fb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-31429fb/bin/gcc with -Os:
+0
+Output of /tmp/gcc-31429fb/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 31429fb... PlainSocketImpl.h: Regenerate.
+[32m[     info][0m Current commit [31429fb] is bad. Return value: 1
+
+Bisecting: 6558 revisions left to test after this (roughly 13 steps)
+[a7ceba73e5af3733ab19ecf6cb3dec3c2c64a87a] objc.texi (Type encoding): Add documentation about encoding complex types and _Bool.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [a7ceba73]
++---------------------------------------- Current commit hash: [a7ceba73] ----------------------------------------+
+GCC for commit [a7ceba73] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-a7ceba73/bin/gcc with -Os:
+1
+Output of /tmp/gcc-a7ceba73/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at a7ceba73... objc.texi (Type encoding): Add documentation about encoding complex types and _Bool.
+[32m[     info][0m Current commit [a7ceba73] is bad. Return value: 1
+
+Bisecting: 3278 revisions left to test after this (roughly 12 steps)
+[62765fb14a52c42422b31938deb5893ebe13e735] tweak comment
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [62765fb]
++---------------------------------------- Current commit hash: [62765fb] ----------------------------------------+
+GCC for commit [62765fb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-62765fb/bin/gcc with -Os:
+1
+Output of /tmp/gcc-62765fb/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 62765fb... tweak comment
+[32m[     info][0m Current commit [62765fb] is bad. Return value: 1
+
+Bisecting: 1639 revisions left to test after this (roughly 11 steps)
+[2828ee690f899a083148d402550c686893a422cc] NameFinder.java (close): IN, OUT, and PROC can all be null, check for that case and don't deference it.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [2828ee6]
++---------------------------------------- Current commit hash: [2828ee6] ----------------------------------------+
+GCC for commit [2828ee6] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-2828ee6/bin/gcc with -Os:
+1
+Output of /tmp/gcc-2828ee6/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2828ee6... NameFinder.java (close): IN, OUT, and PROC can all be null, check for that case and don't deference it.
+[32m[     info][0m Current commit [2828ee6] is bad. Return value: 1
+
+Bisecting: 819 revisions left to test after this (roughly 10 steps)
+[93f15e1e749ed086104b669e7f298146454cbef1] jni.exp (gcj_jni_invocation_test_one): Add libsocket to the libraries to link for Solaris.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [93f15e1]
++---------------------------------------- Current commit hash: [93f15e1] ----------------------------------------+
+GCC for commit [93f15e1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-93f15e1/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-93f15e1/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 93f15e1... jni.exp (gcj_jni_invocation_test_one): Add libsocket to the libraries to link for Solaris.
+[32m[     info][0m Current commit [93f15e1] is good. Return value: 0
+
+Bisecting: 409 revisions left to test after this (roughly 9 steps)
+[eaf727f9d8c183f0c6a05ee2dead2b67c73a80d3] re PR libstdc++/20909 (incorrect floating point format)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [eaf727f]
++---------------------------------------- Current commit hash: [eaf727f] ----------------------------------------+
+GCC for commit [eaf727f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-eaf727f/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-eaf727f/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at eaf727f... re PR libstdc++/20909 (incorrect floating point format)
+[32m[     info][0m Current commit [eaf727f] is good. Return value: 0
+
+Bisecting: 204 revisions left to test after this (roughly 8 steps)
+[41704a387ef7a69778f2d06325b1c10b800bca0d] fold-const.c (fold_binary_to_constant): Delete obsolete comment.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [41704a3]
++---------------------------------------- Current commit hash: [41704a3] ----------------------------------------+
+GCC for commit [41704a3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-41704a3/bin/gcc with -Os:
+1
+Output of /tmp/gcc-41704a3/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 41704a3... fold-const.c (fold_binary_to_constant): Delete obsolete comment.
+[32m[     info][0m Current commit [41704a3] is bad. Return value: 1
+
+Bisecting: 102 revisions left to test after this (roughly 7 steps)
+[4cf88ac3438e29202b8eaf2d7c85e70dd2222733] regex.c (wcs_re_match_2_internal, [...]): Replace not with negate.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [4cf88ac]
++---------------------------------------- Current commit hash: [4cf88ac] ----------------------------------------+
+GCC for commit [4cf88ac] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-4cf88ac/bin/gcc with -Os:
+1
+Output of /tmp/gcc-4cf88ac/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4cf88ac... regex.c (wcs_re_match_2_internal, [...]): Replace not with negate.
+[32m[     info][0m Current commit [4cf88ac] is bad. Return value: 1
+
+Bisecting: 50 revisions left to test after this (roughly 6 steps)
+[57d1677d8dc591fd3635fadb06a83753d65f23c1] tree-vect-analyze (vect_determine_vectorization_factor): Do not use GET_MODE_NUNITS.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [57d1677]
++---------------------------------------- Current commit hash: [57d1677] ----------------------------------------+
+GCC for commit [57d1677] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-57d1677/bin/gcc with -Os:
+1
+Output of /tmp/gcc-57d1677/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 57d1677... tree-vect-analyze (vect_determine_vectorization_factor): Do not use GET_MODE_NUNITS.
+[32m[     info][0m Current commit [57d1677] is bad. Return value: 1
+
+Bisecting: 25 revisions left to test after this (roughly 5 steps)
+[130bcb37be10302019e694667caa3522f5f5f327] re PR libfortran/20163 ([4.0 only] gfortran - error opening direct access file)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [130bcb3]
++---------------------------------------- Current commit hash: [130bcb3] ----------------------------------------+
+GCC for commit [130bcb3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-130bcb3/bin/gcc with -Os:
+1
+Output of /tmp/gcc-130bcb3/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 130bcb3... re PR libfortran/20163 ([4.0 only] gfortran - error opening direct access file)
+[32m[     info][0m Current commit [130bcb3] is bad. Return value: 1
+
+Bisecting: 12 revisions left to test after this (roughly 4 steps)
+[f3b569ca7e724b2fc9b8393af5ede3ab9e8a46ea] dominance.c, [...]: Fix comment typos.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [f3b569c]
++---------------------------------------- Current commit hash: [f3b569c] ----------------------------------------+
+GCC for commit [f3b569c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-f3b569c/bin/gcc with -Os:
+1
+Output of /tmp/gcc-f3b569c/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at f3b569c... dominance.c, [...]: Fix comment typos.
+[32m[     info][0m Current commit [f3b569c] is bad. Return value: 1
+
+Bisecting: 5 revisions left to test after this (roughly 3 steps)
+[835d64ab880ab3932c0e67c87ff859472771456d] match.c (match_arithmetic_if): Remove gfc_ prefix and correct comment according to GNU coding style.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [835d64a]
++---------------------------------------- Current commit hash: [835d64a] ----------------------------------------+
+GCC for commit [835d64a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-835d64a/bin/gcc with -Os:
+1
+Output of /tmp/gcc-835d64a/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 835d64a... match.c (match_arithmetic_if): Remove gfc_ prefix and correct comment according to GNU coding style.
+[32m[     info][0m Current commit [835d64a] is bad. Return value: 1
+
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[fbc315db4a79aee216b2e56e1653e22d86436fea] c-common.def: Move FOR_STMT...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [fbc315d]
++---------------------------------------- Current commit hash: [fbc315d] ----------------------------------------+
+GCC for commit [fbc315d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-fbc315d/bin/gcc with -Os:
+1
+Output of /tmp/gcc-fbc315d/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at fbc315d... c-common.def: Move FOR_STMT...
+[32m[     info][0m Current commit [fbc315d] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[0bca51f080dfff5e943b1f1775d874a73bbc441a] backport: copy-prop, incremental SSA updating of FUD chains and newly exposed symbols.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [0bca51f]
++---------------------------------------- Current commit hash: [0bca51f] ----------------------------------------+
+GCC for commit [0bca51f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-0bca51f/bin/gcc with -Os:
+1
+Output of /tmp/gcc-0bca51f/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0bca51f... backport: copy-prop, incremental SSA updating of FUD chains and newly exposed symbols.
+[32m[     info][0m Current commit [0bca51f] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[45f9480e292e10312914733dd31d1030f4e089af] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/411 small
+[32m[     info][0m Testing commit: [45f9480]
++---------------------------------------- Current commit hash: [45f9480] ----------------------------------------+
+GCC for commit [45f9480] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-45f9480/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-45f9480/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 45f9480... Daily bump.
+[32m[     info][0m Current commit [45f9480] is good. Return value: 0
+
+0bca51f080dfff5e943b1f1775d874a73bbc441a is the first bad commit
+commit 0bca51f080dfff5e943b1f1775d874a73bbc441a
+Author: Diego Novillo <dnovillo@redhat.com>
+Date:   Sat Apr 9 01:37:54 2005 +0000
+
+    backport: copy-prop, incremental SSA updating of FUD chains and newly exposed symbols.
+    
+    
+    	Merge from tree-cleanup-branch: VRP, store CCP, store
+    	    copy-prop, incremental SSA updating of FUD chains and
+    	    newly exposed symbols.
+    
+    	* Makefile.in (tree-ssa-copy.o): Depend on tree-ssa-propagate.h.
+    	(OBJS-common): Add tree-vrp.o.
+    	(tree-vrp.o): New rule.
+    	* basic-block.h (nearest_common_dominator_for_set): Declare.
+    	* common.opt (ftree-store-ccp): New flag.
+    	(ftree-copy-prop): New flag.
+    	(ftree-vrp): New flag.
+    	(ftree-store-copy-prop): New flag.
+    	* dominance.c (nearest_common_dominator_for_set): New.
+    	* domwalk.c (walk_dominator_tree): Only traverse
+    	statements in blocks marked in walk_data->interesting_blocks.
+    	* domwalk.h (struct dom_walk_data): Add field interesting_blocks.
+    	* fold-const.c (fold): Handle ASSERT_EXPR.
+    	* opts.c (decode_options): Set flag_tree_copy_prop at -O1.
+    	Set flag_tree_store_ccp, flag_tree_store_copy_prop and
+    	flag_tree_vrp at -O2.
+    	* timevar.def (TV_TREE_VRP): Define.
+    	(TV_TREE_COPY_PROP): Define.
+    	(TV_TREE_STORE_COPY_PROP): Define.
+    	(TV_TREE_SSA_INCREMENTAL): Define.
+    	(TV_TREE_STORE_CCP): Define.
+    	* tree-cfg.c (tree_can_merge_blocks_p): Remove reference
+    	to kill_redundant_phi_nodes from comment.
+    	(verify_expr): Handle ASSERT_EXPR.
+    	* tree-dfa.c (mark_new_vars_to_rename): Remove second
+    	argument.  Update all users.
+    	(mark_call_clobbered_vars_to_rename): Remove.  Update all
+    	users.
+    	* tree-flow-inline.h (unmodifiable_var_p): New.
+    	* tree-flow.h (enum value_range_type): Declare.
+    	(struct value_range_def): Declare.
+    	(value_range): Declare.
+    	(remove_all_phi_nodes_for): Remove.  Update all users.
+    	(find_phi_node_for): Declare.
+    	(add_type_alias): Declare.
+    	(count_uses_and_derefs): Declare.
+    	(kill_redundant_phi_nodes): Remove.
+    	(rewrite_into_ssa): Remove.
+    	(rewrite_def_def_chains): Remove.
+    	(update_ssa, register_new_name_mapping, create_new_def_for,
+    	need_ssa_update_p, name_registered_for_update_p,
+    	release_ssa_name_after_update_ssa, dump_repl_tbl,
+    	debug_repl_tbl, dump_names_replaced_by,
+    	debug_names_replaced_by, mark_sym_for_renaming,
+    	mark_set_for_renaming, get_current_def, set_current_def,
+    	get_value_range, dump_value_range, debug_value_range,
+    	dump_all_value_ranges, debug_all_value_ranges,
+    	expr_computes_nonzero, loop_depth_of_name,
+    	unmodifiable_var_p): Declare.
+    	* tree-gimple.c (is_gimple_formal_tmp_rhs): Handle
+    	ASSERT_EXPR.
+    	* tree-into-ssa.c (block_defs_stack): Update comment.
+    	(old_ssa_names, new_ssa_names, old_virtual_ssa_names,
+    	syms_to_rename, names_to_release, repl_tbl,
+    	need_to_initialize_update_ssa_p, need_to_update_vops_p,
+    	need_to_replace_names_p): New locals.
+    	(NAME_SETS_GROWTH_FACTOR): Define.
+    	(struct repl_map_d): Declare.
+    	(struct mark_def_sites_global_data): Add field
+    	interesting_blocks.
+    	(enum rewrite_mode): Declare.
+    	(REGISTER_DEFS_IN_THIS_STMT): Define.
+    	(compute_global_livein): Use last_basic_block instead of
+    	n_basic_blocks.
+    	(set_def_block): Remove last argument.  Update all callers.
+    	(prepare_use_operand_for_rename): Remove.  Update all callers.
+    	(prepare_def_operand_for_rename): Remove.  Update all callers.
+    	(symbol_marked_for_renaming): New.
+    	(is_old_name): New.
+    	(is_new_name): New.
+    	(repl_map_hash): New.
+    	(repl_map_eq): New.
+    	(repl_map_free): New.
+    	(names_replaced_by): New.
+    	(add_to_repl_tbl): New.
+    	(add_new_name_mapping): New.
+    	(mark_def_sites): Assume that all the operands in the
+    	statement are in normal form.
+    	(find_idf): Assert that the block in the stack is valid.
+    	(get_default_def_for): New.
+    	(insert_phi_nodes_for): Add new argument 'update_p'.
+    	Add documentation.
+    	If update_p is true, add a new mapping between the LHS of
+    	each new PHI and the name that it replaces.
+    	(insert_phi_nodes_1): Only call find_idf if needed.
+    	(get_reaching_def): Call get_default_def_for.
+    	(rewrite_operand): Remove.
+    	(rewrite_stmt): Do nothing if REGISTER_DEFS_IN_THIS_STMT
+    	and REWRITE_THIS_STMT are false.
+    	Assume that all the operands in the statement are in
+    	normal form.
+    	(rewrite_add_phi_arguments): Don't use PHI_REWRITTEN.
+    	(rewrite_virtual_phi_arguments): Remove.
+    	(invalidate_name_tags): Remove.
+    	(register_new_update_single, register_new_update_set,
+    	rewrite_update_init_block, replace_use,
+    	rewrite_update_fini_block, rewrite_update_stmt,
+    	rewrite_update_phi_arguments): New.
+    	rewrite_blocks): Remove argument 'fix_virtual_phis'.
+    	Add arguments 'entry', 'what' and 'blocks'.
+    	Initialize the dominator walker according to 'what' and
+    	'blocks'.
+    	Start the dominator walk at 'entry'.
+    	(mark_def_site_blocks): Add argument 'interesting_blocks'.
+    	Use it to configure the dominator walker.
+    	(rewrite_into_ssa): Remove argument 'all'.
+    	Make internal.
+    	(rewrite_all_into_ssa): Remove.
+    	(rewrite_def_def_chains): Remove.
+    	(mark_def_interesting, mark_use_interesting,
+    	prepare_phi_args_for_update, prepare_block_for_update,
+    	prepare_def_site_for, prepare_def_sites,
+    	dump_names_replaced_by, debug_names_replaced_by,
+    	dump_repl_tbl, debug_repl_tbl, init_update_ssa,
+    	delete_update_ssa, create_new_def_for,
+    	register_new_name_mapping, mark_sym_for_renaming,
+    	mark_set_for_renaming, need_ssa_update_p,
+    	name_registered_for_update_p, ssa_names_to_replace,
+    	release_ssa_name_after_update_ssa,
+    	insert_updated_phi_nodes_for, update_ssa): New.
+    	* tree-loop-linear.c (linear_transform_loops): Call
+    	update_ssa instead of rewrite_into_ssa.
+    	* tree-optimize.c (vars_to_rename): Remove.
+    	Update all users.
+    	(init_tree_optimization_passes): Replace
+    	pass_redundant_phi with pass_copy_prop.
+    	Add pass_vrp.
+    	Replace pass_ccp with pass_store_ccp.
+    	Add pass_store_copy_prop after pass_store_ccp.
+    	(execute_todo): If the TODO_ flags don't include updating
+    	the SSA form, assert that it does not need to be updated.
+    	Call update_ssa instead of rewrite_into_ssa and
+    	rewrite_def_def_chains.
+    	If TODO_verify_loops is set, call verify_loop_closed_ssa.
+    	(tree_rest_of_compilation):
+    	* tree-pass.h (TODO_dump_func, TODO_ggc_collect,
+    	TODO_verify_ssa, TODO_verify_flow, TODO_verify_stmts,
+    	TODO_cleanup_cfg): Renumber.
+    	(TODO_verify_loops, TODO_update_ssa,
+    	TODO_update_ssa_no_phi, TODO_update_ssa_full_phi,
+    	TODO_update_ssa_only_virtuals): Define.
+    	(pass_copy_prop, pass_store_ccp, pass_store_copy_prop, pass_vrp):
+    	Declare.
+    	* tree-phinodes.c (make_phi_node): Update documentation.
+    	(remove_all_phi_nodes_for): Remove.
+    	(find_phi_node_for): New.
+    	* tree-pretty-print.c (dump_generic_node): Handle ASSERT_EXPR.
+    	* tree-scalar-evolution.c (follow_ssa_edge_in_rhs): Likewise.
+    	(interpret_rhs_modify_expr): Likewise.
+    	* tree-sra.c (decide_instantiations): Mark all symbols in
+    	SRA_CANDIDATES for renaming.
+    	(mark_all_v_defs_1): Rename from mark_all_v_defs.
+    	(mark_all_v_defs): New function.  Update all users to call it
+    	with the whole list of scalarized statements, not just the
+    	first one.
+    	* tree-ssa-alias.c (count_ptr_derefs): Make extern.
+    	(compute_flow_insensitive_aliasing): If the tag is
+    	unmodifiable and the variable isn't or vice-versa, don't
+    	make them alias of each other.
+    	(setup_pointers_and_addressables): If the type tag for
+    	VAR is about to change, mark the old one for renaming.
+    	(add_type_alias): New.
+    	* tree-ssa-ccp.c: Document SSA-CCP and STORE-CCP.
+    	(ccp_lattice_t): Rename from latticevalue.
+    	(value): Remove.  Update all users.
+    	(const_val): New local variable.
+    	(do_store_ccp): New local variable.
+    	(dump_lattice_value): Handle UNINITIALIZED.
+    	(debug_lattice_value): New.
+    	(get_default_value): Re-write.
+    	(set_lattice_value): Re-write.
+    	(def_to_varying): Remove.  Update all users.
+    	(likely_value): Return VARYING for statements that make
+    	stores when STORE_CCP is false.
+    	Return VARYING for any statement other than MODIFY_EXPR,
+    	COND_EXPR and SWITCH_EXPR.
+    	(ccp_initialize): Re-write.
+    	(replace_uses_in, replace_vuse_in, substitute_and_fold):
+    	Move to tree-ssa-propagate.c.
+    	(ccp_lattice_meet): Handle memory stores when
+    	DO_STORE_CCP is true.
+    	(ccp_visit_phi_node): Likewise.
+    	(ccp_fold): Likewise.
+    	(evaluate_stmt): Likewise.
+    	(visit_assignment): Likewise.
+    	(ccp_visit_stmt): Likewise.
+    	(execute_ssa_ccp): Add argument 'store_ccp'.  Copy it
+    	into DO_STORE_CCP.
+    	(do_ssa_ccp): New.
+    	(pass_ccp): Use it.
+    	(do_ssa_store_ccp): New.
+    	(gate_store_ccp): New.
+    	(pass_store_ccp): Declare.
+    	* tree-ssa-copy.c: Include tree-ssa-propagate.h.
+    	(may_propagate_copy): Reformat.
+    	Don't abort if ORIG is a virtual and DEST isn't.
+    	If NEW does not have alias information but DEST does,
+    	copy it.
+    	(copy_of, cached_last_copy_of, do_store_copy_prop, enum
+    	copy_prop_kind, which_copy_prop): Declare.
+    	(stmt_may_generate_copy, get_copy_of_val,
+    	get_last_copy_of, set_copy_of_val, dump_copy_of,
+    	copy_prop_visit_assignment, copy_prop_visit_cond_stmt,
+    	copy_prop_visit_stmt, copy_prop_visit_phi_node,
+    	init_copy_prop, fini_copy_prop, execute_copy_prop,
+    	gate_copy_prop, do_copy_prop, gate_store_copy_prop,
+    	store_copy_prop): New.
+    	(pass_copy_prop, pass_store_copy_prop): Declare.
+    	* tree-ssa-dom.c (struct opt_stats_d): Add fields
+    	'num_const_prop' and 'num_copy_prop'.
+    	(cprop_operand): Update them.
+    	(dump_dominator_optimization_stats): Dump them.
+    	(tree_ssa_dominator_optimize): Call update_ssa instead of
+    	rewrite_into_ssa.
+    	(loop_depth_of_name): Declare extern.
+    	(simplify_cond_and_lookup_avail_expr): Guard against NULL
+    	values for LOW or HIGH.
+    	(cprop_into_successor_phis): Only propagate if NEW != ORIG.
+    	(record_equivalences_from_stmt): Call expr_computes_nonzero.
+    	(cprop_operand): Only propagate if VAL != OP.
+    	* tree-ssa-dse.c (dse_optimize_stmt): Mark symbols in removed
+    	statement for renaming.
+    	* tree-ssa-loop-im.c (move_computations): Call update_ssa.
+    	* tree-ssa-loop-ivopts.c (rewrite_address_base): Call
+    	add_type_alias if necessary.
+    	Call mark_new_vars_to_rename.
+    	(tree_ssa_iv_optimize): If new symbols need to be renamed,
+    	mark every statement updated, call update_ssa and
+    	rewrite_into_loop_closed_ssa.
+    	* tree-ssa-loop-manip.c (add_exit_phis): Do not remove DEF_BB
+    	from LIVEIN if VAR is a virtual.
+    	* tree-ssa-loop.c (tree_loop_optimizer_init): Call update_ssa.
+    	* tree-ssa-operands.c (get_expr_operands): Handle ASSERT_EXPR.
+    	(get_call_expr_operands): Reformat statement.
+    	(add_stmt_operand): Don't create V_MAY_DEFs for read-only
+    	symbols.
+    	* tree-ssa-propagate.c (ssa_prop_init): Initialize
+    	SSA_NAME_VALUE for every name.
+    	(first_vdef, stmt_makes_single_load, stmt_makes_single_store,
+    	get_value_loaded_by): New.
+    	(replace_uses_in, replace_vuses_in, replace_phi_args_in,
+    	substitute_and_fold): Move from tree-ssa-ccp.c.
+    	* tree-ssa-propagate.h (struct prop_value_d, prop_value_t,
+    	first_vdef, stmt_makes_single_load, stmt_makes_single_store,
+    	get_value_loaded_by, replace_uses_in, substitute_and_fold):
+    	Declare.
+    	* tree-ssa.c (verify_use): Fix error message.
+    	(propagate_into_addr, replace_immediate_uses, get_eq_name,
+    	check_phi_redundancy, kill_redundant_phi_nodes,
+    	pass_redundant_phi): Remove.  Update all users.
+    	* tree-vect-transform.c (vect_create_data_ref_ptr): Call
+    	add_type_alias, if necessary.
+    	* tree-vectorizer.h (struct _stmt_vect_info): Update
+    	documentation for field 'memtag'.
+    	* tree-vrp.c: New file.
+    	* tree.def (ASSERT_EXPR): Define.
+    	* tree.h (ASSERT_EXPR_VAR): Define.
+    	(ASSERT_EXPR_COND): Define.
+    	(SSA_NAME_VALUE_RANGE): Define.
+    	(struct tree_ssa_name): Add field 'value_range'.
+    	(PHI_REWRITTEN): Remove.
+    	(struct tree_phi_node): Remove field 'rewritten'.
+    	* doc/invoke.texi (-fdump-tree-storeccp, -ftree-copy-prop,
+    	-ftree-store-copy-prop): Document.
+    	* doc/tree-ssa.texi: Remove broken link to McCAT's compiler.
+    	Document usage of update_ssa.
+    
+    testsuite/ChangeLog
+    
+    	* g++.dg/tree-ssa/pr18178.C: New test.
+    	* gcc.c-torture/execute/20030216-1.x: Ignore at -O1.
+    	* gcc.c-torture/execute/20041019-1.c: New test.
+    	* gcc.dg/tree-ssa/20041008-1.c: New test.
+    	* gcc.dg/tree-ssa/ssa-ccp-12.c: New test.
+    	* gcc.dg/tree-ssa/20030731-2.c: Update to use -fdump-tree-store_ccp.
+    	* gcc.dg/tree-ssa/20030917-1.c: Likewise.
+    	* gcc.dg/tree-ssa/20030917-3.c: Likewise.
+    	* gcc.dg/tree-ssa/20040721-1.c: Likewise.
+    	* gcc.dg/tree-ssa/ssa-ccp-1.c: Likewise.
+    	* gcc.dg/tree-ssa/ssa-ccp-2.c: Likewise.
+    	* gcc.dg/tree-ssa/ssa-ccp-3.c: Likewise.
+    	* gcc.dg/tree-ssa/ssa-ccp-7.c: Likewise.
+    	* gcc.dg/tree-ssa/ssa-ccp-9.c: Likewise.
+    
+    From-SVN: r97884
+
+:040000 040000 dbe727d766153a03c3038835b9367c5e1fbe770b b234bb5004b50a101de2b114400ea0044fd65d99 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 0bca51f backport: copy-prop, incremental SSA updating of FUD chains and newly exposed symbols.
+Checking out files:  13% (7432/54119)   Checking out files:  14% (7577/54119)   Checking out files:  15% (8118/54119)   Checking out files:  16% (8660/54119)   Checking out files:  17% (9201/54119)   Checking out files:  18% (9742/54119)   Checking out files:  18% (9746/54119)   Checking out files:  19% (10283/54119)   Checking out files:  20% (10824/54119)   Checking out files:  21% (11365/54119)   Checking out files:  22% (11907/54119)   Checking out files:  23% (12448/54119)   Checking out files:  23% (12943/54119)   Checking out files:  24% (12989/54119)   Checking out files:  25% (13530/54119)   Checking out files:  26% (14071/54119)   Checking out files:  27% (14613/54119)   Checking out files:  28% (15154/54119)   Checking out files:  29% (15695/54119)   Checking out files:  30% (16236/54119)   Checking out files:  31% (16777/54119)   Checking out files:  32% (17319/54119)   Checking out files:  33% (17860/54119)   Checking out files:  34% (18401/54119)   Checking out files:  34% (18572/54119)   Checking out files:  35% (18942/54119)   Checking out files:  36% (19483/54119)   Checking out files:  37% (20025/54119)   Checking out files:  38% (20566/54119)   Checking out files:  39% (21107/54119)   Checking out files:  40% (21648/54119)   Checking out files:  41% (22189/54119)   Checking out files:  42% (22730/54119)   Checking out files:  43% (23272/54119)   Checking out files:  44% (23813/54119)   Checking out files:  44% (24255/54119)   Checking out files:  45% (24354/54119)   Checking out files:  46% (24895/54119)   Checking out files:  47% (25436/54119)   Checking out files:  48% (25978/54119)   Checking out files:  49% (26519/54119)   Checking out files:  50% (27060/54119)   Checking out files:  51% (27601/54119)   Checking out files:  52% (28142/54119)   Checking out files:  52% (28157/54119)   Checking out files:  53% (28684/54119)   Checking out files:  54% (29225/54119)   Checking out files:  55% (29766/54119)   Checking out files:  56% (30307/54119)   Checking out files:  57% (30848/54119)   Checking out files:  58% (31390/54119)   Checking out files:  59% (31931/54119)   Checking out files:  60% (32472/54119)   Checking out files:  61% (33013/54119)   Checking out files:  61% (33279/54119)   Checking out files:  62% (33554/54119)   Checking out files:  63% (34095/54119)   Checking out files:  64% (34637/54119)   Checking out files:  65% (35178/54119)   Checking out files:  66% (35719/54119)   Checking out files:  67% (36260/54119)   Checking out files:  68% (36801/54119)   Checking out files:  69% (37343/54119)   Checking out files:  70% (37884/54119)   Checking out files:  71% (38425/54119)   Checking out files:  72% (38966/54119)   Checking out files:  72% (39100/54119)   Checking out files:  73% (39507/54119)   Checking out files:  74% (40049/54119)   Checking out files:  75% (40590/54119)   Checking out files:  76% (41131/54119)   Checking out files:  77% (41672/54119)   Checking out files:  78% (42213/54119)   Checking out files:  79% (42755/54119)   Checking out files:  80% (43296/54119)   Checking out files:  81% (43837/54119)   Checking out files:  82% (44378/54119)   Checking out files:  82% (44729/54119)   Checking out files:  83% (44919/54119)   Checking out files:  84% (45460/54119)   Checking out files:  85% (46002/54119)   Checking out files:  86% (46543/54119)   Checking out files:  87% (47084/54119)   Checking out files:  88% (47625/54119)   Checking out files:  89% (48166/54119)   Checking out files:  90% (48708/54119)   Checking out files:  91% (49249/54119)   Checking out files:  92% (49790/54119)   Checking out files:  92% (49873/54119)   Checking out files:  93% (50331/54119)   Checking out files:  94% (50872/54119)   Checking out files:  95% (51414/54119)   Checking out files:  96% (51955/54119)   Checking out files:  97% (52496/54119)   Checking out files:  98% (53037/54119)   Checking out files:  99% (53578/54119)   Checking out files:  99% (53895/54119)   Checking out files: 100% (54119/54119)   Checking out files: 100% (54119/54119), done.
+Previous HEAD position was 45f9480... Daily bump.
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [0bca51f]
++---------------------------------------- Current commit hash: [0bca51f] ----------------------------------------+
+GCC for commit [0bca51f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-0bca51f/bin/gcc with -Os:
+1
+Output of /tmp/gcc-0bca51f/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0bca51f... backport: copy-prop, incremental SSA updating of FUD chains and newly exposed symbols.
+[32m[     info][0m Current commit [0bca51f] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [45f9480]
++---------------------------------------- Current commit hash: [45f9480] ----------------------------------------+
+GCC for commit [45f9480] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-45f9480/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-45f9480/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 45f9480... Daily bump.
+[32m[     info][0m Current commit [45f9480] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [0bca51f] with -O0:
+-1
+Output of gcc [0bca51f] with -O1:
+-1
+Output of gcc [0bca51f] with -O2:
+1
+Output of gcc [0bca51f] with -O3:
+1
+Output of gcc [0bca51f] with -Os:
+1
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

@@ -1,0 +1,6 @@
+inline-functions-called-once
+ipa-reference
+tree-ccp
+tree-salias
+tree-sra
+unit-at-a-time

@@ -1,0 +1,7 @@
+inline-functions-called-once
+inline-small-functions
+tree-ccp
+tree-dce
+tree-store-ccp
+tree-vrp
+unit-at-a-time

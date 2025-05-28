@@ -1,0 +1,7 @@
+caller-saves
+cse-follow-jumps
+gcse
+if-conversion
+ivopts
+move-loop-invariants
+tree-loop-optimize

@@ -1,0 +1,5 @@
+inline-small-functions
+strict-aliasing
+tree-dse
+tree-salias
+unit-at-a-time

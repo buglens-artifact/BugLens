@@ -1,0 +1,9 @@
+inline-functions-called-once
+ipa-reference
+tree-dominator-opts
+tree-dse
+tree-fre
+tree-salias
+tree-sra
+tree-vrp
+unit-at-a-time

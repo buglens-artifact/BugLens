@@ -1,0 +1,6 @@
+dse
+inline-functions-called-once
+ipa-reference
+tree-pre
+tree-sra
+unit-at-a-time

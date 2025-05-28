@@ -1,0 +1,7 @@
+argument-alias
+dse
+inline-functions
+inline-small-functions
+ipa-reference
+tree-sra
+unit-at-a-time

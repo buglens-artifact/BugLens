@@ -1,0 +1,370 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.5.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+-1
+Output of gcc-4.5.0 with -Os:
+1
+Output of gcc-4.5.0 with -O0:
+-1
+====================================================================
+[32m[     info][0m Good version found: gcc-4.0.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[bd182be84e9c8ae8485ac7c392fa0b6678969e3c] re PR rtl-optimization/20117 (duplicated labels in PIC)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [bd182be]
++---------------------------------------- Current commit hash: [bd182be] ----------------------------------------+
+GCC for commit [bd182be] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-bd182be/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-bd182be/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+[32m[     info][0m Current commit [bd182be] is good. Return value: 0
+
+Bisecting: 16604 revisions left to test after this (roughly 14 steps)
+[d48365bc6c150d94584adc7ef17438f8cb195732] exp_ch9.adb (Build_Protected_Entry): Undo previous change because it is not really required and can introduce...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [d48365b]
++---------------------------------------- Current commit hash: [d48365b] ----------------------------------------+
+GCC for commit [d48365b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-d48365b/bin/gcc with -Os:
+1
+Output of /tmp/gcc-d48365b/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at d48365b... exp_ch9.adb (Build_Protected_Entry): Undo previous change because it is not really required and can introduce...
+[32m[     info][0m Current commit [d48365b] is bad. Return value: 1
+
+Bisecting: 8301 revisions left to test after this (roughly 13 steps)
+[bd4ca424997fd4f8f7eaa32b933fc9e19eb38986] posix.cc (_Jv_platform_nanotime): Look for CLOCK_MONOTONIC and CLOCK_HIGHRES.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [bd4ca42]
++---------------------------------------- Current commit hash: [bd4ca42] ----------------------------------------+
+GCC for commit [bd4ca42] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-bd4ca42/bin/gcc with -Os:
+0
+Output of /tmp/gcc-bd4ca42/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd4ca42... posix.cc (_Jv_platform_nanotime): Look for CLOCK_MONOTONIC and CLOCK_HIGHRES.
+[32m[     info][0m Current commit [bd4ca42] is bad. Return value: 1
+
+Bisecting: 4150 revisions left to test after this (roughly 12 steps)
+[2c4a108eec40a96ac7c5fcb8811678c11c71c529] * io/unix.c: Add O_RDWR to open() call.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [2c4a108]
++---------------------------------------- Current commit hash: [2c4a108] ----------------------------------------+
+GCC for commit [2c4a108] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-2c4a108/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-2c4a108/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2c4a108... * io/unix.c: Add O_RDWR to open() call.
+[32m[     info][0m Current commit [2c4a108] is good. Return value: 0
+
+Bisecting: 2075 revisions left to test after this (roughly 11 steps)
+[3820178b949baa84b2d55069579a545fba478430] * zh_CN.po: Update.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [3820178]
++---------------------------------------- Current commit hash: [3820178] ----------------------------------------+
+GCC for commit [3820178] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-3820178/bin/gcc with -Os:
+1
+Output of /tmp/gcc-3820178/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3820178... * zh_CN.po: Update.
+[32m[     info][0m Current commit [3820178] is bad. Return value: 1
+
+Bisecting: 1037 revisions left to test after this (roughly 10 steps)
+[a5cee4808e6598c60068f798542e3c9f690321f2] Fix libstdc++/24196 for ext/vstring/rc by returning to the behavior of basic_string pre-2003-06-13...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [a5cee48]
++---------------------------------------- Current commit hash: [a5cee48] ----------------------------------------+
+GCC for commit [a5cee48] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-a5cee48/bin/gcc with -Os:
+1
+Output of /tmp/gcc-a5cee48/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at a5cee48... Fix libstdc++/24196 for ext/vstring/rc by returning to the behavior of basic_string pre-2003-06-13...
+[32m[     info][0m Current commit [a5cee48] is bad. Return value: 1
+
+Bisecting: 518 revisions left to test after this (roughly 9 steps)
+[2400f4e50b3e5b58f7e6f52acc7a820afd8ed0ed] Minor reformatting.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [2400f4e]
++---------------------------------------- Current commit hash: [2400f4e] ----------------------------------------+
+GCC for commit [2400f4e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-2400f4e/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-2400f4e/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2400f4e... Minor reformatting.
+[32m[     info][0m Current commit [2400f4e] is good. Return value: 0
+
+Bisecting: 259 revisions left to test after this (roughly 8 steps)
+[070a7956aa83825d8cdcc0d1b73aa64a0383ce84] re PR rtl-optimization/23898 (basic block reordering excessively increases code size; get_uncond_jump_length pessimistic)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [070a795]
++---------------------------------------- Current commit hash: [070a795] ----------------------------------------+
+GCC for commit [070a795] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-070a795/bin/gcc with -Os:
+1
+Output of /tmp/gcc-070a795/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 070a795... re PR rtl-optimization/23898 (basic block reordering excessively increases code size; get_uncond_jump_length pessimistic)
+[32m[     info][0m Current commit [070a795] is bad. Return value: 1
+
+Bisecting: 129 revisions left to test after this (roughly 7 steps)
+[ef3381664e516d137c80ebbf48c085220d5810ab] * Imported zlib 1.2.3; merged local changes.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [ef33816]
++---------------------------------------- Current commit hash: [ef33816] ----------------------------------------+
+GCC for commit [ef33816] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-ef33816/bin/gcc with -Os:
+1
+Output of /tmp/gcc-ef33816/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at ef33816... * Imported zlib 1.2.3; merged local changes.
+[32m[     info][0m Current commit [ef33816] is bad. Return value: 1
+
+Bisecting: 64 revisions left to test after this (roughly 6 steps)
+[dcc9eb26a3b11460bfd1fba9430505f274968b63] s390.c (s390_sr_alias_set): Variable removed.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [dcc9eb2]
++---------------------------------------- Current commit hash: [dcc9eb2] ----------------------------------------+
+GCC for commit [dcc9eb2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-dcc9eb2/bin/gcc with -Os:
+1
+Output of /tmp/gcc-dcc9eb2/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at dcc9eb2... s390.c (s390_sr_alias_set): Variable removed.
+[32m[     info][0m Current commit [dcc9eb2] is bad. Return value: 1
+
+Bisecting: 31 revisions left to test after this (roughly 5 steps)
+[3e248b831501dcc1b222a2f27e880eff0b54e523] java-gimplify.c (java_gimplify_block): NULL out the old BLOCK's BLOCK_EXPR_BODY before returning the new BIND_EXPR.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [3e248b8]
++---------------------------------------- Current commit hash: [3e248b8] ----------------------------------------+
+GCC for commit [3e248b8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-3e248b8/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-3e248b8/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3e248b8... java-gimplify.c (java_gimplify_block): NULL out the old BLOCK's BLOCK_EXPR_BODY before returning the new BIND_EXPR.
+[32m[     info][0m Current commit [3e248b8] is good. Return value: 0
+
+Bisecting: 15 revisions left to test after this (roughly 4 steps)
+[d1d26ecf9fa4f22c71353c650d85bf3b0fd3b1b5] re PR fortran/19269 (transpose(reshape(...)) of character array segfaults.)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [d1d26ec]
++---------------------------------------- Current commit hash: [d1d26ec] ----------------------------------------+
+GCC for commit [d1d26ec] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-d1d26ec/bin/gcc with -Os:
+1
+Output of /tmp/gcc-d1d26ec/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at d1d26ec... re PR fortran/19269 (transpose(reshape(...)) of character array segfaults.)
+[32m[     info][0m Current commit [d1d26ec] is bad. Return value: 1
+
+Bisecting: 7 revisions left to test after this (roughly 3 steps)
+[0c9b182b9f454fb2d5f57b17d22e860490c3c68f] re PR c/23075 (Redundant / bogus warning)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [0c9b182]
++---------------------------------------- Current commit hash: [0c9b182] ----------------------------------------+
+GCC for commit [0c9b182] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-0c9b182/bin/gcc with -Os:
+1
+Output of /tmp/gcc-0c9b182/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0c9b182... re PR c/23075 (Redundant / bogus warning)
+[32m[     info][0m Current commit [0c9b182] is bad. Return value: 1
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[1b1cdbffce4e8a8bfb90f704ab1e95bf767634fc] dwarf-char1.c: Further regex fixes.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [1b1cdbf]
++---------------------------------------- Current commit hash: [1b1cdbf] ----------------------------------------+
+GCC for commit [1b1cdbf] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-1b1cdbf/bin/gcc with -Os:
+1
+Output of /tmp/gcc-1b1cdbf/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1b1cdbf... dwarf-char1.c: Further regex fixes.
+[32m[     info][0m Current commit [1b1cdbf] is bad. Return value: 1
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[f5d1572a8a1aaba31679c2500e4a492936960531] simplify-rtx.c (simplify_binary_operation_1): Correct the condition for detecting cases like (a&a) and (a^a).
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [f5d1572]
++---------------------------------------- Current commit hash: [f5d1572] ----------------------------------------+
+GCC for commit [f5d1572] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-f5d1572/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-f5d1572/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at f5d1572... simplify-rtx.c (simplify_binary_operation_1): Correct the condition for detecting cases like (a&a) and (a^a).
+[32m[     info][0m Current commit [f5d1572] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[dda243de446dbf34fed29036394950bfc5bdd4f4] tree-ssa-pre.c (try_look_through_load): New function.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/18 small
+[32m[     info][0m Testing commit: [dda243d]
++---------------------------------------- Current commit hash: [dda243d] ----------------------------------------+
+GCC for commit [dda243d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-dda243d/bin/gcc with -Os:
+1
+Output of /tmp/gcc-dda243d/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at dda243d... tree-ssa-pre.c (try_look_through_load): New function.
+[32m[     info][0m Current commit [dda243d] is bad. Return value: 1
+
+dda243de446dbf34fed29036394950bfc5bdd4f4 is the first bad commit
+commit dda243de446dbf34fed29036394950bfc5bdd4f4
+Author: Steven Bosscher <stevenb@suse.de>
+Date:   Tue Sep 6 18:51:26 2005 +0000
+
+    tree-ssa-pre.c (try_look_through_load): New function.
+    
+    	* tree-ssa-pre.c (try_look_through_load): New function.
+    	(compute_avail): Use it to try to look through loads for some
+    	more useful expressions.
+    
+    From-SVN: r103956
+
+:040000 040000 2adbfbf9bce9a9ae2e34fc639f8541d97cb4147b 17de070c6d0fb32cef1879b0ba9385ef1abb91ba M	gcc
+bisect run success
+[32m[     info][0m First bad commit: dda243d tree-ssa-pre.c (try_look_through_load): New function.
+Previous HEAD position was dda243d... tree-ssa-pre.c (try_look_through_load): New function.
+HEAD is now at 942e593... c-common.c (c_common_nodes_and_builtins): Do not create __builtin_ptrdiff_t and __builtin_size_t.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [dda243d]
++---------------------------------------- Current commit hash: [dda243d] ----------------------------------------+
+GCC for commit [dda243d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-dda243d/bin/gcc with -Os:
+1
+Output of /tmp/gcc-dda243d/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at dda243d... tree-ssa-pre.c (try_look_through_load): New function.
+[32m[     info][0m Current commit [dda243d] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [f5d1572]
++---------------------------------------- Current commit hash: [f5d1572] ----------------------------------------+
+GCC for commit [f5d1572] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-f5d1572/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-f5d1572/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at f5d1572... simplify-rtx.c (simplify_binary_operation_1): Correct the condition for detecting cases like (a&a) and (a^a).
+[32m[     info][0m Current commit [f5d1572] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [dda243d] with -O0:
+-1
+Output of gcc [dda243d] with -O1:
+1
+Output of gcc [dda243d] with -O2:
+1
+Output of gcc [dda243d] with -O3:
+1
+Output of gcc [dda243d] with -Os:
+1
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

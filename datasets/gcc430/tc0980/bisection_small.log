@@ -1,0 +1,349 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+31
+Output of gcc-4.3.0 with -O3:
+1
+Output of gcc-4.3.0 with -O0:
+31
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+31
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+1
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is bad. Return value: 1
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[2b5e5642e38e17dc60ca6408f4c2bba651e1a9f7] builtins.c (fold_builtin_load_exponent): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [2b5e564]
++---------------------------------------- Current commit hash: [2b5e564] ----------------------------------------+
+GCC for commit [2b5e564] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-2b5e564/bin/gcc with -O3:
+1
+Output of /tmp/gcc-2b5e564/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2b5e564... builtins.c (fold_builtin_load_exponent): New.
+[32m[     info][0m Current commit [2b5e564] is bad. Return value: 1
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[af71363e455f4c60cf98f5ef42b4ddd8daedabd3] * configure: Regenerate with correct autoconf version.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [af71363]
++---------------------------------------- Current commit hash: [af71363] ----------------------------------------+
+GCC for commit [af71363] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-af71363/bin/gcc with -O3:
+31
+Output of /tmp/gcc-af71363/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at af71363... * configure: Regenerate with correct autoconf version.
+[32m[     info][0m Current commit [af71363] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[cf227303461b367efbb57f7e4f9425c3f15f1132] pr23382.c: Avoid DCE from eliminating dead variable.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [cf227303]
++---------------------------------------- Current commit hash: [cf227303] ----------------------------------------+
+GCC for commit [cf227303] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-cf227303/bin/gcc with -O3:
+1
+Output of /tmp/gcc-cf227303/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at cf227303... pr23382.c: Avoid DCE from eliminating dead variable.
+[32m[     info][0m Current commit [cf227303] is bad. Return value: 1
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[1bc2338361af6fb1e8fecb3ec44db9979d842e4d] re PR fortran/30430 (Memory corruption in the module search path code)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [1bc2338]
++---------------------------------------- Current commit hash: [1bc2338] ----------------------------------------+
+GCC for commit [1bc2338] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-1bc2338/bin/gcc with -O3:
+1
+Output of /tmp/gcc-1bc2338/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1bc2338... re PR fortran/30430 (Memory corruption in the module search path code)
+[32m[     info][0m Current commit [1bc2338] is bad. Return value: 1
+
+Bisecting: 139 revisions left to test after this (roughly 7 steps)
+[fa9585134f6f58fa0d3da3ca4ad5493855aea2dc] Makefile.def (target_modules): Add libgcc.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [fa95851]
++---------------------------------------- Current commit hash: [fa95851] ----------------------------------------+
+GCC for commit [fa95851] already exists. Using existing binary.
+Compilation by gcc [fa95851] with -O3 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+Compilation by gcc [fa95851] with -O0 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-fa95851/bin/gcc with -O3:
+31
+Output of /tmp/gcc-fa95851/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at fa95851... Makefile.def (target_modules): Add libgcc.
+[32m[     info][0m Current commit [fa95851] is good. Return value: 0
+
+Bisecting: 69 revisions left to test after this (roughly 6 steps)
+[cd85e27a61d61fd365ad5a91f7613de78972c065] data.c (gfc_assign_data_value): Fix whitespace.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [cd85e27]
++---------------------------------------- Current commit hash: [cd85e27] ----------------------------------------+
+GCC for commit [cd85e27] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-cd85e27/bin/gcc with -O3:
+1
+Output of /tmp/gcc-cd85e27/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at cd85e27... data.c (gfc_assign_data_value): Fix whitespace.
+[32m[     info][0m Current commit [cd85e27] is bad. Return value: 1
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[3d761c462aacbfd10cbfe78356b958fd5459cba6] pt.c (tsubst): Propagate the need for structural equality checks when...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [3d761c4]
++---------------------------------------- Current commit hash: [3d761c4] ----------------------------------------+
+GCC for commit [3d761c4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-3d761c4/bin/gcc with -O3:
+1
+Output of /tmp/gcc-3d761c4/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3d761c4... pt.c (tsubst): Propagate the need for structural equality checks when...
+[32m[     info][0m Current commit [3d761c4] is bad. Return value: 1
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[6d413586e00892fd85f6688eda364b545ee1bee2] intrinsic.texi (IAND): Clarify argument specifications.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [6d41358]
++---------------------------------------- Current commit hash: [6d41358] ----------------------------------------+
+GCC for commit [6d41358] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-6d41358/bin/gcc with -O3:
+1
+Output of /tmp/gcc-6d41358/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6d41358... intrinsic.texi (IAND): Clarify argument specifications.
+[32m[     info][0m Current commit [6d41358] is bad. Return value: 1
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[705e2d28a1c830064e0bc77fd7e37f7e73b01516] re PR preprocessor/28165 (_Pragma GCC system_header broken)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [705e2d2]
++---------------------------------------- Current commit hash: [705e2d2] ----------------------------------------+
+GCC for commit [705e2d2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-705e2d2/bin/gcc with -O3:
+1
+Output of /tmp/gcc-705e2d2/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at 705e2d2... re PR preprocessor/28165 (_Pragma GCC system_header broken)
+[32m[     info][0m Current commit [705e2d2] is bad. Return value: 1
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[b06e8639fa88b579c1ea48123d4af902c2d7b101] cfgloop.h (enum li_flags): Make the constants powers of two.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [b06e863]
++---------------------------------------- Current commit hash: [b06e863] ----------------------------------------+
+GCC for commit [b06e863] already exists. Using existing binary.
+Compilation by gcc [b06e863] with -O3 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+Compilation by gcc [b06e863] with -O0 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-b06e863/bin/gcc with -O3:
+1
+Output of /tmp/gcc-b06e863/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at b06e863... cfgloop.h (enum li_flags): Make the constants powers of two.
+[32m[     info][0m Current commit [b06e863] is bad. Return value: 1
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[e01f74e08e0ea50cd26c936c0ddcf7212fd18b7a] re PR fortran/30276 (gfortran include problem)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [e01f74e]
++---------------------------------------- Current commit hash: [e01f74e] ----------------------------------------+
+GCC for commit [e01f74e] already exists. Using existing binary.
+Compilation by gcc [e01f74e] with -O3 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+Compilation by gcc [e01f74e] with -O0 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-e01f74e/bin/gcc with -O3:
+1
+Output of /tmp/gcc-e01f74e/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at e01f74e... re PR fortran/30276 (gfortran include problem)
+[32m[     info][0m Current commit [e01f74e] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[b8a00a4dcb742df10a4d3027fc274658c0330940] tree-inline.c (copy_bb): Insert new statements to statements_to_fold set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0980 small
+[32m[     info][0m Testing commit: [b8a00a4]
++---------------------------------------- Current commit hash: [b8a00a4] ----------------------------------------+
+GCC for commit [b8a00a4] already exists. Using existing binary.
+Compilation by gcc [b8a00a4] with -O3 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+Compilation by gcc [b8a00a4] with -O0 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-b8a00a4/bin/gcc with -O3:
+1
+Output of /tmp/gcc-b8a00a4/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at b8a00a4... tree-inline.c (copy_bb): Insert new statements to statements_to_fold set.
+[32m[     info][0m Current commit [b8a00a4] is bad. Return value: 1
+
+b8a00a4dcb742df10a4d3027fc274658c0330940 is the first bad commit
+commit b8a00a4dcb742df10a4d3027fc274658c0330940
+Author: Jan Hubicka <jh@suse.cz>
+Date:   Thu Jan 4 09:56:05 2007 +0100
+
+    tree-inline.c (copy_bb): Insert new statements to statements_to_fold set.
+    
+    	* tree-inline.c (copy_bb): Insert new statements to statements_to_fold
+    	set.
+    	(fold_marked_statements): New function.
+    	(optimize_inline_calls, tree_function_versioning): Fold new statements.
+    	* tree-inline.h (copy_body_data): Add statemetns_to_fold.
+    
+    From-SVN: r120430
+
+:040000 040000 2fe79a8fa30b76b669704441b205cf09be6e7662 fffbf5b9f7e1e337c4ebdf82db5e94d4743752c3 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: b8a00a4 tree-inline.c (copy_bb): Insert new statements to statements_to_fold set.
+Checking out files:   9% (2376/25322)   Checking out files:  10% (2533/25322)   Checking out files:  11% (2786/25322)   Checking out files:  12% (3039/25322)   Checking out files:  13% (3292/25322)   Checking out files:  14% (3546/25322)   Checking out files:  15% (3799/25322)   Checking out files:  16% (4052/25322)   Checking out files:  17% (4305/25322)   Checking out files:  18% (4558/25322)   Checking out files:  19% (4812/25322)   Checking out files:  20% (5065/25322)   Checking out files:  20% (5136/25322)   Checking out files:  21% (5318/25322)   Checking out files:  22% (5571/25322)   Checking out files:  23% (5825/25322)   Checking out files:  24% (6078/25322)   Checking out files:  25% (6331/25322)   Checking out files:  26% (6584/25322)   Checking out files:  27% (6837/25322)   Checking out files:  28% (7091/25322)   Checking out files:  29% (7344/25322)   Checking out files:  30% (7597/25322)   Checking out files:  31% (7850/25322)   Checking out files:  32% (8104/25322)   Checking out files:  33% (8357/25322)   Checking out files:  34% (8610/25322)   Checking out files:  34% (8747/25322)   Checking out files:  35% (8863/25322)   Checking out files:  36% (9116/25322)   Checking out files:  37% (9370/25322)   Checking out files:  38% (9623/25322)   Checking out files:  39% (9876/25322)   Checking out files:  40% (10129/25322)   Checking out files:  41% (10383/25322)   Checking out files:  42% (10636/25322)   Checking out files:  43% (10889/25322)   Checking out files:  44% (11142/25322)   Checking out files:  45% (11395/25322)   Checking out files:  46% (11649/25322)   Checking out files:  47% (11902/25322)   Checking out files:  48% (12155/25322)   Checking out files:  49% (12408/25322)   Checking out files:  50% (12661/25322)   Checking out files:  51% (12915/25322)   Checking out files:  52% (13168/25322)   Checking out files:  53% (13421/25322)   Checking out files:  54% (13674/25322)   Checking out files:  55% (13928/25322)   Checking out files:  56% (14181/25322)   Checking out files:  57% (14434/25322)   Checking out files:  57% (14641/25322)   Checking out files:  58% (14687/25322)   Checking out files:  59% (14940/25322)   Checking out files:  60% (15194/25322)   Checking out files:  61% (15447/25322)   Checking out files:  62% (15700/25322)   Checking out files:  63% (15953/25322)   Checking out files:  64% (16207/25322)   Checking out files:  65% (16460/25322)   Checking out files:  66% (16713/25322)   Checking out files:  67% (16966/25322)   Checking out files:  68% (17219/25322)   Checking out files:  69% (17473/25322)   Checking out files:  70% (17726/25322)   Checking out files:  71% (17979/25322)   Checking out files:  72% (18232/25322)   Checking out files:  73% (18486/25322)   Checking out files:  74% (18739/25322)   Checking out files:  75% (18992/25322)   Checking out files:  76% (19245/25322)   Checking out files:  77% (19498/25322)   Checking out files:  78% (19752/25322)   Checking out files:  79% (20005/25322)   Checking out files:  80% (20258/25322)   Checking out files:  80% (20295/25322)   Checking out files:  81% (20511/25322)   Checking out files:  82% (20765/25322)   Checking out files:  83% (21018/25322)   Checking out files:  84% (21271/25322)   Checking out files:  85% (21524/25322)   Checking out files:  86% (21777/25322)   Checking out files:  87% (22031/25322)   Checking out files:  88% (22284/25322)   Checking out files:  89% (22537/25322)   Checking out files:  90% (22790/25322)   Checking out files:  91% (23044/25322)   Checking out files:  92% (23297/25322)   Checking out files:  93% (23550/25322)   Checking out files:  94% (23803/25322)   Checking out files:  95% (24056/25322)   Checking out files:  96% (24310/25322)   Checking out files:  97% (24563/25322)   Checking out files:  98% (24816/25322)   Checking out files:  99% (25069/25322)   Checking out files: 100% (25322/25322)   Checking out files: 100% (25322/25322), done.
+Previous HEAD position was b8a00a4... tree-inline.c (copy_bb): Insert new statements to statements_to_fold set.
+HEAD is now at 3673b8c... Daily bump.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [b8a00a4]
++---------------------------------------- Current commit hash: [b8a00a4] ----------------------------------------+
+GCC for commit [b8a00a4] already exists. Using existing binary.
+Compilation by gcc [b8a00a4] with -O3 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+Compilation by gcc [b8a00a4] with -O0 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-b8a00a4/bin/gcc with -O3:
+1
+Output of /tmp/gcc-b8a00a4/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at b8a00a4... tree-inline.c (copy_bb): Insert new statements to statements_to_fold set.
+[32m[     info][0m Current commit [b8a00a4] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [fa95851]
++---------------------------------------- Current commit hash: [fa95851] ----------------------------------------+
+GCC for commit [fa95851] already exists. Using existing binary.
+Compilation by gcc [fa95851] with -O3 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+Compilation by gcc [fa95851] with -O0 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+------------------Current output:-------------------
+Ground truth:
+31
+Output of /tmp/gcc-fa95851/bin/gcc with -O3:
+31
+Output of /tmp/gcc-fa95851/bin/gcc with -O0:
+31
+----------------------------------------------------
+No local changes to save
+HEAD is now at fa95851... Makefile.def (target_modules): Add libgcc.
+[32m[     info][0m Current commit [fa95851] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [b8a00a4] with -O0:
+31
+Output of gcc [b8a00a4] with -O1:
+31
+Output of gcc [b8a00a4] with -O2:
+31
+Output of gcc [b8a00a4] with -O3:
+1
+Output of gcc [b8a00a4] with -Os:
+1
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

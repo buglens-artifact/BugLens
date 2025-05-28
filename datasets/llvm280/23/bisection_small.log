@@ -1,0 +1,11 @@
+[32m[     info][0m Compiler type: llvm
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/llvm-2.8.0/bin/clang
+====================Ground truth & buggy output:====================
+Correct output:
+0
+Output of llvm-2.8.0 with -O0:
+5706755
+Output of llvm-2.8.0 with -Os:
+0
+====================================================================
+[31m[    error][0m No good compiler version found.

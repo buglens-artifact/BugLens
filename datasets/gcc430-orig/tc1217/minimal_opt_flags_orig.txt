@@ -1,0 +1,5 @@
+inline-small-functions
+ipa-reference
+tree-dce
+tree-ter
+unit-at-a-time

@@ -1,0 +1,1 @@
+3b48ccb re PR tree-optimization/19431 (missed optimization with ifs and deferencing)

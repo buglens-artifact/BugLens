@@ -1,0 +1,350 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+Output of gcc-4.3.0 with -O3:
+1
+Output of gcc-4.3.0 with -Os:
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+0
+Output of /tmp/gcc-b23987e/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+0
+Output of /tmp/gcc-b718216/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is good. Return value: 0
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[448d2cd2f73e2e16e2bdd5c407174afebf3ed845] re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [448d2cd]
++---------------------------------------- Current commit hash: [448d2cd] ----------------------------------------+
+GCC for commit [448d2cd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-448d2cd/bin/gcc with -O3:
+1
+Output of /tmp/gcc-448d2cd/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 448d2cd... re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+[32m[     info][0m Current commit [448d2cd] is bad. Return value: 1
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[6812b99bfefb741cadac6c5eba5a7446af820b62] impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [6812b99]
++---------------------------------------- Current commit hash: [6812b99] ----------------------------------------+
+GCC for commit [6812b99] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-6812b99/bin/gcc with -O3:
+0
+Output of /tmp/gcc-6812b99/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6812b99... impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+[32m[     info][0m Current commit [6812b99] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[bc211e05e3379205a808c2f2fa050ba6cc03cf22] darwin.c (machopic_indirect_data_reference): Avoid invalid sharing.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [bc211e0]
++---------------------------------------- Current commit hash: [bc211e0] ----------------------------------------+
+GCC for commit [bc211e0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-bc211e0/bin/gcc with -O3:
+1
+Output of /tmp/gcc-bc211e0/bin/gcc with -Os:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at bc211e0... darwin.c (machopic_indirect_data_reference): Avoid invalid sharing.
+[32m[     info][0m Current commit [bc211e0] is bad. Return value: 1
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[b29ee02b34c3fe06df62dae38f75b0efcfe38704] * c-pretty-print.c (pp_c_constant): Handle COMPLEX_CST.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [b29ee02]
++---------------------------------------- Current commit hash: [b29ee02] ----------------------------------------+
+GCC for commit [b29ee02] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b29ee02/bin/gcc with -O3:
+1
+Output of /tmp/gcc-b29ee02/bin/gcc with -Os:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at b29ee02... * c-pretty-print.c (pp_c_constant): Handle COMPLEX_CST.
+[32m[     info][0m Current commit [b29ee02] is bad. Return value: 1
+
+Bisecting: 139 revisions left to test after this (roughly 7 steps)
+[ff7637ef1d8ab07702005ddba765a2d5fba4c071] c-typeck.c (convert_for_assignment): Use the type of the member for the initialization.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [ff7637e]
++---------------------------------------- Current commit hash: [ff7637e] ----------------------------------------+
+GCC for commit [ff7637e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-ff7637e/bin/gcc with -O3:
+1
+Output of /tmp/gcc-ff7637e/bin/gcc with -Os:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at ff7637e... c-typeck.c (convert_for_assignment): Use the type of the member for the initialization.
+[32m[     info][0m Current commit [ff7637e] is bad. Return value: 1
+
+Bisecting: 69 revisions left to test after this (roughly 6 steps)
+[369925233a003cf92489080ed0a0bcb94629b08b] sem_ch12.adb (Copy_Generic_Node): A reference to a child unit of the generic for an enclosing instance is a...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [3699252]
++---------------------------------------- Current commit hash: [3699252] ----------------------------------------+
+GCC for commit [3699252] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-3699252/bin/gcc with -O3:
+1
+Output of /tmp/gcc-3699252/bin/gcc with -Os:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3699252... sem_ch12.adb (Copy_Generic_Node): A reference to a child unit of the generic for an enclosing instance is a...
+[32m[     info][0m Current commit [3699252] is bad. Return value: 1
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[991df44f3a392709a7bbaf30d618582e9ab62a2b] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [991df44]
++---------------------------------------- Current commit hash: [991df44] ----------------------------------------+
+GCC for commit [991df44] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-991df44/bin/gcc with -O3:
+1
+Output of /tmp/gcc-991df44/bin/gcc with -Os:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 991df44... Daily bump.
+[32m[     info][0m Current commit [991df44] is bad. Return value: 1
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[434632cea8746ceca0d253bd3283495e9ac37b3f] (Check_References.Publicly_Referenceable): A formal parameter is never publicly referenceable outside of its body.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [434632c]
++---------------------------------------- Current commit hash: [434632c] ----------------------------------------+
+GCC for commit [434632c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-434632c/bin/gcc with -O3:
+0
+Output of /tmp/gcc-434632c/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 434632c... (Check_References.Publicly_Referenceable): A formal parameter is never publicly referenceable outside of its body.
+[32m[     info][0m Current commit [434632c] is good. Return value: 0
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[22ea9ec0e8acfd6a8e42aba3437bf61fd6fd04c3] alias.c (component_uses_parent_alias_set): Constify.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [22ea9ec]
++---------------------------------------- Current commit hash: [22ea9ec] ----------------------------------------+
+GCC for commit [22ea9ec] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-22ea9ec/bin/gcc with -O3:
+0
+Output of /tmp/gcc-22ea9ec/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 22ea9ec... alias.c (component_uses_parent_alias_set): Constify.
+[32m[     info][0m Current commit [22ea9ec] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[f8c3b097ed6ce43f64f9dfceac2698b0727969ac] re PR c++/27211 (Bogus error "template definition of non-template" when there is no non-template)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [f8c3b09]
++---------------------------------------- Current commit hash: [f8c3b09] ----------------------------------------+
+GCC for commit [f8c3b09] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-f8c3b09/bin/gcc with -O3:
+1
+Output of /tmp/gcc-f8c3b09/bin/gcc with -Os:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at f8c3b09... re PR c++/27211 (Bogus error "template definition of non-template" when there is no non-template)
+[32m[     info][0m Current commit [f8c3b09] is bad. Return value: 1
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[ea2666ba5e7bd79860e585dd09092bbcb0dd23c9] i386.c: (legitimize_address): Move dllimported variable check infront of legitimizing...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [ea2666b]
++---------------------------------------- Current commit hash: [ea2666b] ----------------------------------------+
+GCC for commit [ea2666b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-ea2666b/bin/gcc with -O3:
+0
+Output of /tmp/gcc-ea2666b/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at ea2666b... i386.c: (legitimize_address): Move dllimported variable check infront of legitimizing...
+[32m[     info][0m Current commit [ea2666b] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[7b0e48fb44b44241ae79e34a666edc87fdfbeb78] tree-pass.h (PROP_pta): Removed.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0097 small
+[32m[     info][0m Testing commit: [7b0e48f]
++---------------------------------------- Current commit hash: [7b0e48f] ----------------------------------------+
+GCC for commit [7b0e48f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-7b0e48f/bin/gcc with -O3:
+1
+Output of /tmp/gcc-7b0e48f/bin/gcc with -Os:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7b0e48f... tree-pass.h (PROP_pta): Removed.
+[32m[     info][0m Current commit [7b0e48f] is bad. Return value: 1
+
+7b0e48fb44b44241ae79e34a666edc87fdfbeb78 is the first bad commit
+commit 7b0e48fb44b44241ae79e34a666edc87fdfbeb78
+Author: Daniel Berlin <dberlin@gcc.gnu.org>
+Date:   Tue Aug 14 20:52:47 2007 +0000
+
+    tree-pass.h (PROP_pta): Removed.
+    
+    2007-08-14  Daniel Berlin  <dberlin@dberlin.org>
+    
+    	* tree-pass.h (PROP_pta): Removed.
+    	(TODO_rebuild_alias): New.
+    	(pass_may_alias): Removed.
+    	* tree-ssa-ccp.c (execute_fold_all_builtins): Only rebuild
+    	aliasing if we changed something.
+    	* tree-ssa-alias.c (compute_may_aliases): Make non-static.  Update
+    	SSA internally.
+    	(pass_may_alias): Removed.
+    	(create_structure_vars): Return TODO_rebuild_alias.
+    	* tree-ssa-pre.c (do_pre): Return TODO_rebuild_alias.
+    	* tree-sra.c (tree_sra): Only rebuild aliasing if something
+    	changed.
+    	(tree_sra_early): We never affect aliasing right now.
+    	* tree-flow.h (compute_may_aliases): New prototype.
+    	* passes.c: Remove pass_may_alias from the passes.
+    	(execute_function_todo): Support TODO_rebuild_alias.
+    
+    From-SVN: r127491
+
+:040000 040000 c068dcf22178619545caf507f3992d011c754837 9903a6626d3bfc7560483f4d1b1a42a8398f42fb M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 7b0e48f tree-pass.h (PROP_pta): Removed.
+Checking out files:  47% (13854/28929)   Checking out files:  48% (13886/28929)   Checking out files:  49% (14176/28929)   Checking out files:  50% (14465/28929)   Checking out files:  51% (14754/28929)   Checking out files:  52% (15044/28929)   Checking out files:  53% (15333/28929)   Checking out files:  54% (15622/28929)   Checking out files:  55% (15911/28929)   Checking out files:  56% (16201/28929)   Checking out files:  57% (16490/28929)   Checking out files:  58% (16779/28929)   Checking out files:  59% (17069/28929)   Checking out files:  60% (17358/28929)   Checking out files:  61% (17647/28929)   Checking out files:  62% (17936/28929)   Checking out files:  63% (18226/28929)   Checking out files:  64% (18515/28929)   Checking out files:  65% (18804/28929)   Checking out files:  66% (19094/28929)   Checking out files:  67% (19383/28929)   Checking out files:  68% (19672/28929)   Checking out files:  69% (19962/28929)   Checking out files:  70% (20251/28929)   Checking out files:  71% (20540/28929)   Checking out files:  72% (20829/28929)   Checking out files:  73% (21119/28929)   Checking out files:  74% (21408/28929)   Checking out files:  75% (21697/28929)   Checking out files:  76% (21987/28929)   Checking out files:  77% (22276/28929)   Checking out files:  77% (22281/28929)   Checking out files:  78% (22565/28929)   Checking out files:  79% (22854/28929)   Checking out files:  80% (23144/28929)   Checking out files:  81% (23433/28929)   Checking out files:  82% (23722/28929)   Checking out files:  82% (23886/28929)   Checking out files:  83% (24012/28929)   Checking out files:  84% (24301/28929)   Checking out files:  85% (24590/28929)   Checking out files:  86% (24879/28929)   Checking out files:  87% (25169/28929)   Checking out files:  88% (25458/28929)   Checking out files:  89% (25747/28929)   Checking out files:  90% (26037/28929)   Checking out files:  91% (26326/28929)   Checking out files:  91% (26534/28929)   Checking out files:  92% (26615/28929)   Checking out files:  93% (26904/28929)   Checking out files:  94% (27194/28929)   Checking out files:  95% (27483/28929)   Checking out files:  96% (27772/28929)   Checking out files:  97% (28062/28929)   Checking out files:  98% (28351/28929)   Checking out files:  99% (28640/28929)   Checking out files: 100% (28929/28929)   Checking out files: 100% (28929/28929), done.
+Previous HEAD position was 7b0e48f... tree-pass.h (PROP_pta): Removed.
+HEAD is now at 870aa1e... re PR middle-end/30322 (((-i-1) + i) +1) is turned into ~i + (i+1) and never into 0 on the tree level)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [7b0e48f]
++---------------------------------------- Current commit hash: [7b0e48f] ----------------------------------------+
+GCC for commit [7b0e48f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-7b0e48f/bin/gcc with -O3:
+1
+Output of /tmp/gcc-7b0e48f/bin/gcc with -Os:
+1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7b0e48f... tree-pass.h (PROP_pta): Removed.
+[32m[     info][0m Current commit [7b0e48f] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [ea2666b]
++---------------------------------------- Current commit hash: [ea2666b] ----------------------------------------+
+GCC for commit [ea2666b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-ea2666b/bin/gcc with -O3:
+0
+Output of /tmp/gcc-ea2666b/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at ea2666b... i386.c: (legitimize_address): Move dllimported variable check infront of legitimizing...
+[32m[     info][0m Current commit [ea2666b] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [7b0e48f] with -O0:
+0
+Output of gcc [7b0e48f] with -O1:
+0
+Output of gcc [7b0e48f] with -O2:
+0
+Output of gcc [7b0e48f] with -O3:
+1
+Output of gcc [7b0e48f] with -Os:
+1
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

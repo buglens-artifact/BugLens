@@ -1,0 +1,1 @@
+e697a6f Constant fold x == undef to undef.

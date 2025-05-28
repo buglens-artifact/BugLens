@@ -1,0 +1,300 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = f2b8f2a0
+Output of gcc-4.3.0 with -O3:
+checksum = f2b8f2c8
+Output of gcc-4.3.0 with -O0:
+checksum = f2b8f2a0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = f2b8f2a0
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+checksum = f2b8f2a0
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+checksum = f2b8f2a0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = f2b8f2a0
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+checksum = f2b8f2a0
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+checksum = f2b8f2a0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is good. Return value: 0
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[448d2cd2f73e2e16e2bdd5c407174afebf3ed845] re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [448d2cd]
++---------------------------------------- Current commit hash: [448d2cd] ----------------------------------------+
+GCC for commit [448d2cd] already exists. Using existing binary.
+Compilation by gcc [448d2cd] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 448d2cd... re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[6812b99bfefb741cadac6c5eba5a7446af820b62] impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [6812b99]
++---------------------------------------- Current commit hash: [6812b99] ----------------------------------------+
+GCC for commit [6812b99] already exists. Using existing binary.
+Compilation by gcc [6812b99] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 6812b99... impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[99c1f1ceed0d85eb785cb6f49ef23cad965922d2] re PR c++/30854 (Wrong number of arguments printed for constructor)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [99c1f1c]
++---------------------------------------- Current commit hash: [99c1f1c] ----------------------------------------+
+GCC for commit [99c1f1c] already exists. Using existing binary.
+Compilation by gcc [99c1f1c] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 99c1f1c... re PR c++/30854 (Wrong number of arguments printed for constructor)
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[7ee1ad848363ca30a254981b13b57d0746ed0dc1] Fix missed initialization of scc_nodes.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [7ee1ad8]
++---------------------------------------- Current commit hash: [7ee1ad8] ----------------------------------------+
+GCC for commit [7ee1ad8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = f2b8f2a0
+Output of /tmp/gcc-7ee1ad8/bin/gcc with -O3:
+checksum = f2b8f2a0
+Output of /tmp/gcc-7ee1ad8/bin/gcc with -O0:
+checksum = f2b8f2a0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7ee1ad8... Fix missed initialization of scc_nodes.
+[32m[     info][0m Current commit [7ee1ad8] is good. Return value: 0
+
+Bisecting: 140 revisions left to test after this (roughly 7 steps)
+[12a27363b0214be894674f2cd4b667e70b060325] Regenerate aclocal.m4 in boehm-gc, libffi, libgfortran, libgomp,
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [12a2736]
++---------------------------------------- Current commit hash: [12a2736] ----------------------------------------+
+GCC for commit [12a2736] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = f2b8f2a0
+Output of /tmp/gcc-12a2736/bin/gcc with -O3:
+checksum = f2b8f2a0
+Output of /tmp/gcc-12a2736/bin/gcc with -O0:
+checksum = f2b8f2a0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 12a2736... Regenerate aclocal.m4 in boehm-gc, libffi, libgfortran, libgomp,
+[32m[     info][0m Current commit [12a2736] is good. Return value: 0
+
+Bisecting: 70 revisions left to test after this (roughly 6 steps)
+[f967586f51957145975ede931f0540f5af3a94fe] decl.c (start_preparsed_function): Do not promote return type.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [f967586]
++---------------------------------------- Current commit hash: [f967586] ----------------------------------------+
+GCC for commit [f967586] already exists. Using existing binary.
+Compilation by gcc [f967586] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at f967586... decl.c (start_preparsed_function): Do not promote return type.
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[e0ff69ab1195bfc3fcc0c5f91cf5fea89acf54ff] sh.md (*prefetch_i4): Disable for TARGET_VXWORKS_RTP.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [e0ff69a]
++---------------------------------------- Current commit hash: [e0ff69a] ----------------------------------------+
+GCC for commit [e0ff69a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = f2b8f2a0
+Output of /tmp/gcc-e0ff69a/bin/gcc with -O3:
+checksum = f2b8f2a0
+Output of /tmp/gcc-e0ff69a/bin/gcc with -O0:
+checksum = f2b8f2a0
+----------------------------------------------------
+No local changes to save
+HEAD is now at e0ff69a... sh.md (*prefetch_i4): Disable for TARGET_VXWORKS_RTP.
+[32m[     info][0m Current commit [e0ff69a] is good. Return value: 0
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[42daa1c05f49caf1ca76d1940295f548245b278b] re PR fortran/32644 ("CHARACTER*1, c" produces "Unclassifiable statement")
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [42daa1c]
++---------------------------------------- Current commit hash: [42daa1c] ----------------------------------------+
+GCC for commit [42daa1c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = f2b8f2a0
+Output of /tmp/gcc-42daa1c/bin/gcc with -O3:
+checksum = f2b8f2a0
+Output of /tmp/gcc-42daa1c/bin/gcc with -O0:
+checksum = f2b8f2a0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 42daa1c... re PR fortran/32644 ("CHARACTER*1, c" produces "Unclassifiable statement")
+[32m[     info][0m Current commit [42daa1c] is good. Return value: 0
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[3bed9dd0236405001fc0aeccf7fa37b1ff4ecc9f] re PR fortran/17711 (Wrong operator name in error message)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [3bed9dd]
++---------------------------------------- Current commit hash: [3bed9dd] ----------------------------------------+
+GCC for commit [3bed9dd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = f2b8f2a0
+Output of /tmp/gcc-3bed9dd/bin/gcc with -O3:
+checksum = f2b8f2a0
+Output of /tmp/gcc-3bed9dd/bin/gcc with -O0:
+checksum = f2b8f2a0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3bed9dd... re PR fortran/17711 (Wrong operator name in error message)
+[32m[     info][0m Current commit [3bed9dd] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[090b4ea8eab716cb92c98dde56dc92754f29a64c] re PR fortran/29876 (ICE on bad operator in ONLY clause of USE statement)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [090b4ea]
++---------------------------------------- Current commit hash: [090b4ea] ----------------------------------------+
+GCC for commit [090b4ea] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = f2b8f2a0
+Output of /tmp/gcc-090b4ea/bin/gcc with -O3:
+checksum = f2b8f2a0
+Output of /tmp/gcc-090b4ea/bin/gcc with -O0:
+checksum = f2b8f2a0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 090b4ea... re PR fortran/29876 (ICE on bad operator in ONLY clause of USE statement)
+[32m[     info][0m Current commit [090b4ea] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[a34567cc3eaf94afea440b95723be9962f645f07] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [a34567c]
++---------------------------------------- Current commit hash: [a34567c] ----------------------------------------+
+GCC for commit [a34567c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = f2b8f2a0
+Output of /tmp/gcc-a34567c/bin/gcc with -O3:
+checksum = f2b8f2a0
+Output of /tmp/gcc-a34567c/bin/gcc with -O0:
+checksum = f2b8f2a0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a34567c... Daily bump.
+[32m[     info][0m Current commit [a34567c] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[58b9f26a61eb587028067093cd903f7e830b48ba] stl_algo.h (search(_ForwardIterator1, _ForwardIterator1, _ForwardIterator2, _ForwardIterator2)): Tidy.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1034 orig
+[32m[     info][0m Testing commit: [58b9f26]
++---------------------------------------- Current commit hash: [58b9f26] ----------------------------------------+
+GCC for commit [58b9f26] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = f2b8f2a0
+Output of /tmp/gcc-58b9f26/bin/gcc with -O3:
+checksum = f2b8f2a0
+Output of /tmp/gcc-58b9f26/bin/gcc with -O0:
+checksum = f2b8f2a0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 58b9f26... stl_algo.h (search(_ForwardIterator1, _ForwardIterator1, _ForwardIterator2, _ForwardIterator2)): Tidy.
+[32m[     info][0m Current commit [58b9f26] is good. Return value: 0
+
+f967586f51957145975ede931f0540f5af3a94fe is the first bad commit
+commit f967586f51957145975ede931f0540f5af3a94fe
+Author: Richard Guenther <rguenther@suse.de>
+Date:   Mon Jul 9 09:53:11 2007 +0000
+
+    decl.c (start_preparsed_function): Do not promote return type.
+    
+    2007-07-09  Richard Guenther  <rguenther@suse.de>
+    
+    	cp/
+    	* decl.c (start_preparsed_function): Do not promote return type.
+    
+    	* c-decl.c (start_function): Do not promote return type.
+    
+    From-SVN: r126480
+
+:040000 040000 8cac1d9525aca165bcd6d4fae4f55917259641db 351aece0b7e6269f9bcd991eae75651005efa85d M	gcc
+bisect run success
+[32m[     info][0m First bad commit: f967586 decl.c (start_preparsed_function): Do not promote return type.
+Previous HEAD position was 58b9f26... stl_algo.h (search(_ForwardIterator1, _ForwardIterator1, _ForwardIterator2, _ForwardIterator2)): Tidy.
+HEAD is now at 3673b8c... Daily bump.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [f967586]
++---------------------------------------- Current commit hash: [f967586] ----------------------------------------+
+GCC for commit [f967586] already exists. Using existing binary.
+Compilation by gcc [f967586] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at f967586... decl.c (start_preparsed_function): Do not promote return type.
+[32m[     info][0m Testing commit: [58b9f26]
++---------------------------------------- Current commit hash: [58b9f26] ----------------------------------------+
+GCC for commit [58b9f26] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = f2b8f2a0
+Output of /tmp/gcc-58b9f26/bin/gcc with -O3:
+checksum = f2b8f2a0
+Output of /tmp/gcc-58b9f26/bin/gcc with -O0:
+checksum = f2b8f2a0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 58b9f26... stl_algo.h (search(_ForwardIterator1, _ForwardIterator1, _ForwardIterator2, _ForwardIterator2)): Tidy.
+[32m[     info][0m Current commit [58b9f26] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [f967586] with -O0:
+checksum = f2b8f2a0
+Output of gcc [f967586] with -O1:
+checksum = f2b8f2a0
+Output of gcc [f967586] with -O2:
+checksum = f2b8f2a0
+[31m[  warning][0m Compilation by gcc [f967586] with -O3 failed. Continue...
+[31m[  warning][0m Compilation by gcc [f967586] with -Os failed. Continue...
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

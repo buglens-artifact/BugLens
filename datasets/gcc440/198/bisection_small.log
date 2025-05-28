@@ -1,0 +1,343 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.4.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+4
+Output of gcc-4.4.0 with -Os:
+0
+Output of gcc-4.4.0 with -O0:
+4
+====================================================================
+[32m[     info][0m Good version found: gcc-4.3.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[0802ae58ae482688b0177086598bc10469645333] cp-tools.texinfo (@direntry): Prefix info name with cp-.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [0802ae5]
++---------------------------------------- Current commit hash: [0802ae5] ----------------------------------------+
+GCC for commit [0802ae5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-0802ae5/bin/gcc with -Os:
+4
+Output of /tmp/gcc-0802ae5/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0802ae5... cp-tools.texinfo (@direntry): Prefix info name with cp-.
+[32m[     info][0m Current commit [0802ae5] is good. Return value: 0
+
+Bisecting: 3219 revisions left to test after this (roughly 12 steps)
+[ca085fd7b7ba0cd12a6411cc0ff6a3380d82df0a] re PR c++/17880 (-Wsequence-point doesn't warn inside if, while, do conditions, for beg/cond/end expressions etc.)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [ca085fd]
++---------------------------------------- Current commit hash: [ca085fd] ----------------------------------------+
+GCC for commit [ca085fd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-ca085fd/bin/gcc with -Os:
+4
+Output of /tmp/gcc-ca085fd/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at ca085fd... re PR c++/17880 (-Wsequence-point doesn't warn inside if, while, do conditions, for beg/cond/end expressions etc.)
+[32m[     info][0m Current commit [ca085fd] is good. Return value: 0
+
+Bisecting: 1609 revisions left to test after this (roughly 11 steps)
+[cc95c8b9d5d337e255ec3351e2ae4afd1e004835] * gcc.pot: Regenerate.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [cc95c8b]
++---------------------------------------- Current commit hash: [cc95c8b] ----------------------------------------+
+GCC for commit [cc95c8b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-cc95c8b/bin/gcc with -Os:
+0
+Output of /tmp/gcc-cc95c8b/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at cc95c8b... * gcc.pot: Regenerate.
+[32m[     info][0m Current commit [cc95c8b] is bad. Return value: 1
+
+Bisecting: 804 revisions left to test after this (roughly 10 steps)
+[d0488d176b8f18ad2d4ef6297fde7de6cbca1899] re PR testsuite/25241 ([C++] DejaGNU does not distinguish between errors and warnings)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [d0488d1]
++---------------------------------------- Current commit hash: [d0488d1] ----------------------------------------+
+GCC for commit [d0488d1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-d0488d1/bin/gcc with -Os:
+4
+Output of /tmp/gcc-d0488d1/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at d0488d1... re PR testsuite/25241 ([C++] DejaGNU does not distinguish between errors and warnings)
+[32m[     info][0m Current commit [d0488d1] is good. Return value: 0
+
+Bisecting: 402 revisions left to test after this (roughly 9 steps)
+[1f6d0c60bacd58ed5dea39bad23e540e01de65ce] c-parser.c (c_parser_binary_expression): Silence the uninitialized variable warning emitted for binary_loc.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [1f6d0c6]
++---------------------------------------- Current commit hash: [1f6d0c6] ----------------------------------------+
+GCC for commit [1f6d0c6] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-1f6d0c6/bin/gcc with -Os:
+0
+Output of /tmp/gcc-1f6d0c6/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1f6d0c6... c-parser.c (c_parser_binary_expression): Silence the uninitialized variable warning emitted for binary_loc.
+[32m[     info][0m Current commit [1f6d0c6] is bad. Return value: 1
+
+Bisecting: 200 revisions left to test after this (roughly 8 steps)
+[1847ea4d9f7d3e7e33764a1fea399d66e528c8e2] rs6000.md (fnmadds combiner): Revert typo.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [1847ea4]
++---------------------------------------- Current commit hash: [1847ea4] ----------------------------------------+
+GCC for commit [1847ea4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-1847ea4/bin/gcc with -Os:
+0
+Output of /tmp/gcc-1847ea4/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1847ea4... rs6000.md (fnmadds combiner): Revert typo.
+[32m[     info][0m Current commit [1847ea4] is bad. Return value: 1
+
+Bisecting: 100 revisions left to test after this (roughly 7 steps)
+[d7445152be468cc8de1ea0a3ab6555448086e951] re PR fortran/37498 (Incorrect array value returned - 4.3 ABI Broken)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [d744515]
++---------------------------------------- Current commit hash: [d744515] ----------------------------------------+
+GCC for commit [d744515] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-d744515/bin/gcc with -Os:
+0
+Output of /tmp/gcc-d744515/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at d744515... re PR fortran/37498 (Incorrect array value returned - 4.3 ABI Broken)
+[32m[     info][0m Current commit [d744515] is bad. Return value: 1
+
+Bisecting: 49 revisions left to test after this (roughly 6 steps)
+[342f11d55aa131b7ad21e20eb3b6f2b421cdffa9] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [342f11d]
++---------------------------------------- Current commit hash: [342f11d] ----------------------------------------+
+GCC for commit [342f11d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-342f11d/bin/gcc with -Os:
+4
+Output of /tmp/gcc-342f11d/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at 342f11d... Daily bump.
+[32m[     info][0m Current commit [342f11d] is good. Return value: 0
+
+Bisecting: 24 revisions left to test after this (roughly 5 steps)
+[ecd3b73c6dde9d7b61b811b3cab3ac823b63c181] re PR fortran/37583 (ICE "insert_bbt(): Duplicate key" for self-calling ENTRY subprogram)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [ecd3b73]
++---------------------------------------- Current commit hash: [ecd3b73] ----------------------------------------+
+GCC for commit [ecd3b73] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-ecd3b73/bin/gcc with -Os:
+4
+Output of /tmp/gcc-ecd3b73/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at ecd3b73... re PR fortran/37583 (ICE "insert_bbt(): Duplicate key" for self-calling ENTRY subprogram)
+[32m[     info][0m Current commit [ecd3b73] is good. Return value: 0
+
+Bisecting: 12 revisions left to test after this (roughly 4 steps)
+[ce7e9a7fe134a20c0e616cd32d3c1c3fadb7bc55] re PR rtl-optimization/33642 (unrecognizable insn for -frtl-abstract-sequences)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [ce7e9a7]
++---------------------------------------- Current commit hash: [ce7e9a7] ----------------------------------------+
+GCC for commit [ce7e9a7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-ce7e9a7/bin/gcc with -Os:
+4
+Output of /tmp/gcc-ce7e9a7/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at ce7e9a7... re PR rtl-optimization/33642 (unrecognizable insn for -frtl-abstract-sequences)
+[32m[     info][0m Current commit [ce7e9a7] is good. Return value: 0
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[61debb780ec6a9d5e2d4bfecc5dccaddcfe1bd5d] re PR target/37593 (-mlong-calls doesn't affect calls to _mcount generated with -pg)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [61debb7]
++---------------------------------------- Current commit hash: [61debb7] ----------------------------------------+
+GCC for commit [61debb7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-61debb7/bin/gcc with -Os:
+0
+Output of /tmp/gcc-61debb7/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at 61debb7... re PR target/37593 (-mlong-calls doesn't affect calls to _mcount generated with -pg)
+[32m[     info][0m Current commit [61debb7] is bad. Return value: 1
+
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[7846e5f9168a3909188afb578ab5b721ba629c7d] mips.h (ISA_HAS_BADDU): New macro.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [7846e5f]
++---------------------------------------- Current commit hash: [7846e5f] ----------------------------------------+
+GCC for commit [7846e5f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-7846e5f/bin/gcc with -Os:
+4
+Output of /tmp/gcc-7846e5f/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7846e5f... mips.h (ISA_HAS_BADDU): New macro.
+[32m[     info][0m Current commit [7846e5f] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[ecb4e37b73d7649a447fe63f33dc20826fce0bb6] re PR tree-optimization/37145 (XFAILs from PRE rewrite, SCCVN union optimization disabled)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [ecb4e37]
++---------------------------------------- Current commit hash: [ecb4e37] ----------------------------------------+
+GCC for commit [ecb4e37] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-ecb4e37/bin/gcc with -Os:
+0
+Output of /tmp/gcc-ecb4e37/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at ecb4e37... re PR tree-optimization/37145 (XFAILs from PRE rewrite, SCCVN union optimization disabled)
+[32m[     info][0m Current commit [ecb4e37] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[880f8ea3bd9ca8e4d1acf5083760da66b05fea59] user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/198 small
+[32m[     info][0m Testing commit: [880f8ea]
++---------------------------------------- Current commit hash: [880f8ea] ----------------------------------------+
+GCC for commit [880f8ea] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-880f8ea/bin/gcc with -Os:
+4
+Output of /tmp/gcc-880f8ea/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+[32m[     info][0m Current commit [880f8ea] is good. Return value: 0
+
+ecb4e37b73d7649a447fe63f33dc20826fce0bb6 is the first bad commit
+commit ecb4e37b73d7649a447fe63f33dc20826fce0bb6
+Author: Richard Guenther <rguenther@suse.de>
+Date:   Mon Sep 22 19:15:43 2008 +0000
+
+    re PR tree-optimization/37145 (XFAILs from PRE rewrite, SCCVN union optimization disabled)
+    
+    2008-09-22  Richard Guenther  <rguenther@suse.de>
+    
+    	PR tree-optimization/37145
+    	* tree-ssa-sccvn.c (copy_reference_ops_from_ref): Re-enable
+    	value-numbering union accesses with their offset and size only.
+    	(visit_reference_op_load): Fix simplification of inserted conversions.
+    	* tree-ssa-pre.c (find_or_generate_expression): Do not
+    	recursively generate expressions if running FRE.
+    
+    	* gcc.c-torture/compile/20080922-1.c: New testcase.
+    	* gcc.dg/tree-ssa/ssa-fre-7.c: Remove XFAIL.
+    	* gcc.dg/tree-ssa/ssa-fre-8.c: Likewise.
+    	* gcc.dg/tree-ssa/ssa-fre-9.c: Likewise.
+    
+    From-SVN: r140562
+
+:040000 040000 1e3b2ed559832cb7ada4f2161b5cf22f356b5c87 78951a21cfe23019112ceed86f8f0d47f64eb667 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: ecb4e37 re PR tree-optimization/37145 (XFAILs from PRE rewrite, SCCVN union optimization disabled)
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [ecb4e37]
++---------------------------------------- Current commit hash: [ecb4e37] ----------------------------------------+
+GCC for commit [ecb4e37] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-ecb4e37/bin/gcc with -Os:
+0
+Output of /tmp/gcc-ecb4e37/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at ecb4e37... re PR tree-optimization/37145 (XFAILs from PRE rewrite, SCCVN union optimization disabled)
+[32m[     info][0m Current commit [ecb4e37] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [880f8ea]
++---------------------------------------- Current commit hash: [880f8ea] ----------------------------------------+
+GCC for commit [880f8ea] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-880f8ea/bin/gcc with -Os:
+4
+Output of /tmp/gcc-880f8ea/bin/gcc with -O0:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+[32m[     info][0m Current commit [880f8ea] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [ecb4e37] with -O0:
+4
+Output of gcc [ecb4e37] with -O1:
+0
+Output of gcc [ecb4e37] with -O2:
+0
+Output of gcc [ecb4e37] with -O3:
+0
+Output of gcc [ecb4e37] with -Os:
+0
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

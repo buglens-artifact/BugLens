@@ -1,0 +1,1 @@
+04d8653 re PR tree-optimization/33291 (a+=2; a+=2  not simplified to  a+=4;  with -O3   (ok with gcc-4.2.1))

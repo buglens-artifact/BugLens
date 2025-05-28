@@ -1,0 +1,1 @@
+22ad64b ipa-inline.c (try_inline): Improve debug output; work on already inline edges too.

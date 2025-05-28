@@ -1,0 +1,1 @@
+3aef2db re PR tree-optimization/30965 (Fails to tree-combine conditions in COND_EXPRs)

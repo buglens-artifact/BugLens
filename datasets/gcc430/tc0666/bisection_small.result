@@ -1,0 +1,1 @@
+7562df8 tree-ssa-coalesce.c (compare_pairs): Use the elements as secondary keys in order to obtain a stable sort.

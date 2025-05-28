@@ -1,0 +1,327 @@
+[32m[     info][0m Compiler type: llvm
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/llvm-2.8.0/bin/clang
+====================Ground truth & buggy output:====================
+Correct output:
+1
+Output of llvm-2.8.0 with -Os:
+0
+Output of llvm-2.8.0 with -O0:
+1
+====================================================================
+[32m[     info][0m Good version found: llvm-2.6.0
+[32m[     info][0m Start Bisection...
+Removing llvm/tools/clang/
+No local changes to save
+Bisecting: a merge base must be tested
+[56d60eaa616498200d8090f45c2602e42e7c5385] revert r79708 + r79711
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [56d60ea]
++---------------------------------------- Current commit hash: [56d60ea] ----------------------------------------+
+[32m[     info][0m LLVM with commit [56d60ea] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-56d60ea/bin/clang with -Os:
+1
+Output of /tmp/llvm-56d60ea/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [56d60ea] is good. Return value: 0
+
+Bisecting: 12261 revisions left to test after this (roughly 14 steps)
+[56ec7895210b6b488d9915963927489085000278] fix two bugs in OPC_EmitRegister, which makes ppc happier.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [56ec789]
++---------------------------------------- Current commit hash: [56ec789] ----------------------------------------+
+[32m[     info][0m LLVM with commit [56ec789] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-56ec789/bin/clang with -Os:
+0
+Output of /tmp/llvm-56ec789/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [56ec789] is bad. Return value: 1
+
+Bisecting: 6130 revisions left to test after this (roughly 13 steps)
+[1e3609f6c48d4908773478c7e7b99ec3026886eb] Do not enter forward class 'Protocol' in decl context. Will do it later. Fixes pr5552.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [1e3609f]
++---------------------------------------- Current commit hash: [1e3609f] ----------------------------------------+
+[32m[     info][0m LLVM with commit [1e3609f] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-1e3609f/bin/clang with -Os:
+1
+Output of /tmp/llvm-1e3609f/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [1e3609f] is good. Return value: 0
+
+Bisecting: 3065 revisions left to test after this (roughly 12 steps)
+[32b79317a27600787442aa55a58608371d6beda6] More crashtracer enhancements to CIndex.  When "popping" a crashtracer string restore to the one most recently created.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [32b7931]
++---------------------------------------- Current commit hash: [32b7931] ----------------------------------------+
+[32m[     info][0m LLVM with commit [32b7931] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-32b7931/bin/clang with -Os:
+0
+Output of /tmp/llvm-32b7931/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [32b7931] is bad. Return value: 1
+
+Bisecting: 1532 revisions left to test after this (roughly 11 steps)
+[84ba039cf22f214942d4139c70eb764c9307b6a4] Make getUniqueExitBlocks's precondition assert more precise, to avoid spurious failures. This fixes PR5758.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [84ba039]
++---------------------------------------- Current commit hash: [84ba039] ----------------------------------------+
+[32m[     info][0m LLVM with commit [84ba039] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-84ba039/bin/clang with -Os:
+1
+Output of /tmp/llvm-84ba039/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [84ba039] is good. Return value: 0
+
+Bisecting: 766 revisions left to test after this (roughly 10 steps)
+[65e6bd6246c53fb2a40f8f81d6535a5013cdb1fe] More cleanup/refactoring of the rewrite.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [65e6bd6]
++---------------------------------------- Current commit hash: [65e6bd6] ----------------------------------------+
+[32m[     info][0m LLVM with commit [65e6bd6] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-65e6bd6/bin/clang with -Os:
+0
+Output of /tmp/llvm-65e6bd6/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [65e6bd6] is bad. Return value: 1
+
+Bisecting: 382 revisions left to test after this (roughly 9 steps)
+[3c13667d14a9a06e92a43af260c222caa8ee3095] Revert accidental commit.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [3c13667]
++---------------------------------------- Current commit hash: [3c13667] ----------------------------------------+
+[32m[     info][0m Building LLVM with commit [3c13667]...
+[32m[     info][0m LLVM with commit [3c13667] has been built successfully.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-3c13667/bin/clang with -Os:
+1
+Output of /tmp/llvm-3c13667/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [3c13667] is good. Return value: 0
+
+Bisecting: 191 revisions left to test after this (roughly 8 steps)
+[2bb0765bb4b56babcaa4bd353b7aa79e59211d6a] When filling in value initializations within an initializer list, be sure to fill in the initialized member of a union when a member was explicitly designated. Fixes PR5843.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [2bb0765]
++---------------------------------------- Current commit hash: [2bb0765] ----------------------------------------+
+[32m[     info][0m Building LLVM with commit [2bb0765]...
+[32m[     info][0m LLVM with commit [2bb0765] has been built successfully.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-2bb0765/bin/clang with -Os:
+1
+Output of /tmp/llvm-2bb0765/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [2bb0765] is good. Return value: 0
+
+Bisecting: 95 revisions left to test after this (roughly 7 steps)
+[c7dccd8ad228a613c516a847e136e83d509ce8dd] Suppress compiler warning.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [c7dccd8]
++---------------------------------------- Current commit hash: [c7dccd8] ----------------------------------------+
+[32m[     info][0m Building LLVM with commit [c7dccd8]...
+[32m[     info][0m LLVM with commit [c7dccd8] has been built successfully.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-c7dccd8/bin/clang with -Os:
+0
+Output of /tmp/llvm-c7dccd8/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [c7dccd8] is bad. Return value: 1
+
+Bisecting: 47 revisions left to test after this (roughly 6 steps)
+[2e9c795df03b73f020366125157bad9e17672083] When transforming a C++ "new" expression that was not explicitly given a size, check whether the transformed type is itself an array type. If so, take the major array bound as the size to allocate. Fixes PR5833.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [2e9c795]
++---------------------------------------- Current commit hash: [2e9c795] ----------------------------------------+
+[32m[     info][0m Building LLVM with commit [2e9c795]...
+[32m[     info][0m LLVM with commit [2e9c795] has been built successfully.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-2e9c795/bin/clang with -Os:
+0
+Output of /tmp/llvm-2e9c795/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [2e9c795] is bad. Return value: 1
+
+Bisecting: 23 revisions left to test after this (roughly 5 steps)
+[a553d4ac951b338cbea75e2e5b7162a3b17c41c7] Switch compound literals over to InitializationSequence.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [a553d4a]
++---------------------------------------- Current commit hash: [a553d4a] ----------------------------------------+
+[32m[     info][0m Building LLVM with commit [a553d4a]...
+[32m[     info][0m LLVM with commit [a553d4a] has been built successfully.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-a553d4a/bin/clang with -Os:
+1
+Output of /tmp/llvm-a553d4a/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [a553d4a] is good. Return value: 0
+
+Bisecting: 11 revisions left to test after this (roughly 4 steps)
+[dc9845b79a82459ecd139b4fd0aa96cfe55f5b99] rewrite the file parser for the disassembler, implementing support for comments.  Also, check in a simple testcase for the disassembler, including a test for r91864
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [dc9845b]
++---------------------------------------- Current commit hash: [dc9845b] ----------------------------------------+
+[32m[     info][0m Building LLVM with commit [dc9845b]...
+[32m[     info][0m LLVM with commit [dc9845b] has been built successfully.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-dc9845b/bin/clang with -Os:
+1
+Output of /tmp/llvm-dc9845b/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [dc9845b] is good. Return value: 0
+
+Bisecting: 5 revisions left to test after this (roughly 3 steps)
+[778f92ab024794d6751a30dfbe59852fd0d0522c] specify what is invalid about it
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [778f92a]
++---------------------------------------- Current commit hash: [778f92a] ----------------------------------------+
+[32m[     info][0m Building LLVM with commit [778f92a]...
+[32m[     info][0m LLVM with commit [778f92a] has been built successfully.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-778f92a/bin/clang with -Os:
+0
+Output of /tmp/llvm-778f92a/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [778f92a] is bad. Return value: 1
+
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[62a84ea8e3a0241446c6118dd300a4059c68f3a7] Generalize SROA to allow the first index of a GEP to be non-zero.  Add a missing check that an array reference doesn't go past the end of the array, and remove some redundant checks for in-bound array and vector references that are no longer needed.
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [62a84ea]
++---------------------------------------- Current commit hash: [62a84ea] ----------------------------------------+
+[32m[     info][0m Building LLVM with commit [62a84ea]...
+[32m[     info][0m LLVM with commit [62a84ea] has been built successfully.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-62a84ea/bin/clang with -Os:
+0
+Output of /tmp/llvm-62a84ea/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [62a84ea] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[dd0c01b5de9df1df37e1c10900f0fcbb066d2001] various cleanups, make the disassemble reject lines with too much data on them, for example:
+running /tmp/deduplication/scripts/r_wrongcode_llvm.sh /tmp/deduplication/benchmarks/llvm280/125 small
+[32m[     info][0m Testing commit: [dd0c01b]
++---------------------------------------- Current commit hash: [dd0c01b] ----------------------------------------+
+[32m[     info][0m Building LLVM with commit [dd0c01b]...
+[32m[     info][0m LLVM with commit [dd0c01b] has been built successfully.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-dd0c01b/bin/clang with -Os:
+1
+Output of /tmp/llvm-dd0c01b/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [dd0c01b] is good. Return value: 0
+
+62a84ea8e3a0241446c6118dd300a4059c68f3a7 is the first bad commit
+commit 62a84ea8e3a0241446c6118dd300a4059c68f3a7
+Author: Bob Wilson <bob.wilson@apple.com>
+Date:   Tue Dec 22 06:57:14 2009 +0000
+
+    Generalize SROA to allow the first index of a GEP to be non-zero.  Add a
+    missing check that an array reference doesn't go past the end of the array,
+    and remove some redundant checks for in-bound array and vector references
+    that are no longer needed.
+    
+    llvm-svn: 91897
+
+:040000 040000 13f28c3325d1d8d6d1137d9e58521e0b21a20818 f608cb1391d47ed99ac4f266f0af506f53d740a1 M	llvm
+bisect run success
+[32m[     info][0m First bad commit: 62a84ea Generalize SROA to allow the first index of a GEP to be non-zero.  Add a missing check that an array reference doesn't go past the end of the array, and remove some redundant checks for in-bound array and vector references that are no longer needed.
+Previous HEAD position was dd0c01b... various cleanups, make the disassemble reject lines with too much data on them, for example:
+HEAD is now at c76493a... Don't pass false (default) for isVolatile parameter to CreateLoad.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [62a84ea]
++---------------------------------------- Current commit hash: [62a84ea] ----------------------------------------+
+[32m[     info][0m LLVM with commit [62a84ea] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-62a84ea/bin/clang with -Os:
+0
+Output of /tmp/llvm-62a84ea/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [62a84ea] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [dd0c01b]
++---------------------------------------- Current commit hash: [dd0c01b] ----------------------------------------+
+[32m[     info][0m LLVM with commit [dd0c01b] already built. Use existing binary.
+------------------Current output:-------------------
+Ground truth:
+1
+Output of /tmp/llvm-dd0c01b/bin/clang with -Os:
+1
+Output of /tmp/llvm-dd0c01b/bin/clang with -O0:
+1
+----------------------------------------------------
+[32m[     info][0m Current commit [dd0c01b] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of llvm [62a84ea] with -O0:
+1
+Output of llvm [62a84ea] with -O1:
+0
+Output of llvm [62a84ea] with -O2:
+0
+Output of llvm [62a84ea] with -O3:
+0
+Output of llvm [62a84ea] with -Os:
+0
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

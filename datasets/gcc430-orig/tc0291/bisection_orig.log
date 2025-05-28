@@ -1,0 +1,54 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 5092cb2b
+Output of gcc-4.3.0 with -O2:
+checksum = 5092cac3
+Output of gcc-4.3.0 with -O0:
+checksum = 5092cb2b
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0291 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+Compilation by gcc [b23987e] with -O2 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+The merge base b23987ec2f0f24c38c78f7cf63c91a699da681bd is bad.
+This means the bug has been fixed between b23987ec2f0f24c38c78f7cf63c91a699da681bd and [bfbec2aae3586d0aed03b24e2b5998b8a1a844a0].
+bisect run failed:
+'bisect_state bad' exited with error code 3
+[32m[     info][0m First bad commit: 
+Checking out files:  38% (837/2173)   Checking out files:  39% (848/2173)   Checking out files:  40% (870/2173)   Checking out files:  41% (891/2173)   Checking out files:  42% (913/2173)   Checking out files:  43% (935/2173)   Checking out files:  44% (957/2173)   Checking out files:  45% (978/2173)   Checking out files:  46% (1000/2173)   Checking out files:  47% (1022/2173)   Checking out files:  48% (1044/2173)   Checking out files:  49% (1065/2173)   Checking out files:  50% (1087/2173)   Checking out files:  51% (1109/2173)   Checking out files:  52% (1130/2173)   Checking out files:  53% (1152/2173)   Checking out files:  54% (1174/2173)   Checking out files:  55% (1196/2173)   Checking out files:  56% (1217/2173)   Checking out files:  57% (1239/2173)   Checking out files:  58% (1261/2173)   Checking out files:  59% (1283/2173)   Checking out files:  60% (1304/2173)   Checking out files:  61% (1326/2173)   Checking out files:  62% (1348/2173)   Checking out files:  63% (1369/2173)   Checking out files:  64% (1391/2173)   Checking out files:  65% (1413/2173)   Checking out files:  66% (1435/2173)   Checking out files:  67% (1456/2173)   Checking out files:  68% (1478/2173)   Checking out files:  69% (1500/2173)   Checking out files:  70% (1522/2173)   Checking out files:  71% (1543/2173)   Checking out files:  72% (1565/2173)   Checking out files:  73% (1587/2173)   Checking out files:  74% (1609/2173)   Checking out files:  75% (1630/2173)   Checking out files:  76% (1652/2173)   Checking out files:  77% (1674/2173)   Checking out files:  78% (1695/2173)   Checking out files:  79% (1717/2173)   Checking out files:  80% (1739/2173)   Checking out files:  81% (1761/2173)   Checking out files:  82% (1782/2173)   Checking out files:  83% (1804/2173)   Checking out files:  84% (1826/2173)   Checking out files:  85% (1848/2173)   Checking out files:  86% (1869/2173)   Checking out files:  87% (1891/2173)   Checking out files:  87% (1910/2173)   Checking out files:  88% (1913/2173)   Checking out files:  89% (1934/2173)   Checking out files:  90% (1956/2173)   Checking out files:  91% (1978/2173)   Checking out files:  92% (2000/2173)   Checking out files:  93% (2021/2173)   Checking out files:  94% (2043/2173)   Checking out files:  95% (2065/2173)   Checking out files:  96% (2087/2173)   Checking out files:  97% (2108/2173)   Checking out files:  98% (2130/2173)   Checking out files:  99% (2152/2173)   Checking out files: 100% (2173/2173)   Checking out files: 100% (2173/2173), done.
+Previous HEAD position was b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+HEAD is now at 419cb34... Daily bump.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [419cb34]
++---------------------------------------- Current commit hash: [419cb34] ----------------------------------------+
+GCC for commit [419cb34] already exists. Using existing binary.
+Compilation by gcc [419cb34] with -O2 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 419cb34... Daily bump.
+fatal: ambiguous argument '^': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions
+[32m[     info][0m Testing commit: [419cb34]
++---------------------------------------- Current commit hash: [419cb34] ----------------------------------------+
+GCC for commit [419cb34] already exists. Using existing binary.
+Compilation by gcc [419cb34] with -O2 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 419cb34... Daily bump.
+Error: The first bad commit is not the correct one. [2]

@@ -1,0 +1,582 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.4.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+0
+Output of gcc-4.4.0 with -Os:
+ABB20778
+ABB20778
+Output of gcc-4.4.0 with -O3:
+0
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.3.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[0802ae58ae482688b0177086598bc10469645333] cp-tools.texinfo (@direntry): Prefix info name with cp-.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [0802ae5]
++---------------------------------------- Current commit hash: [0802ae5] ----------------------------------------+
+GCC for commit [0802ae5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-0802ae5/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-0802ae5/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0802ae5... cp-tools.texinfo (@direntry): Prefix info name with cp-.
+[32m[     info][0m Current commit [0802ae5] is good. Return value: 0
+
+Bisecting: 3219 revisions left to test after this (roughly 12 steps)
+[ca085fd7b7ba0cd12a6411cc0ff6a3380d82df0a] re PR c++/17880 (-Wsequence-point doesn't warn inside if, while, do conditions, for beg/cond/end expressions etc.)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [ca085fd]
++---------------------------------------- Current commit hash: [ca085fd] ----------------------------------------+
+GCC for commit [ca085fd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-ca085fd/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-ca085fd/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at ca085fd... re PR c++/17880 (-Wsequence-point doesn't warn inside if, while, do conditions, for beg/cond/end expressions etc.)
+[32m[     info][0m Current commit [ca085fd] is good. Return value: 0
+
+Bisecting: 1609 revisions left to test after this (roughly 11 steps)
+[cc95c8b9d5d337e255ec3351e2ae4afd1e004835] * gcc.pot: Regenerate.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [cc95c8b]
++---------------------------------------- Current commit hash: [cc95c8b] ----------------------------------------+
+GCC for commit [cc95c8b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-cc95c8b/bin/gcc with -Os:
+4E4E2C88
+4E4E2C88
+Output of /tmp/gcc-cc95c8b/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at cc95c8b... * gcc.pot: Regenerate.
+[32m[     info][0m Current commit [cc95c8b] is bad. Return value: 1
+
+Bisecting: 804 revisions left to test after this (roughly 10 steps)
+[d0488d176b8f18ad2d4ef6297fde7de6cbca1899] re PR testsuite/25241 ([C++] DejaGNU does not distinguish between errors and warnings)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [d0488d1]
++---------------------------------------- Current commit hash: [d0488d1] ----------------------------------------+
+GCC for commit [d0488d1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-d0488d1/bin/gcc with -Os:
+FFEB2BD8
+FFEB2BD8
+Output of /tmp/gcc-d0488d1/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at d0488d1... re PR testsuite/25241 ([C++] DejaGNU does not distinguish between errors and warnings)
+[32m[     info][0m Current commit [d0488d1] is bad. Return value: 1
+
+Bisecting: 402 revisions left to test after this (roughly 9 steps)
+[d6d3e623f2fc96c7d4dd9405a2c67167f97dfcec] mips.h (ISA_HAS_DMUL3): New macro.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [d6d3e62]
++---------------------------------------- Current commit hash: [d6d3e62] ----------------------------------------+
+GCC for commit [d6d3e62] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-d6d3e62/bin/gcc with -Os:
+55C4C678
+55C4C678
+Output of /tmp/gcc-d6d3e62/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at d6d3e62... mips.h (ISA_HAS_DMUL3): New macro.
+[32m[     info][0m Current commit [d6d3e62] is bad. Return value: 1
+
+Bisecting: 200 revisions left to test after this (roughly 8 steps)
+[54e034613467cfab3e89f23f7a1043910791d35b] make.adb (Gnatmake_Switch_Found): New Boolean global variable
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [54e0346]
++---------------------------------------- Current commit hash: [54e0346] ----------------------------------------+
+GCC for commit [54e0346] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-54e0346/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-54e0346/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 54e0346... make.adb (Gnatmake_Switch_Found): New Boolean global variable
+[32m[     info][0m Current commit [54e0346] is good. Return value: 0
+
+Bisecting: 100 revisions left to test after this (roughly 7 steps)
+[fee3292b1460655f81a06c160de992638749373a] re PR fortran/30239 (duplicate data type assignment not detected)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [fee3292]
++---------------------------------------- Current commit hash: [fee3292] ----------------------------------------+
+GCC for commit [fee3292] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-fee3292/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-fee3292/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at fee3292... re PR fortran/30239 (duplicate data type assignment not detected)
+[32m[     info][0m Current commit [fee3292] is good. Return value: 0
+
+Bisecting: 50 revisions left to test after this (roughly 6 steps)
+[24713e85ff118e760314625f58f4329df71031d6] re PR rtl-optimization/37219 (fwprop1 is broken for addresses)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [24713e8]
++---------------------------------------- Current commit hash: [24713e8] ----------------------------------------+
+GCC for commit [24713e8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-24713e8/bin/gcc with -Os:
+1A39D998
+1A39D998
+Output of /tmp/gcc-24713e8/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 24713e8... re PR rtl-optimization/37219 (fwprop1 is broken for addresses)
+[32m[     info][0m Current commit [24713e8] is bad. Return value: 1
+
+Bisecting: 24 revisions left to test after this (roughly 5 steps)
+[692daa90a9a8c996a37f4223ea6d995fc26e6596] re PR tree-optimization/37185 (gcc.dg/matrix/transpose-3.c:16: internal compiler error: verify_stmts failed)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [692daa9]
++---------------------------------------- Current commit hash: [692daa9] ----------------------------------------+
+GCC for commit [692daa9] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-692daa9/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-692daa9/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 692daa9... re PR tree-optimization/37185 (gcc.dg/matrix/transpose-3.c:16: internal compiler error: verify_stmts failed)
+[32m[     info][0m Current commit [692daa9] is good. Return value: 0
+
+Bisecting: 12 revisions left to test after this (roughly 4 steps)
+[4f538d42772a6089366a80d20fac26905bcd6749] rs6000.c (rs6000_handle_altivec_attribute): Propagate all type qualifiers from element type to vector type.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [4f538d4]
++---------------------------------------- Current commit hash: [4f538d4] ----------------------------------------+
+GCC for commit [4f538d4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-4f538d4/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-4f538d4/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4f538d4... rs6000.c (rs6000_handle_altivec_attribute): Propagate all type qualifiers from element type to vector type.
+[32m[     info][0m Current commit [4f538d4] is good. Return value: 0
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[058e97ecf33ad0dfd926b3876a4bcf59ac9556ff] [multiple changes]
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [058e97e]
++---------------------------------------- Current commit hash: [058e97e] ----------------------------------------+
+GCC for commit [058e97e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-058e97e/bin/gcc with -Os:
+367B3A68
+367B3A68
+Output of /tmp/gcc-058e97e/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 058e97e... [multiple changes]
+[32m[     info][0m Current commit [058e97e] is bad. Return value: 1
+
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[1894e4c583d60037c1d51f76b461333799302042] acinclude.m4 ([GLIBCXX_CHECK_GETTIMEOFDAY]): Change to use GCC_TRY_COMPILE_OR_LINK.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [1894e4c]
++---------------------------------------- Current commit hash: [1894e4c] ----------------------------------------+
+GCC for commit [1894e4c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-1894e4c/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-1894e4c/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1894e4c... acinclude.m4 ([GLIBCXX_CHECK_GETTIMEOFDAY]): Change to use GCC_TRY_COMPILE_OR_LINK.
+[32m[     info][0m Current commit [1894e4c] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[8ff27c248ca53aa53d6f2a19d2ee1ce6220013c1] spu.md (vec_extract_evenv4si, [...]): Implement.S
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/640 small
+[32m[     info][0m Testing commit: [8ff27c2]
++---------------------------------------- Current commit hash: [8ff27c2] ----------------------------------------+
+GCC for commit [8ff27c2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-8ff27c2/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-8ff27c2/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8ff27c2... spu.md (vec_extract_evenv4si, [...]): Implement.S
+[32m[     info][0m Current commit [8ff27c2] is good. Return value: 0
+
+058e97ecf33ad0dfd926b3876a4bcf59ac9556ff is the first bad commit
+commit 058e97ecf33ad0dfd926b3876a4bcf59ac9556ff
+Author: Vladimir Makarov <vmakarov@redhat.com>
+Date:   Tue Aug 26 12:39:58 2008 +0000
+
+    [multiple changes]
+    
+    2008-08-26  Vladimir Makarov  <vmakarov@redhat.com>
+    
+    	* ira-build.c, ira-color.c, ira-costs.c, ira.h, ira-lives.c,
+    	ira.c, ira-conflicts.c, ira-emit.c, ira-int.h: New files.
+    
+    	* doc/passes.texi: Describe IRA.
+    
+    	* doc/tm.texi (IRA_COVER_CLASSES,
+    	IRA_HARD_REGNO_ADD_COST_MULTIPLIER): Describe the new macros.
+    
+    	* doc/invoke.texi (ira-max-loops-num): Describe the new parameter.
+    	(-fira, -fira-algorithm, -fira-coalesce, -fno-ira-move-spills,
+    	-fira-propagate-cost, -fno-ira-share-save-slots,
+    	-fno-ira-share-spill-slots, -fira-verbose): Describe new options.
+    
+    	* flags.h (ira_algorithm): New enumeration.
+    	(flag_ira_algorithm, flag_ira_verbose): New external variable
+    	declarations.
+    
+    	* postreload.c (gate_handle_postreload): Don't do post reload
+    	optimizations unless the reload is completed.
+    
+    	* reload.c (push_reload, find_dummy_reload): Use DF_LR_OUT for
+    	IRA.
+    
+    	* tree-pass.h (pass_ira): New external variable declaration.
+    
+    	* reload.h: Add 2008 to the Copyright.
+    
+    	* cfgloopanal.c: Include params.h.
+    	(estimate_reg_pressure_cost): Decrease cost for IRA optimization
+    	mode.
+    
+    	* params.h (IRA_MAX_LOOPS_NUM): New macro.
+    
+    	* toplev.c (ira.h): New include.
+    	(flag_ira_algorithm, flag_ira_verbose): New external variables.
+    	(backend_init_target): Call ira_init.
+    	(backend_init): Call ira_init_once.
+    	(finalize): Call finish_ira_once.
+    
+    	* toplev.h (flag_ira, flag_ira_coalesce, flag_ira_move_spills,
+    	flag_ira_share_save_slots, flag_ira_share_spill_slots): New
+    	external variables.
+    
+    	* regs.h (contains_reg_of_mode, move_cost, may_move_in_cost,
+    	may_move_out_cost): New external variable declarations.
+    	(move_table): New typedef.
+    
+    	* caller-save.c: Include headers output.h and ira.h.
+    	(no_caller_save_reg_set): New global variable.
+    	(save_slots_num, save_slots): New variables.
+    	(reg_save_code, reg_restore_code, add_stored_regs): Add
+    	prototypes.
+    	(init_caller_save): Set up no_caller_save_reg_set.
+    	(init_save_areas): Reset save_slots_num.
+    	(saved_hard_reg): New structure.
+    	(hard_reg_map, saved_regs_num, all_saved_regs): New variables.
+    	(initiate_saved_hard_regs, new_saved_hard_reg,
+    	finish_saved_hard_regs, saved_hard_reg_compare_func): New
+    	functions.
+    	(setup_save_areas): Add code for sharing stack slots.
+    	(all_blocks): New variable.
+    	(save_call_clobbered_regs): Process pseudo-register too.
+    	(mark_set_regs): Process pseudo-register too.
+    	(insert_one_insn): Put the insn after bb note in a empty basic
+    	block.  Add insn check.
+    
+    	* global.c (eliminable_regset): Make it external.
+    	(mark_elimination): Use DF_LR_IN for IRA.
+    	(pseudo_for_reload_consideration_p): New.
+    	(build_insn_chain): Make it external.  Don't ignore spilled
+    	pseudos for IRA.  Use pseudo_for_reload_consideration_p.
+    	(gate_handle_global_alloc): New function.
+    	(pass_global_alloc): Add the gate function.
+    
+    	* opts.c (decode_options): Set up flag_ira.  Print the warning for
+    	-fira.
+    	(common_handle_option): Process -fira-algorithm and -fira-verbose.
+    
+    	* timevar.def (TV_IRA, TV_RELOAD): New passes.
+    
+    	* regmove.c (regmove_optimize): Don't do replacement of output for
+    	IRA.
+    
+    	* hard-reg-set.h (no_caller_save_reg_set, reg_class_subclasses):
+    	New external variable declarations.
+    
+    	* local-alloc.c (update_equiv_regs): Make it external.  Return
+    	true if jump label rebuilding should be done.  Rescan new_insn for
+    	notes.
+    	(gate_handle_local_alloc): New function.
+    	(pass_local_alloc): Add the gate function.
+    
+    	* alias.c (value_addr_p, stack_addr_p): New functions.
+    	(nonoverlapping_memrefs_p): Use them for IRA.
+    
+    	* common.opt (fira, fira-algorithm, fira-coalesce,
+    	fira-move-spills, fira-share-save-slots, fira-share-spill-slots,
+    	fira-verbose): New options.
+    
+    	* regclass.c (reg_class_subclasses, contains_reg_of_mode,
+    	move_cost, may_move_in_cost, may_move_out_cost): Make the
+    	variables external.
+    	(move_table): Remove typedef.
+    	(init_move_cost): Make it external.
+    	(allocate_reg_info, resize_reg_info, setup_reg_classes): New
+    	functions.
+    
+    	* rtl.h (init_move_cost, allocate_reg_info, resize_reg_info,
+    	setup_reg_classes): New function prototypes.
+    	(eliminable_regset): New external variable declaration.
+    	(build_insn_chain, update_equiv_regs): New function prototypes.
+    
+    	* Makefile.in (IRA_INT_H): New definition.
+    	(OBJS-common): Add ira.o, ira-build.o, ira-costs.o,
+    	ira-conflicts.o, ira-color.o, ira-emit.o, and ira-lives.o.
+    	(reload1.o, toplev.o): Add dependence on ira.h.
+    	(cfgloopanal.o): Add PARAMS_H.
+    	(caller-save.o): Add dependence on output.h and ira.h.
+    	(ira.o, ira-build.o, ira-costs.o, ira-conflicts.o, ira-color.o,
+    	ira-emit.o, ira-lives.o): New entries.
+    
+    	* passes.c (pass_ira): New pass.
+    
+    	* params.def (PARAM_IRA_MAX_LOOPS_NUM): New parameter.
+    
+    	* reload1.c (ira.h): Include the header.
+    	(changed_allocation_pseudos): New bitmap.
+    	(init_reload): Initiate the bitmap.
+    	(compute_use_by_pseudos): Permits spilled registers in FROM.
+    	(temp_pseudo_reg_arr): New variable.
+    	(reload): Allocate and free temp_pseudo_reg_arr.  Sort pseudos for
+    	IRA.  Call alter_reg with the additional parameter.  Don't clear
+    	spilled_pseudos for IRA.  Restore original insn chain for IRA.
+    	Clear changed_allocation_pseudos at the end of reload.
+    	(calculate_needs_all_insns): Call IRA's mark_memory_move_deletion.
+    	(hard_regno_to_pseudo_regno): New variable.
+    	(count_pseudo): Check spilled pseudos.  Set up
+    	hard_regno_to_pseudo_regno.
+    	(count_spilled_pseudo): Check spilled pseudos. Update
+    	hard_regno_to_pseudo_regno.
+    	(find_reg): Use better_spill_reload_regno_p.  Check
+    	hard_regno_to_pseudo_regno.
+    	(alter_reg): Set up spilled_pseudos.  Add a new parameter.  Add
+    	code for IRA.
+    	(eliminate_regs_1): Use additional parameter for alter_reg.
+    	(finish_spills): Set up pseudo_previous_regs only for spilled
+    	pseudos.  Call reassign_pseudos once for all spilled pseudos, pass
+    	more arguments.  Don't clear live_throughout and dead_or_set for
+    	spilled pseudos.  Use additional parameter for alter_reg.  Call
+    	mark_allocation_change.  Set up changed_allocation_pseudos.
+    	Remove sanity check.
+    	(emit_input_reload_insns, delete_output_reload): Use additional
+    	parameter for alter_reg.  Call mark_allocation_change.
+    	(substitute, gen_reload_chain_without_interm_reg_p): New
+    	functions.
+    	(reloads_conflict): Use gen_reload_chain_without_interm_reg_p.
+    
+    	* testsuite/gcc.dg/20080410-1.c: New file.
+    
+    	* config/s390/s390.h (IRA_COVER_CLASSES,
+    	IRA_HARD_REGNO_ADD_COST_MULTIPLIER): Define.
+    
+    	* config/sparc/sparc.h (IRA_COVER_CLASSES): New macro.
+    
+    	* config/i386/i386.h (IRA_COVER_CLASSES): Ditto.
+    
+    	* config/ia64/ia64.h (IRA_COVER_CLASSES): Ditto.
+    
+    	* config/rs6000/rs6000.h (IRA_COVER_CLASSES): Ditto.
+    
+    	* config/arm/arm.h (IRA_COVER_CLASSES): Ditto.
+    
+    	* config/alpha/alpha.h (IRA_COVER_CLASSES): Ditto.
+    
+    	2008-08-24  Jeff Law  <law@redhat.com>
+    	* ira.c (setup_reg_class_intersect_union): Prefer smallest class
+    	when ignoring unavailable registers.
+    
+    	2008-08-24  Jeff Law  <law@redhat.com>
+    	* ira-color.c (coalesced_pseudo_reg_slot_compare): Check
+    	FRAME_GROWS_DOWNWARD and STACK_GROWS_DOWNWARD.
+    	* ira.c (setup_eliminable_regset): Check stack_realign_needed.
+    	* config/mn10300/mn10300.h (IRA_COVER_CLASSES): New macro.
+    
+    	2008-06-03 Steve Chamberlain <steve.chamberlain@gmail.com>
+    	* ira-build.c (allocno_range_compare_func): Stabilize sort.
+    
+    	2008-05-29 Andy Hutchinson <hutchinsonandy@aim.com>
+    	* config/avr/avr.h (IRA_COVER_CLASSES): New macro.
+    	* reload1.c (find_reg): Process registers in register allocation order.
+    
+    	2008-05-10 Richard Sandiford <rsandifo@nildram.co.uk>
+    	* toplev.c (backend_init_target): Move ira_init call from
+    	here...
+    	(lang_dependent_init_target): ...to here.
+    
+    	2008-05-10 Richard Sandiford <rsandifo@nildram.co.uk>
+    	* ira.c (setup_class_subset_and_memory_move_costs): Don't
+    	calculate memory move costs for NO_REGS.
+    
+    	2008-05-05 Kaz Kojima <kkojima@gcc.gnu.org>
+    	* ira-color.c (ira_fast_allocation): Use no_stack_reg_p only if
+    	STACK_REGS is defined.
+    
+    	2008-04-08 Andrew Pinski <andrew_pinski@playstation.sony.com>
+    	* config/spu/spu.h (IRA_COVER_CLASSES): New macro.
+    
+    	2008-04-04 Bernd Schmidt <bernd.schmidt@analog.com>
+    	* config/bfin/bfin.h (IRA_COVER_CLASSES): New macro.
+    
+    	2008-04-04 Kaz Kojima <kkojima@gcc.gnu.org>
+    	* config/sh/sh.h (IRA_COVER_CLASSES): Define.
+    	* config/sh/sh.md (movsicc_true+3): Check if emit returns a
+    	barrier.
+    
+    From-SVN: r139590
+
+:040000 040000 248c2fdeedad12315cb8977c19849ee4e0bf9663 2e90210bc66ce871190263843807478f3af6b26d M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 058e97e [multiple changes]
+Previous HEAD position was 8ff27c2... spu.md (vec_extract_evenv4si, [...]): Implement.S
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [058e97e]
++---------------------------------------- Current commit hash: [058e97e] ----------------------------------------+
+GCC for commit [058e97e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-058e97e/bin/gcc with -Os:
+EC32B588
+EC32B588
+Output of /tmp/gcc-058e97e/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 058e97e... [multiple changes]
+[32m[     info][0m Current commit [058e97e] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [8ff27c2]
++---------------------------------------- Current commit hash: [8ff27c2] ----------------------------------------+
+GCC for commit [8ff27c2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-8ff27c2/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-8ff27c2/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8ff27c2... spu.md (vec_extract_evenv4si, [...]): Implement.S
+[32m[     info][0m Current commit [8ff27c2] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [058e97e] with -O0:
+0
+0
+Output of gcc [058e97e] with -O1:
+0
+0
+Output of gcc [058e97e] with -O2:
+0
+0
+Output of gcc [058e97e] with -O3:
+0
+0
+Output of gcc [058e97e] with -Os:
+5578FD38
+5578FD38
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

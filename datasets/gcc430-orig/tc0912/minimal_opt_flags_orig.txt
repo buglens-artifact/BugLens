@@ -1,0 +1,7 @@
+guess-branch-probability
+inline-functions
+inline-functions-called-once
+inline-small-functions
+strict-aliasing
+tree-dse
+unit-at-a-time

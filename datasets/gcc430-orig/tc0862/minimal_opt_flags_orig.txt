@@ -1,0 +1,15 @@
+cse-follow-jumps
+early-inlining
+if-conversion
+inline-functions-called-once
+inline-small-functions
+ipa-reference
+rerun-cse-after-loop
+strict-aliasing
+tree-ccp
+tree-copyrename
+tree-dce
+tree-pre
+tree-salias
+tree-store-ccp
+unit-at-a-time

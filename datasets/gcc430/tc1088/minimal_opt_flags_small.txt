@@ -1,0 +1,10 @@
+early-inlining
+guess-branch-probability
+inline-small-functions
+tree-ch
+tree-dce
+tree-dominator-opts
+tree-loop-im
+tree-loop-optimize
+tree-scev-cprop
+tree-vrp

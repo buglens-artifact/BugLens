@@ -1,0 +1,75 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = c0bc44ee
+Output of gcc-4.3.0 with -Os:
+checksum = c0bc7ec0
+Output of gcc-4.3.0 with -O0:
+checksum = c0bc44ee
+====================================================================
+[32m[     info][0m Good version found: gcc-4.0.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[bd182be84e9c8ae8485ac7c392fa0b6678969e3c] re PR rtl-optimization/20117 (duplicated labels in PIC)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0157 orig
+[32m[     info][0m Testing commit: [bd182be]
++---------------------------------------- Current commit hash: [bd182be] ----------------------------------------+
+GCC for commit [bd182be] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c0bc44ee
+Output of /tmp/gcc-bd182be/bin/gcc with -Os:
+checksum = c0bc7ec0
+Output of /tmp/gcc-bd182be/bin/gcc with -O0:
+checksum = c0bc44ee
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+[32m[     info][0m Current commit [bd182be] is bad. Return value: 1
+
+The merge base bd182be84e9c8ae8485ac7c392fa0b6678969e3c is bad.
+This means the bug has been fixed between bd182be84e9c8ae8485ac7c392fa0b6678969e3c and [d89dab3130e93bf415da3719355e24ef4cd039ca].
+bisect run failed:
+'bisect_state bad' exited with error code 3
+[32m[     info][0m First bad commit: 
+Checking out files:  10% (4838/44705)   Checking out files:  11% (4918/44705)   Checking out files:  12% (5365/44705)   Checking out files:  13% (5812/44705)   Checking out files:  14% (6259/44705)   Checking out files:  14% (6566/44705)   Checking out files:  15% (6706/44705)   Checking out files:  16% (7153/44705)   Checking out files:  17% (7600/44705)   Checking out files:  17% (7844/44705)   Checking out files:  18% (8047/44705)   Checking out files:  19% (8494/44705)   Checking out files:  20% (8941/44705)   Checking out files:  20% (9023/44705)   Checking out files:  21% (9389/44705)   Checking out files:  22% (9836/44705)   Checking out files:  23% (10283/44705)   Checking out files:  24% (10730/44705)   Checking out files:  24% (11066/44705)   Checking out files:  25% (11177/44705)   Checking out files:  26% (11624/44705)   Checking out files:  27% (12071/44705)   Checking out files:  28% (12518/44705)   Checking out files:  29% (12965/44705)   Checking out files:  30% (13412/44705)   Checking out files:  31% (13859/44705)   Checking out files:  31% (14183/44705)   Checking out files:  32% (14306/44705)   Checking out files:  33% (14753/44705)   Checking out files:  34% (15200/44705)   Checking out files:  35% (15647/44705)   Checking out files:  36% (16094/44705)   Checking out files:  37% (16541/44705)   Checking out files:  37% (16564/44705)   Checking out files:  38% (16988/44705)   Checking out files:  39% (17435/44705)   Checking out files:  40% (17882/44705)   Checking out files:  41% (18330/44705)   Checking out files:  42% (18777/44705)   Checking out files:  42% (18887/44705)   Checking out files:  43% (19224/44705)   Checking out files:  44% (19671/44705)   Checking out files:  45% (20118/44705)   Checking out files:  46% (20565/44705)   Checking out files:  47% (21012/44705)   Checking out files:  48% (21459/44705)   Checking out files:  48% (21624/44705)   Checking out files:  49% (21906/44705)   Checking out files:  50% (22353/44705)   Checking out files:  51% (22800/44705)   Checking out files:  52% (23247/44705)   Checking out files:  53% (23694/44705)   Checking out files:  54% (24141/44705)   Checking out files:  54% (24507/44705)   Checking out files:  55% (24588/44705)   Checking out files:  56% (25035/44705)   Checking out files:  57% (25482/44705)   Checking out files:  58% (25929/44705)   Checking out files:  59% (26376/44705)   Checking out files:  60% (26823/44705)   Checking out files:  61% (27271/44705)   Checking out files:  61% (27619/44705)   Checking out files:  62% (27718/44705)   Checking out files:  63% (28165/44705)   Checking out files:  64% (28612/44705)   Checking out files:  65% (29059/44705)   Checking out files:  66% (29506/44705)   Checking out files:  67% (29953/44705)   Checking out files:  68% (30400/44705)   Checking out files:  68% (30692/44705)   Checking out files:  69% (30847/44705)   Checking out files:  70% (31294/44705)   Checking out files:  71% (31741/44705)   Checking out files:  72% (32188/44705)   Checking out files:  73% (32635/44705)   Checking out files:  74% (33082/44705)   Checking out files:  74% (33420/44705)   Checking out files:  75% (33529/44705)   Checking out files:  76% (33976/44705)   Checking out files:  77% (34423/44705)   Checking out files:  78% (34870/44705)   Checking out files:  79% (35317/44705)   Checking out files:  80% (35764/44705)   Checking out files:  81% (36212/44705)   Checking out files:  81% (36556/44705)   Checking out files:  82% (36659/44705)   Checking out files:  83% (37106/44705)   Checking out files:  84% (37553/44705)   Checking out files:  85% (38000/44705)   Checking out files:  86% (38447/44705)   Checking out files:  87% (38894/44705)   Checking out files:  88% (39341/44705)   Checking out files:  88% (39644/44705)   Checking out files:  89% (39788/44705)   Checking out files:  90% (40235/44705)   Checking out files:  91% (40682/44705)   Checking out files:  92% (41129/44705)   Checking out files:  93% (41576/44705)   Checking out files:  93% (41804/44705)   Checking out files:  94% (42023/44705)   Checking out files:  95% (42470/44705)   Checking out files:  96% (42917/44705)   Checking out files:  97% (43364/44705)   Checking out files:  97% (43673/44705)   Checking out files:  98% (43811/44705)   Checking out files:  99% (44258/44705)   Checking out files: 100% (44705/44705)   Checking out files: 100% (44705/44705), done.
+Previous HEAD position was bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+HEAD is now at 891fc5e... re PR tree-optimization/31715 (Array calculation done incorrectly)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [891fc5e]
++---------------------------------------- Current commit hash: [891fc5e] ----------------------------------------+
+GCC for commit [891fc5e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c0bc44ee
+Output of /tmp/gcc-891fc5e/bin/gcc with -Os:
+checksum = c0bc7ec0
+Output of /tmp/gcc-891fc5e/bin/gcc with -O0:
+checksum = c0bc44ee
+----------------------------------------------------
+No local changes to save
+HEAD is now at 891fc5e... re PR tree-optimization/31715 (Array calculation done incorrectly)
+[32m[     info][0m Current commit [891fc5e] is bad. Return value: 1
+
+fatal: ambiguous argument '^': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions
+[32m[     info][0m Testing commit: [891fc5e]
++---------------------------------------- Current commit hash: [891fc5e] ----------------------------------------+
+GCC for commit [891fc5e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c0bc44ee
+Output of /tmp/gcc-891fc5e/bin/gcc with -Os:
+checksum = c0bc7ec0
+Output of /tmp/gcc-891fc5e/bin/gcc with -O0:
+checksum = c0bc44ee
+----------------------------------------------------
+No local changes to save
+HEAD is now at 891fc5e... re PR tree-optimization/31715 (Array calculation done incorrectly)
+[32m[     info][0m Current commit [891fc5e] is bad. Return value: 1
+
+Error: The first bad commit is not the correct one. [2]

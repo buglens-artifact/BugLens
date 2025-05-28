@@ -1,0 +1,7 @@
+early-inlining
+inline-functions-called-once
+inline-small-functions
+ipa-reference
+tree-pre
+tree-sink
+unit-at-a-time

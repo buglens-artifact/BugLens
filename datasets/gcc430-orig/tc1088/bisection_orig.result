@@ -1,0 +1,1 @@
+5a0ed00 tree-ssa-propagate.c (cfg_blocks_add): Insert blocks with fewer predecessors at head rather than tail.

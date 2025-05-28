@@ -1,0 +1,5 @@
+inline-functions
+inline-small-functions
+ivopts
+tree-loop-optimize
+tree-pre

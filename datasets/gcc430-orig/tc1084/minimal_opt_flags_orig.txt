@@ -1,0 +1,3 @@
+inline-small-functions
+strict-aliasing
+unit-at-a-time

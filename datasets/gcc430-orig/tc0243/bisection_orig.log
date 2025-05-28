@@ -1,0 +1,373 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = eb480607
+Output of gcc-4.3.0 with -O3:
+checksum = cd037c41
+Output of gcc-4.3.0 with -O0:
+checksum = eb480607
+====================================================================
+[32m[     info][0m Good version found: gcc-4.1.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[abc088aad79d47b40da8a26e87815db09ab2d6eb] re PR c++/8355 (befriending a template specialization in another namespace)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [abc088a]
++---------------------------------------- Current commit hash: [abc088a] ----------------------------------------+
+GCC for commit [abc088a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-abc088a/bin/gcc with -O3:
+checksum = eb480607
+Output of /tmp/gcc-abc088a/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at abc088a... re PR c++/8355 (befriending a template specialization in another namespace)
+[32m[     info][0m Current commit [abc088a] is good. Return value: 0
+
+Bisecting: 6978 revisions left to test after this (roughly 13 steps)
+[ad8e8d0b465e6dd9d9db4988de7b5c524bb4d85d] re PR inline-asm/28686 (ebp from clobber list used as operand)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [ad8e8d0]
++---------------------------------------- Current commit hash: [ad8e8d0] ----------------------------------------+
+GCC for commit [ad8e8d0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -O3:
+checksum = eb480607
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at ad8e8d0... re PR inline-asm/28686 (ebp from clobber list used as operand)
+[32m[     info][0m Current commit [ad8e8d0] is good. Return value: 0
+
+Bisecting: 3489 revisions left to test after this (roughly 12 steps)
+[390ea488c1753eaf9c747ead8f653c9023058109] mips-protos.h (mips_split_symbol): Add a mode and an "rtx *" argument.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [390ea48]
++---------------------------------------- Current commit hash: [390ea48] ----------------------------------------+
+GCC for commit [390ea48] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-390ea48/bin/gcc with -O3:
+checksum = cd037c41
+Output of /tmp/gcc-390ea48/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at 390ea48... mips-protos.h (mips_split_symbol): Add a mode and an "rtx *" argument.
+[32m[     info][0m Current commit [390ea48] is bad. Return value: 1
+
+Bisecting: 1744 revisions left to test after this (roughly 11 steps)
+[ddd3985ef531626ad904f1f2b7d72a07d72b6cd5] natVMVirtualMachine.cc (getClassMethod): Change to use JVMTI.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [ddd3985]
++---------------------------------------- Current commit hash: [ddd3985] ----------------------------------------+
+GCC for commit [ddd3985] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-ddd3985/bin/gcc with -O3:
+checksum = cd037c41
+Output of /tmp/gcc-ddd3985/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at ddd3985... natVMVirtualMachine.cc (getClassMethod): Change to use JVMTI.
+[32m[     info][0m Current commit [ddd3985] is bad. Return value: 1
+
+Bisecting: 871 revisions left to test after this (roughly 10 steps)
+[46ecc2bc5c8455615f9739847277cbc5fe746c25] re PR libgcj/31228 (Race condition between setting close-on-exec and Runtime.exec())
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [46ecc2b]
++---------------------------------------- Current commit hash: [46ecc2b] ----------------------------------------+
+GCC for commit [46ecc2b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-46ecc2b/bin/gcc with -O3:
+checksum = eb480607
+Output of /tmp/gcc-46ecc2b/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at 46ecc2b... re PR libgcj/31228 (Race condition between setting close-on-exec and Runtime.exec())
+[32m[     info][0m Current commit [46ecc2b] is good. Return value: 0
+
+Bisecting: 435 revisions left to test after this (roughly 9 steps)
+[5cd09fac3dc9c8ef5fbb6de8311d6646618ebcdb] re PR fortran/31250 (Initialization expr as constant character length rejected)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [5cd09fa]
++---------------------------------------- Current commit hash: [5cd09fa] ----------------------------------------+
+GCC for commit [5cd09fa] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-5cd09fa/bin/gcc with -O3:
+checksum = eb480607
+Output of /tmp/gcc-5cd09fa/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5cd09fa... re PR fortran/31250 (Initialization expr as constant character length rejected)
+[32m[     info][0m Current commit [5cd09fa] is good. Return value: 0
+
+Bisecting: 217 revisions left to test after this (roughly 8 steps)
+[cd0a10dd991395eec0a2661a85da31d52ac831fc] dwarf2out.c (field_byte_offset): Move the existing logic under the control of PCC_BITFIELD_TYPE_MATTERS and just...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [cd0a10d]
++---------------------------------------- Current commit hash: [cd0a10d] ----------------------------------------+
+GCC for commit [cd0a10d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-cd0a10d/bin/gcc with -O3:
+checksum = eb480607
+Output of /tmp/gcc-cd0a10d/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at cd0a10d... dwarf2out.c (field_byte_offset): Move the existing logic under the control of PCC_BITFIELD_TYPE_MATTERS and just...
+[32m[     info][0m Current commit [cd0a10d] is good. Return value: 0
+
+Bisecting: 108 revisions left to test after this (roughly 7 steps)
+[2ec85b26e809213e6091b59e832abe20ca5c9f96] Fix problem on case-sensitive file systems.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [2ec85b2]
++---------------------------------------- Current commit hash: [2ec85b2] ----------------------------------------+
+GCC for commit [2ec85b2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-2ec85b2/bin/gcc with -O3:
+checksum = cd037c41
+Output of /tmp/gcc-2ec85b2/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2ec85b2... Fix problem on case-sensitive file systems.
+[32m[     info][0m Current commit [2ec85b2] is bad. Return value: 1
+
+Bisecting: 54 revisions left to test after this (roughly 6 steps)
+[5c7ec4f0d5730d28451003ab8304b388f42f2a85] re PR tree-optimization/31703 (Gcc 4.3 revision 124101 failed to compile gcc 3.2)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [5c7ec4f]
++---------------------------------------- Current commit hash: [5c7ec4f] ----------------------------------------+
+GCC for commit [5c7ec4f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-5c7ec4f/bin/gcc with -O3:
+checksum = eb480607
+Output of /tmp/gcc-5c7ec4f/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5c7ec4f... re PR tree-optimization/31703 (Gcc 4.3 revision 124101 failed to compile gcc 3.2)
+[32m[     info][0m Current commit [5c7ec4f] is good. Return value: 0
+
+Bisecting: 27 revisions left to test after this (roughly 5 steps)
+[093b203ba9a0b34d78ef2972e687fd5ca03a952b] re PR middle-end/31710 (ICE in in set_value_range, at tree-vrp.c:278)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [093b203]
++---------------------------------------- Current commit hash: [093b203] ----------------------------------------+
+GCC for commit [093b203] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-093b203/bin/gcc with -O3:
+checksum = cd037c41
+Output of /tmp/gcc-093b203/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at 093b203... re PR middle-end/31710 (ICE in in set_value_range, at tree-vrp.c:278)
+[32m[     info][0m Current commit [093b203] is bad. Return value: 1
+
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[8c74fb06c66b569a26f93c0d569d4437fdcfd415] reload.h (elimination_target_reg_p): Declare.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [8c74fb0]
++---------------------------------------- Current commit hash: [8c74fb0] ----------------------------------------+
+GCC for commit [8c74fb0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-8c74fb0/bin/gcc with -O3:
+checksum = eb480607
+Output of /tmp/gcc-8c74fb0/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8c74fb0... reload.h (elimination_target_reg_p): Declare.
+[32m[     info][0m Current commit [8c74fb0] is good. Return value: 0
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[a56c06d8c916bf2b3199db40f31a07f48824b076] intrinsic.texi (AND, [...]): Fixed examples.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [a56c06d]
++---------------------------------------- Current commit hash: [a56c06d] ----------------------------------------+
+GCC for commit [a56c06d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-a56c06d/bin/gcc with -O3:
+checksum = cd037c41
+Output of /tmp/gcc-a56c06d/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at a56c06d... intrinsic.texi (AND, [...]): Fixed examples.
+[32m[     info][0m Current commit [a56c06d] is bad. Return value: 1
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[64e8a9f04eaa5a5989607ac36c94c57d6eb9ee14] tree-ssa-forwprop.c (get_prop_dest_stmt): Fix comment typo.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [64e8a9f]
++---------------------------------------- Current commit hash: [64e8a9f] ----------------------------------------+
+GCC for commit [64e8a9f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-64e8a9f/bin/gcc with -O3:
+checksum = cd037c41
+Output of /tmp/gcc-64e8a9f/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at 64e8a9f... tree-ssa-forwprop.c (get_prop_dest_stmt): Fix comment typo.
+[32m[     info][0m Current commit [64e8a9f] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[3aef2dbd2e29122a0a292779af9dade975d6b526] re PR tree-optimization/30965 (Fails to tree-combine conditions in COND_EXPRs)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [3aef2db]
++---------------------------------------- Current commit hash: [3aef2db] ----------------------------------------+
+GCC for commit [3aef2db] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-3aef2db/bin/gcc with -O3:
+checksum = cd037c41
+Output of /tmp/gcc-3aef2db/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3aef2db... re PR tree-optimization/30965 (Fails to tree-combine conditions in COND_EXPRs)
+[32m[     info][0m Current commit [3aef2db] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[891fc5e9f1b6a88f9147b68e670f0cc172acfe21] re PR tree-optimization/31715 (Array calculation done incorrectly)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0243 orig
+[32m[     info][0m Testing commit: [891fc5e]
++---------------------------------------- Current commit hash: [891fc5e] ----------------------------------------+
+GCC for commit [891fc5e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-891fc5e/bin/gcc with -O3:
+checksum = eb480607
+Output of /tmp/gcc-891fc5e/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at 891fc5e... re PR tree-optimization/31715 (Array calculation done incorrectly)
+[32m[     info][0m Current commit [891fc5e] is good. Return value: 0
+
+3aef2dbd2e29122a0a292779af9dade975d6b526 is the first bad commit
+commit 3aef2dbd2e29122a0a292779af9dade975d6b526
+Author: Richard Guenther <rguenther@suse.de>
+Date:   Fri Apr 27 13:43:42 2007 +0000
+
+    re PR tree-optimization/30965 (Fails to tree-combine conditions in COND_EXPRs)
+    
+    2007-04-27  Richard Guenther  <rguenther@suse.de>
+    
+    	PR tree-optimization/30965
+    	PR tree-optimization/30978
+    	* Makefile.in (tree-ssa-forwprop.o): Depend on $(FLAGS_H).
+            * tree-ssa-forwprop.c (forward_propagate_into_cond_1): Remove.
+            (find_equivalent_equality_comparison): Likewise.
+            (simplify_cond): Likewise.
+            (get_prop_source_stmt): New helper.
+            (get_prop_dest_stmt): Likewise.
+    	(can_propagate_from): Likewise.
+    	(remove_prop_source_from_use): Likewise.
+            (combine_cond_expr_cond): Likewise.
+            (forward_propagate_comparison): New function.
+            (forward_propagate_into_cond): Rewrite to use fold for
+            tree combining.
+    	(tree_ssa_forward_propagate_single_use_vars): Call
+    	forward_propagate_comparison to propagate comparisons.
+    
+    	* gcc.dg/tree-ssa/pr30978.c: New testcase.
+    	* gcc.dg/tree-ssa/bool-3.c: Remove XFAIL, explain why.
+    	* gcc.dg/tree-ssa/ssa-fre-4.c: Use char instead of bool
+    	* gcc.dg/strict-overflow-5.c: Adjust tree dump scanning.
+    
+    From-SVN: r124217
+
+:040000 040000 7f371ca1c3bee987d3b6a519de1d7962f0528ce7 f8765dda3fb5810ff96b312bfea39af96bf158e0 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 3aef2db re PR tree-optimization/30965 (Fails to tree-combine conditions in COND_EXPRs)
+Checking out files:  17% (1148/6512)   Checking out files:  18% (1173/6512)   Checking out files:  19% (1238/6512)   Checking out files:  20% (1303/6512)   Checking out files:  21% (1368/6512)   Checking out files:  22% (1433/6512)   Checking out files:  23% (1498/6512)   Checking out files:  24% (1563/6512)   Checking out files:  25% (1628/6512)   Checking out files:  26% (1694/6512)   Checking out files:  27% (1759/6512)   Checking out files:  28% (1824/6512)   Checking out files:  29% (1889/6512)   Checking out files:  30% (1954/6512)   Checking out files:  31% (2019/6512)   Checking out files:  32% (2084/6512)   Checking out files:  33% (2149/6512)   Checking out files:  34% (2215/6512)   Checking out files:  35% (2280/6512)   Checking out files:  35% (2283/6512)   Checking out files:  36% (2345/6512)   Checking out files:  37% (2410/6512)   Checking out files:  38% (2475/6512)   Checking out files:  39% (2540/6512)   Checking out files:  40% (2605/6512)   Checking out files:  41% (2670/6512)   Checking out files:  42% (2736/6512)   Checking out files:  43% (2801/6512)   Checking out files:  44% (2866/6512)   Checking out files:  45% (2931/6512)   Checking out files:  46% (2996/6512)   Checking out files:  47% (3061/6512)   Checking out files:  48% (3126/6512)   Checking out files:  49% (3191/6512)   Checking out files:  50% (3256/6512)   Checking out files:  51% (3322/6512)   Checking out files:  52% (3387/6512)   Checking out files:  53% (3452/6512)   Checking out files:  54% (3517/6512)   Checking out files:  55% (3582/6512)   Checking out files:  56% (3647/6512)   Checking out files:  57% (3712/6512)   Checking out files:  58% (3777/6512)   Checking out files:  59% (3843/6512)   Checking out files:  60% (3908/6512)   Checking out files:  61% (3973/6512)   Checking out files:  61% (3984/6512)   Checking out files:  62% (4038/6512)   Checking out files:  63% (4103/6512)   Checking out files:  64% (4168/6512)   Checking out files:  65% (4233/6512)   Checking out files:  66% (4298/6512)   Checking out files:  67% (4364/6512)   Checking out files:  68% (4429/6512)   Checking out files:  69% (4494/6512)   Checking out files:  70% (4559/6512)   Checking out files:  71% (4624/6512)   Checking out files:  72% (4689/6512)   Checking out files:  73% (4754/6512)   Checking out files:  74% (4819/6512)   Checking out files:  75% (4884/6512)   Checking out files:  76% (4950/6512)   Checking out files:  77% (5015/6512)   Checking out files:  78% (5080/6512)   Checking out files:  79% (5145/6512)   Checking out files:  80% (5210/6512)   Checking out files:  81% (5275/6512)   Checking out files:  82% (5340/6512)   Checking out files:  83% (5405/6512)   Checking out files:  84% (5471/6512)   Checking out files:  85% (5536/6512)   Checking out files:  86% (5601/6512)   Checking out files:  87% (5666/6512)   Checking out files:  88% (5731/6512)   Checking out files:  89% (5796/6512)   Checking out files:  90% (5861/6512)   Checking out files:  91% (5926/6512)   Checking out files:  91% (5934/6512)   Checking out files:  92% (5992/6512)   Checking out files:  93% (6057/6512)   Checking out files:  94% (6122/6512)   Checking out files:  95% (6187/6512)   Checking out files:  96% (6252/6512)   Checking out files:  97% (6317/6512)   Checking out files:  98% (6382/6512)   Checking out files:  99% (6447/6512)   Checking out files: 100% (6512/6512)   Checking out files: 100% (6512/6512), done.
+Previous HEAD position was 891fc5e... re PR tree-optimization/31715 (Array calculation done incorrectly)
+HEAD is now at 3673b8c... Daily bump.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [3aef2db]
++---------------------------------------- Current commit hash: [3aef2db] ----------------------------------------+
+GCC for commit [3aef2db] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-3aef2db/bin/gcc with -O3:
+checksum = cd037c41
+Output of /tmp/gcc-3aef2db/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3aef2db... re PR tree-optimization/30965 (Fails to tree-combine conditions in COND_EXPRs)
+[32m[     info][0m Current commit [3aef2db] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [891fc5e]
++---------------------------------------- Current commit hash: [891fc5e] ----------------------------------------+
+GCC for commit [891fc5e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = eb480607
+Output of /tmp/gcc-891fc5e/bin/gcc with -O3:
+checksum = eb480607
+Output of /tmp/gcc-891fc5e/bin/gcc with -O0:
+checksum = eb480607
+----------------------------------------------------
+No local changes to save
+HEAD is now at 891fc5e... re PR tree-optimization/31715 (Array calculation done incorrectly)
+[32m[     info][0m Current commit [891fc5e] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [3aef2db] with -O0:
+checksum = eb480607
+Output of gcc [3aef2db] with -O1:
+checksum = eb480607
+Output of gcc [3aef2db] with -O2:
+checksum = eb480607
+Output of gcc [3aef2db] with -O3:
+checksum = cd037c41
+Output of gcc [3aef2db] with -Os:
+checksum = cd037c41
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

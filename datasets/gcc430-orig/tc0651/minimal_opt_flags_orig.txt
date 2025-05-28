@@ -1,0 +1,5 @@
+guess-branch-probability
+inline-small-functions
+tree-dse
+tree-loop-optimize
+tree-salias

@@ -1,0 +1,9 @@
+dse
+guess-branch-probability
+inline-small-functions
+ipa-reference
+strict-aliasing
+tree-dce
+tree-dse
+tree-loop-optimize
+unit-at-a-time

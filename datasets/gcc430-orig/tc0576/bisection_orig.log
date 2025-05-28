@@ -1,0 +1,75 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = e9c1ea4e
+Output of gcc-4.3.0 with -Os:
+checksum = e9c2ea4a
+Output of gcc-4.3.0 with -O0:
+checksum = e9c1ea4e
+====================================================================
+[32m[     info][0m Good version found: gcc-4.0.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[bd182be84e9c8ae8485ac7c392fa0b6678969e3c] re PR rtl-optimization/20117 (duplicated labels in PIC)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0576 orig
+[32m[     info][0m Testing commit: [bd182be]
++---------------------------------------- Current commit hash: [bd182be] ----------------------------------------+
+GCC for commit [bd182be] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = e9c1ea4e
+Output of /tmp/gcc-bd182be/bin/gcc with -Os:
+checksum = e9c1ea4d
+Output of /tmp/gcc-bd182be/bin/gcc with -O0:
+checksum = e9c1ea4e
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+[32m[     info][0m Current commit [bd182be] is bad. Return value: 1
+
+The merge base bd182be84e9c8ae8485ac7c392fa0b6678969e3c is bad.
+This means the bug has been fixed between bd182be84e9c8ae8485ac7c392fa0b6678969e3c and [d89dab3130e93bf415da3719355e24ef4cd039ca].
+bisect run failed:
+'bisect_state bad' exited with error code 3
+[32m[     info][0m First bad commit: 
+Checking out files:  11% (5987/50987)   Checking out files:  12% (6119/50987)   Checking out files:  13% (6629/50987)   Checking out files:  14% (7139/50987)   Checking out files:  14% (7368/50987)   Checking out files:  15% (7649/50987)   Checking out files:  16% (8158/50987)   Checking out files:  17% (8668/50987)   Checking out files:  17% (8822/50987)   Checking out files:  18% (9178/50987)   Checking out files:  19% (9688/50987)   Checking out files:  19% (9812/50987)   Checking out files:  20% (10198/50987)   Checking out files:  21% (10708/50987)   Checking out files:  22% (11218/50987)   Checking out files:  23% (11728/50987)   Checking out files:  24% (12237/50987)   Checking out files:  25% (12747/50987)   Checking out files:  25% (12934/50987)   Checking out files:  26% (13257/50987)   Checking out files:  27% (13767/50987)   Checking out files:  28% (14277/50987)   Checking out files:  29% (14787/50987)   Checking out files:  30% (15297/50987)   Checking out files:  31% (15806/50987)   Checking out files:  31% (16138/50987)   Checking out files:  32% (16316/50987)   Checking out files:  33% (16826/50987)   Checking out files:  34% (17336/50987)   Checking out files:  35% (17846/50987)   Checking out files:  36% (18356/50987)   Checking out files:  37% (18866/50987)   Checking out files:  38% (19376/50987)   Checking out files:  39% (19885/50987)   Checking out files:  39% (19945/50987)   Checking out files:  40% (20395/50987)   Checking out files:  41% (20905/50987)   Checking out files:  42% (21415/50987)   Checking out files:  43% (21925/50987)   Checking out files:  43% (22175/50987)   Checking out files:  44% (22435/50987)   Checking out files:  45% (22945/50987)   Checking out files:  46% (23455/50987)   Checking out files:  47% (23964/50987)   Checking out files:  48% (24474/50987)   Checking out files:  48% (24780/50987)   Checking out files:  49% (24984/50987)   Checking out files:  50% (25494/50987)   Checking out files:  51% (26004/50987)   Checking out files:  52% (26514/50987)   Checking out files:  53% (27024/50987)   Checking out files:  54% (27533/50987)   Checking out files:  54% (27671/50987)   Checking out files:  55% (28043/50987)   Checking out files:  56% (28553/50987)   Checking out files:  57% (29063/50987)   Checking out files:  58% (29573/50987)   Checking out files:  59% (30083/50987)   Checking out files:  60% (30593/50987)   Checking out files:  60% (30790/50987)   Checking out files:  61% (31103/50987)   Checking out files:  62% (31612/50987)   Checking out files:  63% (32122/50987)   Checking out files:  64% (32632/50987)   Checking out files:  65% (33142/50987)   Checking out files:  66% (33652/50987)   Checking out files:  66% (34019/50987)   Checking out files:  67% (34162/50987)   Checking out files:  68% (34672/50987)   Checking out files:  69% (35182/50987)   Checking out files:  70% (35691/50987)   Checking out files:  71% (36201/50987)   Checking out files:  72% (36711/50987)   Checking out files:  72% (37149/50987)   Checking out files:  73% (37221/50987)   Checking out files:  74% (37731/50987)   Checking out files:  75% (38241/50987)   Checking out files:  76% (38751/50987)   Checking out files:  77% (39260/50987)   Checking out files:  78% (39770/50987)   Checking out files:  78% (40207/50987)   Checking out files:  79% (40280/50987)   Checking out files:  80% (40790/50987)   Checking out files:  81% (41300/50987)   Checking out files:  82% (41810/50987)   Checking out files:  83% (42320/50987)   Checking out files:  84% (42830/50987)   Checking out files:  85% (43339/50987)   Checking out files:  85% (43473/50987)   Checking out files:  86% (43849/50987)   Checking out files:  87% (44359/50987)   Checking out files:  88% (44869/50987)   Checking out files:  89% (45379/50987)   Checking out files:  90% (45889/50987)   Checking out files:  90% (46219/50987)   Checking out files:  91% (46399/50987)   Checking out files:  92% (46909/50987)   Checking out files:  93% (47418/50987)   Checking out files:  94% (47928/50987)   Checking out files:  94% (48435/50987)   Checking out files:  95% (48438/50987)   Checking out files:  96% (48948/50987)   Checking out files:  97% (49458/50987)   Checking out files:  98% (49968/50987)   Checking out files:  99% (50478/50987)   Checking out files:  99% (50645/50987)   Checking out files: 100% (50987/50987)   Checking out files: 100% (50987/50987), done.
+Previous HEAD position was bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [d2a1878]
++---------------------------------------- Current commit hash: [d2a1878] ----------------------------------------+
+GCC for commit [d2a1878] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = e9c1ea4e
+Output of /tmp/gcc-d2a1878/bin/gcc with -Os:
+checksum = e9c2ea4a
+Output of /tmp/gcc-d2a1878/bin/gcc with -O0:
+checksum = e9c1ea4e
+----------------------------------------------------
+No local changes to save
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+[32m[     info][0m Current commit [d2a1878] is bad. Return value: 1
+
+fatal: ambiguous argument '^': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions
+[32m[     info][0m Testing commit: [d2a1878]
++---------------------------------------- Current commit hash: [d2a1878] ----------------------------------------+
+GCC for commit [d2a1878] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = e9c1ea4e
+Output of /tmp/gcc-d2a1878/bin/gcc with -Os:
+checksum = e9c2ea4a
+Output of /tmp/gcc-d2a1878/bin/gcc with -O0:
+checksum = e9c1ea4e
+----------------------------------------------------
+No local changes to save
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+[32m[     info][0m Current commit [d2a1878] is bad. Return value: 1
+
+Error: The first bad commit is not the correct one. [2]

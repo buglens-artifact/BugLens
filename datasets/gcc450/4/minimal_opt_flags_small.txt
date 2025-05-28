@@ -1,0 +1,3 @@
+caller-saves
+if-conversion
+ipa-pure-const

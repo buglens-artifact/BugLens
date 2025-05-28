@@ -1,0 +1,4 @@
+caller-saves
+forward-propagate
+if-conversion
+move-loop-invariants

@@ -1,0 +1,4 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+/tmp/deduplication/scripts/bisect_wrongcode.sh: line 148: 951308 Killed                  timeout -s 9 $TIMEOUT $bad_compiler $source_file -o $opt1_binary $opt1 > /dev/null 2>&1
+[31m[    error][0m Compilation of /tmp/deduplication/benchmarks/gcc430-orig/tc0084/orig.c by gcc-4.3.0 with -O3 failed.

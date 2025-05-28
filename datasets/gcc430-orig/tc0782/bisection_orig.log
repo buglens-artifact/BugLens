@@ -1,0 +1,529 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = c34a3113
+Output of gcc-4.3.0 with -O3:
+checksum = c34a3112
+Output of gcc-4.3.0 with -O0:
+checksum = c34a3113
+====================================================================
+[32m[     info][0m Good version found: gcc-3.4.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[a8e6c82ab09c4c7a8490bc3861049b1941b84c75] re PR c++/13574 (array default initializer in class lets gcc consume all memory and die)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [a8e6c82]
++---------------------------------------- Current commit hash: [a8e6c82] ----------------------------------------+
+GCC for commit [a8e6c82] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c34a3113
+Output of /tmp/gcc-a8e6c82/bin/gcc with -O3:
+checksum = c34a3113
+Output of /tmp/gcc-a8e6c82/bin/gcc with -O0:
+checksum = c34a3113
+----------------------------------------------------
+No local changes to save
+HEAD is now at a8e6c82... re PR c++/13574 (array default initializer in class lets gcc consume all memory and die)
+[32m[     info][0m Current commit [a8e6c82] is good. Return value: 0
+
+Bisecting: 15168 revisions left to test after this (roughly 14 steps)
+[024f1251b584243372c0413105b2230769f3e682] re PR c++/23691 (`mpl_::bool_<false>::value' is not a valid template argument for type `bool' because it is a non-constant expression)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [024f125]
++---------------------------------------- Current commit hash: [024f125] ----------------------------------------+
+GCC for commit [024f125] already exists. Using existing binary.
+Compilation by gcc [024f125] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 024f125... re PR c++/23691 (`mpl_::bool_<false>::value' is not a valid template argument for type `bool' because it is a non-constant expression)
+Bisecting: 7583 revisions left to test after this (roughly 13 steps)
+[65f4323d84b08d9d0ff450d6e6432abf0a4fa3fb] tree-cfg.c (find_taken_edge): Reject VAL begin NULL.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [65f4323]
++---------------------------------------- Current commit hash: [65f4323] ----------------------------------------+
+GCC for commit [65f4323] already exists. Using existing binary.
+Compilation by gcc [65f4323] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 65f4323... tree-cfg.c (find_taken_edge): Reject VAL begin NULL.
+Bisecting: 3791 revisions left to test after this (roughly 12 steps)
+[ef558756f2838de518a99a52caabe931e9af52b1] decl.c, [...]: Add 2004 to copyright years.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [ef55875]
++---------------------------------------- Current commit hash: [ef55875] ----------------------------------------+
+GCC for commit [ef55875] already exists. Using existing binary.
+Compilation by gcc [ef55875] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at ef55875... decl.c, [...]: Add 2004 to copyright years.
+Bisecting: 1895 revisions left to test after this (roughly 11 steps)
+[cfdfa11075770af7e2c8b0d3fd7e17d066c7385d] * hashtab.h, splay-tree.h: Use new shorter form of GTY markers.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [cfdfa11]
++---------------------------------------- Current commit hash: [cfdfa11] ----------------------------------------+
+GCC for commit [cfdfa11] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c34a3113
+Output of /tmp/gcc-cfdfa11/bin/gcc with -O3:
+checksum = c34a3113
+Output of /tmp/gcc-cfdfa11/bin/gcc with -O0:
+checksum = c34a3113
+----------------------------------------------------
+No local changes to save
+HEAD is now at cfdfa11... * hashtab.h, splay-tree.h: Use new shorter form of GTY markers.
+[32m[     info][0m Current commit [cfdfa11] is good. Return value: 0
+
+Bisecting: 947 revisions left to test after this (roughly 10 steps)
+[aef0afc4f41cab8148ee17a4ea7dddb6fca0342e] re PR tree-optimization/14197 (Wrong code for bcopy/memmove (string-asm-2.c))
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [aef0afc]
++---------------------------------------- Current commit hash: [aef0afc] ----------------------------------------+
+GCC for commit [aef0afc] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c34a3113
+Output of /tmp/gcc-aef0afc/bin/gcc with -O3:
+checksum = c34a3113
+Output of /tmp/gcc-aef0afc/bin/gcc with -O0:
+checksum = c34a3113
+----------------------------------------------------
+No local changes to save
+HEAD is now at aef0afc... re PR tree-optimization/14197 (Wrong code for bcopy/memmove (string-asm-2.c))
+[32m[     info][0m Current commit [aef0afc] is good. Return value: 0
+
+Bisecting: 473 revisions left to test after this (roughly 9 steps)
+[50431bc4280a683141da4c51375ef07636083b7b] Makefile.in (FLAGS_H): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [50431bc]
++---------------------------------------- Current commit hash: [50431bc] ----------------------------------------+
+Building GCC for commit [50431bc]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 50431bc Makefile.in (FLAGS_H): New.
+HEAD is now at 50431bc Makefile.in (FLAGS_H): New.
+Note: checking out '50431bc'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 50431bc... Makefile.in (FLAGS_H): New.
+Deleted branch temp-test-branch (was 50431bc).
+Fail to build gcc for commit [50431bc], skip this commit. Return 125.
+Bisecting: 473 revisions left to test after this (roughly 9 steps)
+[2e2052b19ad876dade65b7977f17708ffb057010] Re-apply hopefully fixed patch:
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [2e2052b]
++---------------------------------------- Current commit hash: [2e2052b] ----------------------------------------+
+GCC for commit [2e2052b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c34a3113
+Output of /tmp/gcc-2e2052b/bin/gcc with -O3:
+checksum = c34a3113
+Output of /tmp/gcc-2e2052b/bin/gcc with -O0:
+checksum = c34a3113
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2e2052b... Re-apply hopefully fixed patch:
+[32m[     info][0m Current commit [2e2052b] is good. Return value: 0
+
+Bisecting: 354 revisions left to test after this (roughly 9 steps)
+[093c7153029151d28e4f60d9204d0edc31e7e3a2] c-common.c (flag_objc_sjlj_exceptions): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [093c715]
++---------------------------------------- Current commit hash: [093c715] ----------------------------------------+
+GCC for commit [093c715] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c34a3113
+Output of /tmp/gcc-093c715/bin/gcc with -O3:
+checksum = c34a3113
+Output of /tmp/gcc-093c715/bin/gcc with -O0:
+checksum = c34a3113
+----------------------------------------------------
+No local changes to save
+HEAD is now at 093c715... c-common.c (flag_objc_sjlj_exceptions): New.
+[32m[     info][0m Current commit [093c715] is good. Return value: 0
+
+Bisecting: 176 revisions left to test after this (roughly 8 steps)
+[3db4a9b428b760809fdff522272b95c378949e9b] re PR tree-optimization/16115 (double-destruction problem with argument passing via temporary (breaks auto_ptr))
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [3db4a9b]
++---------------------------------------- Current commit hash: [3db4a9b] ----------------------------------------+
+GCC for commit [3db4a9b] already exists. Using existing binary.
+Compilation by gcc [3db4a9b] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 3db4a9b... re PR tree-optimization/16115 (double-destruction problem with argument passing via temporary (breaks auto_ptr))
+Bisecting: 88 revisions left to test after this (roughly 7 steps)
+[cae80939b64ac547c253fbb53f4c91c67d9e8ad5] re PR rtl-optimization/14782 (produces an unaligned data access at -O2)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [cae8093]
++---------------------------------------- Current commit hash: [cae8093] ----------------------------------------+
+GCC for commit [cae8093] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c34a3113
+Output of /tmp/gcc-cae8093/bin/gcc with -O3:
+checksum = c34a3113
+Output of /tmp/gcc-cae8093/bin/gcc with -O0:
+checksum = c34a3113
+----------------------------------------------------
+No local changes to save
+HEAD is now at cae8093... re PR rtl-optimization/14782 (produces an unaligned data access at -O2)
+[32m[     info][0m Current commit [cae8093] is good. Return value: 0
+
+Bisecting: 44 revisions left to test after this (roughly 6 steps)
+[a52a0a7feaf1813fac7d38a61341e0894f89fba6] Makefile.tpl (configure-build-[+module+], [...]): Pass [+extra_configure_args+].
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [a52a0a7]
++---------------------------------------- Current commit hash: [a52a0a7] ----------------------------------------+
+GCC for commit [a52a0a7] already exists. Using existing binary.
+Compilation by gcc [a52a0a7] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at a52a0a7... Makefile.tpl (configure-build-[+module+], [...]): Pass [+extra_configure_args+].
+Bisecting: 21 revisions left to test after this (roughly 5 steps)
+[56c5197bc8b2b3d331dea67fc8d7d313d1730ee6] re PR java/16113 (ICE: Segmentation fault when compiling bytecode with debugging info and try/catch)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [56c5197]
++---------------------------------------- Current commit hash: [56c5197] ----------------------------------------+
+GCC for commit [56c5197] already exists. Using existing binary.
+Compilation by gcc [56c5197] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 56c5197... re PR java/16113 (ICE: Segmentation fault when compiling bytecode with debugging info and try/catch)
+Bisecting: 10 revisions left to test after this (roughly 4 steps)
+[058b15c1dc2199a810e4f8793993dc4ede61bb0a] cp-tree.def (NEW_EXPR): Add a fourth slot.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [058b15c]
++---------------------------------------- Current commit hash: [058b15c] ----------------------------------------+
+GCC for commit [058b15c] already exists. Using existing binary.
+Compilation by gcc [058b15c] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 058b15c... cp-tree.def (NEW_EXPR): Add a fourth slot.
+Bisecting: 4 revisions left to test after this (roughly 3 steps)
+[44de5aeb00a66307236cb5b7ccfca1a21aaca080] alias.c (adjust_offset_for_component_ref): Use component_ref_field_offset.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [44de5ae]
++---------------------------------------- Current commit hash: [44de5ae] ----------------------------------------+
+GCC for commit [44de5ae] already exists. Using existing binary.
+Compilation by gcc [44de5ae] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 44de5ae... alias.c (adjust_offset_for_component_ref): Use component_ref_field_offset.
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[88c499cce7487e1d4b40e8c7d568db22ba59d90e] linker-map.gnu: Use wildcards for __basic_file::sys_open(FILE*, _Ios_Openmode).
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [88c499c]
++---------------------------------------- Current commit hash: [88c499c] ----------------------------------------+
+GCC for commit [88c499c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c34a3113
+Output of /tmp/gcc-88c499c/bin/gcc with -O3:
+checksum = c34a3113
+Output of /tmp/gcc-88c499c/bin/gcc with -O0:
+checksum = c34a3113
+----------------------------------------------------
+No local changes to save
+HEAD is now at 88c499c... linker-map.gnu: Use wildcards for __basic_file::sys_open(FILE*, _Ios_Openmode).
+[32m[     info][0m Current commit [88c499c] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[6264b0a68d820604c6b85a4c093de22bef6382cf] configure.in: Check for srcdir/winsup rather than build directory winsup.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0782 orig
+[32m[     info][0m Testing commit: [6264b0a]
++---------------------------------------- Current commit hash: [6264b0a] ----------------------------------------+
+GCC for commit [6264b0a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c34a3113
+Output of /tmp/gcc-6264b0a/bin/gcc with -O3:
+checksum = c34a3113
+Output of /tmp/gcc-6264b0a/bin/gcc with -O0:
+checksum = c34a3113
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6264b0a... configure.in: Check for srcdir/winsup rather than build directory winsup.
+[32m[     info][0m Current commit [6264b0a] is good. Return value: 0
+
+44de5aeb00a66307236cb5b7ccfca1a21aaca080 is the first bad commit
+commit 44de5aeb00a66307236cb5b7ccfca1a21aaca080
+Author: Richard Kenner <kenner@vlsi1.ultra.nyu.edu>
+Date:   Tue Jun 22 03:07:05 2004 +0000
+
+    alias.c (adjust_offset_for_component_ref): Use component_ref_field_offset.
+    
+    	* alias.c (adjust_offset_for_component_ref): Use
+    	component_ref_field_offset.
+    	* c-decl.c (build_array_declarator): Add news args for ARRAY_REF.
+    	* c-gimplify.c (gimplify_expr_stmt): Use alloc_stmt_list.
+    	(gimplify_decl_stmt): Call gimplify_type_sizes for type.
+    	For decl, call gimplify_one_sizepos and use statement list.
+    	(gimplify_compound_literal_expr): New arg PRE_P.
+    	Add statement to PRE_P list and return DECL.
+    	(c_gimplify_expr, case COMPOUND_LITERAL_EXPR): Add arg to
+    	gimplify_compound_literal_expr.
+    	* c-tree.h (getdecls): Deleted.
+    	* c-typeck.c (build_component_ref): Add operand for COMPONENT_REF.
+    	(build_array_ref): Add two operands for ARRAY_REF.
+    	(build_unary_op): Set TREE_INVARIANT and TREE_CONSTANT for
+    	COMPOUND_LITERAL_EXPR.
+    	* coverage.c (tree_coverage_counter_ref): Add new operands
+    	for ARRAY_REF.
+    	* emit-rtl.c (component_ref_for_mem_expr): Add new operand
+    	for COMPONENT_REF.
+    	(set_mem_attributes_minus_bitpos): Use array_ref_low_bound
+    	and array_ref_element_size.
+    	(widen_memory_access):Use component_ref_field_offset.
+    	* explow.c (update_nonlocal_goto_save_area): Add two operands
+    	for ARRAY_REF.
+    	* expr.c (array_ref_element_size, array_ref_low_bound): New functions.
+    	(component_ref_field_offset): Likewise.
+    	(get_inner_reference): Use them.
+    	(expand_expr_real_1, case ARRAY_REF): Use array_ref_low_bound.
+    	* fold-const.c (fold, case EQ_EXPR): Properly handle DECL_SIZE.
+    	(fold_read_from_constant_string): Use array_ref_low_bound.
+    	Verify that result is a character type.
+    	(build_fold_indirect_ref): Add two operands for ARRAY_REF.
+    	* function.c (expand_function_start): Likewise.
+    	* gimple-low.c (expand_var_p): Delete duplicated line.
+    	* gimplify.c: Add static decls for local functions.
+    	(cgraph.h): Now included.
+    	(create_tmp_var): Remove check for ARRAY_TYPE.
+    	(copy_if_shared_r): Look at bounds and sizes of types.
+    	(build_and_jump): Return alloc_stmt_list instead of build_empty_stmt.
+    	(gimplify_exit_expr, shortcut_cond_expr): Likewise.
+    	(gimplify_save_expr, gimple_push_cleanup): Likewise.
+    	(gimplify_init_constructor): Likewise.
+    	WANT_VALUE now bool.
+    	If empty list with no result wanted, return GS_UNHANDLED.
+    	Add additional operands for ARRAY_REF and COMPONENT_REF.
+    	(canonicalize_component_ref): Convert to &array[L].
+    	(gimplify_array_ref_to_plus): Use array_ref_element_size and
+    	array_ref_lower_bound.
+    	(build_addr_expr_with_type, build_addr_expr): New functions.
+    	(gimplify_compound_lval): WANT_LVALUE now bool.
+    	Major rework to allow handle_component_p and initialize and
+    	gimplify new operands for ARRAY_REF, ARRAY_RANGE_REF, and
+    	COMPONENT_REF.
+    	(gimplify_array_ref): Deleted.
+    	(gimplify_self_mod_expr): WANT_VALUE now bool.
+    	(gimplify_modify_expr): Gimplify to_p and from_p later.
+    	Factor out code into gimplify_modify_expr_rhs and call twice.
+    	Move variable-size code earlier and handle PLACEHOLDER_EXPR.
+    	(gimplify_modify_expr_rhs, gimplify_variable_sized_compare): New fns.
+    	(gimplify_addr_expr, case VIEW_CONVERT_EXPR): New case.
+    	(gimplify_expr, case ARRAY_REF): Delete special case.
+    	Instead handle like COMPONENT_REF; also do ARRAY_RANGE_REF,
+    	IMAGPART, and REALPART the same way.
+    	(gimplify_expr, case VIEW_CONVERT_EXPR): New case.
+    	(gimplify_expr): Call gimplify_variable_sized_compare if applicable.
+    	Call alloc_stmt_list instead of build_empty_stmt.
+    	Deal with _REF that's volatile.
+    	(gimplify_type_sizes, gimplify_one_sizepos): New functions.
+    	(unshare_body, unvisit_body): New functions.
+    	(gimplify_body): Call them.
+    	* stmt.c (expand_stack_alloc): Don't expand TYPE_MAX_VALUE.
+    	* stor-layout.c (get_pending_sizes): Don't change SAVE_EXPR_CONTEXT.
+    	* tree-alias-common.c (get_alias_var): Also skip ARRAY_RANGE_REF.
+    	* tree-cfg.c (tree_node_can_be_shared): Treat ARRAY_RANGE_REF
+    	like ARRAY_REF.
+    	(verify_expr, case ADDR_EXPR): Use handled_component_p.
+    	* tree-dfa.c (get_virtual_var): Likewise.
+    	* tree-dump.c (dequeue_and_dump, case COMPONENT_REF, ARRAY_REF):
+    	New cases to dump new operands; likewise for ARRAY_RANGE_REF.
+    	* tree-eh.c (tree_could_trap, case ARRAY_RANGE_REF): Like ARRAY_REF.
+    	* tree-gimple.c (is_gimple_addr_expr_arg): Add ARRAY_RANGE_REF
+    	and INDIRECT_REF.
+    	(get_base_address): Use handled_component_p.
+    	* tree-gimple.h (gimplify_type_sizes, gimplify_one_sizepos): New.
+    	* tree-line.c (walk_tree): Walk more things for types and decls.
+    	* tree-mudflap.c (mf_build_check_statement_for): Add new operands
+    	for ARRAY_REF and COMPONENT_REF.
+    	(mx_xform_derefs_1): Clean up usage of decl sizes.
+    	* tree-nested.c (build_addr): Use handled_component_p.
+    	(walk_stmts, case CATCH_EXPR): Add missing "break".
+    	(get_static_chain, get_frame_field): Add new operand for COMPONENT_REF.
+    	(finalize_nesting_tree_1): Likewise.
+    	(convert_nonlocal_reference, case ARRAY_RANGE_REF): Like ARRAY_REF
+    	and process additional operands.
+    	(convert_local_reference): Likewise.
+    	* tree-outof-ssa.c (discover_nonconstant_array_refs_r): Treat
+    	ARRAY_RANGE_REF similarly to ARRAY_REF.
+    	* tree-pretty-print.c (dump_generic_node, case QUAL_UNION_TYPE): Handle
+    	like RECORD_TYPE.
+    	(dump_generic_node, case COMPONENT_REF): Print offset operand.
+    	(dump_generic_node, case ARRAY_RANGE_REF): Treat like ARRAY_REF
+    	and print lower bound and element size for both.
+    	(op_prio, case ARRAY_RANGE_REF): Like ARRAY_REF.
+    	* tree-sra.c (csc_build_component_ref): Add new operand.
+    	(scalarize_call_expr): Use get_base_address.
+    	* tree-ssa-ccp.c (widen_bitfield): Clean up size handling.
+    	(maybe_fold_offset_to_array_ref): Rework to handle input having an
+    	ARRAY_REF, refine handling of lower bound, and add new operands
+    	for ARRAY_REF.
+    	(maybe_fold_to_component_ref): Add new operand for COMPONENT_REF.
+    	(maybe_fold_stmt_indirect): Only fold *&B to B if types match.
+    	(maybe_fold_stmt_addition): Only handle constant lower bound.
+    	* tree-ssa-operands.c (get_expr_operands): Minor rearrangements.
+    	Treat ARRAY_REF and ARRAY_RANGE_REF the same; look at extra operands.
+    	Look at new offset operand of COMPONENT_REF.
+    	* tree-ssa.c (set_is_used): Use handled_component_p.
+    	* tree.c (substitute_in_expr, case COMPONENT_REF): Add new operand.
+    	(stabilize_reference, case COMPONENT_REF): Likewise.
+    	(stabilize_reference, case ARRAY_RANGE_REF, ARRAY_REF): Similarly.
+    	(recompute_tree_invariant_for_addr_expr): Completely rework to
+    	be more precise.  Also set TREE_SIDE_EFFECTS.
+    	(build1_stat, case ARRAY_EXPR): Don't handle TREE_SIDE_EFFECTS here.
+    	(build2_stat, build3_stat, build4_stat): For references,
+    	propagate TREE_THIS_VOLATILE.
+    	(get_unwidened): Add new operand for COMPONENT_REF.
+    	(get_narrower): Likewise; use host_integerp for DECL_SIZE.
+    	* tree.def (COMPONENT_REF): Add new operand.
+    	(ARRAY_REF, ARRAY_RANGE_REF): Add two new operands.
+    	* tree.h (array_ref_element_size, array_ref_low_bound): New decls.
+    	(component_ref_field_offset): Likewise.
+    	* config/alpha/alpha.c (alpha_va_start): Add new op for COMPONENT_REF.
+    	(alpha_gimplify_va_arg): Likewise.
+    	* config/i386/i386.c (ix86_va_start, ix86_gimplify_va_arg): Likewise.
+    	* config/i860/i860.c (i860_va_start, i860_va_arg): Likewise.
+    	* config/iq2000/iq2000.c (iq2000_va_arg): Likewise.
+    	* config/mips/mips.c (mips_va_start, mips_va_arg): Likewise.
+    	* config/rs6000/rs6000.c (rs6000_va_start, rs6000_gimplify_va_arg):
+    	Likewise.
+    	* config/s390/s390.c (s390_va_start, s390_gimplify_va_arg): Likewise.
+    	* config/sh/sh.c (sh_va_start, sh_va_arg): Likewise.
+    	* config/stormy16/stormy16.c (xstormy1_expand_builin_va_start):
+    	Likewise.
+    	(xstormy16_expand_builtin_va_arg): Likewise.
+    	* config/xtensa/xtensa.c (xtensa_va_start, xtensa_va_arg): Likewise.
+    
+    	* cp/call.c (build_vfield_ref): Add new operand for COMPONENT_REF.
+    	(build_new_method_call): Likewise.
+    	* cp/decl.c (local_variable_p_walkfn): Don't walk into types.
+    	* cp/decl2.c (grok_array_decl): Add new operands for ARRAY_REF.
+    	(build_anon_union_vars): Add new operand for COMPONENT_REF.
+    	* cp/init.c (buld_new): Add new operand for ARRAY_REF.
+    	* cp/method.c (do_build_copy_constructor): New op for COMPONENT_REF.
+    	(do_build_assign_ref): Likewise.
+    	* cp/parser.c (cp_parser_direct_new_declarator): Add new operands
+    	for ARRAY_REF.
+    	(cp_parser_direct_declarator): Likewise.
+    	* cp/pt.c (tsubst): Likewise.
+    	(tsubst_copy, tsubst_copy_and_build): Likewise; also add new operand
+     	for COMPONENT_REF.
+    	* cp/semantics.c (finish_non_static_data_member): Add new operand
+    	for COMPONENT_REF.
+    	* cp/typeck.c (build_class_member_access_expr): Likewise.
+    	(build_class_member_access_expr, finish_class_member_access_expr):
+    	Likewise.
+    	(build_ptrmemfunc_access_expr): Likewise.
+    	(build_array_ref): Add new operands for ARRAY_REF.
+    	* cp/typeck2.c (split_nonconstant_init_1): Likewise; COMPONENT_REF too.
+    	* cp/tree.c (count_trees_r, no_linkage_helper): Don't walk in types.
+    
+    	* fortran/f95-lang.c (LANG_HOOKS_GIMPLE_BEFORE_INLINING): Deleted.
+    	* fortran/trans-array.c (gfc_conv_descriptor_data): Add operand
+    	for COMPONENT_REF.
+    	(gfc_conv_descriptor_offset, gfc_conv_descriptor_dtype): Likewise.
+    	(gfc_conv_descriptor_dimension, gfc_conv_descriptor_stride): Likewise.
+    	(gfc_conv_descriptor_lbound, gfc_conv_descriptor_ubound): Likewise.
+    	* fortran/trans-common.c (create_common): Likewise.
+    	* fortran/trans-expr.c (gfc_conv_component_ref): Likewise.
+    	* fortran/trans-io.c (set_parameter_value): Likewise.
+    	(set_parameter_ref, set_string, set_flag, io_result): Likewise.
+    	(transfer_expr): Likewise.
+    	* fortran/trans-decl.c (gfc_trans_auto_character_variable):
+    	Set up to get DECL_SIZE and DECL_SIZE_UNIT gimplified.
+    	(gfc_simplify_function): New function.
+    	(gfc_generate_function-code): Properly handle nested functions.
+    	* fortran/trans.c (gfc_build_array_ref): Add two new operands
+    	for ARRAY_REF.
+    
+    	* java/class.c (build_class_ref): Add new operand for COMPONENT_REF.
+    	(build_static_field_ref): Likewise and add new operands for ARRAY_REF.
+    	* java/constants.c (build_ref_from_constant_pool): Likewise.
+    	* java/expr.c (build_java_array_length_access): Likewise.
+    	(build_get_class, build_field_ref, build_known_method_ref): Likewise.
+    	(invoke_build_dtable, build_invokevirtual): Likewise.
+    	(build_invokeinterface, java_expand_expr): Likewise.
+    	(emit_init_test_initialization): Likewise.
+    	* java/java-gimplify.c (java_gimplify_new_array_init): Likewise.
+    	* java/parse.y (make_qualifed_name, build_array_ref): Likewise.
+    
+    	* objc/ojbc-act.c (generate_static_references): Add additional
+    	operands to ARRAY_REF.
+    	(generate_strings, build_method_prototype_list_template): Likewise.
+    	(generate_protocol_list): Likewise.
+    
+    From-SVN: r83474
+
+:040000 040000 db0bb5ea14ce4142b235c076ad39da4f34d7a275 e4ed55065e789f3b627d0f2501fe80b8b78d171c M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 44de5ae alias.c (adjust_offset_for_component_ref): Use component_ref_field_offset.
+Checking out files:  10% (5597/52649)   Checking out files:  11% (5792/52649)   Checking out files:  12% (6318/52649)   Checking out files:  13% (6845/52649)   Checking out files:  13% (7038/52649)   Checking out files:  14% (7371/52649)   Checking out files:  15% (7898/52649)   Checking out files:  15% (8385/52649)   Checking out files:  16% (8424/52649)   Checking out files:  17% (8951/52649)   Checking out files:  17% (9360/52649)   Checking out files:  18% (9477/52649)   Checking out files:  18% (9708/52649)   Checking out files:  19% (10004/52649)   Checking out files:  20% (10530/52649)   Checking out files:  21% (11057/52649)   Checking out files:  21% (11542/52649)   Checking out files:  22% (11583/52649)   Checking out files:  23% (12110/52649)   Checking out files:  24% (12636/52649)   Checking out files:  25% (13163/52649)   Checking out files:  25% (13351/52649)   Checking out files:  26% (13689/52649)   Checking out files:  27% (14216/52649)   Checking out files:  28% (14742/52649)   Checking out files:  29% (15269/52649)   Checking out files:  30% (15795/52649)   Checking out files:  30% (15878/52649)   Checking out files:  31% (16322/52649)   Checking out files:  32% (16848/52649)   Checking out files:  33% (17375/52649)   Checking out files:  34% (17901/52649)   Checking out files:  35% (18428/52649)   Checking out files:  36% (18954/52649)   Checking out files:  36% (19218/52649)   Checking out files:  37% (19481/52649)   Checking out files:  38% (20007/52649)   Checking out files:  39% (20534/52649)   Checking out files:  40% (21060/52649)   Checking out files:  41% (21587/52649)   Checking out files:  42% (22113/52649)   Checking out files:  42% (22522/52649)   Checking out files:  43% (22640/52649)   Checking out files:  44% (23166/52649)   Checking out files:  45% (23693/52649)   Checking out files:  46% (24219/52649)   Checking out files:  46% (24342/52649)   Checking out files:  47% (24746/52649)   Checking out files:  48% (25272/52649)   Checking out files:  49% (25799/52649)   Checking out files:  50% (26325/52649)   Checking out files:  51% (26851/52649)   Checking out files:  51% (27089/52649)   Checking out files:  52% (27378/52649)   Checking out files:  53% (27904/52649)   Checking out files:  54% (28431/52649)   Checking out files:  55% (28957/52649)   Checking out files:  56% (29484/52649)   Checking out files:  56% (29886/52649)   Checking out files:  57% (30010/52649)   Checking out files:  58% (30537/52649)   Checking out files:  59% (31063/52649)   Checking out files:  60% (31590/52649)   Checking out files:  61% (32116/52649)   Checking out files:  62% (32643/52649)   Checking out files:  62% (32975/52649)   Checking out files:  63% (33169/52649)   Checking out files:  64% (33696/52649)   Checking out files:  65% (34222/52649)   Checking out files:  66% (34749/52649)   Checking out files:  67% (35275/52649)   Checking out files:  68% (35802/52649)   Checking out files:  68% (36088/52649)   Checking out files:  69% (36328/52649)   Checking out files:  70% (36855/52649)   Checking out files:  71% (37381/52649)   Checking out files:  72% (37908/52649)   Checking out files:  73% (38434/52649)   Checking out files:  73% (38866/52649)   Checking out files:  74% (38961/52649)   Checking out files:  75% (39487/52649)   Checking out files:  76% (40014/52649)   Checking out files:  77% (40540/52649)   Checking out files:  78% (41067/52649)   Checking out files:  79% (41593/52649)   Checking out files:  79% (41784/52649)   Checking out files:  80% (42120/52649)   Checking out files:  81% (42646/52649)   Checking out files:  82% (43173/52649)   Checking out files:  83% (43699/52649)   Checking out files:  84% (44226/52649)   Checking out files:  85% (44752/52649)   Checking out files:  85% (44856/52649)   Checking out files:  86% (45279/52649)   Checking out files:  87% (45805/52649)   Checking out files:  88% (46332/52649)   Checking out files:  89% (46858/52649)   Checking out files:  90% (47385/52649)   Checking out files:  90% (47639/52649)   Checking out files:  91% (47911/52649)   Checking out files:  92% (48438/52649)   Checking out files:  93% (48964/52649)   Checking out files:  94% (49491/52649)   Checking out files:  94% (49788/52649)   Checking out files:  95% (50017/52649)   Checking out files:  96% (50544/52649)   Checking out files:  97% (51070/52649)   Checking out files:  98% (51597/52649)   Checking out files:  98% (52000/52649)   Checking out files:  99% (52123/52649)   Checking out files: 100% (52649/52649)   Checking out files: 100% (52649/52649), done.
+Previous HEAD position was 6264b0a... configure.in: Check for srcdir/winsup rather than build directory winsup.
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [44de5ae]
++---------------------------------------- Current commit hash: [44de5ae] ----------------------------------------+
+GCC for commit [44de5ae] already exists. Using existing binary.
+Compilation by gcc [44de5ae] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 44de5ae... alias.c (adjust_offset_for_component_ref): Use component_ref_field_offset.
+[32m[     info][0m Testing commit: [6264b0a]
++---------------------------------------- Current commit hash: [6264b0a] ----------------------------------------+
+GCC for commit [6264b0a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c34a3113
+Output of /tmp/gcc-6264b0a/bin/gcc with -O3:
+checksum = c34a3113
+Output of /tmp/gcc-6264b0a/bin/gcc with -O0:
+checksum = c34a3113
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6264b0a... configure.in: Check for srcdir/winsup rather than build directory winsup.
+[32m[     info][0m Current commit [6264b0a] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [44de5ae] with -O0:
+checksum = c34a3113
+[31m[  warning][0m Compilation by gcc [44de5ae] with -O1 failed. Continue...
+[31m[  warning][0m Compilation by gcc [44de5ae] with -O2 failed. Continue...
+[31m[  warning][0m Compilation by gcc [44de5ae] with -O3 failed. Continue...
+[31m[  warning][0m Compilation by gcc [44de5ae] with -Os failed. Continue...
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

@@ -1,0 +1,304 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 3bdfe755
+Output of gcc-4.3.0 with -Os:
+checksum = 3bdfe753
+Output of gcc-4.3.0 with -O0:
+checksum = 3bdfe755
+====================================================================
+[32m[     info][0m Good version found: gcc-3.4.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[a8e6c82ab09c4c7a8490bc3861049b1941b84c75] re PR c++/13574 (array default initializer in class lets gcc consume all memory and die)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [a8e6c82]
++---------------------------------------- Current commit hash: [a8e6c82] ----------------------------------------+
+GCC for commit [a8e6c82] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 3bdfe755
+Output of /tmp/gcc-a8e6c82/bin/gcc with -Os:
+checksum = 3bdfe755
+Output of /tmp/gcc-a8e6c82/bin/gcc with -O0:
+checksum = 3bdfe755
+----------------------------------------------------
+No local changes to save
+HEAD is now at a8e6c82... re PR c++/13574 (array default initializer in class lets gcc consume all memory and die)
+[32m[     info][0m Current commit [a8e6c82] is good. Return value: 0
+
+Bisecting: 15168 revisions left to test after this (roughly 14 steps)
+[024f1251b584243372c0413105b2230769f3e682] re PR c++/23691 (`mpl_::bool_<false>::value' is not a valid template argument for type `bool' because it is a non-constant expression)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [024f125]
++---------------------------------------- Current commit hash: [024f125] ----------------------------------------+
+GCC for commit [024f125] already exists. Using existing binary.
+Compilation by gcc [024f125] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 024f125... re PR c++/23691 (`mpl_::bool_<false>::value' is not a valid template argument for type `bool' because it is a non-constant expression)
+Bisecting: 7583 revisions left to test after this (roughly 13 steps)
+[65f4323d84b08d9d0ff450d6e6432abf0a4fa3fb] tree-cfg.c (find_taken_edge): Reject VAL begin NULL.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [65f4323]
++---------------------------------------- Current commit hash: [65f4323] ----------------------------------------+
+GCC for commit [65f4323] already exists. Using existing binary.
+Compilation by gcc [65f4323] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 65f4323... tree-cfg.c (find_taken_edge): Reject VAL begin NULL.
+Bisecting: 3791 revisions left to test after this (roughly 12 steps)
+[ef558756f2838de518a99a52caabe931e9af52b1] decl.c, [...]: Add 2004 to copyright years.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [ef55875]
++---------------------------------------- Current commit hash: [ef55875] ----------------------------------------+
+GCC for commit [ef55875] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 3bdfe755
+Output of /tmp/gcc-ef55875/bin/gcc with -Os:
+checksum = 3bdfe755
+Output of /tmp/gcc-ef55875/bin/gcc with -O0:
+checksum = 3bdfe755
+----------------------------------------------------
+No local changes to save
+HEAD is now at ef55875... decl.c, [...]: Add 2004 to copyright years.
+[32m[     info][0m Current commit [ef55875] is good. Return value: 0
+
+Bisecting: 1895 revisions left to test after this (roughly 11 steps)
+[0705d60230a25db8478d23bbd037351bf78309dc] * tree-ssa.c (propagate_into_addr): Properly test for LHR.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [0705d60]
++---------------------------------------- Current commit hash: [0705d60] ----------------------------------------+
+GCC for commit [0705d60] already exists. Using existing binary.
+Compilation by gcc [0705d60] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 0705d60... * tree-ssa.c (propagate_into_addr): Properly test for LHR.
+Bisecting: 947 revisions left to test after this (roughly 10 steps)
+[852c7b12c56a25dfbad50418d9c4a093b7463bd4] tree-ssa.c (verify_flow_insensitive_alias_info): Process every variable that may have aliases, not just tags.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [852c7b1]
++---------------------------------------- Current commit hash: [852c7b1] ----------------------------------------+
+GCC for commit [852c7b1] already exists. Using existing binary.
+Compilation by gcc [852c7b1] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 852c7b1... tree-ssa.c (verify_flow_insensitive_alias_info): Process every variable that may have aliases, not just tags.
+Bisecting: 473 revisions left to test after this (roughly 9 steps)
+[eeb32988362bb6942c88f173c2062aa23ec7684e] Reported by Roman Kennke <roman@ontographics.com> (bug #9331)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [eeb3298]
++---------------------------------------- Current commit hash: [eeb3298] ----------------------------------------+
+GCC for commit [eeb3298] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 3bdfe755
+Output of /tmp/gcc-eeb3298/bin/gcc with -Os:
+checksum = 3bdfe755
+Output of /tmp/gcc-eeb3298/bin/gcc with -O0:
+checksum = 3bdfe755
+----------------------------------------------------
+No local changes to save
+HEAD is now at eeb3298... Reported by Roman Kennke <roman@ontographics.com> (bug #9331)
+[32m[     info][0m Current commit [eeb3298] is good. Return value: 0
+
+Bisecting: 236 revisions left to test after this (roughly 8 steps)
+[3601f00362e227160cae47efbb179a579f5a5f51] re PR c++/13092 (Accepts invalid pointer-to-member conversion)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [3601f00]
++---------------------------------------- Current commit hash: [3601f00] ----------------------------------------+
+GCC for commit [3601f00] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 3bdfe755
+Output of /tmp/gcc-3601f00/bin/gcc with -Os:
+checksum = 3bdfe755
+Output of /tmp/gcc-3601f00/bin/gcc with -O0:
+checksum = 3bdfe755
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3601f00... re PR c++/13092 (Accepts invalid pointer-to-member conversion)
+[32m[     info][0m Current commit [3601f00] is good. Return value: 0
+
+Bisecting: 118 revisions left to test after this (roughly 7 steps)
+[392abf6bf98fae1c29d777be3b0eed41c43cd9f6] System.java (static): Set http.agent system property when not yet set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [392abf6]
++---------------------------------------- Current commit hash: [392abf6] ----------------------------------------+
+GCC for commit [392abf6] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 3bdfe755
+Output of /tmp/gcc-392abf6/bin/gcc with -Os:
+checksum = 3bdfe755
+Output of /tmp/gcc-392abf6/bin/gcc with -O0:
+checksum = 3bdfe755
+----------------------------------------------------
+No local changes to save
+HEAD is now at 392abf6... System.java (static): Set http.agent system property when not yet set.
+[32m[     info][0m Current commit [392abf6] is good. Return value: 0
+
+Bisecting: 59 revisions left to test after this (roughly 6 steps)
+[5d038c4cb11480bb8ee68bdc71846a0abfe11f02] bitmap.c: Use type-safe memory allocation macros from libiberty.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [5d038c4]
++---------------------------------------- Current commit hash: [5d038c4] ----------------------------------------+
+GCC for commit [5d038c4] already exists. Using existing binary.
+Compilation by gcc [5d038c4] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 5d038c4... bitmap.c: Use type-safe memory allocation macros from libiberty.
+Bisecting: 29 revisions left to test after this (roughly 5 steps)
+[b50a5a953bb83c9f993b75785a65164b627cff26] libiberty.h (XNEW, [...]): Move here from libcpp/internal.h.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [b50a5a9]
++---------------------------------------- Current commit hash: [b50a5a9] ----------------------------------------+
+GCC for commit [b50a5a9] already exists. Using existing binary.
+Compilation by gcc [b50a5a9] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at b50a5a9... libiberty.h (XNEW, [...]): Move here from libcpp/internal.h.
+Bisecting: 14 revisions left to test after this (roughly 4 steps)
+[5aa33bdb4f75939b9467a4580aa13bb6997f192c] Makefile.in (site.exp): Add HOSTCC and HOSTCFLAGS to site.exp.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [5aa33bd]
++---------------------------------------- Current commit hash: [5aa33bd] ----------------------------------------+
+GCC for commit [5aa33bd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 3bdfe755
+Output of /tmp/gcc-5aa33bd/bin/gcc with -Os:
+checksum = 3bdfe755
+Output of /tmp/gcc-5aa33bd/bin/gcc with -O0:
+checksum = 3bdfe755
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5aa33bd... Makefile.in (site.exp): Add HOSTCC and HOSTCFLAGS to site.exp.
+[32m[     info][0m Current commit [5aa33bd] is good. Return value: 0
+
+Bisecting: 7 revisions left to test after this (roughly 3 steps)
+[bbc630f5d95b858bcea31cec1ce2f1d25c6b6fc6] re PR tree-optimization/16688 (ICE in group_aliases, at tree-ssa-alias.c:1234)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [bbc630f]
++---------------------------------------- Current commit hash: [bbc630f] ----------------------------------------+
+GCC for commit [bbc630f] already exists. Using existing binary.
+Compilation by gcc [bbc630f] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at bbc630f... re PR tree-optimization/16688 (ICE in group_aliases, at tree-ssa-alias.c:1234)
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[ef05818b76a645f094e89f0804611d19c677f03f] Makefile.am: Rename jar binary to fastjar.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [ef05818]
++---------------------------------------- Current commit hash: [ef05818] ----------------------------------------+
+GCC for commit [ef05818] already exists. Using existing binary.
+Compilation by gcc [ef05818] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at ef05818... Makefile.am: Rename jar binary to fastjar.
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[d91ba7b021e59c8ab455b04214a8d0a1925befaf] re PR c++/16277 (Wrong code with conditionals in initializers)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [d91ba7b]
++---------------------------------------- Current commit hash: [d91ba7b] ----------------------------------------+
+GCC for commit [d91ba7b] already exists. Using existing binary.
+Compilation by gcc [d91ba7b] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at d91ba7b... re PR c++/16277 (Wrong code with conditionals in initializers)
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[ab8907ef75b71c987932a299bddf04cb73907c69] expr.c (expand_expr_real_1): Don't handle non-local variables.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0270 orig
+[32m[     info][0m Testing commit: [ab8907e]
++---------------------------------------- Current commit hash: [ab8907e] ----------------------------------------+
+GCC for commit [ab8907e] already exists. Using existing binary.
+Compilation by gcc [ab8907e] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at ab8907e... expr.c (expand_expr_real_1): Don't handle non-local variables.
+ab8907ef75b71c987932a299bddf04cb73907c69 is the first bad commit
+commit ab8907ef75b71c987932a299bddf04cb73907c69
+Author: Richard Henderson <rth@redhat.com>
+Date:   Fri Jul 23 15:37:23 2004 -0700
+
+    expr.c (expand_expr_real_1): Don't handle non-local variables.
+    
+            * expr.c (expand_expr_real_1): Don't handle non-local variables.
+            * expr.h (fix_lexical_addr): Remove.
+            * function.c (NEED_SEPARATE_AP): Remove.
+            (fix_lexical_addr): Remove.
+            * tree-alias-common.c (get_alias_var_decl): Check TREE_STATIC,
+            not null decl_function_context.
+            (create_alias_vars): Likewise.
+            * tree-cfg.c (make_ctrl_stmt_edges): Don't check for non-local labels.
+            (simple_goto_p): Likewise.
+            * tree-dfa.c (add_referenced_var): Don't check for non-local variables.
+            * tree-ssa-ccp.c (get_default_value): Likewise.
+            * tree-tailcall.c (suitable_for_tail_opt_p): Likewise.
+            * tree.c (needs_to_live_in_memory): Likewise.
+            * tree-flow-inline.h (may_be_aliased): Move...
+            * tree-ssa-alias.c (may_be_aliased): ... here.  Enhance check for
+            when TREE_STATIC variables may be addressable.
+    
+    From-SVN: r85099
+
+:040000 040000 0b18902818d16f73cfa79fe859371b4213c44693 19d64162651acee88a98ac9f89247af4ac32b2f3 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: ab8907e expr.c (expand_expr_real_1): Don't handle non-local variables.
+Checking out files:  10% (5291/51907)   Checking out files:  11% (5710/51907)   Checking out files:  12% (6229/51907)   Checking out files:  12% (6656/51907)   Checking out files:  13% (6748/51907)   Checking out files:  14% (7267/51907)   Checking out files:  15% (7787/51907)   Checking out files:  15% (7951/51907)   Checking out files:  16% (8306/51907)   Checking out files:  17% (8825/51907)   Checking out files:  17% (9178/51907)   Checking out files:  18% (9344/51907)   Checking out files:  19% (9863/51907)   Checking out files:  20% (10382/51907)   Checking out files:  21% (10901/51907)   Checking out files:  21% (11248/51907)   Checking out files:  22% (11420/51907)   Checking out files:  23% (11939/51907)   Checking out files:  24% (12458/51907)   Checking out files:  25% (12977/51907)   Checking out files:  26% (13496/51907)   Checking out files:  26% (13860/51907)   Checking out files:  27% (14015/51907)   Checking out files:  28% (14534/51907)   Checking out files:  29% (15054/51907)   Checking out files:  30% (15573/51907)   Checking out files:  31% (16092/51907)   Checking out files:  32% (16611/51907)   Checking out files:  32% (16876/51907)   Checking out files:  33% (17130/51907)   Checking out files:  34% (17649/51907)   Checking out files:  35% (18168/51907)   Checking out files:  36% (18687/51907)   Checking out files:  37% (19206/51907)   Checking out files:  38% (19725/51907)   Checking out files:  38% (20178/51907)   Checking out files:  39% (20244/51907)   Checking out files:  40% (20763/51907)   Checking out files:  41% (21282/51907)   Checking out files:  42% (21801/51907)   Checking out files:  43% (22321/51907)   Checking out files:  43% (22409/51907)   Checking out files:  44% (22840/51907)   Checking out files:  45% (23359/51907)   Checking out files:  46% (23878/51907)   Checking out files:  47% (24397/51907)   Checking out files:  47% (24501/51907)   Checking out files:  48% (24916/51907)   Checking out files:  49% (25435/51907)   Checking out files:  50% (25954/51907)   Checking out files:  51% (26473/51907)   Checking out files:  52% (26992/51907)   Checking out files:  52% (27065/51907)   Checking out files:  53% (27511/51907)   Checking out files:  54% (28030/51907)   Checking out files:  55% (28549/51907)   Checking out files:  56% (29068/51907)   Checking out files:  57% (29587/51907)   Checking out files:  57% (29641/51907)   Checking out files:  58% (30107/51907)   Checking out files:  59% (30626/51907)   Checking out files:  60% (31145/51907)   Checking out files:  61% (31664/51907)   Checking out files:  62% (32183/51907)   Checking out files:  62% (32544/51907)   Checking out files:  63% (32702/51907)   Checking out files:  64% (33221/51907)   Checking out files:  65% (33740/51907)   Checking out files:  66% (34259/51907)   Checking out files:  67% (34778/51907)   Checking out files:  68% (35297/51907)   Checking out files:  68% (35502/51907)   Checking out files:  69% (35816/51907)   Checking out files:  70% (36335/51907)   Checking out files:  71% (36854/51907)   Checking out files:  72% (37374/51907)   Checking out files:  73% (37893/51907)   Checking out files:  73% (38218/51907)   Checking out files:  74% (38412/51907)   Checking out files:  75% (38931/51907)   Checking out files:  76% (39450/51907)   Checking out files:  77% (39969/51907)   Checking out files:  78% (40488/51907)   Checking out files:  78% (40899/51907)   Checking out files:  79% (41007/51907)   Checking out files:  80% (41526/51907)   Checking out files:  81% (42045/51907)   Checking out files:  82% (42564/51907)   Checking out files:  83% (43083/51907)   Checking out files:  84% (43602/51907)   Checking out files:  84% (43705/51907)   Checking out files:  85% (44121/51907)   Checking out files:  86% (44641/51907)   Checking out files:  87% (45160/51907)   Checking out files:  88% (45679/51907)   Checking out files:  89% (46198/51907)   Checking out files:  89% (46579/51907)   Checking out files:  90% (46717/51907)   Checking out files:  91% (47236/51907)   Checking out files:  92% (47755/51907)   Checking out files:  93% (48274/51907)   Checking out files:  93% (48355/51907)   Checking out files:  94% (48793/51907)   Checking out files:  95% (49312/51907)   Checking out files:  96% (49831/51907)   Checking out files:  96% (50220/51907)   Checking out files:  97% (50350/51907)   Checking out files:  98% (50869/51907)   Checking out files:  99% (51388/51907)   Checking out files: 100% (51907/51907)   Checking out files: 100% (51907/51907), done.
+Previous HEAD position was ab8907e... expr.c (expand_expr_real_1): Don't handle non-local variables.
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [ab8907e]
++---------------------------------------- Current commit hash: [ab8907e] ----------------------------------------+
+GCC for commit [ab8907e] already exists. Using existing binary.
+Compilation by gcc [ab8907e] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at ab8907e... expr.c (expand_expr_real_1): Don't handle non-local variables.
+[32m[     info][0m Testing commit: [5aa33bd]
++---------------------------------------- Current commit hash: [5aa33bd] ----------------------------------------+
+GCC for commit [5aa33bd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 3bdfe755
+Output of /tmp/gcc-5aa33bd/bin/gcc with -Os:
+checksum = 3bdfe755
+Output of /tmp/gcc-5aa33bd/bin/gcc with -O0:
+checksum = 3bdfe755
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5aa33bd... Makefile.in (site.exp): Add HOSTCC and HOSTCFLAGS to site.exp.
+[32m[     info][0m Current commit [5aa33bd] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [ab8907e] with -O0:
+checksum = 3bdfe755
+Output of gcc [ab8907e] with -O1:
+checksum = 3bdfe755
+[31m[  warning][0m Compilation by gcc [ab8907e] with -O2 failed. Continue...
+[31m[  warning][0m Compilation by gcc [ab8907e] with -O3 failed. Continue...
+[31m[  warning][0m Compilation by gcc [ab8907e] with -Os failed. Continue...
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

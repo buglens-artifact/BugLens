@@ -1,0 +1,9 @@
+early-inlining
+inline-functions
+inline-small-functions
+ipa-reference
+tree-ccp
+tree-dce
+tree-fre
+tree-loop-im
+unit-at-a-time

@@ -1,0 +1,10 @@
+inline-small-functions
+ipa-pure-const
+tree-dce
+tree-fre
+tree-loop-im
+tree-loop-optimize
+tree-salias
+tree-ter
+tree-vrp
+unit-at-a-time

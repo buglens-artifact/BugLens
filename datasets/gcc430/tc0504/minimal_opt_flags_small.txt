@@ -1,0 +1,5 @@
+cse-follow-jumps
+rerun-cse-after-loop
+tree-dce
+tree-loop-im
+tree-loop-optimize

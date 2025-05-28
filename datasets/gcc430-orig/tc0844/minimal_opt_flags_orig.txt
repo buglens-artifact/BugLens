@@ -1,0 +1,10 @@
+dse
+early-inlining
+inline-functions
+inline-functions-called-once
+inline-small-functions
+ipa-reference
+tree-ccp
+tree-dce
+tree-sra
+unit-at-a-time

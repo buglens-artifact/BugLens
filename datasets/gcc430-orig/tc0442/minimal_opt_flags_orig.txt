@@ -1,0 +1,5 @@
+inline-functions
+inline-small-functions
+tree-dce
+tree-dse
+unit-at-a-time

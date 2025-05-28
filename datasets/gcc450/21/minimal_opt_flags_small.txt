@@ -1,0 +1,5 @@
+caller-saves
+if-conversion
+inline-small-functions
+optimize-register-move
+regmove

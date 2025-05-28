@@ -1,0 +1,1 @@
+20b551a IRgen: Always use i8 arrays to access union bit-fields. This is ugly, but matches how we currently handle structs, and this correctly handles -fno-bitfield-type-align.

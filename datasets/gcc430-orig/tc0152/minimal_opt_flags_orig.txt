@@ -1,0 +1,16 @@
+guess-branch-probability
+inline-functions
+inline-small-functions
+ipa-reference
+strict-aliasing
+tree-copyrename
+tree-dce
+tree-dominator-opts
+tree-dse
+tree-fre
+tree-loop-im
+tree-loop-optimize
+tree-sra
+tree-vrp
+unit-at-a-time
+unswitch-loops

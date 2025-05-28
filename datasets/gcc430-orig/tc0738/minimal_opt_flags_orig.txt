@@ -1,0 +1,6 @@
+early-inlining
+inline-functions
+inline-small-functions
+ipa-reference
+tree-fre
+unit-at-a-time

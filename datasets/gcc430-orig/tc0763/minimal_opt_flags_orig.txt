@@ -1,0 +1,14 @@
+early-inlining
+inline-functions
+inline-small-functions
+tree-ccp
+tree-dce
+tree-dse
+tree-loop-im
+tree-loop-optimize
+tree-pre
+tree-salias
+tree-scev-cprop
+tree-vectorize
+tree-vrp
+unit-at-a-time

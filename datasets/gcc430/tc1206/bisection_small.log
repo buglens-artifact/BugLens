@@ -1,0 +1,369 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+-1
+Output of gcc-4.3.0 with -Os:
+1
+Output of gcc-4.3.0 with -O0:
+-1
+====================================================================
+[32m[     info][0m Good version found: gcc-4.1.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[abc088aad79d47b40da8a26e87815db09ab2d6eb] re PR c++/8355 (befriending a template specialization in another namespace)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [abc088a]
++---------------------------------------- Current commit hash: [abc088a] ----------------------------------------+
+GCC for commit [abc088a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-abc088a/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-abc088a/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at abc088a... re PR c++/8355 (befriending a template specialization in another namespace)
+[32m[     info][0m Current commit [abc088a] is good. Return value: 0
+
+Bisecting: 6978 revisions left to test after this (roughly 13 steps)
+[ad8e8d0b465e6dd9d9db4988de7b5c524bb4d85d] re PR inline-asm/28686 (ebp from clobber list used as operand)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [ad8e8d0]
++---------------------------------------- Current commit hash: [ad8e8d0] ----------------------------------------+
+GCC for commit [ad8e8d0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -Os:
+1
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at ad8e8d0... re PR inline-asm/28686 (ebp from clobber list used as operand)
+[32m[     info][0m Current commit [ad8e8d0] is bad. Return value: 1
+
+Bisecting: 3489 revisions left to test after this (roughly 12 steps)
+[3c618f8732814407a5c98146fa24761ba7dddd78] random (xor_combine<>::operator<<): Fix typo.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [3c618f8]
++---------------------------------------- Current commit hash: [3c618f8] ----------------------------------------+
+GCC for commit [3c618f8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-3c618f8/bin/gcc with -Os:
+1
+Output of /tmp/gcc-3c618f8/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3c618f8... random (xor_combine<>::operator<<): Fix typo.
+[32m[     info][0m Current commit [3c618f8] is bad. Return value: 1
+
+Bisecting: 1744 revisions left to test after this (roughly 11 steps)
+[2003abbddeed761ee8ce5442a84b4502656433f5] re PR middle-end/26316 (loop-invariant miscompiles openmp.c)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [2003abb]
++---------------------------------------- Current commit hash: [2003abb] ----------------------------------------+
+GCC for commit [2003abb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-2003abb/bin/gcc with -Os:
+1
+Output of /tmp/gcc-2003abb/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2003abb... re PR middle-end/26316 (loop-invariant miscompiles openmp.c)
+[32m[     info][0m Current commit [2003abb] is bad. Return value: 1
+
+Bisecting: 871 revisions left to test after this (roughly 10 steps)
+[42a27024e950a9eb30f7ca3f24d32a96e0afef59] stl_tree.h (_Rb_tree<>::insert_unique): Rename to _M_insert_unique.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [42a2702]
++---------------------------------------- Current commit hash: [42a2702] ----------------------------------------+
+GCC for commit [42a2702] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-42a2702/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-42a2702/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 42a2702... stl_tree.h (_Rb_tree<>::insert_unique): Rename to _M_insert_unique.
+[32m[     info][0m Current commit [42a2702] is good. Return value: 0
+
+Bisecting: 435 revisions left to test after this (roughly 9 steps)
+[7744bbe369fed74daa92a7ca77c724f5feab5f27] emmintrin.h (_mm_cvtsd_f64): Add missing Intel intrinsic.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [7744bbe]
++---------------------------------------- Current commit hash: [7744bbe] ----------------------------------------+
+GCC for commit [7744bbe] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-7744bbe/bin/gcc with -Os:
+1
+Output of /tmp/gcc-7744bbe/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7744bbe... emmintrin.h (_mm_cvtsd_f64): Add missing Intel intrinsic.
+[32m[     info][0m Current commit [7744bbe] is bad. Return value: 1
+
+Bisecting: 217 revisions left to test after this (roughly 8 steps)
+[6e9ca1fa55a75ea831596c20d817c36ef1b1f320] postreload-gcse.c (gcse_after_reload_main): Make it static.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [6e9ca1f]
++---------------------------------------- Current commit hash: [6e9ca1f] ----------------------------------------+
+GCC for commit [6e9ca1f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-6e9ca1f/bin/gcc with -Os:
+1
+Output of /tmp/gcc-6e9ca1f/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6e9ca1f... postreload-gcse.c (gcse_after_reload_main): Make it static.
+[32m[     info][0m Current commit [6e9ca1f] is bad. Return value: 1
+
+Bisecting: 108 revisions left to test after this (roughly 7 steps)
+[05b1e169b99ff16d8efc0ba5148782b7cb7ffde7] Grr, wrong version
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [05b1e16]
++---------------------------------------- Current commit hash: [05b1e16] ----------------------------------------+
+GCC for commit [05b1e16] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-05b1e16/bin/gcc with -Os:
+1
+Output of /tmp/gcc-05b1e16/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 05b1e16... Grr, wrong version
+[32m[     info][0m Current commit [05b1e16] is bad. Return value: 1
+
+Bisecting: 54 revisions left to test after this (roughly 6 steps)
+[7d0720375952abd2c48d95f4cf752eff7d732e48] i386.md (set_got): Update.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [7d07203]
++---------------------------------------- Current commit hash: [7d07203] ----------------------------------------+
+GCC for commit [7d07203] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-7d07203/bin/gcc with -Os:
+1
+Output of /tmp/gcc-7d07203/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7d07203... i386.md (set_got): Update.
+[32m[     info][0m Current commit [7d07203] is bad. Return value: 1
+
+Bisecting: 26 revisions left to test after this (roughly 5 steps)
+[0a821a922eadddf1c9a1e8f558ac669df3f2e374] fortran ChangeLog entry:
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [0a821a9]
++---------------------------------------- Current commit hash: [0a821a9] ----------------------------------------+
+GCC for commit [0a821a9] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-0a821a9/bin/gcc with -Os:
+1
+Output of /tmp/gcc-0a821a9/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0a821a9... fortran ChangeLog entry:
+[32m[     info][0m Current commit [0a821a9] is bad. Return value: 1
+
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[2b9a33aeea3d49f4e7038ecdc9d96b6220593d15] decl.c (gfc_match_function_decl): Correctly error out in case of omitted function argument list.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [2b9a33a]
++---------------------------------------- Current commit hash: [2b9a33a] ----------------------------------------+
+GCC for commit [2b9a33a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-2b9a33a/bin/gcc with -Os:
+1
+Output of /tmp/gcc-2b9a33a/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2b9a33a... decl.c (gfc_match_function_decl): Correctly error out in case of omitted function argument list.
+[32m[     info][0m Current commit [2b9a33a] is bad. Return value: 1
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[083cad550da4f24cb393626c74c4b2d144a11e02] tm.texi (TARGET_ASM_EMIT_EXCEPT_TABLE_LABEL): Document.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [083cad5]
++---------------------------------------- Current commit hash: [083cad5] ----------------------------------------+
+GCC for commit [083cad5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-083cad5/bin/gcc with -Os:
+1
+Output of /tmp/gcc-083cad5/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 083cad5... tm.texi (TARGET_ASM_EMIT_EXCEPT_TABLE_LABEL): Document.
+[32m[     info][0m Current commit [083cad5] is bad. Return value: 1
+
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[84be0a79a871c4fdb6af0439940ed48e7dba461b] * de.po: Update.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [84be0a7]
++---------------------------------------- Current commit hash: [84be0a7] ----------------------------------------+
+GCC for commit [84be0a7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-84be0a7/bin/gcc with -Os:
+1
+Output of /tmp/gcc-84be0a7/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 84be0a7... * de.po: Update.
+[32m[     info][0m Current commit [84be0a7] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[a6f778b21e8ed7c51e7b7fea73e2105c0996095c] re PR tree-optimization/18527 (cannot determine number of iterations for loops with <=)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [a6f778b]
++---------------------------------------- Current commit hash: [a6f778b] ----------------------------------------+
+GCC for commit [a6f778b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-a6f778b/bin/gcc with -Os:
+1
+Output of /tmp/gcc-a6f778b/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at a6f778b... re PR tree-optimization/18527 (cannot determine number of iterations for loops with <=)
+[32m[     info][0m Current commit [a6f778b] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[782e98753b7ce46cc3fa79253d57b3365149fa54] re PR libgcj/23499 (libgcj/classpath create empty directory $PREFIX/share/classpath/api/)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1206 small
+[32m[     info][0m Testing commit: [782e987]
++---------------------------------------- Current commit hash: [782e987] ----------------------------------------+
+GCC for commit [782e987] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-782e987/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-782e987/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 782e987... re PR libgcj/23499 (libgcj/classpath create empty directory $PREFIX/share/classpath/api/)
+[32m[     info][0m Current commit [782e987] is good. Return value: 0
+
+a6f778b21e8ed7c51e7b7fea73e2105c0996095c is the first bad commit
+commit a6f778b21e8ed7c51e7b7fea73e2105c0996095c
+Author: Zdenek Dvorak <dvorakz@suse.cz>
+Date:   Fri Jan 6 21:22:56 2006 +0100
+
+    re PR tree-optimization/18527 (cannot determine number of iterations for loops with <=)
+    
+    	PR tree-optimization/18527
+    	* tree-ssa-loop-niter.c (number_of_iterations_cond,
+    	number_of_iterations_special, number_of_iterations_exit):
+    	Move base and step of an iv to a single structure.  Add
+    	no_overflow flag, and use it in # of iterations analysis.
+    	* tree-scalar-evolution.c (analyze_scalar_evolution_in_loop): Add
+    	folded_casts argument.
+    	(simple_iv): Pass base and step in a structure.  Set no_overflow
+    	flag.
+    	(scev_const_prop): Add argument to analyze_scalar_evolution_in_loop.
+    	Evaluate expensiveness of computing # of iterations instead of
+    	the final expression.
+    	* tree-scalar-evolution.h (affine_iv): New structure.
+    	(simple_iv): Declaration changed.
+    	* tree-chrec.c (chrec_apply): Handle chrecs containing symbols.
+    	* tree-ssa-loop-ivopts.c (determine_biv_step, find_givs_in_stmt_scev,
+    	find_givs_in_stmt): Changed due to simple_iv change.
+    
+    	* gcc.dg/tree-ssa/loop-15.c: New test.
+    
+    From-SVN: r109427
+
+:040000 040000 e714e470507fe29be4e4d07d405030cc7bc7eb51 d83247457f1d02a14cc80bc06f2e20e466c80a42 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: a6f778b re PR tree-optimization/18527 (cannot determine number of iterations for loops with <=)
+Checking out files:  12% (5073/39506)   Checking out files:  13% (5136/39506)   Checking out files:  14% (5531/39506)   Checking out files:  15% (5926/39506)   Checking out files:  16% (6321/39506)   Checking out files:  17% (6717/39506)   Checking out files:  18% (7112/39506)   Checking out files:  18% (7383/39506)   Checking out files:  19% (7507/39506)   Checking out files:  20% (7902/39506)   Checking out files:  21% (8297/39506)   Checking out files:  22% (8692/39506)   Checking out files:  23% (9087/39506)   Checking out files:  24% (9482/39506)   Checking out files:  25% (9877/39506)   Checking out files:  26% (10272/39506)   Checking out files:  27% (10667/39506)   Checking out files:  28% (11062/39506)   Checking out files:  29% (11457/39506)   Checking out files:  30% (11852/39506)   Checking out files:  31% (12247/39506)   Checking out files:  32% (12642/39506)   Checking out files:  33% (13037/39506)   Checking out files:  34% (13433/39506)   Checking out files:  34% (13496/39506)   Checking out files:  35% (13828/39506)   Checking out files:  36% (14223/39506)   Checking out files:  37% (14618/39506)   Checking out files:  38% (15013/39506)   Checking out files:  39% (15408/39506)   Checking out files:  40% (15803/39506)   Checking out files:  41% (16198/39506)   Checking out files:  42% (16593/39506)   Checking out files:  43% (16988/39506)   Checking out files:  44% (17383/39506)   Checking out files:  44% (17408/39506)   Checking out files:  45% (17778/39506)   Checking out files:  46% (18173/39506)   Checking out files:  47% (18568/39506)   Checking out files:  48% (18963/39506)   Checking out files:  49% (19358/39506)   Checking out files:  50% (19753/39506)   Checking out files:  51% (20149/39506)   Checking out files:  52% (20544/39506)   Checking out files:  53% (20939/39506)   Checking out files:  54% (21334/39506)   Checking out files:  55% (21729/39506)   Checking out files:  56% (22124/39506)   Checking out files:  56% (22473/39506)   Checking out files:  57% (22519/39506)   Checking out files:  58% (22914/39506)   Checking out files:  59% (23309/39506)   Checking out files:  60% (23704/39506)   Checking out files:  61% (24099/39506)   Checking out files:  62% (24494/39506)   Checking out files:  63% (24889/39506)   Checking out files:  64% (25284/39506)   Checking out files:  65% (25679/39506)   Checking out files:  66% (26074/39506)   Checking out files:  67% (26470/39506)   Checking out files:  68% (26865/39506)   Checking out files:  69% (27260/39506)   Checking out files:  70% (27655/39506)   Checking out files:  71% (28050/39506)   Checking out files:  71% (28401/39506)   Checking out files:  72% (28445/39506)   Checking out files:  73% (28840/39506)   Checking out files:  74% (29235/39506)   Checking out files:  75% (29630/39506)   Checking out files:  76% (30025/39506)   Checking out files:  77% (30420/39506)   Checking out files:  78% (30815/39506)   Checking out files:  79% (31210/39506)   Checking out files:  80% (31605/39506)   Checking out files:  81% (32000/39506)   Checking out files:  82% (32395/39506)   Checking out files:  83% (32790/39506)   Checking out files:  84% (33186/39506)   Checking out files:  85% (33581/39506)   Checking out files:  86% (33976/39506)   Checking out files:  87% (34371/39506)   Checking out files:  88% (34766/39506)   Checking out files:  88% (34955/39506)   Checking out files:  89% (35161/39506)   Checking out files:  90% (35556/39506)   Checking out files:  91% (35951/39506)   Checking out files:  92% (36346/39506)   Checking out files:  93% (36741/39506)   Checking out files:  94% (37136/39506)   Checking out files:  95% (37531/39506)   Checking out files:  96% (37926/39506)   Checking out files:  97% (38321/39506)   Checking out files:  98% (38716/39506)   Checking out files:  99% (39111/39506)   Checking out files: 100% (39506/39506)   Checking out files: 100% (39506/39506), done.
+Previous HEAD position was 782e987... re PR libgcj/23499 (libgcj/classpath create empty directory $PREFIX/share/classpath/api/)
+HEAD is now at 823dd93... re PR c++/16370 (__attribute__((deprecated)) not useful on classes, and ugly function name listed for deperecation warnings on constructor)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [a6f778b]
++---------------------------------------- Current commit hash: [a6f778b] ----------------------------------------+
+GCC for commit [a6f778b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-a6f778b/bin/gcc with -Os:
+1
+Output of /tmp/gcc-a6f778b/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at a6f778b... re PR tree-optimization/18527 (cannot determine number of iterations for loops with <=)
+[32m[     info][0m Current commit [a6f778b] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [782e987]
++---------------------------------------- Current commit hash: [782e987] ----------------------------------------+
+GCC for commit [782e987] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+-1
+Output of /tmp/gcc-782e987/bin/gcc with -Os:
+-1
+Output of /tmp/gcc-782e987/bin/gcc with -O0:
+-1
+----------------------------------------------------
+No local changes to save
+HEAD is now at 782e987... re PR libgcj/23499 (libgcj/classpath create empty directory $PREFIX/share/classpath/api/)
+[32m[     info][0m Current commit [782e987] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [a6f778b] with -O0:
+-1
+Output of gcc [a6f778b] with -O1:
+1
+Output of gcc [a6f778b] with -O2:
+-1
+Output of gcc [a6f778b] with -O3:
+-1
+Output of gcc [a6f778b] with -Os:
+1
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

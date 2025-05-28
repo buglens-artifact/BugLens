@@ -1,0 +1,295 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = caf38d5
+Output of gcc-4.3.0 with -O3:
+checksum = caf38dd
+Output of gcc-4.3.0 with -O0:
+checksum = caf38d5
+====================================================================
+[32m[     info][0m Good version found: gcc-4.0.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[bd182be84e9c8ae8485ac7c392fa0b6678969e3c] re PR rtl-optimization/20117 (duplicated labels in PIC)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [bd182be]
++---------------------------------------- Current commit hash: [bd182be] ----------------------------------------+
+GCC for commit [bd182be] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = caf38d5
+Output of /tmp/gcc-bd182be/bin/gcc with -O3:
+checksum = caf38d5
+Output of /tmp/gcc-bd182be/bin/gcc with -O0:
+checksum = caf38d5
+----------------------------------------------------
+No local changes to save
+HEAD is now at bd182be... re PR rtl-optimization/20117 (duplicated labels in PIC)
+[32m[     info][0m Current commit [bd182be] is good. Return value: 0
+
+Bisecting: 9952 revisions left to test after this (roughly 13 steps)
+[9659ce8b6160434d90f8b7985921f0b05e74d2d7] re PR tree-optimization/24888 (duplication of local variables after versioning/inlining)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [9659ce8]
++---------------------------------------- Current commit hash: [9659ce8] ----------------------------------------+
+GCC for commit [9659ce8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = caf38d5
+Output of /tmp/gcc-9659ce8/bin/gcc with -O3:
+checksum = caf38d5
+Output of /tmp/gcc-9659ce8/bin/gcc with -O0:
+checksum = caf38d5
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9659ce8... re PR tree-optimization/24888 (duplication of local variables after versioning/inlining)
+[32m[     info][0m Current commit [9659ce8] is good. Return value: 0
+
+Bisecting: 4976 revisions left to test after this (roughly 12 steps)
+[056299563bb2365dfcf66c0187ffe55f75868c47] i386-cpuid.h (bit_SSE4_1): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [0562995]
++---------------------------------------- Current commit hash: [0562995] ----------------------------------------+
+GCC for commit [0562995] already exists. Using existing binary.
+Compilation by gcc [0562995] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 0562995... i386-cpuid.h (bit_SSE4_1): New.
+Bisecting: 2487 revisions left to test after this (roughly 11 steps)
+[873aa8f5480598231174d8781bc60614815dd71d] cgraph.h (cgraph_decide_inlining_incrementally): Kill.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [873aa8f]
++---------------------------------------- Current commit hash: [873aa8f] ----------------------------------------+
+GCC for commit [873aa8f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = caf38d5
+Output of /tmp/gcc-873aa8f/bin/gcc with -O3:
+checksum = caf38dd
+Output of /tmp/gcc-873aa8f/bin/gcc with -O0:
+checksum = caf38d5
+----------------------------------------------------
+No local changes to save
+HEAD is now at 873aa8f... cgraph.h (cgraph_decide_inlining_incrementally): Kill.
+[32m[     info][0m Current commit [873aa8f] is bad. Return value: 1
+
+Bisecting: 1243 revisions left to test after this (roughly 10 steps)
+[ba1cbfb946aef122c53787e3c6b5dd8ff32a539c] debug.adb: Update flags documentation
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [ba1cbfb]
++---------------------------------------- Current commit hash: [ba1cbfb] ----------------------------------------+
+GCC for commit [ba1cbfb] already exists. Using existing binary.
+Compilation by gcc [ba1cbfb] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at ba1cbfb... debug.adb: Update flags documentation
+Bisecting: 621 revisions left to test after this (roughly 9 steps)
+[bc49e3719f49946ee930a9acc5a8af234ac48948] invoke.texi: Add missing full stop.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [bc49e37]
++---------------------------------------- Current commit hash: [bc49e37] ----------------------------------------+
+GCC for commit [bc49e37] already exists. Using existing binary.
+Compilation by gcc [bc49e37] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at bc49e37... invoke.texi: Add missing full stop.
+Bisecting: 310 revisions left to test after this (roughly 8 steps)
+[b2a06efa610db53a7d1840649128f70c8bc10ae8] re PR c++/26917 (ICE with -frepo on invalid code)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [b2a06ef]
++---------------------------------------- Current commit hash: [b2a06ef] ----------------------------------------+
+GCC for commit [b2a06ef] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = caf38d5
+Output of /tmp/gcc-b2a06ef/bin/gcc with -O3:
+checksum = caf38d5
+Output of /tmp/gcc-b2a06ef/bin/gcc with -O0:
+checksum = caf38d5
+----------------------------------------------------
+No local changes to save
+HEAD is now at b2a06ef... re PR c++/26917 (ICE with -frepo on invalid code)
+[32m[     info][0m Current commit [b2a06ef] is good. Return value: 0
+
+Bisecting: 155 revisions left to test after this (roughly 7 steps)
+[06fcf75439fbafae348fa33a0630f7bd83a835aa] posix.cc (_Jv_platform_nanotime): Return nanoseconds, not microseconds; use gettimeofday when available.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [06fcf75]
++---------------------------------------- Current commit hash: [06fcf75] ----------------------------------------+
+GCC for commit [06fcf75] already exists. Using existing binary.
+Compilation by gcc [06fcf75] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 06fcf75... posix.cc (_Jv_platform_nanotime): Return nanoseconds, not microseconds; use gettimeofday when available.
+Bisecting: 77 revisions left to test after this (roughly 6 steps)
+[8b649f3f12cb1903ac9a66028d6e7c3673a42e6f] re PR target/26778 (GCC4 moves the result of a conditional block through inadequate registers)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [8b649f3]
++---------------------------------------- Current commit hash: [8b649f3] ----------------------------------------+
+GCC for commit [8b649f3] already exists. Using existing binary.
+Compilation by gcc [8b649f3] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 8b649f3... re PR target/26778 (GCC4 moves the result of a conditional block through inadequate registers)
+Bisecting: 38 revisions left to test after this (roughly 5 steps)
+[16ceb301d3e670045d6140143be7998ff67d9c18] pr27226.c: Remove testcase again.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [16ceb30]
++---------------------------------------- Current commit hash: [16ceb30] ----------------------------------------+
+GCC for commit [16ceb30] already exists. Using existing binary.
+Compilation by gcc [16ceb30] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 16ceb30... pr27226.c: Remove testcase again.
+Bisecting: 18 revisions left to test after this (roughly 4 steps)
+[f393e7f57d2643b83b30603568bd7260a6451731] re PR tree-optimization/28935 (Segfault in  operand_equal_p with -ftree-vectorize -O3)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [f393e7f]
++---------------------------------------- Current commit hash: [f393e7f] ----------------------------------------+
+GCC for commit [f393e7f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = caf38d5
+Output of /tmp/gcc-f393e7f/bin/gcc with -O3:
+checksum = caf38d5
+Output of /tmp/gcc-f393e7f/bin/gcc with -O0:
+checksum = caf38d5
+----------------------------------------------------
+No local changes to save
+HEAD is now at f393e7f... re PR tree-optimization/28935 (Segfault in  operand_equal_p with -ftree-vectorize -O3)
+[32m[     info][0m Current commit [f393e7f] is good. Return value: 0
+
+Bisecting: 9 revisions left to test after this (roughly 3 steps)
+[6dd0d2f48454187c94e2b14cc7eaf99ced15a94d] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [6dd0d2f]
++---------------------------------------- Current commit hash: [6dd0d2f] ----------------------------------------+
+GCC for commit [6dd0d2f] already exists. Using existing binary.
+Compilation by gcc [6dd0d2f] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 6dd0d2f... Daily bump.
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[9a7fd67a829bbbcd95505a58301f7bff42e84833] avr.c (avr_mcu_types): Add support for at90pwm1 device.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [9a7fd67]
++---------------------------------------- Current commit hash: [9a7fd67] ----------------------------------------+
+GCC for commit [9a7fd67] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = caf38d5
+Output of /tmp/gcc-9a7fd67/bin/gcc with -O3:
+checksum = caf38d5
+Output of /tmp/gcc-9a7fd67/bin/gcc with -O0:
+checksum = caf38d5
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9a7fd67... avr.c (avr_mcu_types): Add support for at90pwm1 device.
+[32m[     info][0m Current commit [9a7fd67] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[d26cef13fbe5a707e4a495c4a9d56847b9547072] re PR rtl-optimization/26847 (Missed optimization in simplify_plus_minus)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [d26cef1]
++---------------------------------------- Current commit hash: [d26cef1] ----------------------------------------+
+GCC for commit [d26cef1] already exists. Using existing binary.
+Compilation by gcc [d26cef1] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at d26cef1... re PR rtl-optimization/26847 (Missed optimization in simplify_plus_minus)
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[5527be59f4f6621b8e99ecf13ed3a3126576b87f] basic_string.tcc (find(const _CharT*, size_type, size_type)): Robustify.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0694 orig
+[32m[     info][0m Testing commit: [5527be5]
++---------------------------------------- Current commit hash: [5527be5] ----------------------------------------+
+GCC for commit [5527be5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = caf38d5
+Output of /tmp/gcc-5527be5/bin/gcc with -O3:
+checksum = caf38d5
+Output of /tmp/gcc-5527be5/bin/gcc with -O0:
+checksum = caf38d5
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5527be5... basic_string.tcc (find(const _CharT*, size_type, size_type)): Robustify.
+[32m[     info][0m Current commit [5527be5] is good. Return value: 0
+
+d26cef13fbe5a707e4a495c4a9d56847b9547072 is the first bad commit
+commit d26cef13fbe5a707e4a495c4a9d56847b9547072
+Author: Paolo Bonzini <bonzini@gcc.gnu.org>
+Date:   Tue Sep 5 17:41:22 2006 +0000
+
+    re PR rtl-optimization/26847 (Missed optimization in simplify_plus_minus)
+    
+    2006-09-05  Paolo Bonzini  <bonzini@gnu.org>
+    
+    	PR rtl-optimization/26847
+    	* simplify-rtx.c (struct simplify_plus_minus_op_data): Remove ix.
+    	(simplify_plus_minus_op_data_cmp): For REGs, break ties on the regno.
+    	(simplify_plus_minus): Count n_constants while filling ops.  Replace
+    	qsort with insertion sort.  Before going through the array to simplify
+    	pairs, sort it.  Delay early exit until after the first sort, exiting
+    	only if no swaps occurred.  Simplify pairs in reversed order, without
+    	special-casing the first iteration.  Pack ops after simplifying pairs.
+    
+    From-SVN: r116701
+
+:040000 040000 be1cf094f5d78b417609c05e2060dd54c510f59e 8bb8ea5395bc51df71943405c1682a55a1fde39b M	gcc
+bisect run success
+[32m[     info][0m First bad commit: d26cef1 re PR rtl-optimization/26847 (Missed optimization in simplify_plus_minus)
+Checking out files:   7% (1904/26833)   Checking out files:   8% (2147/26833)   Checking out files:   9% (2415/26833)   Checking out files:  10% (2684/26833)   Checking out files:  10% (2885/26833)   Checking out files:  11% (2952/26833)   Checking out files:  12% (3220/26833)   Checking out files:  13% (3489/26833)   Checking out files:  14% (3757/26833)   Checking out files:  15% (4025/26833)   Checking out files:  16% (4294/26833)   Checking out files:  17% (4562/26833)   Checking out files:  18% (4830/26833)   Checking out files:  18% (4878/26833)   Checking out files:  19% (5099/26833)   Checking out files:  20% (5367/26833)   Checking out files:  21% (5635/26833)   Checking out files:  22% (5904/26833)   Checking out files:  23% (6172/26833)   Checking out files:  24% (6440/26833)   Checking out files:  24% (6698/26833)   Checking out files:  25% (6709/26833)   Checking out files:  26% (6977/26833)   Checking out files:  27% (7245/26833)   Checking out files:  28% (7514/26833)   Checking out files:  29% (7782/26833)   Checking out files:  30% (8050/26833)   Checking out files:  31% (8319/26833)   Checking out files:  32% (8587/26833)   Checking out files:  32% (8614/26833)   Checking out files:  33% (8855/26833)   Checking out files:  34% (9124/26833)   Checking out files:  35% (9392/26833)   Checking out files:  36% (9660/26833)   Checking out files:  37% (9929/26833)   Checking out files:  38% (10197/26833)   Checking out files:  39% (10465/26833)   Checking out files:  40% (10734/26833)   Checking out files:  41% (11002/26833)   Checking out files:  42% (11270/26833)   Checking out files:  43% (11539/26833)   Checking out files:  43% (11741/26833)   Checking out files:  44% (11807/26833)   Checking out files:  45% (12075/26833)   Checking out files:  46% (12344/26833)   Checking out files:  47% (12612/26833)   Checking out files:  48% (12880/26833)   Checking out files:  49% (13149/26833)   Checking out files:  50% (13417/26833)   Checking out files:  51% (13685/26833)   Checking out files:  52% (13954/26833)   Checking out files:  53% (14222/26833)   Checking out files:  54% (14490/26833)   Checking out files:  55% (14759/26833)   Checking out files:  55% (14821/26833)   Checking out files:  56% (15027/26833)   Checking out files:  57% (15295/26833)   Checking out files:  58% (15564/26833)   Checking out files:  59% (15832/26833)   Checking out files:  60% (16100/26833)   Checking out files:  61% (16369/26833)   Checking out files:  62% (16637/26833)   Checking out files:  63% (16905/26833)   Checking out files:  64% (17174/26833)   Checking out files:  64% (17382/26833)   Checking out files:  65% (17442/26833)   Checking out files:  66% (17710/26833)   Checking out files:  67% (17979/26833)   Checking out files:  68% (18247/26833)   Checking out files:  69% (18515/26833)   Checking out files:  70% (18784/26833)   Checking out files:  71% (19052/26833)   Checking out files:  72% (19320/26833)   Checking out files:  73% (19589/26833)   Checking out files:  74% (19857/26833)   Checking out files:  75% (20125/26833)   Checking out files:  75% (20344/26833)   Checking out files:  76% (20394/26833)   Checking out files:  77% (20662/26833)   Checking out files:  78% (20930/26833)   Checking out files:  79% (21199/26833)   Checking out files:  80% (21467/26833)   Checking out files:  81% (21735/26833)   Checking out files:  82% (22004/26833)   Checking out files:  83% (22272/26833)   Checking out files:  84% (22540/26833)   Checking out files:  85% (22809/26833)   Checking out files:  86% (23077/26833)   Checking out files:  87% (23345/26833)   Checking out files:  87% (23434/26833)   Checking out files:  88% (23614/26833)   Checking out files:  89% (23882/26833)   Checking out files:  90% (24150/26833)   Checking out files:  91% (24419/26833)   Checking out files:  92% (24687/26833)   Checking out files:  93% (24955/26833)   Checking out files:  94% (25224/26833)   Checking out files:  95% (25492/26833)   Checking out files:  95% (25625/26833)   Checking out files:  96% (25760/26833)   Checking out files:  97% (26029/26833)   Checking out files:  98% (26297/26833)   Checking out files:  99% (26565/26833)   Checking out files: 100% (26833/26833)   Checking out files: 100% (26833/26833), done.
+Previous HEAD position was 5527be5... basic_string.tcc (find(const _CharT*, size_type, size_type)): Robustify.
+HEAD is now at a91d32a... i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [d26cef1]
++---------------------------------------- Current commit hash: [d26cef1] ----------------------------------------+
+GCC for commit [d26cef1] already exists. Using existing binary.
+Compilation by gcc [d26cef1] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at d26cef1... re PR rtl-optimization/26847 (Missed optimization in simplify_plus_minus)
+[32m[     info][0m Testing commit: [5527be5]
++---------------------------------------- Current commit hash: [5527be5] ----------------------------------------+
+GCC for commit [5527be5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = caf38d5
+Output of /tmp/gcc-5527be5/bin/gcc with -O3:
+checksum = caf38d5
+Output of /tmp/gcc-5527be5/bin/gcc with -O0:
+checksum = caf38d5
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5527be5... basic_string.tcc (find(const _CharT*, size_type, size_type)): Robustify.
+[32m[     info][0m Current commit [5527be5] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [d26cef1] with -O0:
+checksum = caf38d5
+Output of gcc [d26cef1] with -O1:
+checksum = caf38d5
+[31m[  warning][0m Compilation by gcc [d26cef1] with -O2 failed. Continue...
+[31m[  warning][0m Compilation by gcc [d26cef1] with -O3 failed. Continue...
+Output of gcc [d26cef1] with -Os:
+checksum = caf38d5
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

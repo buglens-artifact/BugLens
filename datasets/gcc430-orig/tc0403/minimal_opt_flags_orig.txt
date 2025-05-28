@@ -1,0 +1,13 @@
+inline-functions-called-once
+inline-small-functions
+ipa-reference
+strict-aliasing
+tree-ccp
+tree-dce
+tree-dominator-opts
+tree-dse
+tree-fre
+tree-pre
+tree-salias
+tree-store-ccp
+unit-at-a-time

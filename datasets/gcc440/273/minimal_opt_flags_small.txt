@@ -1,0 +1,5 @@
+early-inlining
+guess-branch-probability
+inline-functions
+inline-small-functions
+tree-fre

@@ -1,0 +1,353 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+Output of gcc-4.3.0 with -O1:
+0
+Output of gcc-4.3.0 with -O0:
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-b23987e/bin/gcc with -O1:
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-b718216/bin/gcc with -O1:
+0
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is bad. Return value: 1
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[2b5e5642e38e17dc60ca6408f4c2bba651e1a9f7] builtins.c (fold_builtin_load_exponent): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [2b5e564]
++---------------------------------------- Current commit hash: [2b5e564] ----------------------------------------+
+GCC for commit [2b5e564] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-2b5e564/bin/gcc with -O1:
+0
+Output of /tmp/gcc-2b5e564/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2b5e564... builtins.c (fold_builtin_load_exponent): New.
+[32m[     info][0m Current commit [2b5e564] is bad. Return value: 1
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[af71363e455f4c60cf98f5ef42b4ddd8daedabd3] * configure: Regenerate with correct autoconf version.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [af71363]
++---------------------------------------- Current commit hash: [af71363] ----------------------------------------+
+GCC for commit [af71363] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-af71363/bin/gcc with -O1:
+Output of /tmp/gcc-af71363/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at af71363... * configure: Regenerate with correct autoconf version.
+[32m[     info][0m Current commit [af71363] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[cf227303461b367efbb57f7e4f9425c3f15f1132] pr23382.c: Avoid DCE from eliminating dead variable.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [cf227303]
++---------------------------------------- Current commit hash: [cf227303] ----------------------------------------+
+GCC for commit [cf227303] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-cf227303/bin/gcc with -O1:
+Output of /tmp/gcc-cf227303/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at cf227303... pr23382.c: Avoid DCE from eliminating dead variable.
+[32m[     info][0m Current commit [cf227303] is good. Return value: 0
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[7f1c6e93a9fcb03aea38e9cff175e855776f1997] testsuite/Makefile.am (compile-tests): Fix typo.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [7f1c6e9]
++---------------------------------------- Current commit hash: [7f1c6e9] ----------------------------------------+
+GCC for commit [7f1c6e9] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-7f1c6e9/bin/gcc with -O1:
+0
+Output of /tmp/gcc-7f1c6e9/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7f1c6e9... testsuite/Makefile.am (compile-tests): Fix typo.
+[32m[     info][0m Current commit [7f1c6e9] is bad. Return value: 1
+
+Bisecting: 139 revisions left to test after this (roughly 7 steps)
+[e4cf973dd9cccacb662af8c4f9ed5aa35573074a] * gcj.texi (Strings): Fix documentation for JvNewString.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [e4cf973]
++---------------------------------------- Current commit hash: [e4cf973] ----------------------------------------+
+GCC for commit [e4cf973] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-e4cf973/bin/gcc with -O1:
+0
+Output of /tmp/gcc-e4cf973/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at e4cf973... * gcj.texi (Strings): Fix documentation for JvNewString.
+[32m[     info][0m Current commit [e4cf973] is bad. Return value: 1
+
+Bisecting: 69 revisions left to test after this (roughly 6 steps)
+[ea6244280b016b12843432c1381a2a9064f60d00] * gnu/classpath/jdwp/natVMVirtualMachine.cc         (getAllClassMethods): Move error handling to ...         (throw_jvmti_error): ... here.         (jdwpClassPrepareCB): New function.         (jdwpThreadEndCB): New function.         (jdwpThreadStartCB): New function.         (jdwpVMDeathCB): New function.         (jdwpVMInitCB): Define and enable callbacks for         ClassPrepare, ThreadEnd, ThreadStart, and VMDeath.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [ea62442]
++---------------------------------------- Current commit hash: [ea62442] ----------------------------------------+
+GCC for commit [ea62442] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-ea62442/bin/gcc with -O1:
+Output of /tmp/gcc-ea62442/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at ea62442... * gnu/classpath/jdwp/natVMVirtualMachine.cc         (getAllClassMethods): Move error handling to ...         (throw_jvmti_error): ... here.         (jdwpClassPrepareCB): New function.         (jdwpThreadEndCB): New function.         (jdwpThreadStartCB): New function.         (jdwpVMDeathCB): New function.         (jdwpVMInitCB): Define and enable callbacks for         ClassPrepare, ThreadEnd, ThreadStart, and VMDeath.
+[32m[     info][0m Current commit [ea62442] is good. Return value: 0
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[48e540b04f64910218cc702d0e05760e2eb1ef44] re PR tree-optimization/30630 (Trunk GCC hangs while compiling cpu2k6/perlbench at -O2)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [48e540b]
++---------------------------------------- Current commit hash: [48e540b] ----------------------------------------+
+GCC for commit [48e540b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-48e540b/bin/gcc with -O1:
+0
+Output of /tmp/gcc-48e540b/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at 48e540b... re PR tree-optimization/30630 (Trunk GCC hangs while compiling cpu2k6/perlbench at -O2)
+[32m[     info][0m Current commit [48e540b] is bad. Return value: 1
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[7f9bc51b091441d6f9484c62d210d4fc724b376b] tree-ssa-loop-unswitch.c: Include tree-inline.h.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [7f9bc51]
++---------------------------------------- Current commit hash: [7f9bc51] ----------------------------------------+
+GCC for commit [7f9bc51] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-7f9bc51/bin/gcc with -O1:
+0
+Output of /tmp/gcc-7f9bc51/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7f9bc51... tree-ssa-loop-unswitch.c: Include tree-inline.h.
+[32m[     info][0m Current commit [7f9bc51] is bad. Return value: 1
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[b93633383b51c53c037a835172bdf84fbc04b43d] Add missing doc/install.texi to ChangeLog entry of the previous commit.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [b936333]
++---------------------------------------- Current commit hash: [b936333] ----------------------------------------+
+GCC for commit [b936333] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-b936333/bin/gcc with -O1:
+Output of /tmp/gcc-b936333/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at b936333... Add missing doc/install.texi to ChangeLog entry of the previous commit.
+[32m[     info][0m Current commit [b936333] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[eeef0e452e98fe6424ce65fb25fba15c59151848] common.opt: Add fstrict-overflow.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [eeef0e4]
++---------------------------------------- Current commit hash: [eeef0e4] ----------------------------------------+
+GCC for commit [eeef0e4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-eeef0e4/bin/gcc with -O1:
+0
+Output of /tmp/gcc-eeef0e4/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at eeef0e4... common.opt: Add fstrict-overflow.
+[32m[     info][0m Current commit [eeef0e4] is bad. Return value: 1
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[74890d7bbdacf14edfcd1e50bac0e5053a2bdf53] fold-const.c (size_binop): In the fast-paths for X+0...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [74890d7]
++---------------------------------------- Current commit hash: [74890d7] ----------------------------------------+
+GCC for commit [74890d7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-74890d7/bin/gcc with -O1:
+Output of /tmp/gcc-74890d7/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at 74890d7... fold-const.c (size_binop): In the fast-paths for X+0...
+[32m[     info][0m Current commit [74890d7] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[b73a6056563470e5b99e79a0dc769c351e906e6e] tree.c (tree_fold_gcd): Delete.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc1285 small
+[32m[     info][0m Testing commit: [b73a605]
++---------------------------------------- Current commit hash: [b73a605] ----------------------------------------+
+GCC for commit [b73a605] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-b73a605/bin/gcc with -O1:
+Output of /tmp/gcc-b73a605/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at b73a605... tree.c (tree_fold_gcd): Delete.
+[32m[     info][0m Current commit [b73a605] is good. Return value: 0
+
+eeef0e452e98fe6424ce65fb25fba15c59151848 is the first bad commit
+commit eeef0e452e98fe6424ce65fb25fba15c59151848
+Author: Ian Lance Taylor <iant@google.com>
+Date:   Sun Jan 28 05:15:06 2007 +0000
+
+    common.opt: Add fstrict-overflow.
+    
+    ./:	* common.opt: Add fstrict-overflow.
+    	* opts.c (decode_options): Set flag_strict_overflow if -O2.
+    	* flags.h (TYPE_OVERFLOW_WRAPS): Define.
+    	(TYPE_OVERFLOW_UNDEFINED): Define.
+    	(TYPE_OVERFLOW_TRAPS): Define.  This replaces TYPE_TRAP_SIGNED.
+    	Replace all uses.
+    	* tree.h (TYPE_TRAP_SIGNED): Don't define.
+    	* fold-const.c (negate_expr_p): Use TYPE_OVERFLOW_UNDEFINED.
+    	(fold_negate_expr): Likewise.
+    	(make_range): Likewise.
+    	(extract_muldiv_1): Likewise.
+    	(maybe_canonicalize_comparison): Likewise.
+    	(fold_comparison): Likewise.
+    	(fold_binary): Likewise.
+    	(tree_expr_nonnegative_p): Likewise.
+    	(tree_expr_nonzero_p): Likewise.
+    	* tree-vrp.c (compare_values): Likewise.
+    	(extract_range_from_binary_expr): Likewise.
+    	(extract_range_from_unary_expr): Likewise.
+    	* tree-ssa-loop-niter.c (infer_loop_bounds_from_signedness):
+    	Likewise.
+    	(nowrap_type_p): Likewise.
+    	* tree-scalar-evolution.c (simple_iv): Likewise.
+    	* fold-const.c (negate_expr_p): Use TYPE_OVERFLOW_WRAPS.
+    	(build_range_check): Likewise.
+    	(extract_muldiv_1): Likewise.
+    	(fold_comparison): Likewise.
+    	* tree-vrp.c (vrp_int_const_binop): Likewise.
+    	(extract_range_from_unary_expr): Likewise.
+    	* convert.c (convert_to_integer): Likewise.
+    	* fold-const.c (fold_negate_expr): Use TYPE_OVERFLOW_TRAPS.
+    	(fold_comparison): Likewise.
+    	(fold_binary): Likewise.
+    	* optabs.c (optab_for_tree_code): Likewise.
+    	* tree-vectorizer.c (vect_is_simple_reduction): Likewise.
+    	* simplify-rtx.c (simplify_const_relational_operation): Check
+    	flag_strict_overflow and flag_trapv.
+    	(simplify_const_relational_operation): Likewise.
+    	* doc/invoke.texi (Option Summary): Mention -fstrict-overflow.
+    	(Optimize Options): Add -fstrict-overflow to -O2 list.  Document
+    	-fstrict-overflow.
+    testsuite/:
+    	* gcc.dg/strict-overflow-1.c: New test.
+    	* gcc.dg/no-strict-overflow-1.c: New test.
+    	* gcc.dg/strict-overflow-2.c: New test.
+    	* gcc.dg/no-strict-overflow-2.c: New test.
+    	* gcc.dg/strict-overflow-3.c: New test.
+    	* gcc.dg/no-strict-overflow-3.c: New test.
+    	* gcc.dg/strict-overflow-4.c: New test.
+    	* gcc.dg/no-strict-overflow-4.c: New test.
+    	* gcc.dg/fold-mod-1.c: Add -fstrict-overflow option.
+    	* gcc.dg/pr15784-1.c: Likewise.
+    	* gcc.dg/pr20922-1.c: Likewise.
+    	* gcc.dg/pr20922-3.c: Likewise.
+    	* gcc.dg/pr20922-4.c: Likewise.
+    	* gcc.dg/pr20922-6.c: Likewise.
+    	* gcc.dg/compare-4.c: Likewise.
+    	* gcc.dg/torture/pr26898-1.c: Likewise.
+    	* gcc.dg/tree-ssa/divide-1.c: Likewise.
+    	* gcc.dg/tree-ssa/divide-2.c: Likewise.
+    	* gcc.dg/tree-ssa/divide-3.c: Likewise.
+    	* gcc.dg/tree-ssa/divide-4.c: Likewise.
+    	* gcc.dg/tree-ssa/pr14490-1.c: Likewise.
+    	* gcc.dg/tree-ssa/pr14490-3.c: Likewise.
+    	* gcc.dg/tree-ssa/pr21082.c: Likewise.
+    	* gcc.dg/tree-ssa/pr26899.c: Likewise.
+    	* g++.dg/tree-ssa/pr21082.C: Likewise.
+    
+    From-SVN: r121254
+
+:040000 040000 a0d385819a4acc83c9599880e72e3388b9c03598 082c6aaa49688558f0bbffab23d58e0450078dde M	gcc
+bisect run success
+[32m[     info][0m First bad commit: eeef0e4 common.opt: Add fstrict-overflow.
+Checking out files:  21% (2166/10213)   Checking out files:  22% (2247/10213)   Checking out files:  23% (2349/10213)   Checking out files:  24% (2452/10213)   Checking out files:  25% (2554/10213)   Checking out files:  26% (2656/10213)   Checking out files:  27% (2758/10213)   Checking out files:  28% (2860/10213)   Checking out files:  29% (2962/10213)   Checking out files:  30% (3064/10213)   Checking out files:  31% (3167/10213)   Checking out files:  32% (3269/10213)   Checking out files:  33% (3371/10213)   Checking out files:  34% (3473/10213)   Checking out files:  35% (3575/10213)   Checking out files:  36% (3677/10213)   Checking out files:  37% (3779/10213)   Checking out files:  38% (3881/10213)   Checking out files:  39% (3984/10213)   Checking out files:  40% (4086/10213)   Checking out files:  41% (4188/10213)   Checking out files:  42% (4290/10213)   Checking out files:  43% (4392/10213)   Checking out files:  44% (4494/10213)   Checking out files:  45% (4596/10213)   Checking out files:  46% (4698/10213)   Checking out files:  47% (4801/10213)   Checking out files:  48% (4903/10213)   Checking out files:  48% (4986/10213)   Checking out files:  49% (5005/10213)   Checking out files:  50% (5107/10213)   Checking out files:  51% (5209/10213)   Checking out files:  52% (5311/10213)   Checking out files:  53% (5413/10213)   Checking out files:  54% (5516/10213)   Checking out files:  55% (5618/10213)   Checking out files:  56% (5720/10213)   Checking out files:  57% (5822/10213)   Checking out files:  58% (5924/10213)   Checking out files:  59% (6026/10213)   Checking out files:  60% (6128/10213)   Checking out files:  61% (6230/10213)   Checking out files:  62% (6333/10213)   Checking out files:  63% (6435/10213)   Checking out files:  64% (6537/10213)   Checking out files:  65% (6639/10213)   Checking out files:  66% (6741/10213)   Checking out files:  67% (6843/10213)   Checking out files:  68% (6945/10213)   Checking out files:  69% (7047/10213)   Checking out files:  70% (7150/10213)   Checking out files:  71% (7252/10213)   Checking out files:  72% (7354/10213)   Checking out files:  73% (7456/10213)   Checking out files:  74% (7558/10213)   Checking out files:  75% (7660/10213)   Checking out files:  76% (7762/10213)   Checking out files:  77% (7865/10213)   Checking out files:  78% (7967/10213)   Checking out files:  79% (8069/10213)   Checking out files:  80% (8171/10213)   Checking out files:  80% (8177/10213)   Checking out files:  81% (8273/10213)   Checking out files:  82% (8375/10213)   Checking out files:  83% (8477/10213)   Checking out files:  84% (8579/10213)   Checking out files:  85% (8682/10213)   Checking out files:  86% (8784/10213)   Checking out files:  87% (8886/10213)   Checking out files:  88% (8988/10213)   Checking out files:  89% (9090/10213)   Checking out files:  90% (9192/10213)   Checking out files:  91% (9294/10213)   Checking out files:  92% (9396/10213)   Checking out files:  93% (9499/10213)   Checking out files:  94% (9601/10213)   Checking out files:  95% (9703/10213)   Checking out files:  96% (9805/10213)   Checking out files:  97% (9907/10213)   Checking out files:  98% (10009/10213)   Checking out files:  99% (10111/10213)   Checking out files: 100% (10213/10213)   Checking out files: 100% (10213/10213), done.
+Previous HEAD position was b73a605... tree.c (tree_fold_gcd): Delete.
+HEAD is now at 3673b8c... Daily bump.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [eeef0e4]
++---------------------------------------- Current commit hash: [eeef0e4] ----------------------------------------+
+GCC for commit [eeef0e4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-eeef0e4/bin/gcc with -O1:
+0
+Output of /tmp/gcc-eeef0e4/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at eeef0e4... common.opt: Add fstrict-overflow.
+[32m[     info][0m Current commit [eeef0e4] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [b73a605]
++---------------------------------------- Current commit hash: [b73a605] ----------------------------------------+
+GCC for commit [b73a605] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+Output of /tmp/gcc-b73a605/bin/gcc with -O1:
+Output of /tmp/gcc-b73a605/bin/gcc with -O0:
+----------------------------------------------------
+No local changes to save
+HEAD is now at b73a605... tree.c (tree_fold_gcd): Delete.
+[32m[     info][0m Current commit [b73a605] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [eeef0e4] with -O0:
+Output of gcc [eeef0e4] with -O1:
+0
+Output of gcc [eeef0e4] with -O2:
+Output of gcc [eeef0e4] with -O3:
+Output of gcc [eeef0e4] with -Os:
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

@@ -1,0 +1,371 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+Output of gcc-4.3.0 with -O3:
+1
+Output of gcc-4.3.0 with -O0:
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+0
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+0
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is good. Return value: 0
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[448d2cd2f73e2e16e2bdd5c407174afebf3ed845] re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [448d2cd]
++---------------------------------------- Current commit hash: [448d2cd] ----------------------------------------+
+GCC for commit [448d2cd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-448d2cd/bin/gcc with -O3:
+1
+Output of /tmp/gcc-448d2cd/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 448d2cd... re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+[32m[     info][0m Current commit [448d2cd] is bad. Return value: 1
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[6812b99bfefb741cadac6c5eba5a7446af820b62] impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [6812b99]
++---------------------------------------- Current commit hash: [6812b99] ----------------------------------------+
+GCC for commit [6812b99] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-6812b99/bin/gcc with -O3:
+0
+Output of /tmp/gcc-6812b99/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6812b99... impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+[32m[     info][0m Current commit [6812b99] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[bc211e05e3379205a808c2f2fa050ba6cc03cf22] darwin.c (machopic_indirect_data_reference): Avoid invalid sharing.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [bc211e0]
++---------------------------------------- Current commit hash: [bc211e0] ----------------------------------------+
+GCC for commit [bc211e0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-bc211e0/bin/gcc with -O3:
+1
+Output of /tmp/gcc-bc211e0/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at bc211e0... darwin.c (machopic_indirect_data_reference): Avoid invalid sharing.
+[32m[     info][0m Current commit [bc211e0] is bad. Return value: 1
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[b29ee02b34c3fe06df62dae38f75b0efcfe38704] * c-pretty-print.c (pp_c_constant): Handle COMPLEX_CST.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [b29ee02]
++---------------------------------------- Current commit hash: [b29ee02] ----------------------------------------+
+GCC for commit [b29ee02] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b29ee02/bin/gcc with -O3:
+0
+Output of /tmp/gcc-b29ee02/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b29ee02... * c-pretty-print.c (pp_c_constant): Handle COMPLEX_CST.
+[32m[     info][0m Current commit [b29ee02] is good. Return value: 0
+
+Bisecting: 140 revisions left to test after this (roughly 7 steps)
+[d4d96a5aef412d51447c9e3632c18c6107b9315c] * gcc.dg/torture/cris-asm-mof-1.c: Skip if -march defined.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [d4d96a5]
++---------------------------------------- Current commit hash: [d4d96a5] ----------------------------------------+
+GCC for commit [d4d96a5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-d4d96a5/bin/gcc with -O3:
+0
+Output of /tmp/gcc-d4d96a5/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at d4d96a5... * gcc.dg/torture/cris-asm-mof-1.c: Skip if -march defined.
+[32m[     info][0m Current commit [d4d96a5] is good. Return value: 0
+
+Bisecting: 70 revisions left to test after this (roughly 6 steps)
+[03ba2e11227bfe13580b80367feeb196035109ed] PR c++/29731 (again)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [03ba2e1]
++---------------------------------------- Current commit hash: [03ba2e1] ----------------------------------------+
+GCC for commit [03ba2e1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-03ba2e1/bin/gcc with -O3:
+1
+Output of /tmp/gcc-03ba2e1/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 03ba2e1... PR c++/29731 (again)
+[32m[     info][0m Current commit [03ba2e1] is bad. Return value: 1
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[1e0890ae3c09d0f8885fd4917e76268a44071e35] vect-reduc-dot-s16b.c: Mark functions noinline.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [1e0890a]
++---------------------------------------- Current commit hash: [1e0890a] ----------------------------------------+
+GCC for commit [1e0890a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-1e0890a/bin/gcc with -O3:
+1
+Output of /tmp/gcc-1e0890a/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1e0890a... vect-reduc-dot-s16b.c: Mark functions noinline.
+[32m[     info][0m Current commit [1e0890a] is bad. Return value: 1
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[b3560209601c229f3b76bf866f7ff7b14daba3dd] re PR libfortran/33253 (namelist: reading back a string with apostrophe)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [b356020]
++---------------------------------------- Current commit hash: [b356020] ----------------------------------------+
+GCC for commit [b356020] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b356020/bin/gcc with -O3:
+0
+Output of /tmp/gcc-b356020/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b356020... re PR libfortran/33253 (namelist: reading back a string with apostrophe)
+[32m[     info][0m Current commit [b356020] is good. Return value: 0
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[0b2dffe116ad3f02eada2fcbd23f67c5ba5f3eda] * c-opts.c: Include "tm_p.h".
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [0b2dffe]
++---------------------------------------- Current commit hash: [0b2dffe] ----------------------------------------+
+GCC for commit [0b2dffe] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-0b2dffe/bin/gcc with -O3:
+1
+Output of /tmp/gcc-0b2dffe/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0b2dffe... * c-opts.c: Include "tm_p.h".
+[32m[     info][0m Current commit [0b2dffe] is bad. Return value: 1
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[1abaafd34831829c5cb1b67cbd049ecdf6c1cf87] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [1abaafd]
++---------------------------------------- Current commit hash: [1abaafd] ----------------------------------------+
+GCC for commit [1abaafd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-1abaafd/bin/gcc with -O3:
+0
+Output of /tmp/gcc-1abaafd/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1abaafd... Daily bump.
+[32m[     info][0m Current commit [1abaafd] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[fc7a6a0dfa65af07a199aa34823d81800ec35f64] * config/arm/arm.md (mulsidi3, umulsidi3, mulsi3_highpart) 	(umulsi3_highpart): Make into expanders; existing insns are 	now named *[insn]_nov6.  Add stars to existing [insn]_v6 	counterparts' names.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [fc7a6a0]
++---------------------------------------- Current commit hash: [fc7a6a0] ----------------------------------------+
+GCC for commit [fc7a6a0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-fc7a6a0/bin/gcc with -O3:
+0
+Output of /tmp/gcc-fc7a6a0/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at fc7a6a0... * config/arm/arm.md (mulsidi3, umulsidi3, mulsi3_highpart) 	(umulsi3_highpart): Make into expanders; existing insns are 	now named *[insn]_nov6.  Add stars to existing [insn]_v6 	counterparts' names.
+[32m[     info][0m Current commit [fc7a6a0] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[8d67c58f94f8b9166002eed18d2096b35c0666e7] sse4a-check.h: New file.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [8d67c58]
++---------------------------------------- Current commit hash: [8d67c58] ----------------------------------------+
+GCC for commit [8d67c58] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-8d67c58/bin/gcc with -O3:
+1
+Output of /tmp/gcc-8d67c58/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8d67c58... sse4a-check.h: New file.
+[32m[     info][0m Current commit [8d67c58] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[04d86531d7cf2080903ea85d27d79daa944828fb] re PR tree-optimization/33291 (a+=2; a+=2  not simplified to  a+=4;  with -O3   (ok with gcc-4.2.1))
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0843 small
+[32m[     info][0m Testing commit: [04d8653]
++---------------------------------------- Current commit hash: [04d8653] ----------------------------------------+
+GCC for commit [04d8653] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-04d8653/bin/gcc with -O3:
+1
+Output of /tmp/gcc-04d8653/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 04d8653... re PR tree-optimization/33291 (a+=2; a+=2  not simplified to  a+=4;  with -O3   (ok with gcc-4.2.1))
+[32m[     info][0m Current commit [04d8653] is bad. Return value: 1
+
+04d86531d7cf2080903ea85d27d79daa944828fb is the first bad commit
+commit 04d86531d7cf2080903ea85d27d79daa944828fb
+Author: Richard Guenther <rguenther@suse.de>
+Date:   Tue Sep 4 08:38:56 2007 +0000
+
+    re PR tree-optimization/33291 (a+=2; a+=2  not simplified to  a+=4;  with -O3   (ok with gcc-4.2.1))
+    
+    2007-09-04  Richard Guenther  <rguenther@suse.de>
+    
+    	PR tree-optimization/33291
+    	* tree-pretty-print.c (dump_generic_node): Dump all
+    	qualifiers for pointer types, not only first.  Dump
+    	qualifiers for aggregate types as well.
+    	* tree-ssa-ccp.c (maybe_fold_offset_to_array_ref): Always
+    	use the canonical type for building ARRAY_REFs.
+    	* gimplify.c (canonicalize_addr_expr): Clean up.  The
+    	correct validness check is compatibility of the pointer
+    	types.  Always use the canonical type for building
+    	ARRAY_REFs and ADDR_EXPRs.
+    	* tree-ssa-forwprop.c (forward_propagate_addr_expr): Revert
+    	change that disabled propagation of ADDR_EXPRs into statements
+    	with volatile ops.
+    
+    	* gcc.dg/volatile2.c: New testcase.
+    	* gcc.dg/pr32721.c: Adjust volatile reference pattern.
+    	* gcc.dg/tree-ssa/forwprop-1.c: Remove xfail.
+    	* gcc.dg/tree-ssa/forwprop-2.c: Likewise.
+    	* gcc.dg/tree-ssa/pr17141-1.c: Likewise.
+    
+    From-SVN: r128068
+
+:040000 040000 ed1581742212c9239898bdfcd830b8ebab6d10b2 fab984c86f3738bd8fcba4f9338e4086e8a52a08 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 04d8653 re PR tree-optimization/33291 (a+=2; a+=2  not simplified to  a+=4;  with -O3   (ok with gcc-4.2.1))
+Checking out files:  30% (1899/6276)   Checking out files:  31% (1946/6276)   Checking out files:  32% (2009/6276)   Checking out files:  33% (2072/6276)   Checking out files:  34% (2134/6276)   Checking out files:  35% (2197/6276)   Checking out files:  36% (2260/6276)   Checking out files:  37% (2323/6276)   Checking out files:  38% (2385/6276)   Checking out files:  39% (2448/6276)   Checking out files:  40% (2511/6276)   Checking out files:  41% (2574/6276)   Checking out files:  42% (2636/6276)   Checking out files:  43% (2699/6276)   Checking out files:  44% (2762/6276)   Checking out files:  45% (2825/6276)   Checking out files:  46% (2887/6276)   Checking out files:  47% (2950/6276)   Checking out files:  48% (3013/6276)   Checking out files:  49% (3076/6276)   Checking out files:  50% (3138/6276)   Checking out files:  51% (3201/6276)   Checking out files:  52% (3264/6276)   Checking out files:  53% (3327/6276)   Checking out files:  54% (3390/6276)   Checking out files:  55% (3452/6276)   Checking out files:  56% (3515/6276)   Checking out files:  57% (3578/6276)   Checking out files:  58% (3641/6276)   Checking out files:  59% (3703/6276)   Checking out files:  60% (3766/6276)   Checking out files:  61% (3829/6276)   Checking out files:  62% (3892/6276)   Checking out files:  63% (3954/6276)   Checking out files:  64% (4017/6276)   Checking out files:  65% (4080/6276)   Checking out files:  66% (4143/6276)   Checking out files:  67% (4205/6276)   Checking out files:  68% (4268/6276)   Checking out files:  69% (4331/6276)   Checking out files:  70% (4394/6276)   Checking out files:  71% (4456/6276)   Checking out files:  72% (4519/6276)   Checking out files:  73% (4582/6276)   Checking out files:  74% (4645/6276)   Checking out files:  74% (4705/6276)   Checking out files:  75% (4707/6276)   Checking out files:  76% (4770/6276)   Checking out files:  77% (4833/6276)   Checking out files:  78% (4896/6276)   Checking out files:  79% (4959/6276)   Checking out files:  80% (5021/6276)   Checking out files:  81% (5084/6276)   Checking out files:  82% (5147/6276)   Checking out files:  83% (5210/6276)   Checking out files:  84% (5272/6276)   Checking out files:  85% (5335/6276)   Checking out files:  86% (5398/6276)   Checking out files:  87% (5461/6276)   Checking out files:  88% (5523/6276)   Checking out files:  89% (5586/6276)   Checking out files:  90% (5649/6276)   Checking out files:  91% (5712/6276)   Checking out files:  92% (5774/6276)   Checking out files:  93% (5837/6276)   Checking out files:  94% (5900/6276)   Checking out files:  95% (5963/6276)   Checking out files:  96% (6025/6276)   Checking out files:  97% (6088/6276)   Checking out files:  98% (6151/6276)   Checking out files:  99% (6214/6276)   Checking out files: 100% (6276/6276)   Checking out files: 100% (6276/6276), done.
+Previous HEAD position was 04d8653... re PR tree-optimization/33291 (a+=2; a+=2  not simplified to  a+=4;  with -O3   (ok with gcc-4.2.1))
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [04d8653]
++---------------------------------------- Current commit hash: [04d8653] ----------------------------------------+
+GCC for commit [04d8653] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-04d8653/bin/gcc with -O3:
+1
+Output of /tmp/gcc-04d8653/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 04d8653... re PR tree-optimization/33291 (a+=2; a+=2  not simplified to  a+=4;  with -O3   (ok with gcc-4.2.1))
+[32m[     info][0m Current commit [04d8653] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [fc7a6a0]
++---------------------------------------- Current commit hash: [fc7a6a0] ----------------------------------------+
+GCC for commit [fc7a6a0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-fc7a6a0/bin/gcc with -O3:
+0
+Output of /tmp/gcc-fc7a6a0/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at fc7a6a0... * config/arm/arm.md (mulsidi3, umulsidi3, mulsi3_highpart) 	(umulsi3_highpart): Make into expanders; existing insns are 	now named *[insn]_nov6.  Add stars to existing [insn]_v6 	counterparts' names.
+[32m[     info][0m Current commit [fc7a6a0] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [04d8653] with -O0:
+0
+Output of gcc [04d8653] with -O1:
+0
+Output of gcc [04d8653] with -O2:
+0
+Output of gcc [04d8653] with -O3:
+1
+Output of gcc [04d8653] with -Os:
+0
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

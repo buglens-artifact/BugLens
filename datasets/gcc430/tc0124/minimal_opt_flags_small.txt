@@ -1,0 +1,12 @@
+guess-branch-probability
+if-conversion
+inline-small-functions
+ipa-reference
+strict-aliasing
+tree-dce
+tree-loop-im
+tree-loop-optimize
+tree-pre
+tree-salias
+tree-ter
+unit-at-a-time

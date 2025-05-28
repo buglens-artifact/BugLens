@@ -1,0 +1,5 @@
+gcse
+ivopts
+tree-fre
+tree-loop-im
+tree-loop-optimize

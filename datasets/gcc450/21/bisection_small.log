@@ -1,0 +1,319 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.5.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+Output of gcc-4.5.0 with -Os:
+1410213192
+Output of gcc-4.5.0 with -O3:
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.4.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[e9d51dc6a3d2af09436f3d8da583ef2b1efda26c] Fix for PR39557
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [e9d51dc]
++---------------------------------------- Current commit hash: [e9d51dc] ----------------------------------------+
+GCC for commit [e9d51dc] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-e9d51dc/bin/gcc with -Os:
+0
+Output of /tmp/gcc-e9d51dc/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at e9d51dc... Fix for PR39557
+[32m[     info][0m Current commit [e9d51dc] is good. Return value: 0
+
+Bisecting: 3564 revisions left to test after this (roughly 12 steps)
+[feb4e5ba87ce9a1774925b939959ec6d7f20f813] tree-cfg.c (dump_function_to_file): Dump eh tree with TDF_EH, not TDF_DETAILS.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [feb4e5b]
++---------------------------------------- Current commit hash: [feb4e5b] ----------------------------------------+
+GCC for commit [feb4e5b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-feb4e5b/bin/gcc with -Os:
+0
+Output of /tmp/gcc-feb4e5b/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at feb4e5b... tree-cfg.c (dump_function_to_file): Dump eh tree with TDF_EH, not TDF_DETAILS.
+[32m[     info][0m Current commit [feb4e5b] is good. Return value: 0
+
+Bisecting: 1782 revisions left to test after this (roughly 11 steps)
+[b50eb277c1c3eef6f81de369130aca3ee9fff5a0] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [b50eb27]
++---------------------------------------- Current commit hash: [b50eb27] ----------------------------------------+
+GCC for commit [b50eb27] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b50eb27/bin/gcc with -Os:
+1740404040
+Output of /tmp/gcc-b50eb27/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b50eb27... Daily bump.
+[32m[     info][0m Current commit [b50eb27] is bad. Return value: 1
+
+Bisecting: 890 revisions left to test after this (roughly 10 steps)
+[41ca8d08460314d305c79140abef6c9587b9b446] mingw32.h (CHECK_EXECUTE_STACK_ENABLED): New macro.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [41ca8d0]
++---------------------------------------- Current commit hash: [41ca8d0] ----------------------------------------+
+GCC for commit [41ca8d0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-41ca8d0/bin/gcc with -Os:
+122942792
+Output of /tmp/gcc-41ca8d0/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 41ca8d0... mingw32.h (CHECK_EXECUTE_STACK_ENABLED): New macro.
+[32m[     info][0m Current commit [41ca8d0] is bad. Return value: 1
+
+Bisecting: 445 revisions left to test after this (roughly 9 steps)
+[9cb26fc5c3ed73a784f5030e30ba13f0ad641d8f] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [9cb26fc]
++---------------------------------------- Current commit hash: [9cb26fc] ----------------------------------------+
+GCC for commit [9cb26fc] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-9cb26fc/bin/gcc with -Os:
+0
+Output of /tmp/gcc-9cb26fc/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9cb26fc... Daily bump.
+[32m[     info][0m Current commit [9cb26fc] is good. Return value: 0
+
+Bisecting: 222 revisions left to test after this (roughly 8 steps)
+[49d60f14c0f142c86b5e86c7b8ce4f9b6e05ee63] authors.xml: Update.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [49d60f1]
++---------------------------------------- Current commit hash: [49d60f1] ----------------------------------------+
+GCC for commit [49d60f1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-49d60f1/bin/gcc with -Os:
+0
+Output of /tmp/gcc-49d60f1/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 49d60f1... authors.xml: Update.
+[32m[     info][0m Current commit [49d60f1] is good. Return value: 0
+
+Bisecting: 111 revisions left to test after this (roughly 7 steps)
+[53d6697702ced911f598a2d3d19b9a1bde9cec69] mips.c (mips_binary_cost): Add new argument speed.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [53d6697]
++---------------------------------------- Current commit hash: [53d6697] ----------------------------------------+
+GCC for commit [53d6697] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-53d6697/bin/gcc with -Os:
+0
+Output of /tmp/gcc-53d6697/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 53d6697... mips.c (mips_binary_cost): Add new argument speed.
+[32m[     info][0m Current commit [53d6697] is good. Return value: 0
+
+Bisecting: 55 revisions left to test after this (roughly 6 steps)
+[8ab079f4d53b0a5ec861b81635e105ae4677255f] re PR c++/40808 (member template specialization causes ICE)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [8ab079f]
++---------------------------------------- Current commit hash: [8ab079f] ----------------------------------------+
+GCC for commit [8ab079f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-8ab079f/bin/gcc with -Os:
+1882264904
+Output of /tmp/gcc-8ab079f/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8ab079f... re PR c++/40808 (member template specialization causes ICE)
+[32m[     info][0m Current commit [8ab079f] is bad. Return value: 1
+
+Bisecting: 27 revisions left to test after this (roughly 5 steps)
+[487102294c3844ed86ff8689a55b7931608b9170] cfgloopmanip.c (duplicate_subloops): Export.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [4871022]
++---------------------------------------- Current commit hash: [4871022] ----------------------------------------+
+GCC for commit [4871022] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-4871022/bin/gcc with -Os:
+0
+Output of /tmp/gcc-4871022/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4871022... cfgloopmanip.c (duplicate_subloops): Export.
+[32m[     info][0m Current commit [4871022] is good. Return value: 0
+
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[5813994e3c5f155d96930314e82f6980c8981406] re PR tree-optimization/41778 (missed dead store elimination)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [5813994]
++---------------------------------------- Current commit hash: [5813994] ----------------------------------------+
+GCC for commit [5813994] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-5813994/bin/gcc with -Os:
+0
+Output of /tmp/gcc-5813994/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5813994... re PR tree-optimization/41778 (missed dead store elimination)
+[32m[     info][0m Current commit [5813994] is good. Return value: 0
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[566df91a821dd06954011f491f2b7f0a2f253bef] re PR fortran/41800 ([OOP] ICE in fold_convert_loc, at fold-const.c:2789)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [566df91]
++---------------------------------------- Current commit hash: [566df91] ----------------------------------------+
+GCC for commit [566df91] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-566df91/bin/gcc with -Os:
+-1430624952
+Output of /tmp/gcc-566df91/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 566df91... re PR fortran/41800 ([OOP] ICE in fold_convert_loc, at fold-const.c:2789)
+[32m[     info][0m Current commit [566df91] is bad. Return value: 1
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[93f28ca73fbb038d98a74a464d04c734743720c4] re PR middle-end/41805 (possible LTO termination bug)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [93f28ca]
++---------------------------------------- Current commit hash: [93f28ca] ----------------------------------------+
+GCC for commit [93f28ca] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-93f28ca/bin/gcc with -Os:
+2074920264
+Output of /tmp/gcc-93f28ca/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 93f28ca... re PR middle-end/41805 (possible LTO termination bug)
+[32m[     info][0m Current commit [93f28ca] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[8460475b4265e2a607acf6bc4bcf98bca5b38aba] re PR fortran/41758 ([Cleanup] Don't resolve expr in gfc_match_allocate)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/21 small
+[32m[     info][0m Testing commit: [8460475b4]
++---------------------------------------- Current commit hash: [8460475b4] ----------------------------------------+
+GCC for commit [8460475b4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-8460475b4/bin/gcc with -Os:
+0
+Output of /tmp/gcc-8460475b4/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8460475b4... re PR fortran/41758 ([Cleanup] Don't resolve expr in gfc_match_allocate)
+[32m[     info][0m Current commit [8460475b4] is good. Return value: 0
+
+93f28ca73fbb038d98a74a464d04c734743720c4 is the first bad commit
+commit 93f28ca73fbb038d98a74a464d04c734743720c4
+Author: Richard Guenther <rguenther@suse.de>
+Date:   Fri Oct 23 12:01:21 2009 +0000
+
+    re PR middle-end/41805 (possible LTO termination bug)
+    
+    2009-10-23  Richard Guenther  <rguenther@suse.de>
+    
+    	PR middle-end/41805
+    	* cfgexpand.c (expand_call_stmt): Use gimple_has_side_effects and
+    	gimple_call_nothrow_p.
+    
+    From-SVN: r153495
+
+:040000 040000 9b54aaaed9c6a14d7ee09abcd0a0083e90723612 6d760c5cf754f2f756c5b2cb932bf4a02dd3c5da M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 93f28ca re PR middle-end/41805 (possible LTO termination bug)
+Checking out files:  28% (5008/17832)   Checking out files:  29% (5172/17832)   Checking out files:  30% (5350/17832)   Checking out files:  31% (5528/17832)   Checking out files:  32% (5707/17832)   Checking out files:  33% (5885/17832)   Checking out files:  34% (6063/17832)   Checking out files:  35% (6242/17832)   Checking out files:  36% (6420/17832)   Checking out files:  37% (6598/17832)   Checking out files:  37% (6677/17832)   Checking out files:  38% (6777/17832)   Checking out files:  39% (6955/17832)   Checking out files:  40% (7133/17832)   Checking out files:  41% (7312/17832)   Checking out files:  42% (7490/17832)   Checking out files:  43% (7668/17832)   Checking out files:  43% (7693/17832)   Checking out files:  44% (7847/17832)   Checking out files:  45% (8025/17832)   Checking out files:  46% (8203/17832)   Checking out files:  47% (8382/17832)   Checking out files:  48% (8560/17832)   Checking out files:  49% (8738/17832)   Checking out files:  50% (8916/17832)   Checking out files:  51% (9095/17832)   Checking out files:  52% (9273/17832)   Checking out files:  53% (9451/17832)   Checking out files:  54% (9630/17832)   Checking out files:  55% (9808/17832)   Checking out files:  55% (9905/17832)   Checking out files:  56% (9986/17832)   Checking out files:  57% (10165/17832)   Checking out files:  58% (10343/17832)   Checking out files:  59% (10521/17832)   Checking out files:  60% (10700/17832)   Checking out files:  61% (10878/17832)   Checking out files:  62% (11056/17832)   Checking out files:  63% (11235/17832)   Checking out files:  64% (11413/17832)   Checking out files:  65% (11591/17832)   Checking out files:  66% (11770/17832)   Checking out files:  66% (11841/17832)   Checking out files:  67% (11948/17832)   Checking out files:  68% (12126/17832)   Checking out files:  69% (12305/17832)   Checking out files:  70% (12483/17832)   Checking out files:  71% (12661/17832)   Checking out files:  72% (12840/17832)   Checking out files:  73% (13018/17832)   Checking out files:  74% (13196/17832)   Checking out files:  75% (13374/17832)   Checking out files:  76% (13553/17832)   Checking out files:  77% (13731/17832)   Checking out files:  77% (13761/17832)   Checking out files:  78% (13909/17832)   Checking out files:  79% (14088/17832)   Checking out files:  80% (14266/17832)   Checking out files:  81% (14444/17832)   Checking out files:  82% (14623/17832)   Checking out files:  83% (14801/17832)   Checking out files:  84% (14979/17832)   Checking out files:  85% (15158/17832)   Checking out files:  86% (15336/17832)   Checking out files:  87% (15514/17832)   Checking out files:  88% (15693/17832)   Checking out files:  89% (15871/17832)   Checking out files:  90% (16049/17832)   Checking out files:  91% (16228/17832)   Checking out files:  91% (16289/17832)   Checking out files:  92% (16406/17832)   Checking out files:  93% (16584/17832)   Checking out files:  94% (16763/17832)   Checking out files:  95% (16941/17832)   Checking out files:  96% (17119/17832)   Checking out files:  97% (17298/17832)   Checking out files:  98% (17476/17832)   Checking out files:  99% (17654/17832)   Checking out files: 100% (17832/17832)   Checking out files: 100% (17832/17832), done.
+Previous HEAD position was 8460475b4... re PR fortran/41758 ([Cleanup] Don't resolve expr in gfc_match_allocate)
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [93f28ca]
++---------------------------------------- Current commit hash: [93f28ca] ----------------------------------------+
+GCC for commit [93f28ca] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-93f28ca/bin/gcc with -Os:
+1172743496
+Output of /tmp/gcc-93f28ca/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 93f28ca... re PR middle-end/41805 (possible LTO termination bug)
+[32m[     info][0m Current commit [93f28ca] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [8460475b4]
++---------------------------------------- Current commit hash: [8460475b4] ----------------------------------------+
+GCC for commit [8460475b4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-8460475b4/bin/gcc with -Os:
+0
+Output of /tmp/gcc-8460475b4/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8460475b4... re PR fortran/41758 ([Cleanup] Don't resolve expr in gfc_match_allocate)
+[32m[     info][0m Current commit [8460475b4] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [93f28ca] with -O0:
+0
+Output of gcc [93f28ca] with -O1:
+0
+Output of gcc [93f28ca] with -O2:
+0
+Output of gcc [93f28ca] with -O3:
+0
+Output of gcc [93f28ca] with -Os:
+-1900571320
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

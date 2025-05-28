@@ -1,0 +1,68 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = c9cac4ff
+Output of gcc-4.3.0 with -O3:
+checksum = b87ea2bc
+Output of gcc-4.3.0 with -O0:
+checksum = c9cac4ff
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0664 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+Compilation by gcc [b23987e] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+The merge base b23987ec2f0f24c38c78f7cf63c91a699da681bd is bad.
+This means the bug has been fixed between b23987ec2f0f24c38c78f7cf63c91a699da681bd and [bfbec2aae3586d0aed03b24e2b5998b8a1a844a0].
+bisect run failed:
+'bisect_state bad' exited with error code 3
+[32m[     info][0m First bad commit: 
+Checking out files:   6% (1619/24968)   Checking out files:   7% (1748/24968)   Checking out files:   8% (1998/24968)   Checking out files:   9% (2248/24968)   Checking out files:   9% (2441/24968)   Checking out files:  10% (2497/24968)   Checking out files:  11% (2747/24968)   Checking out files:  12% (2997/24968)   Checking out files:  13% (3246/24968)   Checking out files:  14% (3496/24968)   Checking out files:  15% (3746/24968)   Checking out files:  16% (3995/24968)   Checking out files:  17% (4245/24968)   Checking out files:  17% (4386/24968)   Checking out files:  18% (4495/24968)   Checking out files:  19% (4744/24968)   Checking out files:  20% (4994/24968)   Checking out files:  21% (5244/24968)   Checking out files:  22% (5493/24968)   Checking out files:  23% (5743/24968)   Checking out files:  23% (5987/24968)   Checking out files:  24% (5993/24968)   Checking out files:  25% (6242/24968)   Checking out files:  26% (6492/24968)   Checking out files:  27% (6742/24968)   Checking out files:  28% (6992/24968)   Checking out files:  29% (7241/24968)   Checking out files:  30% (7491/24968)   Checking out files:  31% (7741/24968)   Checking out files:  32% (7990/24968)   Checking out files:  33% (8240/24968)   Checking out files:  33% (8281/24968)   Checking out files:  34% (8490/24968)   Checking out files:  35% (8739/24968)   Checking out files:  36% (8989/24968)   Checking out files:  37% (9239/24968)   Checking out files:  38% (9488/24968)   Checking out files:  39% (9738/24968)   Checking out files:  40% (9988/24968)   Checking out files:  41% (10237/24968)   Checking out files:  42% (10487/24968)   Checking out files:  43% (10737/24968)   Checking out files:  44% (10986/24968)   Checking out files:  45% (11236/24968)   Checking out files:  46% (11486/24968)   Checking out files:  47% (11735/24968)   Checking out files:  48% (11985/24968)   Checking out files:  49% (12235/24968)   Checking out files:  50% (12484/24968)   Checking out files:  51% (12734/24968)   Checking out files:  52% (12984/24968)   Checking out files:  53% (13234/24968)   Checking out files:  54% (13483/24968)   Checking out files:  55% (13733/24968)   Checking out files:  56% (13983/24968)   Checking out files:  57% (14232/24968)   Checking out files:  57% (14268/24968)   Checking out files:  58% (14482/24968)   Checking out files:  59% (14732/24968)   Checking out files:  60% (14981/24968)   Checking out files:  61% (15231/24968)   Checking out files:  62% (15481/24968)   Checking out files:  63% (15730/24968)   Checking out files:  64% (15980/24968)   Checking out files:  65% (16230/24968)   Checking out files:  66% (16479/24968)   Checking out files:  67% (16729/24968)   Checking out files:  67% (16978/24968)   Checking out files:  68% (16979/24968)   Checking out files:  69% (17228/24968)   Checking out files:  70% (17478/24968)   Checking out files:  71% (17728/24968)   Checking out files:  72% (17977/24968)   Checking out files:  73% (18227/24968)   Checking out files:  74% (18477/24968)   Checking out files:  75% (18726/24968)   Checking out files:  76% (18976/24968)   Checking out files:  77% (19226/24968)   Checking out files:  78% (19476/24968)   Checking out files:  79% (19725/24968)   Checking out files:  80% (19975/24968)   Checking out files:  80% (20043/24968)   Checking out files:  81% (20225/24968)   Checking out files:  82% (20474/24968)   Checking out files:  83% (20724/24968)   Checking out files:  84% (20974/24968)   Checking out files:  85% (21223/24968)   Checking out files:  86% (21473/24968)   Checking out files:  87% (21723/24968)   Checking out files:  88% (21972/24968)   Checking out files:  89% (22222/24968)   Checking out files:  90% (22472/24968)   Checking out files:  91% (22721/24968)   Checking out files:  92% (22971/24968)   Checking out files:  93% (23221/24968)   Checking out files:  93% (23313/24968)   Checking out files:  94% (23470/24968)   Checking out files:  95% (23720/24968)   Checking out files:  96% (23970/24968)   Checking out files:  97% (24219/24968)   Checking out files:  98% (24469/24968)   Checking out files:  99% (24719/24968)   Checking out files: 100% (24968/24968)   Checking out files: 100% (24968/24968), done.
+Previous HEAD position was b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+HEAD is now at b906121... Daily bump.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [b906121]
++---------------------------------------- Current commit hash: [b906121] ----------------------------------------+
+GCC for commit [b906121] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c9cac4ff
+Output of /tmp/gcc-b906121/bin/gcc with -O3:
+checksum = b87ea2bc
+Output of /tmp/gcc-b906121/bin/gcc with -O0:
+checksum = c9cac4ff
+----------------------------------------------------
+No local changes to save
+HEAD is now at b906121... Daily bump.
+[32m[     info][0m Current commit [b906121] is bad. Return value: 1
+
+fatal: ambiguous argument '^': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions
+[32m[     info][0m Testing commit: [b906121]
++---------------------------------------- Current commit hash: [b906121] ----------------------------------------+
+GCC for commit [b906121] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = c9cac4ff
+Output of /tmp/gcc-b906121/bin/gcc with -O3:
+checksum = b87ea2bc
+Output of /tmp/gcc-b906121/bin/gcc with -O0:
+checksum = c9cac4ff
+----------------------------------------------------
+No local changes to save
+HEAD is now at b906121... Daily bump.
+[32m[     info][0m Current commit [b906121] is bad. Return value: 1
+
+Error: The first bad commit is not the correct one. [2]

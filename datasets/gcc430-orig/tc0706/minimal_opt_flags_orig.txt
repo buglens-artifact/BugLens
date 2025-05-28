@@ -1,0 +1,3 @@
+early-inlining
+inline-small-functions
+unit-at-a-time

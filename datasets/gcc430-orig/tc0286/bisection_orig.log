@@ -1,0 +1,369 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = a60141ac
+Output of gcc-4.3.0 with -Os:
+checksum = 73768445
+Output of gcc-4.3.0 with -O0:
+checksum = a60141ac
+====================================================================
+[32m[     info][0m Good version found: gcc-3.4.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[a8e6c82ab09c4c7a8490bc3861049b1941b84c75] re PR c++/13574 (array default initializer in class lets gcc consume all memory and die)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [a8e6c82]
++---------------------------------------- Current commit hash: [a8e6c82] ----------------------------------------+
+GCC for commit [a8e6c82] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-a8e6c82/bin/gcc with -Os:
+checksum = a60141ac
+Output of /tmp/gcc-a8e6c82/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at a8e6c82... re PR c++/13574 (array default initializer in class lets gcc consume all memory and die)
+[32m[     info][0m Current commit [a8e6c82] is good. Return value: 0
+
+Bisecting: 15168 revisions left to test after this (roughly 14 steps)
+[024f1251b584243372c0413105b2230769f3e682] re PR c++/23691 (`mpl_::bool_<false>::value' is not a valid template argument for type `bool' because it is a non-constant expression)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [024f125]
++---------------------------------------- Current commit hash: [024f125] ----------------------------------------+
+GCC for commit [024f125] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-024f125/bin/gcc with -Os:
+checksum = fa0eda56
+Output of /tmp/gcc-024f125/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at 024f125... re PR c++/23691 (`mpl_::bool_<false>::value' is not a valid template argument for type `bool' because it is a non-constant expression)
+[32m[     info][0m Current commit [024f125] is bad. Return value: 1
+
+Bisecting: 7583 revisions left to test after this (roughly 13 steps)
+[65f4323d84b08d9d0ff450d6e6432abf0a4fa3fb] tree-cfg.c (find_taken_edge): Reject VAL begin NULL.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [65f4323]
++---------------------------------------- Current commit hash: [65f4323] ----------------------------------------+
+GCC for commit [65f4323] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-65f4323/bin/gcc with -Os:
+checksum = a57d80f1
+Output of /tmp/gcc-65f4323/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at 65f4323... tree-cfg.c (find_taken_edge): Reject VAL begin NULL.
+[32m[     info][0m Current commit [65f4323] is bad. Return value: 1
+
+Bisecting: 3791 revisions left to test after this (roughly 12 steps)
+[ef558756f2838de518a99a52caabe931e9af52b1] decl.c, [...]: Add 2004 to copyright years.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [ef55875]
++---------------------------------------- Current commit hash: [ef55875] ----------------------------------------+
+GCC for commit [ef55875] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-ef55875/bin/gcc with -Os:
+checksum = a60141ac
+Output of /tmp/gcc-ef55875/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at ef55875... decl.c, [...]: Add 2004 to copyright years.
+[32m[     info][0m Current commit [ef55875] is good. Return value: 0
+
+Bisecting: 1895 revisions left to test after this (roughly 11 steps)
+[0705d60230a25db8478d23bbd037351bf78309dc] * tree-ssa.c (propagate_into_addr): Properly test for LHR.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [0705d60]
++---------------------------------------- Current commit hash: [0705d60] ----------------------------------------+
+GCC for commit [0705d60] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-0705d60/bin/gcc with -Os:
+checksum = cec10c42
+Output of /tmp/gcc-0705d60/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0705d60... * tree-ssa.c (propagate_into_addr): Properly test for LHR.
+[32m[     info][0m Current commit [0705d60] is bad. Return value: 1
+
+Bisecting: 947 revisions left to test after this (roughly 10 steps)
+[852c7b12c56a25dfbad50418d9c4a093b7463bd4] tree-ssa.c (verify_flow_insensitive_alias_info): Process every variable that may have aliases, not just tags.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [852c7b1]
++---------------------------------------- Current commit hash: [852c7b1] ----------------------------------------+
+GCC for commit [852c7b1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-852c7b1/bin/gcc with -Os:
+checksum = a60141ac
+Output of /tmp/gcc-852c7b1/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at 852c7b1... tree-ssa.c (verify_flow_insensitive_alias_info): Process every variable that may have aliases, not just tags.
+[32m[     info][0m Current commit [852c7b1] is good. Return value: 0
+
+Bisecting: 473 revisions left to test after this (roughly 9 steps)
+[b4b3435ecce4606416949432e6c5454b3b174c37] re PR libgcj/17079 ([PATCH] Log messages whose logging level is equal to the threshold discarded by java.util.logging.Handler)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [b4b3435]
++---------------------------------------- Current commit hash: [b4b3435] ----------------------------------------+
+GCC for commit [b4b3435] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-b4b3435/bin/gcc with -Os:
+checksum = 34ab445
+Output of /tmp/gcc-b4b3435/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at b4b3435... re PR libgcj/17079 ([PATCH] Log messages whose logging level is equal to the threshold discarded by java.util.logging.Handler)
+[32m[     info][0m Current commit [b4b3435] is bad. Return value: 1
+
+Bisecting: 236 revisions left to test after this (roughly 8 steps)
+[067a5735c5236147708d701c247a8bee38c06a8b] c99_functions.c (nextafterf): New implementation that works correctly with denormalized numbers.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [067a573]
++---------------------------------------- Current commit hash: [067a573] ----------------------------------------+
+GCC for commit [067a573] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-067a573/bin/gcc with -Os:
+checksum = a60141ac
+Output of /tmp/gcc-067a573/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at 067a573... c99_functions.c (nextafterf): New implementation that works correctly with denormalized numbers.
+[32m[     info][0m Current commit [067a573] is good. Return value: 0
+
+Bisecting: 118 revisions left to test after this (roughly 7 steps)
+[73389fa4a2ec749ef646627ef69c6245a8d862a4] re PR libgcj/17020 (gij should ignore all reserved method flags)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [73389fa]
++---------------------------------------- Current commit hash: [73389fa] ----------------------------------------+
+GCC for commit [73389fa] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-73389fa/bin/gcc with -Os:
+checksum = 8695b642
+Output of /tmp/gcc-73389fa/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at 73389fa... re PR libgcj/17020 (gij should ignore all reserved method flags)
+[32m[     info][0m Current commit [73389fa] is bad. Return value: 1
+
+Bisecting: 58 revisions left to test after this (roughly 6 steps)
+[fbac6f3cf5a007c9888d1fecdd647338f9eb623f] re PR c++/16698 (ICE with exceptions and declaration of __cxa_throw)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [fbac6f3]
++---------------------------------------- Current commit hash: [fbac6f3] ----------------------------------------+
+GCC for commit [fbac6f3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-fbac6f3/bin/gcc with -Os:
+checksum = 79b61644
+Output of /tmp/gcc-fbac6f3/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at fbac6f3... re PR c++/16698 (ICE with exceptions and declaration of __cxa_throw)
+[32m[     info][0m Current commit [fbac6f3] is bad. Return value: 1
+
+Bisecting: 29 revisions left to test after this (roughly 5 steps)
+[5158e8d8c1a81c0506defd908022aba439f3edeb] re PR bootstrap/16164 (automake 1.8.5 upgrade changed fastjar into a read-write source directory)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [5158e8d]
++---------------------------------------- Current commit hash: [5158e8d] ----------------------------------------+
+GCC for commit [5158e8d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-5158e8d/bin/gcc with -Os:
+checksum = bf9da644
+Output of /tmp/gcc-5158e8d/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5158e8d... re PR bootstrap/16164 (automake 1.8.5 upgrade changed fastjar into a read-write source directory)
+[32m[     info][0m Current commit [5158e8d] is bad. Return value: 1
+
+Bisecting: 14 revisions left to test after this (roughly 4 steps)
+[7e04b67b775a32da7ccaa79897755601bdf53467] err14.java: New file.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [7e04b67]
++---------------------------------------- Current commit hash: [7e04b67] ----------------------------------------+
+GCC for commit [7e04b67] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-7e04b67/bin/gcc with -Os:
+checksum = 42c9dc45
+Output of /tmp/gcc-7e04b67/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7e04b67... err14.java: New file.
+[32m[     info][0m Current commit [7e04b67] is bad. Return value: 1
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[bbefea96623c01fd9915585adc21cfdbdd59746d] java-tree.h (flag_deprecated): Removed.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [bbefea9]
++---------------------------------------- Current commit hash: [bbefea9] ----------------------------------------+
+GCC for commit [bbefea9] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-bbefea9/bin/gcc with -Os:
+checksum = a60141ac
+Output of /tmp/gcc-bbefea9/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at bbefea9... java-tree.h (flag_deprecated): Removed.
+[32m[     info][0m Current commit [bbefea9] is good. Return value: 0
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[45d78e7f76382d08aeec6c4237e149d2d364ed1c] re PR libgcj/3144 (java.lang.Date.compareTo() not supported)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [45d78e7]
++---------------------------------------- Current commit hash: [45d78e7] ----------------------------------------+
+GCC for commit [45d78e7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-45d78e7/bin/gcc with -Os:
+checksum = b9078044
+Output of /tmp/gcc-45d78e7/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at 45d78e7... re PR libgcj/3144 (java.lang.Date.compareTo() not supported)
+[32m[     info][0m Current commit [45d78e7] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[25f3e06c7c272acfe17d2502a03330dcf5447b97] expr.c (expand_expr_real_1): Add back code that was not dead.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0286 orig
+[32m[     info][0m Testing commit: [25f3e06]
++---------------------------------------- Current commit hash: [25f3e06] ----------------------------------------+
+GCC for commit [25f3e06] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-25f3e06/bin/gcc with -Os:
+checksum = a60141ac
+Output of /tmp/gcc-25f3e06/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at 25f3e06... expr.c (expand_expr_real_1): Add back code that was not dead.
+[32m[     info][0m Current commit [25f3e06] is good. Return value: 0
+
+45d78e7f76382d08aeec6c4237e149d2d364ed1c is the first bad commit
+commit 45d78e7f76382d08aeec6c4237e149d2d364ed1c
+Author: Jakub Jelinek <jakub@redhat.com>
+Date:   Tue Aug 10 15:28:26 2004 +0200
+
+    re PR libgcj/3144 (java.lang.Date.compareTo() not supported)
+    
+    	PR target/3144
+    	* expr.c (move_by_pieces_ninsns): Add max_size argument.
+    	(MOVE_BY_PIECES_P): Pass MOVE_MAX_PIECES + 1 to it.
+    	(CLEAR_BY_PIECES_P): Pass STORE_MAX_PIECES + 1 to it.
+    	(STORE_BY_PIECES_P): Define similarly to CLEAR_BY_PIECES_P,
+    	but using MOVE_RATIO.
+    	(move_by_pieces): Pass max_size to move_by_pieces_ninsns.
+    	(can_store_by_pieces): Change max_size type to unsigned int.
+    	(store_by_pieces_1): Likewise.  Pass max_size to
+    	move_by_pieces_ninsns.
+    	* config/s390/s390.h (STORE_BY_PIECES_P): Define.
+    	* config/sh/sh.c (MOVE_BY_PIECES_P): Pass MOVE_MAX_PIECES + 1
+    	to move_by_pieces_ninsns.
+    	(STORE_BY_PIECES_P): Define.
+    	* config/ns32k/ns32k.h (STORE_BY_PIECES_P): Pass STORE_MAX_PIECES + 1
+    	to move_by_pieces_ninsns.
+    	* doc/tm.texi (STORE_BY_PIECES_P): Document changed default.
+    
+    	* config/i386/i386.h (CLEAR_RATIO): Define.
+    
+    From-SVN: r85750
+
+:040000 040000 8069e965713b0c5e478e1e0fa1c88055eb9b4120 be1f5801058c37294f73297fe6d77a98106776cb M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 45d78e7 re PR libgcj/3144 (java.lang.Date.compareTo() not supported)
+Checking out files:  10% (5242/50569)   Checking out files:  11% (5563/50569)   Checking out files:  12% (6069/50569)   Checking out files:  13% (6574/50569)   Checking out files:  13% (6878/50569)   Checking out files:  14% (7080/50569)   Checking out files:  15% (7586/50569)   Checking out files:  16% (8092/50569)   Checking out files:  16% (8320/50569)   Checking out files:  17% (8597/50569)   Checking out files:  18% (9103/50569)   Checking out files:  19% (9609/50569)   Checking out files:  19% (9799/50569)   Checking out files:  20% (10114/50569)   Checking out files:  21% (10620/50569)   Checking out files:  22% (11126/50569)   Checking out files:  23% (11631/50569)   Checking out files:  24% (12137/50569)   Checking out files:  25% (12643/50569)   Checking out files:  25% (13077/50569)   Checking out files:  26% (13148/50569)   Checking out files:  27% (13654/50569)   Checking out files:  28% (14160/50569)   Checking out files:  29% (14666/50569)   Checking out files:  30% (15171/50569)   Checking out files:  31% (15677/50569)   Checking out files:  32% (16183/50569)   Checking out files:  32% (16669/50569)   Checking out files:  33% (16688/50569)   Checking out files:  34% (17194/50569)   Checking out files:  35% (17700/50569)   Checking out files:  36% (18205/50569)   Checking out files:  37% (18711/50569)   Checking out files:  38% (19217/50569)   Checking out files:  39% (19722/50569)   Checking out files:  40% (20228/50569)   Checking out files:  40% (20437/50569)   Checking out files:  41% (20734/50569)   Checking out files:  42% (21239/50569)   Checking out files:  43% (21745/50569)   Checking out files:  44% (22251/50569)   Checking out files:  44% (22380/50569)   Checking out files:  45% (22757/50569)   Checking out files:  46% (23262/50569)   Checking out files:  47% (23768/50569)   Checking out files:  48% (24274/50569)   Checking out files:  49% (24779/50569)   Checking out files:  50% (25285/50569)   Checking out files:  50% (25311/50569)   Checking out files:  51% (25791/50569)   Checking out files:  52% (26296/50569)   Checking out files:  53% (26802/50569)   Checking out files:  54% (27308/50569)   Checking out files:  55% (27813/50569)   Checking out files:  56% (28319/50569)   Checking out files:  56% (28383/50569)   Checking out files:  57% (28825/50569)   Checking out files:  58% (29331/50569)   Checking out files:  59% (29836/50569)   Checking out files:  60% (30342/50569)   Checking out files:  61% (30848/50569)   Checking out files:  62% (31353/50569)   Checking out files:  63% (31859/50569)   Checking out files:  63% (31940/50569)   Checking out files:  64% (32365/50569)   Checking out files:  65% (32870/50569)   Checking out files:  66% (33376/50569)   Checking out files:  67% (33882/50569)   Checking out files:  68% (34387/50569)   Checking out files:  69% (34893/50569)   Checking out files:  70% (35399/50569)   Checking out files:  70% (35435/50569)   Checking out files:  71% (35904/50569)   Checking out files:  72% (36410/50569)   Checking out files:  73% (36916/50569)   Checking out files:  74% (37422/50569)   Checking out files:  75% (37927/50569)   Checking out files:  76% (38433/50569)   Checking out files:  76% (38868/50569)   Checking out files:  77% (38939/50569)   Checking out files:  78% (39444/50569)   Checking out files:  79% (39950/50569)   Checking out files:  80% (40456/50569)   Checking out files:  81% (40961/50569)   Checking out files:  82% (41467/50569)   Checking out files:  83% (41973/50569)   Checking out files:  84% (42478/50569)   Checking out files:  84% (42554/50569)   Checking out files:  85% (42984/50569)   Checking out files:  86% (43490/50569)   Checking out files:  87% (43996/50569)   Checking out files:  88% (44501/50569)   Checking out files:  89% (45007/50569)   Checking out files:  90% (45513/50569)   Checking out files:  90% (45807/50569)   Checking out files:  91% (46018/50569)   Checking out files:  92% (46524/50569)   Checking out files:  93% (47030/50569)   Checking out files:  94% (47535/50569)   Checking out files:  95% (48041/50569)   Checking out files:  95% (48217/50569)   Checking out files:  96% (48547/50569)   Checking out files:  97% (49052/50569)   Checking out files:  98% (49558/50569)   Checking out files:  99% (50064/50569)   Checking out files: 100% (50569/50569)   Checking out files: 100% (50569/50569), done.
+Previous HEAD position was 25f3e06... expr.c (expand_expr_real_1): Add back code that was not dead.
+HEAD is now at eb64c8e... re PR libfortran/33055 (Runtime error in INQUIRE unit existance with -fdefault-integer-8)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [45d78e7]
++---------------------------------------- Current commit hash: [45d78e7] ----------------------------------------+
+GCC for commit [45d78e7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-45d78e7/bin/gcc with -Os:
+checksum = 8ce11845
+Output of /tmp/gcc-45d78e7/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at 45d78e7... re PR libgcj/3144 (java.lang.Date.compareTo() not supported)
+[32m[     info][0m Current commit [45d78e7] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [25f3e06]
++---------------------------------------- Current commit hash: [25f3e06] ----------------------------------------+
+GCC for commit [25f3e06] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a60141ac
+Output of /tmp/gcc-25f3e06/bin/gcc with -Os:
+checksum = a60141ac
+Output of /tmp/gcc-25f3e06/bin/gcc with -O0:
+checksum = a60141ac
+----------------------------------------------------
+No local changes to save
+HEAD is now at 25f3e06... expr.c (expand_expr_real_1): Add back code that was not dead.
+[32m[     info][0m Current commit [25f3e06] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [45d78e7] with -O0:
+checksum = a60141ac
+Output of gcc [45d78e7] with -O1:
+checksum = a60141ac
+Output of gcc [45d78e7] with -O2:
+checksum = a60141ac
+Output of gcc [45d78e7] with -O3:
+checksum = a60141ac
+Output of gcc [45d78e7] with -Os:
+checksum = 48cdbe44
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

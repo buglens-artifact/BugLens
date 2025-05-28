@@ -1,0 +1,9 @@
+early-inlining
+inline-functions-called-once
+inline-small-functions
+strict-aliasing
+tree-dominator-opts
+tree-loop-im
+tree-loop-optimize
+tree-sra
+unit-at-a-time

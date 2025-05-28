@@ -1,0 +1,347 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = efb66b5a
+Output of gcc-4.3.0 with -O3:
+checksum = efb66b59
+Output of gcc-4.3.0 with -O0:
+checksum = efb66b5a
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+checksum = efb66b5a
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+checksum = efb66b59
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is bad. Return value: 1
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[2b5e5642e38e17dc60ca6408f4c2bba651e1a9f7] builtins.c (fold_builtin_load_exponent): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [2b5e564]
++---------------------------------------- Current commit hash: [2b5e564] ----------------------------------------+
+GCC for commit [2b5e564] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-2b5e564/bin/gcc with -O3:
+checksum = efb66b59
+Output of /tmp/gcc-2b5e564/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2b5e564... builtins.c (fold_builtin_load_exponent): New.
+[32m[     info][0m Current commit [2b5e564] is bad. Return value: 1
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[af71363e455f4c60cf98f5ef42b4ddd8daedabd3] * configure: Regenerate with correct autoconf version.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [af71363]
++---------------------------------------- Current commit hash: [af71363] ----------------------------------------+
+GCC for commit [af71363] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-af71363/bin/gcc with -O3:
+checksum = efb66b5a
+Output of /tmp/gcc-af71363/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at af71363... * configure: Regenerate with correct autoconf version.
+[32m[     info][0m Current commit [af71363] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[cf227303461b367efbb57f7e4f9425c3f15f1132] pr23382.c: Avoid DCE from eliminating dead variable.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [cf227303]
++---------------------------------------- Current commit hash: [cf227303] ----------------------------------------+
+GCC for commit [cf227303] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-cf227303/bin/gcc with -O3:
+checksum = efb66b59
+Output of /tmp/gcc-cf227303/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at cf227303... pr23382.c: Avoid DCE from eliminating dead variable.
+[32m[     info][0m Current commit [cf227303] is bad. Return value: 1
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[1bc2338361af6fb1e8fecb3ec44db9979d842e4d] re PR fortran/30430 (Memory corruption in the module search path code)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [1bc2338]
++---------------------------------------- Current commit hash: [1bc2338] ----------------------------------------+
+GCC for commit [1bc2338] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-1bc2338/bin/gcc with -O3:
+checksum = efb66b59
+Output of /tmp/gcc-1bc2338/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1bc2338... re PR fortran/30430 (Memory corruption in the module search path code)
+[32m[     info][0m Current commit [1bc2338] is bad. Return value: 1
+
+Bisecting: 139 revisions left to test after this (roughly 7 steps)
+[fa9585134f6f58fa0d3da3ca4ad5493855aea2dc] Makefile.def (target_modules): Add libgcc.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [fa95851]
++---------------------------------------- Current commit hash: [fa95851] ----------------------------------------+
+GCC for commit [fa95851] already exists. Using existing binary.
+Compilation by gcc [fa95851] with -O3 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+Compilation by gcc [fa95851] with -O0 failed - [cannot find crtbegin.o]. Try to fix and recompile...
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-fa95851/bin/gcc with -O3:
+checksum = efb66b5a
+Output of /tmp/gcc-fa95851/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at fa95851... Makefile.def (target_modules): Add libgcc.
+[32m[     info][0m Current commit [fa95851] is good. Return value: 0
+
+Bisecting: 69 revisions left to test after this (roughly 6 steps)
+[cd85e27a61d61fd365ad5a91f7613de78972c065] data.c (gfc_assign_data_value): Fix whitespace.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [cd85e27]
++---------------------------------------- Current commit hash: [cd85e27] ----------------------------------------+
+GCC for commit [cd85e27] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-cd85e27/bin/gcc with -O3:
+checksum = efb66b5a
+Output of /tmp/gcc-cd85e27/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at cd85e27... data.c (gfc_assign_data_value): Fix whitespace.
+[32m[     info][0m Current commit [cd85e27] is good. Return value: 0
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[95af8923f19ed9bddc89caa02103d48b44641c7e] Regenerate configure after updating configure.in
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [95af892]
++---------------------------------------- Current commit hash: [95af892] ----------------------------------------+
+GCC for commit [95af892] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-95af892/bin/gcc with -O3:
+checksum = efb66b59
+Output of /tmp/gcc-95af892/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 95af892... Regenerate configure after updating configure.in
+[32m[     info][0m Current commit [95af892] is bad. Return value: 1
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[62511fb1ea2fdf6656dac150ccb9dc3859dad9b3] trans-array.c (constant_array_constructor_p): New function to determine whether an array constructor consists only of...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [62511fb]
++---------------------------------------- Current commit hash: [62511fb] ----------------------------------------+
+GCC for commit [62511fb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-62511fb/bin/gcc with -O3:
+checksum = efb66b59
+Output of /tmp/gcc-62511fb/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 62511fb... trans-array.c (constant_array_constructor_p): New function to determine whether an array constructor consists only of...
+[32m[     info][0m Current commit [62511fb] is bad. Return value: 1
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[46e3b90f7e326c672c4ecddf5287f603a89d03ef] re PR tree-optimization/29877 (out of SSA (TER) extends variable life of variable beyond original declared)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [46e3b90]
++---------------------------------------- Current commit hash: [46e3b90] ----------------------------------------+
+GCC for commit [46e3b90] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-46e3b90/bin/gcc with -O3:
+checksum = efb66b5a
+Output of /tmp/gcc-46e3b90/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 46e3b90... re PR tree-optimization/29877 (out of SSA (TER) extends variable life of variable beyond original declared)
+[32m[     info][0m Current commit [46e3b90] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[f4b3ca7277845d4444997924301da6225ce19001] tree-pas.h (TODO_remove_function): New flag.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [f4b3ca7]
++---------------------------------------- Current commit hash: [f4b3ca7] ----------------------------------------+
+GCC for commit [f4b3ca7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-f4b3ca7/bin/gcc with -O3:
+checksum = efb66b5a
+Output of /tmp/gcc-f4b3ca7/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at f4b3ca7... tree-pas.h (TODO_remove_function): New flag.
+[32m[     info][0m Current commit [f4b3ca7] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[31ab1cc9db34ff449b8a72a2e856b9f5edcab7fa] re PR tree-optimization/23603 (VRP does not say range for a in a = b == c; is [0,1])
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [31ab1cc]
++---------------------------------------- Current commit hash: [31ab1cc] ----------------------------------------+
+GCC for commit [31ab1cc] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-31ab1cc/bin/gcc with -O3:
+checksum = efb66b59
+Output of /tmp/gcc-31ab1cc/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 31ab1cc... re PR tree-optimization/23603 (VRP does not say range for a in a = b == c; is [0,1])
+[32m[     info][0m Current commit [31ab1cc] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[151e6f2437deb05a6080f0710b4e52f57d74be95] cgraphunit.c (cgraph_process_new_functions): Reset reachable flag.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0547 orig
+[32m[     info][0m Testing commit: [151e6f2]
++---------------------------------------- Current commit hash: [151e6f2] ----------------------------------------+
+GCC for commit [151e6f2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-151e6f2/bin/gcc with -O3:
+checksum = efb66b5a
+Output of /tmp/gcc-151e6f2/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 151e6f2... cgraphunit.c (cgraph_process_new_functions): Reset reachable flag.
+[32m[     info][0m Current commit [151e6f2] is good. Return value: 0
+
+31ab1cc9db34ff449b8a72a2e856b9f5edcab7fa is the first bad commit
+commit 31ab1cc9db34ff449b8a72a2e856b9f5edcab7fa
+Author: Richard Guenther <rguenther@suse.de>
+Date:   Mon Jan 8 11:20:00 2007 +0000
+
+    re PR tree-optimization/23603 (VRP does not say range for a in a = b == c; is [0,1])
+    
+    2007-01-08  Richard Guenther  <rguenther@suse.de>
+    
+            PR tree-optimization/23603
+            * tree-vrp.c (set_value_range_to_truthvalue): New function.
+            (extract_range_from_binary): Fall back to truthvalue instead of
+            varying for TRUTH_*_EXPR.
+            (extract_range_from_comparison): Fall back to truthvalue instead of
+            varying.
+            (vrp_visit_phi_node): Don't adjust new range bounds to +INF/-INF
+            if all visited PHI values were constant.
+    
+            * gcc.dg/tree-ssa/vrp31.c: New testcase.
+            * gcc.dg/tree-ssa/vrp32.c: Likewise.
+    
+    From-SVN: r120578
+
+:040000 040000 6fc752f6379a5f36aac174cddf07cc4f830ba583 ca519bd3755c028170e44cbe8ec2c171af6410a3 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 31ab1cc re PR tree-optimization/23603 (VRP does not say range for a in a = b == c; is [0,1])
+Checking out files:  25% (5096/20177)   Checking out files:  26% (5247/20177)   Checking out files:  27% (5448/20177)   Checking out files:  28% (5650/20177)   Checking out files:  29% (5852/20177)   Checking out files:  30% (6054/20177)   Checking out files:  31% (6255/20177)   Checking out files:  32% (6457/20177)   Checking out files:  33% (6659/20177)   Checking out files:  34% (6861/20177)   Checking out files:  35% (7062/20177)   Checking out files:  36% (7264/20177)   Checking out files:  37% (7466/20177)   Checking out files:  38% (7668/20177)   Checking out files:  39% (7870/20177)   Checking out files:  40% (8071/20177)   Checking out files:  41% (8273/20177)   Checking out files:  42% (8475/20177)   Checking out files:  42% (8501/20177)   Checking out files:  43% (8677/20177)   Checking out files:  44% (8878/20177)   Checking out files:  45% (9080/20177)   Checking out files:  46% (9282/20177)   Checking out files:  47% (9484/20177)   Checking out files:  48% (9685/20177)   Checking out files:  48% (9775/20177)   Checking out files:  49% (9887/20177)   Checking out files:  50% (10089/20177)   Checking out files:  51% (10291/20177)   Checking out files:  52% (10493/20177)   Checking out files:  52% (10608/20177)   Checking out files:  53% (10694/20177)   Checking out files:  54% (10896/20177)   Checking out files:  55% (11098/20177)   Checking out files:  56% (11300/20177)   Checking out files:  57% (11501/20177)   Checking out files:  58% (11703/20177)   Checking out files:  59% (11905/20177)   Checking out files:  60% (12107/20177)   Checking out files:  61% (12308/20177)   Checking out files:  62% (12510/20177)   Checking out files:  63% (12712/20177)   Checking out files:  64% (12914/20177)   Checking out files:  65% (13116/20177)   Checking out files:  65% (13244/20177)   Checking out files:  66% (13317/20177)   Checking out files:  67% (13519/20177)   Checking out files:  68% (13721/20177)   Checking out files:  69% (13923/20177)   Checking out files:  70% (14124/20177)   Checking out files:  71% (14326/20177)   Checking out files:  72% (14528/20177)   Checking out files:  73% (14730/20177)   Checking out files:  73% (14861/20177)   Checking out files:  74% (14931/20177)   Checking out files:  75% (15133/20177)   Checking out files:  76% (15335/20177)   Checking out files:  77% (15537/20177)   Checking out files:  78% (15739/20177)   Checking out files:  79% (15940/20177)   Checking out files:  80% (16142/20177)   Checking out files:  81% (16344/20177)   Checking out files:  82% (16546/20177)   Checking out files:  82% (16734/20177)   Checking out files:  83% (16747/20177)   Checking out files:  84% (16949/20177)   Checking out files:  85% (17151/20177)   Checking out files:  86% (17353/20177)   Checking out files:  87% (17554/20177)   Checking out files:  88% (17756/20177)   Checking out files:  89% (17958/20177)   Checking out files:  90% (18160/20177)   Checking out files:  91% (18362/20177)   Checking out files:  92% (18563/20177)   Checking out files:  92% (18722/20177)   Checking out files:  93% (18765/20177)   Checking out files:  94% (18967/20177)   Checking out files:  95% (19169/20177)   Checking out files:  96% (19370/20177)   Checking out files:  97% (19572/20177)   Checking out files:  98% (19774/20177)   Checking out files:  99% (19976/20177)   Checking out files: 100% (20177/20177)   Checking out files: 100% (20177/20177), done.
+Previous HEAD position was 151e6f2... cgraphunit.c (cgraph_process_new_functions): Reset reachable flag.
+HEAD is now at 8f59c51... makemake.tcl (emit_package_rule): Emit command to create target directory.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [31ab1cc]
++---------------------------------------- Current commit hash: [31ab1cc] ----------------------------------------+
+GCC for commit [31ab1cc] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-31ab1cc/bin/gcc with -O3:
+checksum = efb66b59
+Output of /tmp/gcc-31ab1cc/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 31ab1cc... re PR tree-optimization/23603 (VRP does not say range for a in a = b == c; is [0,1])
+[32m[     info][0m Current commit [31ab1cc] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [151e6f2]
++---------------------------------------- Current commit hash: [151e6f2] ----------------------------------------+
+GCC for commit [151e6f2] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = efb66b5a
+Output of /tmp/gcc-151e6f2/bin/gcc with -O3:
+checksum = efb66b5a
+Output of /tmp/gcc-151e6f2/bin/gcc with -O0:
+checksum = efb66b5a
+----------------------------------------------------
+No local changes to save
+HEAD is now at 151e6f2... cgraphunit.c (cgraph_process_new_functions): Reset reachable flag.
+[32m[     info][0m Current commit [151e6f2] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [31ab1cc] with -O0:
+checksum = efb66b5a
+Output of gcc [31ab1cc] with -O1:
+checksum = efb66b5a
+Output of gcc [31ab1cc] with -O2:
+checksum = efb66b5a
+Output of gcc [31ab1cc] with -O3:
+checksum = efb66b59
+Output of gcc [31ab1cc] with -Os:
+checksum = efb66b5a
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

@@ -1,0 +1,14 @@
+early-inlining
+inline-functions
+inline-functions-called-once
+inline-small-functions
+tree-ccp
+tree-copyrename
+tree-dce
+tree-dominator-opts
+tree-dse
+tree-loop-im
+tree-loop-optimize
+tree-store-ccp
+tree-vrp
+unit-at-a-time

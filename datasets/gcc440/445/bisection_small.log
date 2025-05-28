@@ -1,0 +1,347 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.4.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+Output of gcc-4.4.0 with -O3:
+1918707016
+Output of gcc-4.4.0 with -Os:
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.3.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[0802ae58ae482688b0177086598bc10469645333] cp-tools.texinfo (@direntry): Prefix info name with cp-.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [0802ae5]
++---------------------------------------- Current commit hash: [0802ae5] ----------------------------------------+
+GCC for commit [0802ae5] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-0802ae5/bin/gcc with -O3:
+0
+Output of /tmp/gcc-0802ae5/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0802ae5... cp-tools.texinfo (@direntry): Prefix info name with cp-.
+[32m[     info][0m Current commit [0802ae5] is good. Return value: 0
+
+Bisecting: 3219 revisions left to test after this (roughly 12 steps)
+[ca085fd7b7ba0cd12a6411cc0ff6a3380d82df0a] re PR c++/17880 (-Wsequence-point doesn't warn inside if, while, do conditions, for beg/cond/end expressions etc.)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [ca085fd]
++---------------------------------------- Current commit hash: [ca085fd] ----------------------------------------+
+GCC for commit [ca085fd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-ca085fd/bin/gcc with -O3:
+0
+Output of /tmp/gcc-ca085fd/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at ca085fd... re PR c++/17880 (-Wsequence-point doesn't warn inside if, while, do conditions, for beg/cond/end expressions etc.)
+[32m[     info][0m Current commit [ca085fd] is good. Return value: 0
+
+Bisecting: 1609 revisions left to test after this (roughly 11 steps)
+[cc95c8b9d5d337e255ec3351e2ae4afd1e004835] * gcc.pot: Regenerate.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [cc95c8b]
++---------------------------------------- Current commit hash: [cc95c8b] ----------------------------------------+
+GCC for commit [cc95c8b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-cc95c8b/bin/gcc with -O3:
+-684464824
+Output of /tmp/gcc-cc95c8b/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at cc95c8b... * gcc.pot: Regenerate.
+[32m[     info][0m Current commit [cc95c8b] is bad. Return value: 1
+
+Bisecting: 804 revisions left to test after this (roughly 10 steps)
+[d0488d176b8f18ad2d4ef6297fde7de6cbca1899] re PR testsuite/25241 ([C++] DejaGNU does not distinguish between errors and warnings)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [d0488d1]
++---------------------------------------- Current commit hash: [d0488d1] ----------------------------------------+
+GCC for commit [d0488d1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-d0488d1/bin/gcc with -O3:
+-133507768
+Output of /tmp/gcc-d0488d1/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at d0488d1... re PR testsuite/25241 ([C++] DejaGNU does not distinguish between errors and warnings)
+[32m[     info][0m Current commit [d0488d1] is bad. Return value: 1
+
+Bisecting: 402 revisions left to test after this (roughly 9 steps)
+[d6d3e623f2fc96c7d4dd9405a2c67167f97dfcec] mips.h (ISA_HAS_DMUL3): New macro.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [d6d3e62]
++---------------------------------------- Current commit hash: [d6d3e62] ----------------------------------------+
+GCC for commit [d6d3e62] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-d6d3e62/bin/gcc with -O3:
+0
+Output of /tmp/gcc-d6d3e62/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at d6d3e62... mips.h (ISA_HAS_DMUL3): New macro.
+[32m[     info][0m Current commit [d6d3e62] is good. Return value: 0
+
+Bisecting: 201 revisions left to test after this (roughly 8 steps)
+[719bb4e3d3f7d9e3e59f97141a54fe633a77b46d] Convert ChangeLog files to UTF-8.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [719bb4e]
++---------------------------------------- Current commit hash: [719bb4e] ----------------------------------------+
+GCC for commit [719bb4e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-719bb4e/bin/gcc with -O3:
+-89291448
+Output of /tmp/gcc-719bb4e/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 719bb4e... Convert ChangeLog files to UTF-8.
+[32m[     info][0m Current commit [719bb4e] is bad. Return value: 1
+
+Bisecting: 100 revisions left to test after this (roughly 7 steps)
+[4b738718614de4af7939844cf3232ac0b9a7b0e4] pa64-hpux.h (LIB_SPEC): Link against librt when building static openmp applications.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [4b73871]
++---------------------------------------- Current commit hash: [4b73871] ----------------------------------------+
+GCC for commit [4b73871] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-4b73871/bin/gcc with -O3:
+0
+Output of /tmp/gcc-4b73871/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4b73871... pa64-hpux.h (LIB_SPEC): Link against librt when building static openmp applications.
+[32m[     info][0m Current commit [4b73871] is good. Return value: 0
+
+Bisecting: 50 revisions left to test after this (roughly 6 steps)
+[204853a7651de3a2590daf4139cc65d6b6cc814d] re PR rtl-optimization/37296 (Bootstrap failure compiling libgcc)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [204853a]
++---------------------------------------- Current commit hash: [204853a] ----------------------------------------+
+GCC for commit [204853a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-204853a/bin/gcc with -O3:
+0
+Output of /tmp/gcc-204853a/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 204853a... re PR rtl-optimization/37296 (Bootstrap failure compiling libgcc)
+[32m[     info][0m Current commit [204853a] is good. Return value: 0
+
+Bisecting: 25 revisions left to test after this (roughly 5 steps)
+[04888e68e729b9ac689ed6610efe7adc29adaafb] re PR middle-end/37243 (IRA causes wrong code generation)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [04888e6]
++---------------------------------------- Current commit hash: [04888e6] ----------------------------------------+
+GCC for commit [04888e6] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-04888e6/bin/gcc with -O3:
+-1927457464
+Output of /tmp/gcc-04888e6/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 04888e6... re PR middle-end/37243 (IRA causes wrong code generation)
+[32m[     info][0m Current commit [04888e6] is bad. Return value: 1
+
+Bisecting: 12 revisions left to test after this (roughly 4 steps)
+[83b55915e74aca2ede0562d3cb55465da5090abd] acinclude.m4 ([GLIBCXX_CHECK_GTHREADS]): Fix typo in last commit, check _POSIX_TIMEOUTS, not _POSIX_TIMERS.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [83b5591]
++---------------------------------------- Current commit hash: [83b5591] ----------------------------------------+
+GCC for commit [83b5591] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-83b5591/bin/gcc with -O3:
+577836360
+Output of /tmp/gcc-83b5591/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 83b5591... acinclude.m4 ([GLIBCXX_CHECK_GTHREADS]): Fix typo in last commit, check _POSIX_TIMEOUTS, not _POSIX_TIMERS.
+[32m[     info][0m Current commit [83b5591] is bad. Return value: 1
+
+Bisecting: 5 revisions left to test after this (roughly 3 steps)
+[3368cdd3f5f242e4ffe9147802591f5d9b5c40ec] re PR c++/37189 (OpenMP task construct with implicit firstprivate variables ICEs)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [3368cdd]
++---------------------------------------- Current commit hash: [3368cdd] ----------------------------------------+
+GCC for commit [3368cdd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-3368cdd/bin/gcc with -O3:
+106280264
+Output of /tmp/gcc-3368cdd/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3368cdd... re PR c++/37189 (OpenMP task construct with implicit firstprivate variables ICEs)
+[32m[     info][0m Current commit [3368cdd] is bad. Return value: 1
+
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[49d988e7e8164d71e73c2de5a1f1c6a2afe205a4] re PR middle-end/37243 (IRA causes wrong code generation)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [49d988e]
++---------------------------------------- Current commit hash: [49d988e] ----------------------------------------+
+GCC for commit [49d988e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-49d988e/bin/gcc with -O3:
+-716421816
+Output of /tmp/gcc-49d988e/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 49d988e... re PR middle-end/37243 (IRA causes wrong code generation)
+[32m[     info][0m Current commit [49d988e] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[27738602d5c08a8725ef63e43899bc6bfb4eab3c] alpha.c (alpha_split_lock_test_and_set): Move memory barrier to below the test-and-set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [2773860]
++---------------------------------------- Current commit hash: [2773860] ----------------------------------------+
+GCC for commit [2773860] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-2773860/bin/gcc with -O3:
+-361728696
+Output of /tmp/gcc-2773860/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2773860... alpha.c (alpha_split_lock_test_and_set): Move memory barrier to below the test-and-set.
+[32m[     info][0m Current commit [2773860] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[a7f32992e310ba052e04f24dfb8a54a4bc59c35b] re PR middle-end/37243 (IRA causes wrong code generation)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/445 small
+[32m[     info][0m Testing commit: [a7f3299]
++---------------------------------------- Current commit hash: [a7f3299] ----------------------------------------+
+GCC for commit [a7f3299] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-a7f3299/bin/gcc with -O3:
+-410106552
+Output of /tmp/gcc-a7f3299/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a7f3299... re PR middle-end/37243 (IRA causes wrong code generation)
+[32m[     info][0m Current commit [a7f3299] is bad. Return value: 1
+
+a7f32992e310ba052e04f24dfb8a54a4bc59c35b is the first bad commit
+commit a7f32992e310ba052e04f24dfb8a54a4bc59c35b
+Author: Vladimir Makarov <vmakarov@redhat.com>
+Date:   Wed Sep 3 20:12:27 2008 +0000
+
+    re PR middle-end/37243 (IRA causes wrong code generation)
+    
+    2008-09-03  Vladimir Makarov  <vmakarov@redhat.com>
+    
+    	PR rtl-opt/37243
+    
+    	* ira-conflicts.c (REG_SUBREG_P, go_through_subreg): New.
+    	(process_regs_for_copy): Process subregs.  Refine check when cost
+    	is taken into account in ira-costs.c.
+    	(process_reg_shuffles): Use REG_SUBREG_P.
+    	(add_insn_allocno_copies): Ditto.  Ignore modes.
+    
+    	* ira-color.c (conflict_allocno_vec): New.
+    	(COST_HOP_DIVISOR): New macro.
+    	(update_copy_costs_1): Use it.
+    	(update_conflict_hard_regno_costs): New function.
+    	(assign_hard_reg): Use it.
+    	(ira_color): Allocate and free conflict_allocno_vec.
+    
+    From-SVN: r139949
+
+:040000 040000 f54de2cd1fdcf63fd052bbb819c8b5b43cde0907 89951fa9a0662889e706940183250b2e3054e891 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: a7f3299 re PR middle-end/37243 (IRA causes wrong code generation)
+Previous HEAD position was a7f3299... re PR middle-end/37243 (IRA causes wrong code generation)
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [a7f3299]
++---------------------------------------- Current commit hash: [a7f3299] ----------------------------------------+
+GCC for commit [a7f3299] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-a7f3299/bin/gcc with -O3:
+-92359352
+Output of /tmp/gcc-a7f3299/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a7f3299... re PR middle-end/37243 (IRA causes wrong code generation)
+[32m[     info][0m Current commit [a7f3299] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [204853a]
++---------------------------------------- Current commit hash: [204853a] ----------------------------------------+
+GCC for commit [204853a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-204853a/bin/gcc with -O3:
+0
+Output of /tmp/gcc-204853a/bin/gcc with -Os:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 204853a... re PR rtl-optimization/37296 (Bootstrap failure compiling libgcc)
+[32m[     info][0m Current commit [204853a] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [a7f3299] with -O0:
+0
+Output of gcc [a7f3299] with -O1:
+0
+Output of gcc [a7f3299] with -O2:
+0
+Output of gcc [a7f3299] with -O3:
+1968969032
+Output of gcc [a7f3299] with -Os:
+0
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

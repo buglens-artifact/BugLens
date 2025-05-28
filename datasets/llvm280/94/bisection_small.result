@@ -1,0 +1,1 @@
+e99c110 implement rdar://7346691 by codegen'ing struct/array initializers to a memset or a memcpy from a global when possible.

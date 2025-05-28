@@ -1,0 +1,5 @@
+tree-copyrename
+tree-dse
+tree-loop-im
+tree-loop-optimize
+unswitch-loops

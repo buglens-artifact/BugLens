@@ -1,0 +1,1 @@
+201b2ea passes.c (init_optimization_passes): Add simple dce and addressable passes.

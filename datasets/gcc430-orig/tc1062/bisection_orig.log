@@ -1,0 +1,370 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = fffec3bd
+Output of gcc-4.3.0 with -O3:
+checksum = fffec3df
+Output of gcc-4.3.0 with -O0:
+checksum = fffec3bd
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+checksum = fffec3bd
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+checksum = fffec3bd
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is good. Return value: 0
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[448d2cd2f73e2e16e2bdd5c407174afebf3ed845] re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [448d2cd]
++---------------------------------------- Current commit hash: [448d2cd] ----------------------------------------+
+GCC for commit [448d2cd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-448d2cd/bin/gcc with -O3:
+checksum = fffec3df
+Output of /tmp/gcc-448d2cd/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at 448d2cd... re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+[32m[     info][0m Current commit [448d2cd] is bad. Return value: 1
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[6812b99bfefb741cadac6c5eba5a7446af820b62] impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [6812b99]
++---------------------------------------- Current commit hash: [6812b99] ----------------------------------------+
+GCC for commit [6812b99] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-6812b99/bin/gcc with -O3:
+checksum = fffec3bd
+Output of /tmp/gcc-6812b99/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6812b99... impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+[32m[     info][0m Current commit [6812b99] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[bc211e05e3379205a808c2f2fa050ba6cc03cf22] darwin.c (machopic_indirect_data_reference): Avoid invalid sharing.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [bc211e0]
++---------------------------------------- Current commit hash: [bc211e0] ----------------------------------------+
+GCC for commit [bc211e0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-bc211e0/bin/gcc with -O3:
+checksum = fffec3bd
+Output of /tmp/gcc-bc211e0/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at bc211e0... darwin.c (machopic_indirect_data_reference): Avoid invalid sharing.
+[32m[     info][0m Current commit [bc211e0] is good. Return value: 0
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[0e01499666a5032861459cd9fd07bdb8df149637] tree-cfg.c (is_ctrl_altering_stmt, [...]): Don't use const_get_call_expr_in.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [0e01499]
++---------------------------------------- Current commit hash: [0e01499] ----------------------------------------+
+GCC for commit [0e01499] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-0e01499/bin/gcc with -O3:
+checksum = fffec3bd
+Output of /tmp/gcc-0e01499/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0e01499... tree-cfg.c (is_ctrl_altering_stmt, [...]): Don't use const_get_call_expr_in.
+[32m[     info][0m Current commit [0e01499] is good. Return value: 0
+
+Bisecting: 140 revisions left to test after this (roughly 7 steps)
+[808d6eaa019dd81d95656e2e05bdf34e17c63484] re PR c/32295 (An invalid c code causes an ICE in create_tmp_var, at gimplify.c:489)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [808d6ea]
++---------------------------------------- Current commit hash: [808d6ea] ----------------------------------------+
+GCC for commit [808d6ea] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-808d6ea/bin/gcc with -O3:
+checksum = fffec3bd
+Output of /tmp/gcc-808d6ea/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at 808d6ea... re PR c/32295 (An invalid c code causes an ICE in create_tmp_var, at gimplify.c:489)
+[32m[     info][0m Current commit [808d6ea] is good. Return value: 0
+
+Bisecting: 70 revisions left to test after this (roughly 6 steps)
+[12487dd07ef8c5b789ad47dc7f4341347e68f625] varasm.c (compare_constant): Removed call to lang_hooks.expand_constant.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [12487dd]
++---------------------------------------- Current commit hash: [12487dd] ----------------------------------------+
+GCC for commit [12487dd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-12487dd/bin/gcc with -O3:
+checksum = fffec3df
+Output of /tmp/gcc-12487dd/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at 12487dd... varasm.c (compare_constant): Removed call to lang_hooks.expand_constant.
+[32m[     info][0m Current commit [12487dd] is bad. Return value: 1
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[1cc40a1063aa7b00784da59111d9bb9a770929c1] sem_warn.adb (Check_References): Catch more cases of unreferenced packages.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [1cc40a1]
++---------------------------------------- Current commit hash: [1cc40a1] ----------------------------------------+
+GCC for commit [1cc40a1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-1cc40a1/bin/gcc with -O3:
+checksum = fffec3bd
+Output of /tmp/gcc-1cc40a1/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1cc40a1... sem_warn.adb (Check_References): Catch more cases of unreferenced packages.
+[32m[     info][0m Current commit [1cc40a1] is good. Return value: 0
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[3c1eb9eb6c8cf087a78774d6f3a1d7e1eaf1d036] rs6000.c (rs6000_legitimize_address): Do not reduce offset by units of 0x10000 for SPE vector modes or modes used...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [3c1eb9e]
++---------------------------------------- Current commit hash: [3c1eb9e] ----------------------------------------+
+GCC for commit [3c1eb9e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-3c1eb9e/bin/gcc with -O3:
+checksum = fffec3df
+Output of /tmp/gcc-3c1eb9e/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3c1eb9e... rs6000.c (rs6000_legitimize_address): Do not reduce offset by units of 0x10000 for SPE vector modes or modes used...
+[32m[     info][0m Current commit [3c1eb9e] is bad. Return value: 1
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[e2e79a188a4aa19a783c3df89aa9cbd6444777c3] re PR tree-optimization/33563 (DSE removes non-dead store)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [e2e79a1]
++---------------------------------------- Current commit hash: [e2e79a1] ----------------------------------------+
+GCC for commit [e2e79a1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-e2e79a1/bin/gcc with -O3:
+checksum = fffec3df
+Output of /tmp/gcc-e2e79a1/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at e2e79a1... re PR tree-optimization/33563 (DSE removes non-dead store)
+[32m[     info][0m Current commit [e2e79a1] is bad. Return value: 1
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[43943e4035dfaf885484faa9a1f71ec28f4677c9] makegpr.adb (Link_Executables): Do not fail when the root project has no sources, but is an extending project.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [43943e4]
++---------------------------------------- Current commit hash: [43943e4] ----------------------------------------+
+GCC for commit [43943e4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-43943e4/bin/gcc with -O3:
+checksum = fffec3bd
+Output of /tmp/gcc-43943e4/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at 43943e4... makegpr.adb (Link_Executables): Do not fail when the root project has no sources, but is an extending project.
+[32m[     info][0m Current commit [43943e4] is good. Return value: 0
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[7bfcb402eab7dbcf0108c5b9682a8b409fad4359] re PR c/25309 (ICE on initialization of a huge array)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [7bfcb40]
++---------------------------------------- Current commit hash: [7bfcb40] ----------------------------------------+
+GCC for commit [7bfcb40] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-7bfcb40/bin/gcc with -O3:
+checksum = fffec3df
+Output of /tmp/gcc-7bfcb40/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7bfcb40... re PR c/25309 (ICE on initialization of a huge array)
+[32m[     info][0m Current commit [7bfcb40] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[15caa2abe98b8a46bb0225da1d81e585d904d5f2] re PR tree-optimization/30375 (tree-ssa-dse incorrectly removes struct initialization)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1062 orig
+[32m[     info][0m Testing commit: [15caa2a]
++---------------------------------------- Current commit hash: [15caa2a] ----------------------------------------+
+GCC for commit [15caa2a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-15caa2a/bin/gcc with -O3:
+checksum = fffec3df
+Output of /tmp/gcc-15caa2a/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at 15caa2a... re PR tree-optimization/30375 (tree-ssa-dse incorrectly removes struct initialization)
+[32m[     info][0m Current commit [15caa2a] is bad. Return value: 1
+
+15caa2abe98b8a46bb0225da1d81e585d904d5f2 is the first bad commit
+commit 15caa2abe98b8a46bb0225da1d81e585d904d5f2
+Author: Richard Guenther <rguenther@suse.de>
+Date:   Wed Sep 26 11:55:17 2007 +0000
+
+    re PR tree-optimization/30375 (tree-ssa-dse incorrectly removes struct initialization)
+    
+    2007-09-26  Richard Guenther  <rguenther@suse.de>
+    
+    	PR tree-optimization/30375
+    	PR tree-optimization/33560
+    	* tree-ssa-dse.c (get_use_of_stmt_lhs): Give up on uses
+    	with calls.
+    
+    	Revert
+    	2006-05-22  Aldy Hernandez  <aldyh@redhat.com>
+    
+            * tree-ssa-dse.c (aggregate_vardecl_d): New.
+            (dse_global_data): Add aggregate_vardecl field.
+            (dse_possible_dead_store_p): New.
+            Add prev_defvar variable.
+            Allow immediate uses and previous immediate uses to differ
+            if they are setting different parts of the whole.
+            (get_aggregate_vardecl): New.
+            (dse_record_partial_aggregate_store): New.
+            (dse_whole_aggregate_clobbered_p): New.
+            (dse_partial_kill_p): New.
+            Call dse_maybe_record_aggregate_store().
+            When checking whether a STMT and its USE_STMT refer to the
+            same memory address, check also for partial kills that clobber
+            the whole.
+            Move some variable definitions to the block where they are used.
+            (aggregate_vardecl_hash): New.
+            (aggregate_vardecl_eq): New.
+            (aggregate_vardecl_free): New.
+            (aggregate_whole_store_p): New.
+            (tree_ssa_dse): Initialize and free aggregate_vardecl.
+            Mark which aggregate stores we care about.
+    
+    	* gcc.dg/tree-ssa/complex-4.c: XFAIL.
+    	* gcc.dg/tree-ssa/complex-5.c: Likewise.
+    	* gcc.dg/tree-ssa/ssa-dse-9.c: Likewise.
+    	* gcc.dg/torture/pr30375.c: New testcase.
+    	* gcc.dg/torture/pr33560.c: New testcase.
+    	* gcc.dg/tree-ssa/pr30375.c: Likewise.
+    
+    From-SVN: r128810
+
+:040000 040000 59782f8b9db85af1ef76fc156c373be385b8387a 136cd0d3cb601c0ee9b859215f0d0a0fb5d4b543 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 15caa2a re PR tree-optimization/30375 (tree-ssa-dse incorrectly removes struct initialization)
+Checking out files:  41% (3794/9045)   Checking out files:  42% (3799/9045)   Checking out files:  43% (3890/9045)   Checking out files:  44% (3980/9045)   Checking out files:  45% (4071/9045)   Checking out files:  46% (4161/9045)   Checking out files:  47% (4252/9045)   Checking out files:  48% (4342/9045)   Checking out files:  49% (4433/9045)   Checking out files:  50% (4523/9045)   Checking out files:  51% (4613/9045)   Checking out files:  52% (4704/9045)   Checking out files:  53% (4794/9045)   Checking out files:  53% (4821/9045)   Checking out files:  54% (4885/9045)   Checking out files:  55% (4975/9045)   Checking out files:  56% (5066/9045)   Checking out files:  57% (5156/9045)   Checking out files:  58% (5247/9045)   Checking out files:  59% (5337/9045)   Checking out files:  60% (5427/9045)   Checking out files:  61% (5518/9045)   Checking out files:  61% (5605/9045)   Checking out files:  62% (5608/9045)   Checking out files:  63% (5699/9045)   Checking out files:  64% (5789/9045)   Checking out files:  65% (5880/9045)   Checking out files:  66% (5970/9045)   Checking out files:  67% (6061/9045)   Checking out files:  68% (6151/9045)   Checking out files:  69% (6242/9045)   Checking out files:  70% (6332/9045)   Checking out files:  71% (6422/9045)   Checking out files:  72% (6513/9045)   Checking out files:  73% (6603/9045)   Checking out files:  74% (6694/9045)   Checking out files:  75% (6784/9045)   Checking out files:  76% (6875/9045)   Checking out files:  77% (6965/9045)   Checking out files:  78% (7056/9045)   Checking out files:  79% (7146/9045)   Checking out files:  79% (7187/9045)   Checking out files:  80% (7236/9045)   Checking out files:  81% (7327/9045)   Checking out files:  82% (7417/9045)   Checking out files:  83% (7508/9045)   Checking out files:  84% (7598/9045)   Checking out files:  85% (7689/9045)   Checking out files:  86% (7779/9045)   Checking out files:  87% (7870/9045)   Checking out files:  88% (7960/9045)   Checking out files:  89% (8051/9045)   Checking out files:  90% (8141/9045)   Checking out files:  91% (8231/9045)   Checking out files:  92% (8322/9045)   Checking out files:  93% (8412/9045)   Checking out files:  94% (8503/9045)   Checking out files:  94% (8511/9045)   Checking out files:  95% (8593/9045)   Checking out files:  96% (8684/9045)   Checking out files:  97% (8774/9045)   Checking out files:  98% (8865/9045)   Checking out files:  99% (8955/9045)   Checking out files: 100% (9045/9045)   Checking out files: 100% (9045/9045), done.
+Previous HEAD position was 15caa2a... re PR tree-optimization/30375 (tree-ssa-dse incorrectly removes struct initialization)
+HEAD is now at a91d32a... i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [15caa2a]
++---------------------------------------- Current commit hash: [15caa2a] ----------------------------------------+
+GCC for commit [15caa2a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-15caa2a/bin/gcc with -O3:
+checksum = fffec3df
+Output of /tmp/gcc-15caa2a/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at 15caa2a... re PR tree-optimization/30375 (tree-ssa-dse incorrectly removes struct initialization)
+[32m[     info][0m Current commit [15caa2a] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [43943e4]
++---------------------------------------- Current commit hash: [43943e4] ----------------------------------------+
+GCC for commit [43943e4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = fffec3bd
+Output of /tmp/gcc-43943e4/bin/gcc with -O3:
+checksum = fffec3bd
+Output of /tmp/gcc-43943e4/bin/gcc with -O0:
+checksum = fffec3bd
+----------------------------------------------------
+No local changes to save
+HEAD is now at 43943e4... makegpr.adb (Link_Executables): Do not fail when the root project has no sources, but is an extending project.
+[32m[     info][0m Current commit [43943e4] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [15caa2a] with -O0:
+checksum = fffec3bd
+Output of gcc [15caa2a] with -O1:
+checksum = fffec3bd
+Output of gcc [15caa2a] with -O2:
+checksum = fffec3df
+Output of gcc [15caa2a] with -O3:
+checksum = fffec3df
+Output of gcc [15caa2a] with -Os:
+checksum = fffec3bd
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

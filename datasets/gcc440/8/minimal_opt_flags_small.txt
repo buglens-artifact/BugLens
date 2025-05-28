@@ -1,0 +1,3 @@
+forward-propagate
+inline-small-functions
+schedule-insns2

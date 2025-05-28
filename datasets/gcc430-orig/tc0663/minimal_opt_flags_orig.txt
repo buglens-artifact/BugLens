@@ -1,0 +1,8 @@
+dse
+gcse
+inline-functions
+inline-small-functions
+ipa-reference
+tree-ccp
+tree-dce
+unit-at-a-time

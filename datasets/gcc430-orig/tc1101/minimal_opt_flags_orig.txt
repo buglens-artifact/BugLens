@@ -1,0 +1,15 @@
+early-inlining
+inline-small-functions
+ipa-reference
+strict-aliasing
+tree-ccp
+tree-copyrename
+tree-dce
+tree-dominator-opts
+tree-dse
+tree-fre
+tree-loop-im
+tree-loop-optimize
+tree-pre
+tree-vrp
+unit-at-a-time

@@ -1,0 +1,3 @@
+inline-small-functions
+tree-loop-im
+tree-loop-optimize

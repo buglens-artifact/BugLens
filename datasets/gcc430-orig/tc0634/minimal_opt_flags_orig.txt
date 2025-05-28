@@ -1,0 +1,13 @@
+guess-branch-probability
+inline-functions
+inline-functions-called-once
+inline-small-functions
+tree-ccp
+tree-copyrename
+tree-dce
+tree-dominator-opts
+tree-dse
+tree-loop-im
+tree-loop-optimize
+tree-sra
+unit-at-a-time

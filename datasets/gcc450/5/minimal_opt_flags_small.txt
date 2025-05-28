@@ -1,0 +1,5 @@
+caller-saves
+forward-propagate
+if-conversion
+move-loop-invariants
+tree-loop-optimize

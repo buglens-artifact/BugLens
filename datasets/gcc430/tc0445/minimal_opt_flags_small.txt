@@ -1,0 +1,8 @@
+gcse
+ivopts
+move-loop-invariants
+omit-frame-pointer
+tree-dse
+tree-loop-im
+tree-loop-optimize
+tree-salias

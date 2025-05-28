@@ -1,0 +1,11 @@
+inline-small-functions
+ipa-reference
+tree-ch
+tree-copyrename
+tree-dce
+tree-dominator-opts
+tree-loop-im
+tree-loop-optimize
+tree-store-ccp
+tree-vrp
+unit-at-a-time

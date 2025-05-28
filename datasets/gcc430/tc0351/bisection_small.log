@@ -1,0 +1,356 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+Output of gcc-4.3.0 with -Os:
+255
+Output of gcc-4.3.0 with -O0:
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.1.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[abc088aad79d47b40da8a26e87815db09ab2d6eb] re PR c++/8355 (befriending a template specialization in another namespace)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [abc088a]
++---------------------------------------- Current commit hash: [abc088a] ----------------------------------------+
+GCC for commit [abc088a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-abc088a/bin/gcc with -Os:
+0
+Output of /tmp/gcc-abc088a/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at abc088a... re PR c++/8355 (befriending a template specialization in another namespace)
+[32m[     info][0m Current commit [abc088a] is good. Return value: 0
+
+Bisecting: 6978 revisions left to test after this (roughly 13 steps)
+[ad8e8d0b465e6dd9d9db4988de7b5c524bb4d85d] re PR inline-asm/28686 (ebp from clobber list used as operand)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [ad8e8d0]
++---------------------------------------- Current commit hash: [ad8e8d0] ----------------------------------------+
+GCC for commit [ad8e8d0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -Os:
+4
+Output of /tmp/gcc-ad8e8d0/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at ad8e8d0... re PR inline-asm/28686 (ebp from clobber list used as operand)
+[32m[     info][0m Current commit [ad8e8d0] is bad. Return value: 1
+
+Bisecting: 3489 revisions left to test after this (roughly 12 steps)
+[3c618f8732814407a5c98146fa24761ba7dddd78] random (xor_combine<>::operator<<): Fix typo.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [3c618f8]
++---------------------------------------- Current commit hash: [3c618f8] ----------------------------------------+
+GCC for commit [3c618f8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-3c618f8/bin/gcc with -Os:
+0
+Output of /tmp/gcc-3c618f8/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3c618f8... random (xor_combine<>::operator<<): Fix typo.
+[32m[     info][0m Current commit [3c618f8] is good. Return value: 0
+
+Bisecting: 1744 revisions left to test after this (roughly 11 steps)
+[e3da30b2ef2b73e936ee7821aad5a4ea44fbdf16] sinfo.ads, sinfo.adb (Set_Synchronized_Present, [...]): Add Formal_Derived_Type_Definition and Private_Extension_Declaration to the...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [e3da30b]
++---------------------------------------- Current commit hash: [e3da30b] ----------------------------------------+
+GCC for commit [e3da30b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-e3da30b/bin/gcc with -Os:
+4
+Output of /tmp/gcc-e3da30b/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at e3da30b... sinfo.ads, sinfo.adb (Set_Synchronized_Present, [...]): Add Formal_Derived_Type_Definition and Private_Extension_Declaration to the...
+[32m[     info][0m Current commit [e3da30b] is bad. Return value: 1
+
+Bisecting: 872 revisions left to test after this (roughly 10 steps)
+[aa4f41c1d57b1d533650672d5bcf2e40fffbf0f1] configure.ac (ACX_PROG_CC_WARNING_OPTS): Add -Wcast-qual.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [aa4f41c]
++---------------------------------------- Current commit hash: [aa4f41c] ----------------------------------------+
+GCC for commit [aa4f41c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-aa4f41c/bin/gcc with -Os:
+4
+Output of /tmp/gcc-aa4f41c/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at aa4f41c... configure.ac (ACX_PROG_CC_WARNING_OPTS): Add -Wcast-qual.
+[32m[     info][0m Current commit [aa4f41c] is bad. Return value: 1
+
+Bisecting: 435 revisions left to test after this (roughly 9 steps)
+[0fb2088c6a08cf849bda7138603045b2f6d8869b] Fix typo in previous commit, pr number.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [0fb2088]
++---------------------------------------- Current commit hash: [0fb2088] ----------------------------------------+
+GCC for commit [0fb2088] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-0fb2088/bin/gcc with -Os:
+4
+Output of /tmp/gcc-0fb2088/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0fb2088... Fix typo in previous commit, pr number.
+[32m[     info][0m Current commit [0fb2088] is bad. Return value: 1
+
+Bisecting: 217 revisions left to test after this (roughly 8 steps)
+[b6c03bcd80e0128009dad84f8cf891c5df22029c] re PR target/27968 (gcc emits (undefined) ffreep opcode which is not understood by Solaris' /usr/ccs/bin/as when tuning for Athlon or Opteron CPUs)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [b6c03bc]
++---------------------------------------- Current commit hash: [b6c03bc] ----------------------------------------+
+GCC for commit [b6c03bc] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b6c03bc/bin/gcc with -Os:
+4
+Output of /tmp/gcc-b6c03bc/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b6c03bc... re PR target/27968 (gcc emits (undefined) ffreep opcode which is not understood by Solaris' /usr/ccs/bin/as when tuning for Athlon or Opteron CPUs)
+[32m[     info][0m Current commit [b6c03bc] is bad. Return value: 1
+
+Bisecting: 108 revisions left to test after this (roughly 7 steps)
+[bfe3e83159fa545f90a81e81321a77ca9f6fd6c0] random (operator<<(std::basic_ostream<>&, const linear_congruential<>&), [...]): Redo per TR1 specs; move out of line...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [bfe3e83]
++---------------------------------------- Current commit hash: [bfe3e83] ----------------------------------------+
+GCC for commit [bfe3e83] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-bfe3e83/bin/gcc with -Os:
+0
+Output of /tmp/gcc-bfe3e83/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at bfe3e83... random (operator<<(std::basic_ostream<>&, const linear_congruential<>&), [...]): Redo per TR1 specs; move out of line...
+[32m[     info][0m Current commit [bfe3e83] is good. Return value: 0
+
+Bisecting: 54 revisions left to test after this (roughly 6 steps)
+[1546bb648faaf18d273d738eed03f1f3efd72de7] re PR other/27063 (Fail to build gcc-core-4.2 snapshots)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [1546bb6]
++---------------------------------------- Current commit hash: [1546bb6] ----------------------------------------+
+GCC for commit [1546bb6] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-1546bb6/bin/gcc with -Os:
+0
+Output of /tmp/gcc-1546bb6/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1546bb6... re PR other/27063 (Fail to build gcc-core-4.2 snapshots)
+[32m[     info][0m Current commit [1546bb6] is good. Return value: 0
+
+Bisecting: 27 revisions left to test after this (roughly 5 steps)
+[d2ab4cf72b60d8a81aea2a7e09e1b06a04a5c402] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [d2ab4cf]
++---------------------------------------- Current commit hash: [d2ab4cf] ----------------------------------------+
+GCC for commit [d2ab4cf] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-d2ab4cf/bin/gcc with -Os:
+4
+Output of /tmp/gcc-d2ab4cf/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at d2ab4cf... Daily bump.
+[32m[     info][0m Current commit [d2ab4cf] is bad. Return value: 1
+
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[84e9ad15fabafedf6815d5a6c90d65c7774c7792] re PR target/28207 (128-bit IBM long double misaligned on stack)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [84e9ad1]
++---------------------------------------- Current commit hash: [84e9ad1] ----------------------------------------+
+GCC for commit [84e9ad1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-84e9ad1/bin/gcc with -Os:
+4
+Output of /tmp/gcc-84e9ad1/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 84e9ad1... re PR target/28207 (128-bit IBM long double misaligned on stack)
+[32m[     info][0m Current commit [84e9ad1] is bad. Return value: 1
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[7aa6ba766c8438ca61e08d85573256d00278cc50] [multiple changes]
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [7aa6ba7]
++---------------------------------------- Current commit hash: [7aa6ba7] ----------------------------------------+
+GCC for commit [7aa6ba7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-7aa6ba7/bin/gcc with -Os:
+4
+Output of /tmp/gcc-7aa6ba7/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7aa6ba7... [multiple changes]
+[32m[     info][0m Current commit [7aa6ba7] is bad. Return value: 1
+
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[3a3977a8101927bb02c37dd42f20df98fbce8db4] * intrinsic.texi: Document new intrinsics.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [3a3977a]
++---------------------------------------- Current commit hash: [3a3977a] ----------------------------------------+
+GCC for commit [3a3977a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-3a3977a/bin/gcc with -Os:
+0
+Output of /tmp/gcc-3a3977a/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3a3977a... * intrinsic.texi: Document new intrinsics.
+[32m[     info][0m Current commit [3a3977a] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[cdc3c14cfc801d70b3499e21f3d5a02a85badbf4] iresolve.c (gfc_resolve_cpu_time, [...]): Remove ATTRIBUTE_UNUSED for used argument.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [cdc3c14]
++---------------------------------------- Current commit hash: [cdc3c14] ----------------------------------------+
+GCC for commit [cdc3c14] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-cdc3c14/bin/gcc with -Os:
+4
+Output of /tmp/gcc-cdc3c14/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at cdc3c14... iresolve.c (gfc_resolve_cpu_time, [...]): Remove ATTRIBUTE_UNUSED for used argument.
+[32m[     info][0m Current commit [cdc3c14] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[31a9760af0813a556f8334a12d9677ea246558d1] re PR tree-optimization/26251 (code size increase with -Os)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0351 small
+[32m[     info][0m Testing commit: [31a9760]
++---------------------------------------- Current commit hash: [31a9760] ----------------------------------------+
+GCC for commit [31a9760] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-31a9760/bin/gcc with -Os:
+4
+Output of /tmp/gcc-31a9760/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 31a9760... re PR tree-optimization/26251 (code size increase with -Os)
+[32m[     info][0m Current commit [31a9760] is bad. Return value: 1
+
+31a9760af0813a556f8334a12d9677ea246558d1 is the first bad commit
+commit 31a9760af0813a556f8334a12d9677ea246558d1
+Author: Roger Sayle <roger@eyesopen.com>
+Date:   Mon Jul 3 14:35:13 2006 +0000
+
+    re PR tree-optimization/26251 (code size increase with -Os)
+    
+    
+    	PR tree-optimization/26251
+    	* tree-ssa-threadupdate.c (redirection_block_p): New function.
+    	(thread_block): When optimizing for size refuse to thread jumps
+    	that would require duplication of blocks other than redirection
+    	blocks.
+    
+    From-SVN: r115150
+
+:040000 040000 5f7f23ddb7727201bb528f5cbc44b78fa8d245a4 02f69d09bfae02d608ba9859288ec1b49451bd74 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 31a9760 re PR tree-optimization/26251 (code size increase with -Os)
+Checking out files:   9% (2712/28046)   Checking out files:  10% (2805/28046)   Checking out files:  11% (3086/28046)   Checking out files:  12% (3366/28046)   Checking out files:  13% (3646/28046)   Checking out files:  14% (3927/28046)   Checking out files:  15% (4207/28046)   Checking out files:  16% (4488/28046)   Checking out files:  17% (4768/28046)   Checking out files:  18% (5049/28046)   Checking out files:  19% (5329/28046)   Checking out files:  20% (5610/28046)   Checking out files:  21% (5890/28046)   Checking out files:  22% (6171/28046)   Checking out files:  22% (6266/28046)   Checking out files:  23% (6451/28046)   Checking out files:  24% (6732/28046)   Checking out files:  25% (7012/28046)   Checking out files:  26% (7292/28046)   Checking out files:  27% (7573/28046)   Checking out files:  28% (7853/28046)   Checking out files:  29% (8134/28046)   Checking out files:  30% (8414/28046)   Checking out files:  31% (8695/28046)   Checking out files:  32% (8975/28046)   Checking out files:  33% (9256/28046)   Checking out files:  33% (9429/28046)   Checking out files:  34% (9536/28046)   Checking out files:  35% (9817/28046)   Checking out files:  36% (10097/28046)   Checking out files:  37% (10378/28046)   Checking out files:  38% (10658/28046)   Checking out files:  39% (10938/28046)   Checking out files:  40% (11219/28046)   Checking out files:  41% (11499/28046)   Checking out files:  42% (11780/28046)   Checking out files:  43% (12060/28046)   Checking out files:  44% (12341/28046)   Checking out files:  45% (12621/28046)   Checking out files:  46% (12902/28046)   Checking out files:  47% (13182/28046)   Checking out files:  48% (13463/28046)   Checking out files:  49% (13743/28046)   Checking out files:  50% (14023/28046)   Checking out files:  51% (14304/28046)   Checking out files:  52% (14584/28046)   Checking out files:  53% (14865/28046)   Checking out files:  54% (15145/28046)   Checking out files:  54% (15336/28046)   Checking out files:  55% (15426/28046)   Checking out files:  56% (15706/28046)   Checking out files:  57% (15987/28046)   Checking out files:  58% (16267/28046)   Checking out files:  59% (16548/28046)   Checking out files:  60% (16828/28046)   Checking out files:  61% (17109/28046)   Checking out files:  62% (17389/28046)   Checking out files:  63% (17669/28046)   Checking out files:  64% (17950/28046)   Checking out files:  65% (18230/28046)   Checking out files:  66% (18511/28046)   Checking out files:  67% (18791/28046)   Checking out files:  68% (19072/28046)   Checking out files:  69% (19352/28046)   Checking out files:  70% (19633/28046)   Checking out files:  71% (19913/28046)   Checking out files:  72% (20194/28046)   Checking out files:  73% (20474/28046)   Checking out files:  74% (20755/28046)   Checking out files:  74% (20931/28046)   Checking out files:  75% (21035/28046)   Checking out files:  76% (21315/28046)   Checking out files:  77% (21596/28046)   Checking out files:  78% (21876/28046)   Checking out files:  79% (22157/28046)   Checking out files:  80% (22437/28046)   Checking out files:  81% (22718/28046)   Checking out files:  82% (22998/28046)   Checking out files:  83% (23279/28046)   Checking out files:  84% (23559/28046)   Checking out files:  85% (23840/28046)   Checking out files:  86% (24120/28046)   Checking out files:  87% (24401/28046)   Checking out files:  88% (24681/28046)   Checking out files:  89% (24961/28046)   Checking out files:  90% (25242/28046)   Checking out files:  91% (25522/28046)   Checking out files:  92% (25803/28046)   Checking out files:  93% (26083/28046)   Checking out files:  94% (26364/28046)   Checking out files:  94% (26449/28046)   Checking out files:  95% (26644/28046)   Checking out files:  96% (26925/28046)   Checking out files:  97% (27205/28046)   Checking out files:  98% (27486/28046)   Checking out files:  99% (27766/28046)   Checking out files: 100% (28046/28046)   Checking out files: 100% (28046/28046), done.
+Previous HEAD position was 31a9760... re PR tree-optimization/26251 (code size increase with -Os)
+HEAD is now at a91d32a... i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [31a9760]
++---------------------------------------- Current commit hash: [31a9760] ----------------------------------------+
+GCC for commit [31a9760] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-31a9760/bin/gcc with -Os:
+4
+Output of /tmp/gcc-31a9760/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 31a9760... re PR tree-optimization/26251 (code size increase with -Os)
+[32m[     info][0m Current commit [31a9760] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [3a3977a]
++---------------------------------------- Current commit hash: [3a3977a] ----------------------------------------+
+GCC for commit [3a3977a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-3a3977a/bin/gcc with -Os:
+0
+Output of /tmp/gcc-3a3977a/bin/gcc with -O0:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 3a3977a... * intrinsic.texi: Document new intrinsics.
+[32m[     info][0m Current commit [3a3977a] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [31a9760] with -O0:
+0
+Output of gcc [31a9760] with -O1:
+0
+Output of gcc [31a9760] with -O2:
+0
+Output of gcc [31a9760] with -O3:
+0
+Output of gcc [31a9760] with -Os:
+4
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

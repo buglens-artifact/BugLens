@@ -1,0 +1,1 @@
+88d0381 cgraphunit.c (cgraph_varpool_analyze_pending_decls): Call align_variable.

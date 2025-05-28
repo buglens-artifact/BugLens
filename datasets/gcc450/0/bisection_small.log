@@ -1,0 +1,478 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.5.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+0
+Output of gcc-4.5.0 with -Os:
+-1769265960
+0
+Output of gcc-4.5.0 with -O3:
+0
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.4.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[e9d51dc6a3d2af09436f3d8da583ef2b1efda26c] Fix for PR39557
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [e9d51dc]
++---------------------------------------- Current commit hash: [e9d51dc] ----------------------------------------+
+GCC for commit [e9d51dc] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-e9d51dc/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-e9d51dc/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at e9d51dc... Fix for PR39557
+[32m[     info][0m Current commit [e9d51dc] is good. Return value: 0
+
+Bisecting: 3564 revisions left to test after this (roughly 12 steps)
+[feb4e5ba87ce9a1774925b939959ec6d7f20f813] tree-cfg.c (dump_function_to_file): Dump eh tree with TDF_EH, not TDF_DETAILS.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [feb4e5b]
++---------------------------------------- Current commit hash: [feb4e5b] ----------------------------------------+
+GCC for commit [feb4e5b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-feb4e5b/bin/gcc with -Os:
+-1358708440
+0
+Output of /tmp/gcc-feb4e5b/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at feb4e5b... tree-cfg.c (dump_function_to_file): Dump eh tree with TDF_EH, not TDF_DETAILS.
+[32m[     info][0m Current commit [feb4e5b] is bad. Return value: 1
+
+Bisecting: 1782 revisions left to test after this (roughly 11 steps)
+[19b905ce29121de6335c9a90b3ef10c068ce0a66] eabi.asm (__eabi_convert): Don't define if _RELOCATABLE.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [19b905c]
++---------------------------------------- Current commit hash: [19b905c] ----------------------------------------+
+GCC for commit [19b905c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-19b905c/bin/gcc with -Os:
+-1711706440
+0
+Output of /tmp/gcc-19b905c/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 19b905c... eabi.asm (__eabi_convert): Don't define if _RELOCATABLE.
+[32m[     info][0m Current commit [19b905c] is bad. Return value: 1
+
+Bisecting: 890 revisions left to test after this (roughly 10 steps)
+[ee721644f5958a0bf1d40aabd8e0dfaa6f8ed870] Makefile.am (install-data-local): Fix symlinks to header files.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [ee72164]
++---------------------------------------- Current commit hash: [ee72164] ----------------------------------------+
+GCC for commit [ee72164] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-ee72164/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-ee72164/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at ee72164... Makefile.am (install-data-local): Fix symlinks to header files.
+[32m[     info][0m Current commit [ee72164] is good. Return value: 0
+
+Bisecting: 445 revisions left to test after this (roughly 9 steps)
+[ed102b70fe85cad5f49287442dd201e1b3ba0b6a] ipa-cp.c (ipcp_cloning_candidate_p): Add missing return false.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [ed102b7]
++---------------------------------------- Current commit hash: [ed102b7] ----------------------------------------+
+GCC for commit [ed102b7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-ed102b7/bin/gcc with -Os:
+78932632
+0
+Output of /tmp/gcc-ed102b7/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at ed102b7... ipa-cp.c (ipcp_cloning_candidate_p): Add missing return false.
+[32m[     info][0m Current commit [ed102b7] is bad. Return value: 1
+
+Bisecting: 222 revisions left to test after this (roughly 8 steps)
+[236fecbf44a87814987887e5d3f03c4b8bf0c294] sem_ch3.adb (Analyze_Object_Declaration): Disable error message associated with dyamically tagged expressions if...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [236fecb]
++---------------------------------------- Current commit hash: [236fecb] ----------------------------------------+
+GCC for commit [236fecb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-236fecb/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-236fecb/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 236fecb... sem_ch3.adb (Analyze_Object_Declaration): Disable error message associated with dyamically tagged expressions if...
+[32m[     info][0m Current commit [236fecb] is good. Return value: 0
+
+Bisecting: 111 revisions left to test after this (roughly 7 steps)
+[e264efcc3847c1b3cfc107eade935d24dee661f6] [multiple changes]
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [e264efc]
++---------------------------------------- Current commit hash: [e264efc] ----------------------------------------+
+GCC for commit [e264efc] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-e264efc/bin/gcc with -Os:
+-409577704
+0
+Output of /tmp/gcc-e264efc/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at e264efc... [multiple changes]
+[32m[     info][0m Current commit [e264efc] is bad. Return value: 1
+
+Bisecting: 55 revisions left to test after this (roughly 6 steps)
+[0453fa897a43d806c8046a682f89f4ffef91c82d] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [0453fa8]
++---------------------------------------- Current commit hash: [0453fa8] ----------------------------------------+
+GCC for commit [0453fa8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-0453fa8/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-0453fa8/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0453fa8... Daily bump.
+[32m[     info][0m Current commit [0453fa8] is good. Return value: 0
+
+Bisecting: 27 revisions left to test after this (roughly 5 steps)
+[4fbe73ec8080aad23ad62972d7a05565ecadd0bc] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [4fbe73e]
++---------------------------------------- Current commit hash: [4fbe73e] ----------------------------------------+
+GCC for commit [4fbe73e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-4fbe73e/bin/gcc with -Os:
+-2141484696
+0
+Output of /tmp/gcc-4fbe73e/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4fbe73e... Daily bump.
+[32m[     info][0m Current commit [4fbe73e] is bad. Return value: 1
+
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[a967a1b62f0cb075423957684f8ab38606a192fd] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [a967a1b]
++---------------------------------------- Current commit hash: [a967a1b] ----------------------------------------+
+GCC for commit [a967a1b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-a967a1b/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-a967a1b/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a967a1b... Daily bump.
+[32m[     info][0m Current commit [a967a1b] is good. Return value: 0
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[ffef121932a2522684893c009a966d1cb43123e2] re PR ada/38874 (gnatmake doesn't pass through --param options)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [ffef121]
++---------------------------------------- Current commit hash: [ffef121] ----------------------------------------+
+GCC for commit [ffef121] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-ffef121/bin/gcc with -Os:
+-654939944
+0
+Output of /tmp/gcc-ffef121/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at ffef121... re PR ada/38874 (gnatmake doesn't pass through --param options)
+[32m[     info][0m Current commit [ffef121] is bad. Return value: 1
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[67beaaa685fd5a4659cf725d109871a486b5c175] re PR c++/28152 (Diagnostic about wrong use _Complex prints __complex__)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [67beaaa]
++---------------------------------------- Current commit hash: [67beaaa] ----------------------------------------+
+GCC for commit [67beaaa] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-67beaaa/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-67beaaa/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 67beaaa... re PR c++/28152 (Diagnostic about wrong use _Complex prints __complex__)
+[32m[     info][0m Current commit [67beaaa] is good. Return value: 0
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[edce9f18ecaf216023b001851d39585dccf0274a] Add t-xilinx for powerpc-xilinx-eabi*.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [edce9f1]
++---------------------------------------- Current commit hash: [edce9f1] ----------------------------------------+
+GCC for commit [edce9f1] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-edce9f1/bin/gcc with -Os:
+-868760248
+0
+Output of /tmp/gcc-edce9f1/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at edce9f1... Add t-xilinx for powerpc-xilinx-eabi*.
+[32m[     info][0m Current commit [edce9f1] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[506d7b686cfb5b66f2945219d8863233d7dac645] tm.texi (LEGITIMIZE_ADDRESS): Revise documentation.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/0 small
+[32m[     info][0m Testing commit: [506d7b6]
++---------------------------------------- Current commit hash: [506d7b6] ----------------------------------------+
+GCC for commit [506d7b6] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-506d7b6/bin/gcc with -Os:
+129512664
+0
+Output of /tmp/gcc-506d7b6/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 506d7b6... tm.texi (LEGITIMIZE_ADDRESS): Revise documentation.
+[32m[     info][0m Current commit [506d7b6] is bad. Return value: 1
+
+506d7b686cfb5b66f2945219d8863233d7dac645 is the first bad commit
+commit 506d7b686cfb5b66f2945219d8863233d7dac645
+Author: Paolo Bonzini <bonzini@gnu.org>
+Date:   Mon May 4 12:52:41 2009 +0000
+
+    tm.texi (LEGITIMIZE_ADDRESS): Revise documentation.
+    
+    2009-05-04  Paolo Bonzini  <bonzini@gnu.org>
+    
+     	* doc/tm.texi (LEGITIMIZE_ADDRESS): Revise documentation.
+    	* gcc/defaults.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/explow.c (memory_address): Use target hook.
+    	* gcc/targhooks.c (default_legitimize_address): New.
+    	* gcc/targhooks.h (default_legitimize_address): New.
+    	* gcc/target.h (legitimize_address): New.
+    	* gcc/target-def.h (TARGET_LEGITIMIZE_ADDRESS): New.
+    	(TARGET_INITIALIZER): Include it.
+    	* gcc/system.h (LEGITIMIZE_ADDRESS): Poison.
+    
+    	* config/bfin/bfin-protos.h (legitimize_address): Remove.
+    	* config/bfin/bfin.c (legitimize_address): Remove.
+    	* config/bfin/bfin.h (LEGITIMIZE_ADDRESS): Remove.
+    	* config/m68hc11/m68hc11-protos.h (m68hc11_legitimize_address): Remove.
+    	* config/m68hc11/m68hc11.c (m68hc11_legitimize_address): Remove.
+    	* config/m68hc11/m68hc11.h (LEGITIMIZE_ADDRESS): Remove.
+    
+    	* gcc/config/arm/arm.h (LEGITIMIZE_ADDRESS, ARM_LEGITIMIZE_ADDRESS,
+    	THUMB_LEGITIMIZE_ADDRESS, THUMB2_LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/s390/s390.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/m32c/m32c.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/sparc/sparc.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/m32r/m32r.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/i386/i386.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/sh/sh.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/avr/avr.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/m68hc11/m68hc11.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/iq2000/iq2000.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/mn10300/mn10300.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/m68k/m68k.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/score/score.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/pa/pa.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/mips/mips.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/alpha/alpha.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/frv/frv.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/spu/spu.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/xtensa/xtensa.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/cris/cris.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/rs6000/rs6000.h (LEGITIMIZE_ADDRESS): Delete.
+    	* gcc/config/picochip/picochip.h (LEGITIMIZE_ADDRESS): Delete.
+    
+    	* gcc/config/s390/s390-protos.h (legitimize_address): Delete.
+    	* gcc/config/m32c/m32c-protos.h (m32c_legitimize_address): Delete.
+    	* gcc/config/sparc/sparc-protos.h (legitimize_address): Delete.
+    	* gcc/config/i386/i386-protos.h (legitimize_address): Delete.
+    	* gcc/config/avr/avr-protos.h (legitimize_address): Delete.
+    	* gcc/config/mn10300/mn10300-protos.h (legitimize_address): Delete.
+    	* gcc/config/score/score-protos.h (score_legitimize_address): Delete.
+    	* gcc/config/arm/arm-protos.h (arm_legitimize_address,
+    	(thumb_legitimize_address): Delete.
+    	* gcc/config/pa/pa-protos.h (hppa_legitimize_address): Delete.
+    	* gcc/config/mips/mips-protos.h (mips_legitimize_address): Delete.
+    	* gcc/config/alpha/alpha-protos.h (alpha_legitimize_address): Delete.
+    	* gcc/config/frv/frv-protos.h (frv_legitimize_address): Delete.
+    	* gcc/config/spu/spu-protos.h (spu_legitimize_address): Delete.
+    	* gcc/config/xtensa/xtensa-protos.h (xtensa_legitimize_address): Delete.
+    	* gcc/config/rs6000/rs6000-protos.h (rs6000_legitimize_address): Delete.
+    
+    	* config/arm/arm.c (arm_legitimize_address): Maybe call Thumb version.
+    	* config/m32c/m32c.c (m32c_legitimize_address): Standardize.
+    	* config/m32r/m32r.c (m32r_legitimize_address): New.
+    	* config/m68k/m68k.c (m68k_legitimize_address): New.
+    	* config/score/score.c (score_legitimize_address): Standardize.
+    	* config/score/score3.c (score3_legitimize_address): Standardize.
+    	* config/score/score3.h (score3_legitimize_address): Adjust.
+    	* config/score/score7.c (score7_legitimize_address): Standardize.
+    	* config/score/score7.h (score7_legitimize_address): Adjust.
+    	* config/sh/sh.c (sh_legitimize_address): New.
+    	* config/iq2000/iq2000.c (iq2000_legitimize_address): New.
+    
+    	* gcc/config/s390/s390.c (legitimize_address): Rename to...
+     	(s390_legitimize_address): ... this.
+    	* gcc/config/sparc/sparc.c (legitimize_address): Rename to...
+    	(sparc_legitimize_address): ... this.
+    	* gcc/config/i386/i386.c (legitimize_address): Rename to...
+    	(ix86_legitimize_address): ... this.
+    	* gcc/config/avr/avr.c (legitimize_address): Rename to...
+    	(avr_legitimize_address): ... this.
+    	* gcc/config/mn10300/mn10300.c (legitimize_address): Rename to...
+    	(mn10300_legitimize_address): ... this.
+    	* config/alpha/alpha.c (alpha_legitimize_address): Wrap...
+    	(alpha_legitimize_address_1): ... the old alpha_legitimize_address.
+    	(alpha_expand_mov): Adjust call.
+    
+    	* config/frv/frv.c (frv_legitimize_address): Return x on failure.
+    	* config/spu/spu.c (spu_legitimize_address): Likewise.
+    	* config/xtensa/xtensa.c (xtensa_legitimize_address): Likewise.
+    	* config/rs6000/rs6000.c (rs6000_legitimize_address): Likewise.
+    
+    From-SVN: r147098
+
+:040000 040000 3b1702999cfc9d6309a5490b7261e5e22ffc5ad3 49497de6d0b62615571600755f976dc341619cd9 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 506d7b6 tm.texi (LEGITIMIZE_ADDRESS): Revise documentation.
+Checking out files:  23% (3319/14343)   Checking out files:  24% (3443/14343)   Checking out files:  25% (3586/14343)   Checking out files:  26% (3730/14343)   Checking out files:  27% (3873/14343)   Checking out files:  28% (4017/14343)   Checking out files:  29% (4160/14343)   Checking out files:  30% (4303/14343)   Checking out files:  31% (4447/14343)   Checking out files:  32% (4590/14343)   Checking out files:  33% (4734/14343)   Checking out files:  33% (4824/14343)   Checking out files:  34% (4877/14343)   Checking out files:  35% (5021/14343)   Checking out files:  36% (5164/14343)   Checking out files:  37% (5307/14343)   Checking out files:  38% (5451/14343)   Checking out files:  39% (5594/14343)   Checking out files:  40% (5738/14343)   Checking out files:  41% (5881/14343)   Checking out files:  42% (6025/14343)   Checking out files:  43% (6168/14343)   Checking out files:  44% (6311/14343)   Checking out files:  44% (6360/14343)   Checking out files:  45% (6455/14343)   Checking out files:  46% (6598/14343)   Checking out files:  47% (6742/14343)   Checking out files:  48% (6885/14343)   Checking out files:  49% (7029/14343)   Checking out files:  50% (7172/14343)   Checking out files:  51% (7315/14343)   Checking out files:  52% (7459/14343)   Checking out files:  53% (7602/14343)   Checking out files:  54% (7746/14343)   Checking out files:  55% (7889/14343)   Checking out files:  56% (8033/14343)   Checking out files:  57% (8176/14343)   Checking out files:  58% (8319/14343)   Checking out files:  59% (8463/14343)   Checking out files:  59% (8487/14343)   Checking out files:  60% (8606/14343)   Checking out files:  61% (8750/14343)   Checking out files:  62% (8893/14343)   Checking out files:  63% (9037/14343)   Checking out files:  64% (9180/14343)   Checking out files:  65% (9323/14343)   Checking out files:  66% (9467/14343)   Checking out files:  67% (9610/14343)   Checking out files:  68% (9754/14343)   Checking out files:  69% (9897/14343)   Checking out files:  70% (10041/14343)   Checking out files:  71% (10184/14343)   Checking out files:  72% (10327/14343)   Checking out files:  73% (10471/14343)   Checking out files:  74% (10614/14343)   Checking out files:  74% (10632/14343)   Checking out files:  75% (10758/14343)   Checking out files:  76% (10901/14343)   Checking out files:  77% (11045/14343)   Checking out files:  78% (11188/14343)   Checking out files:  79% (11331/14343)   Checking out files:  80% (11475/14343)   Checking out files:  81% (11618/14343)   Checking out files:  82% (11762/14343)   Checking out files:  83% (11905/14343)   Checking out files:  84% (12049/14343)   Checking out files:  85% (12192/14343)   Checking out files:  86% (12335/14343)   Checking out files:  87% (12479/14343)   Checking out files:  88% (12622/14343)   Checking out files:  89% (12766/14343)   Checking out files:  90% (12909/14343)   Checking out files:  91% (13053/14343)   Checking out files:  92% (13196/14343)   Checking out files:  92% (13308/14343)   Checking out files:  93% (13339/14343)   Checking out files:  94% (13483/14343)   Checking out files:  95% (13626/14343)   Checking out files:  96% (13770/14343)   Checking out files:  97% (13913/14343)   Checking out files:  98% (14057/14343)   Checking out files:  99% (14200/14343)   Checking out files: 100% (14343/14343)   Checking out files: 100% (14343/14343), done.
+Previous HEAD position was 506d7b6... tm.texi (LEGITIMIZE_ADDRESS): Revise documentation.
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [506d7b6]
++---------------------------------------- Current commit hash: [506d7b6] ----------------------------------------+
+GCC for commit [506d7b6] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-506d7b6/bin/gcc with -Os:
+101898776
+0
+Output of /tmp/gcc-506d7b6/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 506d7b6... tm.texi (LEGITIMIZE_ADDRESS): Revise documentation.
+[32m[     info][0m Current commit [506d7b6] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [67beaaa]
++---------------------------------------- Current commit hash: [67beaaa] ----------------------------------------+
+GCC for commit [67beaaa] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+Output of /tmp/gcc-67beaaa/bin/gcc with -Os:
+0
+0
+Output of /tmp/gcc-67beaaa/bin/gcc with -O3:
+0
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 67beaaa... re PR c++/28152 (Diagnostic about wrong use _Complex prints __complex__)
+[32m[     info][0m Current commit [67beaaa] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [506d7b6] with -O0:
+0
+0
+Output of gcc [506d7b6] with -O1:
+0
+0
+Output of gcc [506d7b6] with -O2:
+0
+0
+Output of gcc [506d7b6] with -O3:
+0
+0
+Output of gcc [506d7b6] with -Os:
+-194348008
+0
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

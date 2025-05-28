@@ -1,0 +1,1 @@
+ba8978d ipa-inline.c (cgraph_decide_inlining_incrementally): When optimizing for size, reduce amount of inlining.

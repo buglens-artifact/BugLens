@@ -1,0 +1,1 @@
+ff0e2a3 Rework the ConstStructBuilder code to emit missing initializer elements with explicit zero values instead of with tail padding. On an example like this:

@@ -1,0 +1,1 @@
+e9f91f6 tree-ssa-operands.c (add_virtual_operand): Only mark stores as has_volatile_ops if alias information is not available.

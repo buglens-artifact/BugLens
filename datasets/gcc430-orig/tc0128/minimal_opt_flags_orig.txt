@@ -1,0 +1,5 @@
+inline-functions-called-once
+tree-dce
+tree-fre
+tree-sra
+unit-at-a-time

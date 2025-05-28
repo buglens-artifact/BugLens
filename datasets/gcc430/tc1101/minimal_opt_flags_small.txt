@@ -1,0 +1,9 @@
+inline-small-functions
+tree-copyrename
+tree-dce
+tree-dominator-opts
+tree-dse
+tree-loop-im
+tree-loop-optimize
+tree-vrp
+unit-at-a-time

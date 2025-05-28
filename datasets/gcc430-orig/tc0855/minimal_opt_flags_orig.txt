@@ -1,0 +1,5 @@
+inline-functions-called-once
+tree-dce
+tree-dse
+tree-salias
+unit-at-a-time

@@ -1,0 +1,8 @@
+dse
+inline-functions
+inline-functions-called-once
+inline-small-functions
+ipa-reference
+strict-aliasing
+tree-ccp
+unit-at-a-time

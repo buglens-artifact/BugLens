@@ -1,0 +1,1 @@
+0a64eec re PR rtl-optimization/33653 (volatile memory access optimized away)

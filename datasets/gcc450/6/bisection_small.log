@@ -1,0 +1,334 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.5.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+4
+Output of gcc-4.5.0 with -Os:
+0
+Output of gcc-4.5.0 with -O3:
+4
+====================================================================
+[32m[     info][0m Good version found: gcc-4.4.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[e9d51dc6a3d2af09436f3d8da583ef2b1efda26c] Fix for PR39557
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [e9d51dc]
++---------------------------------------- Current commit hash: [e9d51dc] ----------------------------------------+
+GCC for commit [e9d51dc] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-e9d51dc/bin/gcc with -Os:
+4
+Output of /tmp/gcc-e9d51dc/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at e9d51dc... Fix for PR39557
+[32m[     info][0m Current commit [e9d51dc] is good. Return value: 0
+
+Bisecting: 3564 revisions left to test after this (roughly 12 steps)
+[feb4e5ba87ce9a1774925b939959ec6d7f20f813] tree-cfg.c (dump_function_to_file): Dump eh tree with TDF_EH, not TDF_DETAILS.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [feb4e5b]
++---------------------------------------- Current commit hash: [feb4e5b] ----------------------------------------+
+GCC for commit [feb4e5b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-feb4e5b/bin/gcc with -Os:
+0
+Output of /tmp/gcc-feb4e5b/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at feb4e5b... tree-cfg.c (dump_function_to_file): Dump eh tree with TDF_EH, not TDF_DETAILS.
+[32m[     info][0m Current commit [feb4e5b] is bad. Return value: 1
+
+Bisecting: 1782 revisions left to test after this (roughly 11 steps)
+[19b905ce29121de6335c9a90b3ef10c068ce0a66] eabi.asm (__eabi_convert): Don't define if _RELOCATABLE.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [19b905c]
++---------------------------------------- Current commit hash: [19b905c] ----------------------------------------+
+GCC for commit [19b905c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-19b905c/bin/gcc with -Os:
+4
+Output of /tmp/gcc-19b905c/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at 19b905c... eabi.asm (__eabi_convert): Don't define if _RELOCATABLE.
+[32m[     info][0m Current commit [19b905c] is good. Return value: 0
+
+Bisecting: 891 revisions left to test after this (roughly 10 steps)
+[ac3cbee587c9d65ba8d5be751c8c74ad9ba4c930] re PR c++/40799 (Revision 149750 failed 483.xalancbmk in SPEC CPU 2006)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [ac3cbee]
++---------------------------------------- Current commit hash: [ac3cbee] ----------------------------------------+
+GCC for commit [ac3cbee] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-ac3cbee/bin/gcc with -Os:
+0
+Output of /tmp/gcc-ac3cbee/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at ac3cbee... re PR c++/40799 (Revision 149750 failed 483.xalancbmk in SPEC CPU 2006)
+[32m[     info][0m Current commit [ac3cbee] is bad. Return value: 1
+
+Bisecting: 445 revisions left to test after this (roughly 9 steps)
+[463d9ac4d3097fa2b93a45a6784826d8cfffa8ca] * tb-gcc.c: Fix copyright notice.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [463d9ac]
++---------------------------------------- Current commit hash: [463d9ac] ----------------------------------------+
+GCC for commit [463d9ac] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-463d9ac/bin/gcc with -Os:
+4
+Output of /tmp/gcc-463d9ac/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at 463d9ac... * tb-gcc.c: Fix copyright notice.
+[32m[     info][0m Current commit [463d9ac] is good. Return value: 0
+
+Bisecting: 222 revisions left to test after this (roughly 8 steps)
+[ac7120ce8aef83a746376463906782476b407e9b] exp_util.adb: Minor code reorganization (use N_Short_Circuit)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [ac7120c]
++---------------------------------------- Current commit hash: [ac7120c] ----------------------------------------+
+GCC for commit [ac7120c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-ac7120c/bin/gcc with -Os:
+0
+Output of /tmp/gcc-ac7120c/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at ac7120c... exp_util.adb: Minor code reorganization (use N_Short_Circuit)
+[32m[     info][0m Current commit [ac7120c] is bad. Return value: 1
+
+Bisecting: 111 revisions left to test after this (roughly 7 steps)
+[caf271d8026c2f9a3ade32a8e670fa3be6e3892b] re PR fortran/40638 (RTE: "Unit number in I/O statement too large" -- fails with any low value)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [caf271d]
++---------------------------------------- Current commit hash: [caf271d] ----------------------------------------+
+GCC for commit [caf271d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-caf271d/bin/gcc with -Os:
+0
+Output of /tmp/gcc-caf271d/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at caf271d... re PR fortran/40638 (RTE: "Unit number in I/O statement too large" -- fails with any low value)
+[32m[     info][0m Current commit [caf271d] is bad. Return value: 1
+
+Bisecting: 55 revisions left to test after this (roughly 6 steps)
+[b30bfd402f5109ae54ceb113a9492b8ec3737e0f] gcc-defs.exp (gcc-set-multilib-library-path): Delete.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [b30bfd4]
++---------------------------------------- Current commit hash: [b30bfd4] ----------------------------------------+
+GCC for commit [b30bfd4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-b30bfd4/bin/gcc with -Os:
+4
+Output of /tmp/gcc-b30bfd4/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at b30bfd4... gcc-defs.exp (gcc-set-multilib-library-path): Delete.
+[32m[     info][0m Current commit [b30bfd4] is good. Return value: 0
+
+Bisecting: 27 revisions left to test after this (roughly 5 steps)
+[997704f18b252a1063f514a716fbf6b636f62620] re PR bootstrap/40347 (i386-darwin ICEs while building libgcc during stage2)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [997704f]
++---------------------------------------- Current commit hash: [997704f] ----------------------------------------+
+GCC for commit [997704f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-997704f/bin/gcc with -Os:
+4
+Output of /tmp/gcc-997704f/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at 997704f... re PR bootstrap/40347 (i386-darwin ICEs while building libgcc during stage2)
+[32m[     info][0m Current commit [997704f] is good. Return value: 0
+
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[2b110bfcc074f222a49d875c5f0f5ea370294b9f] Use hash tables for template specialization lookup.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [2b110bf]
++---------------------------------------- Current commit hash: [2b110bf] ----------------------------------------+
+GCC for commit [2b110bf] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-2b110bf/bin/gcc with -Os:
+4
+Output of /tmp/gcc-2b110bf/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2b110bf... Use hash tables for template specialization lookup.
+[32m[     info][0m Current commit [2b110bf] is good. Return value: 0
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[d73fb533dc652d2201bded0d386093af57810a6f] re PR middle-end/34163 (10% performance regression since Nov 1 on Polyhedron's "NF" on AMD64)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [d73fb53]
++---------------------------------------- Current commit hash: [d73fb53] ----------------------------------------+
+GCC for commit [d73fb53] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-d73fb53/bin/gcc with -Os:
+4
+Output of /tmp/gcc-d73fb53/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at d73fb53... re PR middle-end/34163 (10% performance regression since Nov 1 on Polyhedron's "NF" on AMD64)
+[32m[     info][0m Current commit [d73fb53] is good. Return value: 0
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[fae1034ef48b598981195dc0192e882b9ce98894] re PR tree-optimization/40640 (ICE in set_value_range, at tree-vrp.c:383)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [fae1034]
++---------------------------------------- Current commit hash: [fae1034] ----------------------------------------+
+GCC for commit [fae1034] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-fae1034/bin/gcc with -Os:
+0
+Output of /tmp/gcc-fae1034/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at fae1034... re PR tree-optimization/40640 (ICE in set_value_range, at tree-vrp.c:383)
+[32m[     info][0m Current commit [fae1034] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[ba8978d0f01676d2cc72bb1bac2d3bc54d8cf2e0] ipa-inline.c (cgraph_decide_inlining_incrementally): When optimizing for size, reduce amount of inlining.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [ba8978d]
++---------------------------------------- Current commit hash: [ba8978d] ----------------------------------------+
+GCC for commit [ba8978d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-ba8978d/bin/gcc with -Os:
+0
+Output of /tmp/gcc-ba8978d/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at ba8978d... ipa-inline.c (cgraph_decide_inlining_incrementally): When optimizing for size, reduce amount of inlining.
+[32m[     info][0m Current commit [ba8978d] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[d4289bdd6d7102d5fc10f782752ac8dbfae6883c] inclhack.def (solaris_int_types): New fix.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc450/6 small
+[32m[     info][0m Testing commit: [d4289bd]
++---------------------------------------- Current commit hash: [d4289bd] ----------------------------------------+
+GCC for commit [d4289bd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-d4289bd/bin/gcc with -Os:
+4
+Output of /tmp/gcc-d4289bd/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at d4289bd... inclhack.def (solaris_int_types): New fix.
+[32m[     info][0m Current commit [d4289bd] is good. Return value: 0
+
+ba8978d0f01676d2cc72bb1bac2d3bc54d8cf2e0 is the first bad commit
+commit ba8978d0f01676d2cc72bb1bac2d3bc54d8cf2e0
+Author: Jan Hubicka <jh@suse.cz>
+Date:   Fri Jul 3 22:28:14 2009 +0200
+
+    ipa-inline.c (cgraph_decide_inlining_incrementally): When optimizing for size, reduce amount of inlining.
+    
+    	* ipa-inline.c (cgraph_decide_inlining_incrementally): When optimizing
+    	for size, reduce amount of inlining.
+    
+    From-SVN: r149210
+
+:040000 040000 46db1331ef332f1ec1e9ef32db6f50b4edd63d4e c1f269eb05987c820b6ef0fd2bcc605acc966dac M	gcc
+bisect run success
+[32m[     info][0m First bad commit: ba8978d ipa-inline.c (cgraph_decide_inlining_incrementally): When optimizing for size, reduce amount of inlining.
+Checking out files:  28% (7953/27599)   Checking out files:  29% (8004/27599)   Checking out files:  30% (8280/27599)   Checking out files:  31% (8556/27599)   Checking out files:  32% (8832/27599)   Checking out files:  33% (9108/27599)   Checking out files:  34% (9384/27599)   Checking out files:  35% (9660/27599)   Checking out files:  36% (9936/27599)   Checking out files:  37% (10212/27599)   Checking out files:  38% (10488/27599)   Checking out files:  39% (10764/27599)   Checking out files:  40% (11040/27599)   Checking out files:  41% (11316/27599)   Checking out files:  42% (11592/27599)   Checking out files:  43% (11868/27599)   Checking out files:  44% (12144/27599)   Checking out files:  44% (12148/27599)   Checking out files:  45% (12420/27599)   Checking out files:  46% (12696/27599)   Checking out files:  47% (12972/27599)   Checking out files:  48% (13248/27599)   Checking out files:  49% (13524/27599)   Checking out files:  49% (13689/27599)   Checking out files:  50% (13800/27599)   Checking out files:  51% (14076/27599)   Checking out files:  52% (14352/27599)   Checking out files:  53% (14628/27599)   Checking out files:  54% (14904/27599)   Checking out files:  54% (15057/27599)   Checking out files:  55% (15180/27599)   Checking out files:  56% (15456/27599)   Checking out files:  57% (15732/27599)   Checking out files:  58% (16008/27599)   Checking out files:  59% (16284/27599)   Checking out files:  60% (16560/27599)   Checking out files:  61% (16836/27599)   Checking out files:  61% (17000/27599)   Checking out files:  62% (17112/27599)   Checking out files:  63% (17388/27599)   Checking out files:  64% (17664/27599)   Checking out files:  65% (17940/27599)   Checking out files:  66% (18216/27599)   Checking out files:  67% (18492/27599)   Checking out files:  68% (18768/27599)   Checking out files:  69% (19044/27599)   Checking out files:  69% (19167/27599)   Checking out files:  70% (19320/27599)   Checking out files:  71% (19596/27599)   Checking out files:  72% (19872/27599)   Checking out files:  73% (20148/27599)   Checking out files:  74% (20424/27599)   Checking out files:  75% (20700/27599)   Checking out files:  76% (20976/27599)   Checking out files:  76% (21126/27599)   Checking out files:  77% (21252/27599)   Checking out files:  78% (21528/27599)   Checking out files:  79% (21804/27599)   Checking out files:  80% (22080/27599)   Checking out files:  81% (22356/27599)   Checking out files:  82% (22632/27599)   Checking out files:  83% (22908/27599)   Checking out files:  84% (23184/27599)   Checking out files:  84% (23402/27599)   Checking out files:  85% (23460/27599)   Checking out files:  86% (23736/27599)   Checking out files:  87% (24012/27599)   Checking out files:  88% (24288/27599)   Checking out files:  89% (24564/27599)   Checking out files:  90% (24840/27599)   Checking out files:  91% (25116/27599)   Checking out files:  92% (25392/27599)   Checking out files:  93% (25668/27599)   Checking out files:  94% (25944/27599)   Checking out files:  94% (26093/27599)   Checking out files:  95% (26220/27599)   Checking out files:  96% (26496/27599)   Checking out files:  97% (26772/27599)   Checking out files:  98% (27048/27599)   Checking out files:  99% (27324/27599)   Checking out files: 100% (27599/27599)   Checking out files: 100% (27599/27599), done.
+Previous HEAD position was d4289bd... inclhack.def (solaris_int_types): New fix.
+HEAD is now at a91d32a... i386.md ("*movtf_internal): Penalize moves to and from integer registers.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [ba8978d]
++---------------------------------------- Current commit hash: [ba8978d] ----------------------------------------+
+GCC for commit [ba8978d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-ba8978d/bin/gcc with -Os:
+0
+Output of /tmp/gcc-ba8978d/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at ba8978d... ipa-inline.c (cgraph_decide_inlining_incrementally): When optimizing for size, reduce amount of inlining.
+[32m[     info][0m Current commit [ba8978d] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [d4289bd]
++---------------------------------------- Current commit hash: [d4289bd] ----------------------------------------+
+GCC for commit [d4289bd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+4
+Output of /tmp/gcc-d4289bd/bin/gcc with -Os:
+4
+Output of /tmp/gcc-d4289bd/bin/gcc with -O3:
+4
+----------------------------------------------------
+No local changes to save
+HEAD is now at d4289bd... inclhack.def (solaris_int_types): New fix.
+[32m[     info][0m Current commit [d4289bd] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [ba8978d] with -O0:
+4
+Output of gcc [ba8978d] with -O1:
+4
+Output of gcc [ba8978d] with -O2:
+4
+Output of gcc [ba8978d] with -O3:
+4
+Output of gcc [ba8978d] with -Os:
+0
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

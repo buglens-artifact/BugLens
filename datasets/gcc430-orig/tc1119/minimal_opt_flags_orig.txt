@@ -1,0 +1,4 @@
+ipa-reference
+strict-aliasing
+tree-dominator-opts
+unit-at-a-time

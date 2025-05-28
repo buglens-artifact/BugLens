@@ -1,0 +1,6 @@
+ipa-reference
+tree-dce
+tree-dominator-opts
+tree-sra
+tree-store-ccp
+unit-at-a-time

@@ -1,0 +1,755 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = a09a4298
+Output of gcc-4.3.0 with -Os:
+checksum = 6714dce9
+Output of gcc-4.3.0 with -O0:
+checksum = a09a4298
+====================================================================
+[32m[     info][0m Good version found: gcc-3.4.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[a8e6c82ab09c4c7a8490bc3861049b1941b84c75] re PR c++/13574 (array default initializer in class lets gcc consume all memory and die)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [a8e6c82]
++---------------------------------------- Current commit hash: [a8e6c82] ----------------------------------------+
+GCC for commit [a8e6c82] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a09a4298
+Output of /tmp/gcc-a8e6c82/bin/gcc with -Os:
+checksum = a09a4298
+Output of /tmp/gcc-a8e6c82/bin/gcc with -O0:
+checksum = a09a4298
+----------------------------------------------------
+No local changes to save
+HEAD is now at a8e6c82... re PR c++/13574 (array default initializer in class lets gcc consume all memory and die)
+[32m[     info][0m Current commit [a8e6c82] is good. Return value: 0
+
+Bisecting: 15168 revisions left to test after this (roughly 14 steps)
+[024f1251b584243372c0413105b2230769f3e682] re PR c++/23691 (`mpl_::bool_<false>::value' is not a valid template argument for type `bool' because it is a non-constant expression)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [024f125]
++---------------------------------------- Current commit hash: [024f125] ----------------------------------------+
+GCC for commit [024f125] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a09a4298
+Output of /tmp/gcc-024f125/bin/gcc with -Os:
+checksum = 6714dce9
+Output of /tmp/gcc-024f125/bin/gcc with -O0:
+checksum = a09a4298
+----------------------------------------------------
+No local changes to save
+HEAD is now at 024f125... re PR c++/23691 (`mpl_::bool_<false>::value' is not a valid template argument for type `bool' because it is a non-constant expression)
+[32m[     info][0m Current commit [024f125] is bad. Return value: 1
+
+Bisecting: 7583 revisions left to test after this (roughly 13 steps)
+[65f4323d84b08d9d0ff450d6e6432abf0a4fa3fb] tree-cfg.c (find_taken_edge): Reject VAL begin NULL.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [65f4323]
++---------------------------------------- Current commit hash: [65f4323] ----------------------------------------+
+GCC for commit [65f4323] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a09a4298
+Output of /tmp/gcc-65f4323/bin/gcc with -Os:
+checksum = a09a4298
+Output of /tmp/gcc-65f4323/bin/gcc with -O0:
+checksum = a09a4298
+----------------------------------------------------
+No local changes to save
+HEAD is now at 65f4323... tree-cfg.c (find_taken_edge): Reject VAL begin NULL.
+[32m[     info][0m Current commit [65f4323] is good. Return value: 0
+
+Bisecting: 3791 revisions left to test after this (roughly 12 steps)
+[65664157f4be450cf759e0cfd6cfe09213bd7427] * g++.dg/other/static11.C: Use cleanup-rtl-dump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [6566415]
++---------------------------------------- Current commit hash: [6566415] ----------------------------------------+
+GCC for commit [6566415] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a09a4298
+Output of /tmp/gcc-6566415/bin/gcc with -Os:
+checksum = 6714dce9
+Output of /tmp/gcc-6566415/bin/gcc with -O0:
+checksum = a09a4298
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6566415... * g++.dg/other/static11.C: Use cleanup-rtl-dump.
+[32m[     info][0m Current commit [6566415] is bad. Return value: 1
+
+Bisecting: 1895 revisions left to test after this (roughly 11 steps)
+[e6003f4d017445d5c0797665405ee05f813fb323] MAINTAINERS: Update my email address.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [e6003f4]
++---------------------------------------- Current commit hash: [e6003f4] ----------------------------------------+
+GCC for commit [e6003f4] already exists. Using existing binary.
+Compilation by gcc [e6003f4] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at e6003f4... MAINTAINERS: Update my email address.
+Bisecting: 947 revisions left to test after this (roughly 10 steps)
+[f4f4921e08a4ce854486d0777d098fbab8b92fd2] rs6000.c (rs6000_assemble_integer): Put back the #ifdef RELOCATABLE_NEEDS_FIXUP.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [f4f4921]
++---------------------------------------- Current commit hash: [f4f4921] ----------------------------------------+
+GCC for commit [f4f4921] already exists. Using existing binary.
+Compilation by gcc [f4f4921] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at f4f4921... rs6000.c (rs6000_assemble_integer): Put back the #ifdef RELOCATABLE_NEEDS_FIXUP.
+Bisecting: 473 revisions left to test after this (roughly 9 steps)
+[80298b8904d62d74b44e77b4a0553f599299a7ce] gnat_ugn.texi: Remove extra paren check from list of checks for redundant constructs Add...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [80298b8]
++---------------------------------------- Current commit hash: [80298b8] ----------------------------------------+
+GCC for commit [80298b8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a09a4298
+Output of /tmp/gcc-80298b8/bin/gcc with -Os:
+checksum = a09a4298
+Output of /tmp/gcc-80298b8/bin/gcc with -O0:
+checksum = a09a4298
+----------------------------------------------------
+No local changes to save
+HEAD is now at 80298b8... gnat_ugn.texi: Remove extra paren check from list of checks for redundant constructs Add...
+[32m[     info][0m Current commit [80298b8] is good. Return value: 0
+
+Bisecting: 236 revisions left to test after this (roughly 8 steps)
+[62b6316473cb472092a35d7b43842ce276483c95] Complete previous check-in: add Style_Check_Xtra_Parens.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [62b6316]
++---------------------------------------- Current commit hash: [62b6316] ----------------------------------------+
+GCC for commit [62b6316] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a09a4298
+Output of /tmp/gcc-62b6316/bin/gcc with -Os:
+checksum = a09a4298
+Output of /tmp/gcc-62b6316/bin/gcc with -O0:
+checksum = a09a4298
+----------------------------------------------------
+No local changes to save
+HEAD is now at 62b6316... Complete previous check-in: add Style_Check_Xtra_Parens.
+[32m[     info][0m Current commit [62b6316] is good. Return value: 0
+
+Bisecting: 118 revisions left to test after this (roughly 7 steps)
+[9302338c8c1e51d2a6eacae6fe30fb57499244e6] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [9302338]
++---------------------------------------- Current commit hash: [9302338] ----------------------------------------+
+GCC for commit [9302338] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a09a4298
+Output of /tmp/gcc-9302338/bin/gcc with -Os:
+checksum = a09a4298
+Output of /tmp/gcc-9302338/bin/gcc with -O0:
+checksum = a09a4298
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9302338... Daily bump.
+[32m[     info][0m Current commit [9302338] is good. Return value: 0
+
+Bisecting: 59 revisions left to test after this (roughly 6 steps)
+[37ea4e6756a8892442fc83fcdf918e331d66d0b3] tree-vectorizer.c (vect_gen_niters_for_prolog_loop): Use tree_low_cst instead of TREE_INT_CST_LOW.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [37ea4e6]
++---------------------------------------- Current commit hash: [37ea4e6] ----------------------------------------+
+Building GCC for commit [37ea4e6]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 37ea4e6 tree-vectorizer.c (vect_gen_niters_for_prolog_loop): Use tree_low_cst instead of TREE_INT_CST_LOW.
+HEAD is now at 37ea4e6 tree-vectorizer.c (vect_gen_niters_for_prolog_loop): Use tree_low_cst instead of TREE_INT_CST_LOW.
+Note: checking out '37ea4e6'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 37ea4e6... tree-vectorizer.c (vect_gen_niters_for_prolog_loop): Use tree_low_cst instead of TREE_INT_CST_LOW.
+Deleted branch temp-test-branch (was 37ea4e6).
+Fail to build gcc for commit [37ea4e6], skip this commit. Return 125.
+Bisecting: 59 revisions left to test after this (roughly 6 steps)
+[8c1cfd5aa4a3eb878b7591a688c79dd939684813] expr.c (optimize_bitfield_assignment_op): Split out from ...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [8c1cfd5a]
++---------------------------------------- Current commit hash: [8c1cfd5a] ----------------------------------------+
+GCC for commit [8c1cfd5a] already exists. Using existing binary.
+Compilation by gcc [8c1cfd5a] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 8c1cfd5a... expr.c (optimize_bitfield_assignment_op): Split out from ...
+Bisecting: 44 revisions left to test after this (roughly 6 steps)
+[36cf004a74310fcd8fc7dd934fd034946cd2cd8d] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [36cf004]
++---------------------------------------- Current commit hash: [36cf004] ----------------------------------------+
+GCC for commit [36cf004] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a09a4298
+Output of /tmp/gcc-36cf004/bin/gcc with -Os:
+checksum = a09a4298
+Output of /tmp/gcc-36cf004/bin/gcc with -O0:
+checksum = a09a4298
+----------------------------------------------------
+No local changes to save
+HEAD is now at 36cf004... Daily bump.
+[32m[     info][0m Current commit [36cf004] is good. Return value: 0
+
+Bisecting: 22 revisions left to test after this (roughly 5 steps)
+[00bda9206b27e0c9d5bae355189fe2067ed12750] s390-modes.def: Added cc modes documentation.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [00bda92]
++---------------------------------------- Current commit hash: [00bda92] ----------------------------------------+
+Building GCC for commit [00bda92]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 00bda92 s390-modes.def: Added cc modes documentation.
+HEAD is now at 00bda92 s390-modes.def: Added cc modes documentation.
+Note: checking out '00bda92'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 00bda92... s390-modes.def: Added cc modes documentation.
+Deleted branch temp-test-branch (was 00bda92).
+Fail to build gcc for commit [00bda92], skip this commit. Return 125.
+Bisecting: 22 revisions left to test after this (roughly 5 steps)
+[017e0eb94d164300f87adc5759eeffea42d02300] s390.c (struct processor_costs): New data type.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [017e0eb]
++---------------------------------------- Current commit hash: [017e0eb] ----------------------------------------+
+Building GCC for commit [017e0eb]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 017e0eb s390.c (struct processor_costs): New data type.
+HEAD is now at 017e0eb s390.c (struct processor_costs): New data type.
+Note: checking out '017e0eb'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 017e0eb... s390.c (struct processor_costs): New data type.
+Deleted branch temp-test-branch (was 017e0eb).
+Fail to build gcc for commit [017e0eb], skip this commit. Return 125.
+Bisecting: 22 revisions left to test after this (roughly 5 steps)
+[ea28b8f60fb4113053238a22a4d2c508f39710bb] revert: [multiple changes]
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [ea28b8f]
++---------------------------------------- Current commit hash: [ea28b8f] ----------------------------------------+
+GCC for commit [ea28b8f] already exists. Using existing binary.
+Compilation by gcc [ea28b8f] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at ea28b8f... revert: [multiple changes]
+Bisecting: 16 revisions left to test after this (roughly 4 steps)
+[1b3c8f4655e63309012ab8054699b47d9b64b9fe] c-opts.c (check_deps_environment_vars): If spec != NULL, set deps_seen.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [1b3c8f4]
++---------------------------------------- Current commit hash: [1b3c8f4] ----------------------------------------+
+Building GCC for commit [1b3c8f4]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 1b3c8f4 c-opts.c (check_deps_environment_vars): If spec != NULL, set deps_seen.
+HEAD is now at 1b3c8f4 c-opts.c (check_deps_environment_vars): If spec != NULL, set deps_seen.
+Note: checking out '1b3c8f4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 1b3c8f4... c-opts.c (check_deps_environment_vars): If spec != NULL, set deps_seen.
+Deleted branch temp-test-branch (was 1b3c8f4).
+Fail to build gcc for commit [1b3c8f4], skip this commit. Return 125.
+Bisecting: 16 revisions left to test after this (roughly 4 steps)
+[1ac0ac8b905ca91a7b5b8af907237133d65f2a5c] re PR c/18596 (ICE in make_decl_rtl)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [1ac0ac8]
++---------------------------------------- Current commit hash: [1ac0ac8] ----------------------------------------+
+GCC for commit [1ac0ac8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a09a4298
+Output of /tmp/gcc-1ac0ac8/bin/gcc with -Os:
+checksum = a09a4298
+Output of /tmp/gcc-1ac0ac8/bin/gcc with -O0:
+checksum = a09a4298
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1ac0ac8... re PR c/18596 (ICE in make_decl_rtl)
+[32m[     info][0m Current commit [1ac0ac8] is good. Return value: 0
+
+Bisecting: 14 revisions left to test after this (roughly 4 steps)
+[e92845664c623d7b8cf9bcf41d27183d2081a9fa] re PR tree-optimization/18673 (Tree-PRE is O(N^4) in the depth of the dominator tree)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [e928456]
++---------------------------------------- Current commit hash: [e928456] ----------------------------------------+
+Building GCC for commit [e928456]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: e928456 re PR tree-optimization/18673 (Tree-PRE is O(N^4) in the depth of the dominator tree)
+HEAD is now at e928456 re PR tree-optimization/18673 (Tree-PRE is O(N^4) in the depth of the dominator tree)
+Note: checking out 'e928456'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at e928456... re PR tree-optimization/18673 (Tree-PRE is O(N^4) in the depth of the dominator tree)
+Deleted branch temp-test-branch (was e928456).
+Fail to build gcc for commit [e928456], skip this commit. Return 125.
+Bisecting: 14 revisions left to test after this (roughly 4 steps)
+[209e170cf47f93c83786522b00ddba70b9df1a2d] re PR tree-optimization/18298 (bad code from lim ssa pass with strcmp)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [209e170]
++---------------------------------------- Current commit hash: [209e170] ----------------------------------------+
+Building GCC for commit [209e170]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 209e170 re PR tree-optimization/18298 (bad code from lim ssa pass with strcmp)
+HEAD is now at 209e170 re PR tree-optimization/18298 (bad code from lim ssa pass with strcmp)
+Note: checking out '209e170'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 209e170... re PR tree-optimization/18298 (bad code from lim ssa pass with strcmp)
+Deleted branch temp-test-branch (was 209e170).
+Fail to build gcc for commit [209e170], skip this commit. Return 125.
+Bisecting: 14 revisions left to test after this (roughly 4 steps)
+[ecc30353f4b8b441a6b2a979773993737ccaa456] * pex-unix.c: Fix the spelling of longjmp.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [ecc3035]
++---------------------------------------- Current commit hash: [ecc3035] ----------------------------------------+
+GCC for commit [ecc3035] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a09a4298
+Output of /tmp/gcc-ecc3035/bin/gcc with -Os:
+checksum = a09a4298
+Output of /tmp/gcc-ecc3035/bin/gcc with -O0:
+checksum = a09a4298
+----------------------------------------------------
+No local changes to save
+HEAD is now at ecc3035... * pex-unix.c: Fix the spelling of longjmp.
+[32m[     info][0m Current commit [ecc3035] is good. Return value: 0
+
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[218d1b8834ea64304e27749811c48f8ed48728a9] re PR tree-optimization/18607 (Vectorizer: data_reference is overwritten in vect_analyze_data_refs)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [218d1b8]
++---------------------------------------- Current commit hash: [218d1b8] ----------------------------------------+
+Building GCC for commit [218d1b8]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 218d1b8 re PR tree-optimization/18607 (Vectorizer: data_reference is overwritten in vect_analyze_data_refs)
+HEAD is now at 218d1b8 re PR tree-optimization/18607 (Vectorizer: data_reference is overwritten in vect_analyze_data_refs)
+Note: checking out '218d1b8'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 218d1b8... re PR tree-optimization/18607 (Vectorizer: data_reference is overwritten in vect_analyze_data_refs)
+Deleted branch temp-test-branch (was 218d1b8).
+Fail to build gcc for commit [218d1b8], skip this commit. Return 125.
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[688977080c69ae454fd568d6af42c57679ec885a] * lib/target-supports.exp (is-effective-target): Simplify.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [6889770]
++---------------------------------------- Current commit hash: [6889770] ----------------------------------------+
+GCC for commit [6889770] already exists. Using existing binary.
+Compilation by gcc [6889770] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 6889770... * lib/target-supports.exp (is-effective-target): Simplify.
+Bisecting: 11 revisions left to test after this (roughly 4 steps)
+[472c29c36418690550ac46005b58ff474d757e1f] * parser.c: Fix comment typos.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [472c29c]
++---------------------------------------- Current commit hash: [472c29c] ----------------------------------------+
+Building GCC for commit [472c29c]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 472c29c * parser.c: Fix comment typos.
+HEAD is now at 472c29c * parser.c: Fix comment typos.
+Note: checking out '472c29c'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 472c29c... * parser.c: Fix comment typos.
+Deleted branch temp-test-branch (was 472c29c).
+Fail to build gcc for commit [472c29c], skip this commit. Return 125.
+Bisecting: 11 revisions left to test after this (roughly 4 steps)
+[1ae5bf022387b0b62045323e7b0890ad90dc6ee0] badalloc1.C (arena_size): Bump up to 262144 to support new requirements on FreeBSD 5.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [1ae5bf0]
++---------------------------------------- Current commit hash: [1ae5bf0] ----------------------------------------+
+GCC for commit [1ae5bf0] already exists. Using existing binary.
+Compilation by gcc [1ae5bf0] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 1ae5bf0... badalloc1.C (arena_size): Bump up to 262144 to support new requirements on FreeBSD 5.
+Bisecting: 10 revisions left to test after this (roughly 4 steps)
+[f093059e6bc9870ea2a2fadbe4b75c66dcacb3b4] changed from 'PR tree-opt/18173' to 'PR target/18173'
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [f093059]
++---------------------------------------- Current commit hash: [f093059] ----------------------------------------+
+Building GCC for commit [f093059]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: f093059 changed from 'PR tree-opt/18173' to 'PR target/18173'
+HEAD is now at f093059 changed from 'PR tree-opt/18173' to 'PR target/18173'
+Note: checking out 'f093059'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at f093059... changed from 'PR tree-opt/18173' to 'PR target/18173'
+Deleted branch temp-test-branch (was f093059).
+Fail to build gcc for commit [f093059], skip this commit. Return 125.
+Bisecting: 10 revisions left to test after this (roughly 4 steps)
+[98705d7dfa8cd4f0ccf27676ca6d02786624b8cb] altivec.h (vec_step_help): Support const vector types.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [98705d7]
++---------------------------------------- Current commit hash: [98705d7] ----------------------------------------+
+Building GCC for commit [98705d7]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 98705d7 altivec.h (vec_step_help): Support const vector types.
+HEAD is now at 98705d7 altivec.h (vec_step_help): Support const vector types.
+Note: checking out '98705d7'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 98705d7... altivec.h (vec_step_help): Support const vector types.
+Deleted branch temp-test-branch (was 98705d7).
+Fail to build gcc for commit [98705d7], skip this commit. Return 125.
+Bisecting: 10 revisions left to test after this (roughly 4 steps)
+[f2b60e4039b662779ffc4a59eacb186b5b821cd6] re PR tree-optimization/18607 (Vectorizer: data_reference is overwritten in vect_analyze_data_refs)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [f2b60e4]
++---------------------------------------- Current commit hash: [f2b60e4] ----------------------------------------+
+Building GCC for commit [f2b60e4]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: f2b60e4 re PR tree-optimization/18607 (Vectorizer: data_reference is overwritten in vect_analyze_data_refs)
+HEAD is now at f2b60e4 re PR tree-optimization/18607 (Vectorizer: data_reference is overwritten in vect_analyze_data_refs)
+Note: checking out 'f2b60e4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at f2b60e4... re PR tree-optimization/18607 (Vectorizer: data_reference is overwritten in vect_analyze_data_refs)
+Deleted branch temp-test-branch (was f2b60e4).
+Fail to build gcc for commit [f2b60e4], skip this commit. Return 125.
+Bisecting: 10 revisions left to test after this (roughly 4 steps)
+[f2978871b26c69d516916d280e81cc1f9b460416] * expr.c (emit_group_load_1): Don't die on const_int orig_src.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [f297887]
++---------------------------------------- Current commit hash: [f297887] ----------------------------------------+
+GCC for commit [f297887] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a09a4298
+Output of /tmp/gcc-f297887/bin/gcc with -Os:
+checksum = a09a4298
+Output of /tmp/gcc-f297887/bin/gcc with -O0:
+checksum = a09a4298
+----------------------------------------------------
+No local changes to save
+HEAD is now at f297887... * expr.c (emit_group_load_1): Don't die on const_int orig_src.
+[32m[     info][0m Current commit [f297887] is good. Return value: 0
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[d75bf0cab42169239902ddadcdb4f35a3fd5a35d] tree-vectorizer.c (vect_can_force_dr_alignment_p): Return false for decls that are assembled before vectorization takes place.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [d75bf0c]
++---------------------------------------- Current commit hash: [d75bf0c] ----------------------------------------+
+Building GCC for commit [d75bf0c]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: d75bf0c tree-vectorizer.c (vect_can_force_dr_alignment_p): Return false for decls that are assembled before vectorization takes place.
+HEAD is now at d75bf0c tree-vectorizer.c (vect_can_force_dr_alignment_p): Return false for decls that are assembled before vectorization takes place.
+Note: checking out 'd75bf0c'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at d75bf0c... tree-vectorizer.c (vect_can_force_dr_alignment_p): Return false for decls that are assembled before vectorization takes place.
+Deleted branch temp-test-branch (was d75bf0c).
+Fail to build gcc for commit [d75bf0c], skip this commit. Return 125.
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[80ded1258e48eb9262b18821437b178e58ba3da9] mklibgcc.in: Correct calculation of libgcc_s_soname and libunwind_soname.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [80ded12]
++---------------------------------------- Current commit hash: [80ded12] ----------------------------------------+
+GCC for commit [80ded12] already exists. Using existing binary.
+Compilation by gcc [80ded12] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 80ded12... mklibgcc.in: Correct calculation of libgcc_s_soname and libunwind_soname.
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[0050e8620a98776c3508acd826c328e7c5023fd3] varasm.c (default_encode_section_info): Don't set SYMBOL_FLAG_SMALL on TLS symbols.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [0050e86]
++---------------------------------------- Current commit hash: [0050e86] ----------------------------------------+
+Building GCC for commit [0050e86]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 0050e86 varasm.c (default_encode_section_info): Don't set SYMBOL_FLAG_SMALL on TLS symbols.
+HEAD is now at 0050e86 varasm.c (default_encode_section_info): Don't set SYMBOL_FLAG_SMALL on TLS symbols.
+Note: checking out '0050e86'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 0050e86... varasm.c (default_encode_section_info): Don't set SYMBOL_FLAG_SMALL on TLS symbols.
+Deleted branch temp-test-branch (was 0050e86).
+Fail to build gcc for commit [0050e86], skip this commit. Return 125.
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[9b09c842b5339a624677754bdadf377ccf944bf4] passes.c (rest_of_handle_old_regalloc): Delete unreachable blocks if local_alloc modified jumps.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [9b09c84]
++---------------------------------------- Current commit hash: [9b09c84] ----------------------------------------+
+Building GCC for commit [9b09c84]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 9b09c84 passes.c (rest_of_handle_old_regalloc): Delete unreachable blocks if local_alloc modified jumps.
+HEAD is now at 9b09c84 passes.c (rest_of_handle_old_regalloc): Delete unreachable blocks if local_alloc modified jumps.
+Note: checking out '9b09c84'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 9b09c84... passes.c (rest_of_handle_old_regalloc): Delete unreachable blocks if local_alloc modified jumps.
+Deleted branch temp-test-branch (was 9b09c84).
+Fail to build gcc for commit [9b09c84], skip this commit. Return 125.
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[7370bebd3f4bf1725a73073c027ba13afc127f40] * gthr-gnat.c, gthr-gnat.h, gthr.h, libgcc2.h, unwind-dw2-fde.h 	* unwind.h: Surround all visibility pragmas with #ifndef HIDE_EXPORTS.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [7370beb]
++---------------------------------------- Current commit hash: [7370beb] ----------------------------------------+
+Building GCC for commit [7370beb]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 7370beb * gthr-gnat.c, gthr-gnat.h, gthr.h, libgcc2.h, unwind-dw2-fde.h 	* unwind.h: Surround all visibility pragmas with #ifndef HIDE_EXPORTS.
+HEAD is now at 7370beb * gthr-gnat.c, gthr-gnat.h, gthr.h, libgcc2.h, unwind-dw2-fde.h
+Note: checking out '7370beb'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 7370beb... * gthr-gnat.c, gthr-gnat.h, gthr.h, libgcc2.h, unwind-dw2-fde.h 	* unwind.h: Surround all visibility pragmas with #ifndef HIDE_EXPORTS.
+Deleted branch temp-test-branch (was 7370beb).
+Fail to build gcc for commit [7370beb], skip this commit. Return 125.
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[afe849213eed9764b4579ba081c111a0b3ddde25] expr.c (get_inner_reference): Handle REAL/IMAGPART_EXPR.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0288 orig
+[32m[     info][0m Testing commit: [afe8492]
++---------------------------------------- Current commit hash: [afe8492] ----------------------------------------+
+GCC for commit [afe8492] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = a09a4298
+Output of /tmp/gcc-afe8492/bin/gcc with -Os:
+checksum = a09a4298
+Output of /tmp/gcc-afe8492/bin/gcc with -O0:
+checksum = a09a4298
+----------------------------------------------------
+No local changes to save
+HEAD is now at afe8492... expr.c (get_inner_reference): Handle REAL/IMAGPART_EXPR.
+[32m[     info][0m Current commit [afe8492] is good. Return value: 0
+
+There are only 'skip'ped commits left to test.
+The first bad commit could be any of:
+f2b60e4039b662779ffc4a59eacb186b5b821cd6
+1b3c8f4655e63309012ab8054699b47d9b64b9fe
+e92845664c623d7b8cf9bcf41d27183d2081a9fa
+218d1b8834ea64304e27749811c48f8ed48728a9
+f093059e6bc9870ea2a2fadbe4b75c66dcacb3b4
+37ea4e6756a8892442fc83fcdf918e331d66d0b3
+472c29c36418690550ac46005b58ff474d757e1f
+017e0eb94d164300f87adc5759eeffea42d02300
+d75bf0cab42169239902ddadcdb4f35a3fd5a35d
+00bda9206b27e0c9d5bae355189fe2067ed12750
+9b09c842b5339a624677754bdadf377ccf944bf4
+0050e8620a98776c3508acd826c328e7c5023fd3
+209e170cf47f93c83786522b00ddba70b9df1a2d
+7370bebd3f4bf1725a73073c027ba13afc127f40
+98705d7dfa8cd4f0ccf27676ca6d02786624b8cb
+80ded1258e48eb9262b18821437b178e58ba3da9
+We cannot bisect more!
+bisect run cannot continue any more
+[32m[     info][0m First bad commit: 80ded12 mklibgcc.in: Correct calculation of libgcc_s_soname and libunwind_soname.
+Checking out files:  10% (5361/50974)   Checking out files:  11% (5608/50974)   Checking out files:  12% (6117/50974)   Checking out files:  13% (6627/50974)   Checking out files:  13% (6885/50974)   Checking out files:  14% (7137/50974)   Checking out files:  15% (7647/50974)   Checking out files:  16% (8156/50974)   Checking out files:  16% (8266/50974)   Checking out files:  17% (8666/50974)   Checking out files:  17% (9132/50974)   Checking out files:  18% (9176/50974)   Checking out files:  19% (9686/50974)   Checking out files:  20% (10195/50974)   Checking out files:  21% (10705/50974)   Checking out files:  22% (11215/50974)   Checking out files:  23% (11725/50974)   Checking out files:  23% (12232/50974)   Checking out files:  24% (12234/50974)   Checking out files:  25% (12744/50974)   Checking out files:  26% (13254/50974)   Checking out files:  27% (13763/50974)   Checking out files:  28% (14273/50974)   Checking out files:  29% (14783/50974)   Checking out files:  30% (15293/50974)   Checking out files:  30% (15458/50974)   Checking out files:  31% (15802/50974)   Checking out files:  32% (16312/50974)   Checking out files:  33% (16822/50974)   Checking out files:  34% (17332/50974)   Checking out files:  35% (17841/50974)   Checking out files:  36% (18351/50974)   Checking out files:  37% (18861/50974)   Checking out files:  37% (19236/50974)   Checking out files:  38% (19371/50974)   Checking out files:  39% (19880/50974)   Checking out files:  40% (20390/50974)   Checking out files:  41% (20900/50974)   Checking out files:  42% (21410/50974)   Checking out files:  42% (21801/50974)   Checking out files:  43% (21919/50974)   Checking out files:  44% (22429/50974)   Checking out files:  45% (22939/50974)   Checking out files:  46% (23449/50974)   Checking out files:  47% (23958/50974)   Checking out files:  47% (24193/50974)   Checking out files:  48% (24468/50974)   Checking out files:  49% (24978/50974)   Checking out files:  50% (25487/50974)   Checking out files:  51% (25997/50974)   Checking out files:  52% (26507/50974)   Checking out files:  53% (27017/50974)   Checking out files:  53% (27274/50974)   Checking out files:  54% (27526/50974)   Checking out files:  55% (28036/50974)   Checking out files:  56% (28546/50974)   Checking out files:  57% (29056/50974)   Checking out files:  58% (29565/50974)   Checking out files:  59% (30075/50974)   Checking out files:  59% (30545/50974)   Checking out files:  60% (30585/50974)   Checking out files:  61% (31095/50974)   Checking out files:  62% (31604/50974)   Checking out files:  63% (32114/50974)   Checking out files:  64% (32624/50974)   Checking out files:  65% (33134/50974)   Checking out files:  66% (33643/50974)   Checking out files:  66% (33980/50974)   Checking out files:  67% (34153/50974)   Checking out files:  68% (34663/50974)   Checking out files:  69% (35173/50974)   Checking out files:  70% (35682/50974)   Checking out files:  71% (36192/50974)   Checking out files:  72% (36702/50974)   Checking out files:  72% (37166/50974)   Checking out files:  73% (37212/50974)   Checking out files:  74% (37721/50974)   Checking out files:  75% (38231/50974)   Checking out files:  76% (38741/50974)   Checking out files:  77% (39250/50974)   Checking out files:  78% (39760/50974)   Checking out files:  79% (40270/50974)   Checking out files:  79% (40330/50974)   Checking out files:  80% (40780/50974)   Checking out files:  81% (41289/50974)   Checking out files:  82% (41799/50974)   Checking out files:  83% (42309/50974)   Checking out files:  84% (42819/50974)   Checking out files:  85% (43328/50974)   Checking out files:  85% (43586/50974)   Checking out files:  86% (43838/50974)   Checking out files:  87% (44348/50974)   Checking out files:  88% (44858/50974)   Checking out files:  89% (45367/50974)   Checking out files:  90% (45877/50974)   Checking out files:  90% (46143/50974)   Checking out files:  91% (46387/50974)   Checking out files:  92% (46897/50974)   Checking out files:  93% (47406/50974)   Checking out files:  94% (47916/50974)   Checking out files:  94% (48323/50974)   Checking out files:  95% (48426/50974)   Checking out files:  96% (48936/50974)   Checking out files:  97% (49445/50974)   Checking out files:  98% (49955/50974)   Checking out files:  99% (50465/50974)   Checking out files:  99% (50488/50974)   Checking out files: 100% (50974/50974)   Checking out files: 100% (50974/50974), done.
+Previous HEAD position was afe8492... expr.c (get_inner_reference): Handle REAL/IMAGPART_EXPR.
+HEAD is now at d2a1878... * gcc.target/i386/asm-3.c: Fix dg-skip-if for all 32bit PIC targets.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [80ded12]
++---------------------------------------- Current commit hash: [80ded12] ----------------------------------------+
+GCC for commit [80ded12] already exists. Using existing binary.
+Compilation by gcc [80ded12] with -Os failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at 80ded12... mklibgcc.in: Correct calculation of libgcc_s_soname and libunwind_soname.
+[32m[     info][0m Testing commit: [98705d7]
++---------------------------------------- Current commit hash: [98705d7] ----------------------------------------+
+Building GCC for commit [98705d7]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC compilation failed.
+Unknown failure reason... Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 98705d7 altivec.h (vec_step_help): Support const vector types.
+HEAD is now at 98705d7 altivec.h (vec_step_help): Support const vector types.
+Note: checking out '98705d7'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 98705d7... altivec.h (vec_step_help): Support const vector types.
+Deleted branch temp-test-branch (was 98705d7).
+Fail to build gcc for commit [98705d7], skip this commit. Return 125.
+Error: The first bad commit is not the correct one. [2]

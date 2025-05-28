@@ -1,0 +1,6 @@
+inline-functions-called-once
+ipa-pure-const
+tree-dce
+tree-dse
+tree-sra
+unit-at-a-time

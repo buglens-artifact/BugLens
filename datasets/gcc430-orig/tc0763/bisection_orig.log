@@ -1,0 +1,52 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 889fb181
+Output of gcc-4.3.0 with -O3:
+checksum = 88a0f9ff
+Output of gcc-4.3.0 with -O0:
+checksum = 889fb181
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0763 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+/tmp/deduplication/scripts/r_wrongcode_gcc.sh: line 191: 2108937 Killed                  timeout -s 9 $TIMEOUT $gcc_bin $source_file -o $test_binary $opt1 > $build_output 2>&1
+Compilation by gcc [b23987e] with -O3 failed - [unkonwn failure reason]. Skip this commit, return 1.
+-------------------------------------------------------------------------------------------------
+
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+The merge base b23987ec2f0f24c38c78f7cf63c91a699da681bd is bad.
+This means the bug has been fixed between b23987ec2f0f24c38c78f7cf63c91a699da681bd and [bfbec2aae3586d0aed03b24e2b5998b8a1a844a0].
+bisect run failed:
+'bisect_state bad' exited with error code 3
+[32m[     info][0m First bad commit: 
+Checking out files:  37% (938/2533)   Checking out files:  38% (963/2533)   Checking out files:  39% (988/2533)   Checking out files:  40% (1014/2533)   Checking out files:  41% (1039/2533)   Checking out files:  42% (1064/2533)   Checking out files:  43% (1090/2533)   Checking out files:  44% (1115/2533)   Checking out files:  45% (1140/2533)   Checking out files:  46% (1166/2533)   Checking out files:  47% (1191/2533)   Checking out files:  48% (1216/2533)   Checking out files:  49% (1242/2533)   Checking out files:  50% (1267/2533)   Checking out files:  51% (1292/2533)   Checking out files:  52% (1318/2533)   Checking out files:  53% (1343/2533)   Checking out files:  54% (1368/2533)   Checking out files:  55% (1394/2533)   Checking out files:  56% (1419/2533)   Checking out files:  57% (1444/2533)   Checking out files:  58% (1470/2533)   Checking out files:  59% (1495/2533)   Checking out files:  60% (1520/2533)   Checking out files:  61% (1546/2533)   Checking out files:  62% (1571/2533)   Checking out files:  63% (1596/2533)   Checking out files:  64% (1622/2533)   Checking out files:  65% (1647/2533)   Checking out files:  66% (1672/2533)   Checking out files:  67% (1698/2533)   Checking out files:  68% (1723/2533)   Checking out files:  69% (1748/2533)   Checking out files:  70% (1774/2533)   Checking out files:  71% (1799/2533)   Checking out files:  72% (1824/2533)   Checking out files:  73% (1850/2533)   Checking out files:  74% (1875/2533)   Checking out files:  75% (1900/2533)   Checking out files:  76% (1926/2533)   Checking out files:  77% (1951/2533)   Checking out files:  78% (1976/2533)   Checking out files:  79% (2002/2533)   Checking out files:  80% (2027/2533)   Checking out files:  81% (2052/2533)   Checking out files:  82% (2078/2533)   Checking out files:  83% (2103/2533)   Checking out files:  84% (2128/2533)   Checking out files:  85% (2154/2533)   Checking out files:  86% (2179/2533)   Checking out files:  87% (2204/2533)   Checking out files:  88% (2230/2533)   Checking out files:  89% (2255/2533)   Checking out files:  89% (2274/2533)   Checking out files:  90% (2280/2533)   Checking out files:  91% (2306/2533)   Checking out files:  92% (2331/2533)   Checking out files:  93% (2356/2533)   Checking out files:  94% (2382/2533)   Checking out files:  95% (2407/2533)   Checking out files:  96% (2432/2533)   Checking out files:  97% (2458/2533)   Checking out files:  98% (2483/2533)   Checking out files:  99% (2508/2533)   Checking out files: 100% (2533/2533)   Checking out files: 100% (2533/2533), done.
+Previous HEAD position was b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+HEAD is now at 870aa1e... re PR middle-end/30322 (((-i-1) + i) +1) is turned into ~i + (i+1) and never into 0 on the tree level)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [870aa1e]
++---------------------------------------- Current commit hash: [870aa1e] ----------------------------------------+
+GCC for commit [870aa1e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 889fb181
+Output of /tmp/gcc-870aa1e/bin/gcc with -O3:
+checksum = 889fb181
+Output of /tmp/gcc-870aa1e/bin/gcc with -O0:
+checksum = 889fb181
+----------------------------------------------------
+No local changes to save
+HEAD is now at 870aa1e... re PR middle-end/30322 (((-i-1) + i) +1) is turned into ~i + (i+1) and never into 0 on the tree level)
+[32m[     info][0m Current commit [870aa1e] is good. Return value: 0
+
+Error: The first bad commit is not the correct one. [1]

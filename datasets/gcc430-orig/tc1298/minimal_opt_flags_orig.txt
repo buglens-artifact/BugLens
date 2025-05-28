@@ -1,0 +1,5 @@
+dse
+inline-functions-called-once
+ipa-reference
+toplevel-reorder
+unit-at-a-time

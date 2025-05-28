@@ -1,0 +1,1 @@
+93242b9 ifcvt.c (noce_try_store_flag_constants): Don't check no_new_pseudos here.

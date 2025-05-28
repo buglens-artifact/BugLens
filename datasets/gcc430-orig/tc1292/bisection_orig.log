@@ -1,0 +1,335 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 32435210
+Output of gcc-4.3.0 with -O3:
+checksum = a2bc8a28
+Output of gcc-4.3.0 with -O0:
+checksum = 32435210
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+checksum = 32435210
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+checksum = 32435210
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is good. Return value: 0
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[448d2cd2f73e2e16e2bdd5c407174afebf3ed845] re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [448d2cd]
++---------------------------------------- Current commit hash: [448d2cd] ----------------------------------------+
+GCC for commit [448d2cd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-448d2cd/bin/gcc with -O3:
+checksum = 32435210
+Output of /tmp/gcc-448d2cd/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at 448d2cd... re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+[32m[     info][0m Current commit [448d2cd] is good. Return value: 0
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[502630f495cd78b97fd3788e049640210bce8ddb] dwarf2out.c (gen_array_type_die, [...]): For Fortran multi-dimensional arrays use DW_AT_ordering DW_ORD_col_major.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [502630f]
++---------------------------------------- Current commit hash: [502630f] ----------------------------------------+
+GCC for commit [502630f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-502630f/bin/gcc with -O3:
+checksum = a2bc8a28
+Output of /tmp/gcc-502630f/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at 502630f... dwarf2out.c (gen_array_type_die, [...]): For Fortran multi-dimensional arrays use DW_AT_ordering DW_ORD_col_major.
+[32m[     info][0m Current commit [502630f] is bad. Return value: 1
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[241b92c8c5fd4ef847b99284126de8e3349b926b] re PR libfortran/24685 (real(16) formatted input is broken for huge values (gfortran.dg/default_format_2.f90))
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [241b92c]
++---------------------------------------- Current commit hash: [241b92c] ----------------------------------------+
+GCC for commit [241b92c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-241b92c/bin/gcc with -O3:
+checksum = a2bc8a28
+Output of /tmp/gcc-241b92c/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at 241b92c... re PR libfortran/24685 (real(16) formatted input is broken for huge values (gfortran.dg/default_format_2.f90))
+[32m[     info][0m Current commit [241b92c] is bad. Return value: 1
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[a7f638eca471ae667d2aea8d634869d1f0809887] re PR fortran/33733 (ICEs in simplify_transfer)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [a7f638e]
++---------------------------------------- Current commit hash: [a7f638e] ----------------------------------------+
+GCC for commit [a7f638e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-a7f638e/bin/gcc with -O3:
+checksum = a2bc8a28
+Output of /tmp/gcc-a7f638e/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at a7f638e... re PR fortran/33733 (ICEs in simplify_transfer)
+[32m[     info][0m Current commit [a7f638e] is bad. Return value: 1
+
+Bisecting: 139 revisions left to test after this (roughly 7 steps)
+[a6bda7d08bba0105f6e490bcbb8287684643990f] moveable.cc: Fix and extend.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [a6bda7d]
++---------------------------------------- Current commit hash: [a6bda7d] ----------------------------------------+
+GCC for commit [a6bda7d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-a6bda7d/bin/gcc with -O3:
+checksum = a2bc8a28
+Output of /tmp/gcc-a6bda7d/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at a6bda7d... moveable.cc: Fix and extend.
+[32m[     info][0m Current commit [a6bda7d] is bad. Return value: 1
+
+Bisecting: 69 revisions left to test after this (roughly 6 steps)
+[becb103cbe12515cc3a2a98c315d5d4488de80cc] m68k.c, m68k.md: Use the assembly syntax for ASSEMBLER_DIALECT.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [becb103]
++---------------------------------------- Current commit hash: [becb103] ----------------------------------------+
+GCC for commit [becb103] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-becb103/bin/gcc with -O3:
+checksum = a2bc8a28
+Output of /tmp/gcc-becb103/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at becb103... m68k.c, m68k.md: Use the assembly syntax for ASSEMBLER_DIALECT.
+[32m[     info][0m Current commit [becb103] is bad. Return value: 1
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[42f02385bdfb21849e984584082047881f53d8c9] re PR c++/20416 (Incorrect lifetime for temporary with static const reference)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [42f0238]
++---------------------------------------- Current commit hash: [42f0238] ----------------------------------------+
+GCC for commit [42f0238] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-42f0238/bin/gcc with -O3:
+checksum = a2bc8a28
+Output of /tmp/gcc-42f0238/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at 42f0238... re PR c++/20416 (Incorrect lifetime for temporary with static const reference)
+[32m[     info][0m Current commit [42f0238] is bad. Return value: 1
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[ee332da9f77d641cb731596e6d2545ba03b6b326] re PR fortran/33542 (gfortran does not detect ambigious specific names if they are the same as generic names)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [ee332da]
++---------------------------------------- Current commit hash: [ee332da] ----------------------------------------+
+GCC for commit [ee332da] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-ee332da/bin/gcc with -O3:
+checksum = 32435210
+Output of /tmp/gcc-ee332da/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at ee332da... re PR fortran/33542 (gfortran does not detect ambigious specific names if they are the same as generic names)
+[32m[     info][0m Current commit [ee332da] is good. Return value: 0
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[7dc83ebc4a15beeba41e01a0e1a9d3981bc6182c] re PR middle-end/33641 (perlbmk gets type mismatch in pointer plus expression)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [7dc83eb]
++---------------------------------------- Current commit hash: [7dc83eb] ----------------------------------------+
+GCC for commit [7dc83eb] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-7dc83eb/bin/gcc with -O3:
+checksum = a2bc8a28
+Output of /tmp/gcc-7dc83eb/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7dc83eb... re PR middle-end/33641 (perlbmk gets type mismatch in pointer plus expression)
+[32m[     info][0m Current commit [7dc83eb] is bad. Return value: 1
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[dc5752338ba869ec407f1d97b0d47793be431239] re PR tree-optimization/33627 (ICE in verify_stmts compiling abiword)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [dc57523]
++---------------------------------------- Current commit hash: [dc57523] ----------------------------------------+
+GCC for commit [dc57523] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-dc57523/bin/gcc with -O3:
+checksum = 32435210
+Output of /tmp/gcc-dc57523/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at dc57523... re PR tree-optimization/33627 (ICE in verify_stmts compiling abiword)
+[32m[     info][0m Current commit [dc57523] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[0a64eecaf4c81c3a22d49573965d8bf48e556a40] re PR rtl-optimization/33653 (volatile memory access optimized away)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [0a64eec]
++---------------------------------------- Current commit hash: [0a64eec] ----------------------------------------+
+GCC for commit [0a64eec] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-0a64eec/bin/gcc with -O3:
+checksum = a2bc8a28
+Output of /tmp/gcc-0a64eec/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0a64eec... re PR rtl-optimization/33653 (volatile memory access optimized away)
+[32m[     info][0m Current commit [0a64eec] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[cf909b0d8ce459088de2987c46a7932561d27bd1] * config.gcc: Remove USE_GAS for m68k targets.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc1292 orig
+[32m[     info][0m Testing commit: [cf909b0]
++---------------------------------------- Current commit hash: [cf909b0] ----------------------------------------+
+GCC for commit [cf909b0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-cf909b0/bin/gcc with -O3:
+checksum = 32435210
+Output of /tmp/gcc-cf909b0/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at cf909b0... * config.gcc: Remove USE_GAS for m68k targets.
+[32m[     info][0m Current commit [cf909b0] is good. Return value: 0
+
+0a64eecaf4c81c3a22d49573965d8bf48e556a40 is the first bad commit
+commit 0a64eecaf4c81c3a22d49573965d8bf48e556a40
+Author: Michael Matz <matz@suse.de>
+Date:   Thu Oct 4 13:34:09 2007 +0000
+
+    re PR rtl-optimization/33653 (volatile memory access optimized away)
+    
+            PR rtl-optimization/33653
+            * dce.c (deletable_insn_p_1): Use volatile_refs_p().
+            * dse.c (scan_insn): Same.
+    
+    From-SVN: r129006
+
+:040000 040000 98ce6cde5927a121ededb4677d76f26032f3737a da938488ee7ed432625aed9836e067e025f300f9 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 0a64eec re PR rtl-optimization/33653 (volatile memory access optimized away)
+Checking out files:  38% (3439/8828)   Checking out files:  39% (3443/8828)   Checking out files:  40% (3532/8828)   Checking out files:  41% (3620/8828)   Checking out files:  42% (3708/8828)   Checking out files:  43% (3797/8828)   Checking out files:  44% (3885/8828)   Checking out files:  45% (3973/8828)   Checking out files:  46% (4061/8828)   Checking out files:  47% (4150/8828)   Checking out files:  48% (4238/8828)   Checking out files:  49% (4326/8828)   Checking out files:  50% (4414/8828)   Checking out files:  50% (4442/8828)   Checking out files:  51% (4503/8828)   Checking out files:  52% (4591/8828)   Checking out files:  53% (4679/8828)   Checking out files:  54% (4768/8828)   Checking out files:  55% (4856/8828)   Checking out files:  56% (4944/8828)   Checking out files:  57% (5032/8828)   Checking out files:  58% (5121/8828)   Checking out files:  59% (5209/8828)   Checking out files:  59% (5273/8828)   Checking out files:  60% (5297/8828)   Checking out files:  61% (5386/8828)   Checking out files:  62% (5474/8828)   Checking out files:  63% (5562/8828)   Checking out files:  64% (5650/8828)   Checking out files:  65% (5739/8828)   Checking out files:  66% (5827/8828)   Checking out files:  67% (5915/8828)   Checking out files:  68% (6004/8828)   Checking out files:  69% (6092/8828)   Checking out files:  70% (6180/8828)   Checking out files:  71% (6268/8828)   Checking out files:  72% (6357/8828)   Checking out files:  73% (6445/8828)   Checking out files:  74% (6533/8828)   Checking out files:  75% (6621/8828)   Checking out files:  76% (6710/8828)   Checking out files:  77% (6798/8828)   Checking out files:  78% (6886/8828)   Checking out files:  78% (6957/8828)   Checking out files:  79% (6975/8828)   Checking out files:  80% (7063/8828)   Checking out files:  81% (7151/8828)   Checking out files:  82% (7239/8828)   Checking out files:  83% (7328/8828)   Checking out files:  84% (7416/8828)   Checking out files:  85% (7504/8828)   Checking out files:  86% (7593/8828)   Checking out files:  87% (7681/8828)   Checking out files:  88% (7769/8828)   Checking out files:  89% (7857/8828)   Checking out files:  90% (7946/8828)   Checking out files:  91% (8034/8828)   Checking out files:  92% (8122/8828)   Checking out files:  93% (8211/8828)   Checking out files:  94% (8299/8828)   Checking out files:  95% (8387/8828)   Checking out files:  96% (8475/8828)   Checking out files:  96% (8504/8828)   Checking out files:  97% (8564/8828)   Checking out files:  98% (8652/8828)   Checking out files:  99% (8740/8828)   Checking out files: 100% (8828/8828)   Checking out files: 100% (8828/8828), done.
+Previous HEAD position was cf909b0... * config.gcc: Remove USE_GAS for m68k targets.
+HEAD is now at 433e6a8... ffi.c: Don't include sys/cachectl.h.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [0a64eec]
++---------------------------------------- Current commit hash: [0a64eec] ----------------------------------------+
+GCC for commit [0a64eec] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-0a64eec/bin/gcc with -O3:
+checksum = a2bc8a28
+Output of /tmp/gcc-0a64eec/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at 0a64eec... re PR rtl-optimization/33653 (volatile memory access optimized away)
+[32m[     info][0m Current commit [0a64eec] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [cf909b0]
++---------------------------------------- Current commit hash: [cf909b0] ----------------------------------------+
+GCC for commit [cf909b0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 32435210
+Output of /tmp/gcc-cf909b0/bin/gcc with -O3:
+checksum = 32435210
+Output of /tmp/gcc-cf909b0/bin/gcc with -O0:
+checksum = 32435210
+----------------------------------------------------
+No local changes to save
+HEAD is now at cf909b0... * config.gcc: Remove USE_GAS for m68k targets.
+[32m[     info][0m Current commit [cf909b0] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [0a64eec] with -O0:
+checksum = 32435210
+Output of gcc [0a64eec] with -O1:
+checksum = a2bc8a28
+Output of gcc [0a64eec] with -O2:
+checksum = a2bc8a28
+Output of gcc [0a64eec] with -O3:
+checksum = a2bc8a28
+Output of gcc [0a64eec] with -Os:
+checksum = a2bc8a28
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

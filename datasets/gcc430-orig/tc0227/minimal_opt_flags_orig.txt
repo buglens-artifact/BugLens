@@ -1,0 +1,13 @@
+early-inlining
+inline-functions
+inline-small-functions
+tree-ccp
+tree-copyrename
+tree-dce
+tree-dse
+tree-loop-im
+tree-loop-optimize
+tree-salias
+tree-sra
+unit-at-a-time
+unswitch-loops

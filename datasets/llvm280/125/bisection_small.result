@@ -1,0 +1,1 @@
+62a84ea Generalize SROA to allow the first index of a GEP to be non-zero.  Add a missing check that an array reference doesn't go past the end of the array, and remove some redundant checks for in-bound array and vector references that are no longer needed.

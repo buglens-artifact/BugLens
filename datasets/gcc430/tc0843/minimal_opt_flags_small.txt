@@ -1,0 +1,9 @@
+inline-small-functions
+strict-aliasing
+tree-ch
+tree-copyrename
+tree-dce
+tree-dse
+tree-fre
+tree-pre
+unit-at-a-time

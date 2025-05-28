@@ -1,0 +1,335 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 82206559
+Output of gcc-4.3.0 with -O3:
+checksum = 8220e43d
+Output of gcc-4.3.0 with -O0:
+checksum = 82206559
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+checksum = 82206559
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+checksum = 8220e43d
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is bad. Return value: 1
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[2b5e5642e38e17dc60ca6408f4c2bba651e1a9f7] builtins.c (fold_builtin_load_exponent): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [2b5e564]
++---------------------------------------- Current commit hash: [2b5e564] ----------------------------------------+
+GCC for commit [2b5e564] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-2b5e564/bin/gcc with -O3:
+checksum = 8220e43d
+Output of /tmp/gcc-2b5e564/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2b5e564... builtins.c (fold_builtin_load_exponent): New.
+[32m[     info][0m Current commit [2b5e564] is bad. Return value: 1
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[af71363e455f4c60cf98f5ef42b4ddd8daedabd3] * configure: Regenerate with correct autoconf version.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [af71363]
++---------------------------------------- Current commit hash: [af71363] ----------------------------------------+
+GCC for commit [af71363] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-af71363/bin/gcc with -O3:
+checksum = 82206559
+Output of /tmp/gcc-af71363/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at af71363... * configure: Regenerate with correct autoconf version.
+[32m[     info][0m Current commit [af71363] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[cf227303461b367efbb57f7e4f9425c3f15f1132] pr23382.c: Avoid DCE from eliminating dead variable.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [cf227303]
++---------------------------------------- Current commit hash: [cf227303] ----------------------------------------+
+GCC for commit [cf227303] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-cf227303/bin/gcc with -O3:
+checksum = 82206559
+Output of /tmp/gcc-cf227303/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at cf227303... pr23382.c: Avoid DCE from eliminating dead variable.
+[32m[     info][0m Current commit [cf227303] is good. Return value: 0
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[7f1c6e93a9fcb03aea38e9cff175e855776f1997] testsuite/Makefile.am (compile-tests): Fix typo.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [7f1c6e9]
++---------------------------------------- Current commit hash: [7f1c6e9] ----------------------------------------+
+GCC for commit [7f1c6e9] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-7f1c6e9/bin/gcc with -O3:
+checksum = 8220e43d
+Output of /tmp/gcc-7f1c6e9/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7f1c6e9... testsuite/Makefile.am (compile-tests): Fix typo.
+[32m[     info][0m Current commit [7f1c6e9] is bad. Return value: 1
+
+Bisecting: 139 revisions left to test after this (roughly 7 steps)
+[e4cf973dd9cccacb662af8c4f9ed5aa35573074a] * gcj.texi (Strings): Fix documentation for JvNewString.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [e4cf973]
++---------------------------------------- Current commit hash: [e4cf973] ----------------------------------------+
+GCC for commit [e4cf973] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-e4cf973/bin/gcc with -O3:
+checksum = 8220e43d
+Output of /tmp/gcc-e4cf973/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at e4cf973... * gcj.texi (Strings): Fix documentation for JvNewString.
+[32m[     info][0m Current commit [e4cf973] is bad. Return value: 1
+
+Bisecting: 69 revisions left to test after this (roughly 6 steps)
+[ea6244280b016b12843432c1381a2a9064f60d00] * gnu/classpath/jdwp/natVMVirtualMachine.cc         (getAllClassMethods): Move error handling to ...         (throw_jvmti_error): ... here.         (jdwpClassPrepareCB): New function.         (jdwpThreadEndCB): New function.         (jdwpThreadStartCB): New function.         (jdwpVMDeathCB): New function.         (jdwpVMInitCB): Define and enable callbacks for         ClassPrepare, ThreadEnd, ThreadStart, and VMDeath.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [ea62442]
++---------------------------------------- Current commit hash: [ea62442] ----------------------------------------+
+GCC for commit [ea62442] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-ea62442/bin/gcc with -O3:
+checksum = 82206559
+Output of /tmp/gcc-ea62442/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at ea62442... * gnu/classpath/jdwp/natVMVirtualMachine.cc         (getAllClassMethods): Move error handling to ...         (throw_jvmti_error): ... here.         (jdwpClassPrepareCB): New function.         (jdwpThreadEndCB): New function.         (jdwpThreadStartCB): New function.         (jdwpVMDeathCB): New function.         (jdwpVMInitCB): Define and enable callbacks for         ClassPrepare, ThreadEnd, ThreadStart, and VMDeath.
+[32m[     info][0m Current commit [ea62442] is good. Return value: 0
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[48e540b04f64910218cc702d0e05760e2eb1ef44] re PR tree-optimization/30630 (Trunk GCC hangs while compiling cpu2k6/perlbench at -O2)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [48e540b]
++---------------------------------------- Current commit hash: [48e540b] ----------------------------------------+
+GCC for commit [48e540b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-48e540b/bin/gcc with -O3:
+checksum = 8220e43d
+Output of /tmp/gcc-48e540b/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at 48e540b... re PR tree-optimization/30630 (Trunk GCC hangs while compiling cpu2k6/perlbench at -O2)
+[32m[     info][0m Current commit [48e540b] is bad. Return value: 1
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[7f9bc51b091441d6f9484c62d210d4fc724b376b] tree-ssa-loop-unswitch.c: Include tree-inline.h.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [7f9bc51]
++---------------------------------------- Current commit hash: [7f9bc51] ----------------------------------------+
+GCC for commit [7f9bc51] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-7f9bc51/bin/gcc with -O3:
+checksum = 8220e43d
+Output of /tmp/gcc-7f9bc51/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7f9bc51... tree-ssa-loop-unswitch.c: Include tree-inline.h.
+[32m[     info][0m Current commit [7f9bc51] is bad. Return value: 1
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[b93633383b51c53c037a835172bdf84fbc04b43d] Add missing doc/install.texi to ChangeLog entry of the previous commit.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [b936333]
++---------------------------------------- Current commit hash: [b936333] ----------------------------------------+
+GCC for commit [b936333] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-b936333/bin/gcc with -O3:
+checksum = 8220e43d
+Output of /tmp/gcc-b936333/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at b936333... Add missing doc/install.texi to ChangeLog entry of the previous commit.
+[32m[     info][0m Current commit [b936333] is bad. Return value: 1
+
+Bisecting: 3 revisions left to test after this (roughly 2 steps)
+[4838bfc05bf7b35b1e07a57a0878df308655d6d8] re PR libgcj/30513 (Bootstrap failure with libgcj on sparc-sun-solaris2.10)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [4838bfc]
++---------------------------------------- Current commit hash: [4838bfc] ----------------------------------------+
+GCC for commit [4838bfc] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-4838bfc/bin/gcc with -O3:
+checksum = 82206559
+Output of /tmp/gcc-4838bfc/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4838bfc... re PR libgcj/30513 (Bootstrap failure with libgcj on sparc-sun-solaris2.10)
+[32m[     info][0m Current commit [4838bfc] is good. Return value: 0
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[1eaf20ec87c8f7403f91a465c892d381df42e468] sourcebuild.texi: Add comma for clarity.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [1eaf20e]
++---------------------------------------- Current commit hash: [1eaf20e] ----------------------------------------+
+GCC for commit [1eaf20e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-1eaf20e/bin/gcc with -O3:
+checksum = 8220e43d
+Output of /tmp/gcc-1eaf20e/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1eaf20e... sourcebuild.texi: Add comma for clarity.
+[32m[     info][0m Current commit [1eaf20e] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[7fbb9a499c94f945e4c495e431aa16ad0ff47e8d] tree-sra.c (sra_walk_function): Don't rely on aliases being build.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0885 orig
+[32m[     info][0m Testing commit: [7fbb9a4]
++---------------------------------------- Current commit hash: [7fbb9a4] ----------------------------------------+
+GCC for commit [7fbb9a4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-7fbb9a4/bin/gcc with -O3:
+checksum = 8220e43d
+Output of /tmp/gcc-7fbb9a4/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7fbb9a4... tree-sra.c (sra_walk_function): Don't rely on aliases being build.
+[32m[     info][0m Current commit [7fbb9a4] is bad. Return value: 1
+
+7fbb9a499c94f945e4c495e431aa16ad0ff47e8d is the first bad commit
+commit 7fbb9a499c94f945e4c495e431aa16ad0ff47e8d
+Author: Jan Hubicka <jh@suse.cz>
+Date:   Sat Jan 27 23:31:19 2007 +0100
+
+    tree-sra.c (sra_walk_function): Don't rely on aliases being build.
+    
+    	* tree-sra.c (sra_walk_function): Don't rely on aliases being build.
+    	(pass_sra): Do not require alias information.
+    	* passes.c (init_optimization_passes): Add SRA
+    
+    From-SVN: r121240
+
+:040000 040000 389324c6aa1d1e8adb657cd29fff441224681574 443a7ef7201c03c3e9691f951005a318d1a7b6ed M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 7fbb9a4 tree-sra.c (sra_walk_function): Don't rely on aliases being build.
+Checking out files:  10% (1434/14176)   Checking out files:  11% (1560/14176)   Checking out files:  12% (1702/14176)   Checking out files:  13% (1843/14176)   Checking out files:  14% (1985/14176)   Checking out files:  15% (2127/14176)   Checking out files:  16% (2269/14176)   Checking out files:  17% (2410/14176)   Checking out files:  17% (2518/14176)   Checking out files:  18% (2552/14176)   Checking out files:  19% (2694/14176)   Checking out files:  20% (2836/14176)   Checking out files:  21% (2977/14176)   Checking out files:  22% (3119/14176)   Checking out files:  22% (3254/14176)   Checking out files:  23% (3261/14176)   Checking out files:  24% (3403/14176)   Checking out files:  25% (3544/14176)   Checking out files:  26% (3686/14176)   Checking out files:  27% (3828/14176)   Checking out files:  28% (3970/14176)   Checking out files:  29% (4112/14176)   Checking out files:  30% (4253/14176)   Checking out files:  31% (4395/14176)   Checking out files:  32% (4537/14176)   Checking out files:  33% (4679/14176)   Checking out files:  34% (4820/14176)   Checking out files:  35% (4962/14176)   Checking out files:  36% (5104/14176)   Checking out files:  37% (5246/14176)   Checking out files:  38% (5387/14176)   Checking out files:  39% (5529/14176)   Checking out files:  40% (5671/14176)   Checking out files:  41% (5813/14176)   Checking out files:  41% (5909/14176)   Checking out files:  42% (5954/14176)   Checking out files:  43% (6096/14176)   Checking out files:  44% (6238/14176)   Checking out files:  45% (6380/14176)   Checking out files:  46% (6521/14176)   Checking out files:  47% (6663/14176)   Checking out files:  48% (6805/14176)   Checking out files:  49% (6947/14176)   Checking out files:  50% (7088/14176)   Checking out files:  51% (7230/14176)   Checking out files:  52% (7372/14176)   Checking out files:  53% (7514/14176)   Checking out files:  54% (7656/14176)   Checking out files:  55% (7797/14176)   Checking out files:  56% (7939/14176)   Checking out files:  57% (8081/14176)   Checking out files:  58% (8223/14176)   Checking out files:  58% (8266/14176)   Checking out files:  59% (8364/14176)   Checking out files:  60% (8506/14176)   Checking out files:  61% (8648/14176)   Checking out files:  62% (8790/14176)   Checking out files:  63% (8931/14176)   Checking out files:  64% (9073/14176)   Checking out files:  65% (9215/14176)   Checking out files:  66% (9357/14176)   Checking out files:  67% (9498/14176)   Checking out files:  68% (9640/14176)   Checking out files:  68% (9768/14176)   Checking out files:  69% (9782/14176)   Checking out files:  70% (9924/14176)   Checking out files:  71% (10065/14176)   Checking out files:  72% (10207/14176)   Checking out files:  73% (10349/14176)   Checking out files:  74% (10491/14176)   Checking out files:  75% (10632/14176)   Checking out files:  76% (10774/14176)   Checking out files:  77% (10916/14176)   Checking out files:  78% (11058/14176)   Checking out files:  79% (11200/14176)   Checking out files:  80% (11341/14176)   Checking out files:  81% (11483/14176)   Checking out files:  81% (11541/14176)   Checking out files:  82% (11625/14176)   Checking out files:  83% (11767/14176)   Checking out files:  84% (11908/14176)   Checking out files:  85% (12050/14176)   Checking out files:  86% (12192/14176)   Checking out files:  87% (12334/14176)   Checking out files:  88% (12475/14176)   Checking out files:  89% (12617/14176)   Checking out files:  90% (12759/14176)   Checking out files:  91% (12901/14176)   Checking out files:  92% (13042/14176)   Checking out files:  93% (13184/14176)   Checking out files:  94% (13326/14176)   Checking out files:  95% (13468/14176)   Checking out files:  96% (13609/14176)   Checking out files:  97% (13751/14176)   Checking out files:  98% (13893/14176)   Checking out files:  99% (14035/14176)   Checking out files: 100% (14176/14176)   Checking out files: 100% (14176/14176), done.
+Previous HEAD position was 7fbb9a4... tree-sra.c (sra_walk_function): Don't rely on aliases being build.
+HEAD is now at 5a4ac68... re PR target/32522 (Bootstrap failure on Alpha due to pointer-plus changes)
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [7fbb9a4]
++---------------------------------------- Current commit hash: [7fbb9a4] ----------------------------------------+
+GCC for commit [7fbb9a4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-7fbb9a4/bin/gcc with -O3:
+checksum = 8220e43d
+Output of /tmp/gcc-7fbb9a4/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7fbb9a4... tree-sra.c (sra_walk_function): Don't rely on aliases being build.
+[32m[     info][0m Current commit [7fbb9a4] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [4838bfc]
++---------------------------------------- Current commit hash: [4838bfc] ----------------------------------------+
+GCC for commit [4838bfc] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 82206559
+Output of /tmp/gcc-4838bfc/bin/gcc with -O3:
+checksum = 82206559
+Output of /tmp/gcc-4838bfc/bin/gcc with -O0:
+checksum = 82206559
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4838bfc... re PR libgcj/30513 (Bootstrap failure with libgcj on sparc-sun-solaris2.10)
+[32m[     info][0m Current commit [4838bfc] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [7fbb9a4] with -O0:
+checksum = 82206559
+Output of gcc [7fbb9a4] with -O1:
+checksum = 82206559
+Output of gcc [7fbb9a4] with -O2:
+checksum = 82206559
+Output of gcc [7fbb9a4] with -O3:
+checksum = 8220e43d
+Output of gcc [7fbb9a4] with -Os:
+checksum = 8220e43d
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

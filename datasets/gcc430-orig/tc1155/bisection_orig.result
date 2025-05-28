@@ -1,0 +1,1 @@
+7faade0 re PR tree-optimization/1046 (gcc less efficient than jdk for recursion with -finline-functions)

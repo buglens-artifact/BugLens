@@ -1,0 +1,7 @@
+dse
+ipa-reference
+strict-aliasing
+tree-loop-im
+tree-loop-optimize
+unit-at-a-time
+unswitch-loops

@@ -1,0 +1,13 @@
+early-inlining
+gcse
+if-conversion
+inline-small-functions
+ipa-reference
+move-loop-invariants
+tree-ccp
+tree-dce
+tree-dominator-opts
+tree-fre
+tree-loop-im
+tree-loop-optimize
+unit-at-a-time

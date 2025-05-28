@@ -1,0 +1,4 @@
+inline-small-functions
+tree-dce
+tree-vrp
+unit-at-a-time

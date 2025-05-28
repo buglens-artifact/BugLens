@@ -1,0 +1,7 @@
+dse
+inline-functions
+inline-functions-called-once
+inline-small-functions
+ipa-reference
+tree-dse
+unit-at-a-time

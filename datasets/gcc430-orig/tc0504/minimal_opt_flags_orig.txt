@@ -1,0 +1,10 @@
+dce
+guess-branch-probability
+inline-small-functions
+ipa-reference
+omit-frame-pointer
+tree-ccp
+tree-dce
+tree-dominator-opts
+tree-vrp
+unit-at-a-time

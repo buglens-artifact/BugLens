@@ -1,0 +1,716 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+checksum = 24d8d1e9
+Output of gcc-4.3.0 with -O3:
+checksum = 24d8d1ee
+Output of gcc-4.3.0 with -O0:
+checksum = 24d8d1e9
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+checksum = 24d8d1e9
+Output of /tmp/gcc-b23987e/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+checksum = 24d8d1e9
+Output of /tmp/gcc-b718216/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is good. Return value: 0
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[448d2cd2f73e2e16e2bdd5c407174afebf3ed845] re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [448d2cd]
++---------------------------------------- Current commit hash: [448d2cd] ----------------------------------------+
+GCC for commit [448d2cd] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-448d2cd/bin/gcc with -O3:
+checksum = 24d8d1ee
+Output of /tmp/gcc-448d2cd/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at 448d2cd... re PR fortran/33198 (Derived type in common: Default initializer not rejected)
+[32m[     info][0m Current commit [448d2cd] is bad. Return value: 1
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[6812b99bfefb741cadac6c5eba5a7446af820b62] impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [6812b99]
++---------------------------------------- Current commit hash: [6812b99] ----------------------------------------+
+GCC for commit [6812b99] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-6812b99/bin/gcc with -O3:
+checksum = 24d8d1ee
+Output of /tmp/gcc-6812b99/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at 6812b99... impunit.adb: Re-organize System.Random_Numbers and GNAT.Random_Numbers and add to builds.
+[32m[     info][0m Current commit [6812b99] is bad. Return value: 1
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[99c1f1ceed0d85eb785cb6f49ef23cad965922d2] re PR c++/30854 (Wrong number of arguments printed for constructor)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [99c1f1c]
++---------------------------------------- Current commit hash: [99c1f1c] ----------------------------------------+
+GCC for commit [99c1f1c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-99c1f1c/bin/gcc with -O3:
+checksum = 24d8d1ee
+Output of /tmp/gcc-99c1f1c/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at 99c1f1c... re PR c++/30854 (Wrong number of arguments printed for constructor)
+[32m[     info][0m Current commit [99c1f1c] is bad. Return value: 1
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[7ee1ad848363ca30a254981b13b57d0746ed0dc1] Fix missed initialization of scc_nodes.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [7ee1ad8]
++---------------------------------------- Current commit hash: [7ee1ad8] ----------------------------------------+
+GCC for commit [7ee1ad8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-7ee1ad8/bin/gcc with -O3:
+checksum = 24d8d1ee
+Output of /tmp/gcc-7ee1ad8/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7ee1ad8... Fix missed initialization of scc_nodes.
+[32m[     info][0m Current commit [7ee1ad8] is bad. Return value: 1
+
+Bisecting: 139 revisions left to test after this (roughly 7 steps)
+[5c7cafa8dc040ac9573f81ce9f9cdd6111ca83a4] svn ci -m "introduce bank[0,1] registers and fix rte delay slot scheduling"
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [5c7cafa]
++---------------------------------------- Current commit hash: [5c7cafa] ----------------------------------------+
+GCC for commit [5c7cafa] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-5c7cafa/bin/gcc with -O3:
+checksum = 24d8d1ee
+Output of /tmp/gcc-5c7cafa/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5c7cafa... svn ci -m "introduce bank[0,1] registers and fix rte delay slot scheduling"
+[32m[     info][0m Current commit [5c7cafa] is bad. Return value: 1
+
+Bisecting: 69 revisions left to test after this (roughly 6 steps)
+[19caedae314ce20ca4eb9cc7a64432d6fdf850b7] atomicity.h: Use __mcfisaa__...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [19caeda]
++---------------------------------------- Current commit hash: [19caeda] ----------------------------------------+
+GCC for commit [19caeda] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-19caeda/bin/gcc with -O3:
+checksum = 24d8d1ee
+Output of /tmp/gcc-19caeda/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at 19caeda... atomicity.h: Use __mcfisaa__...
+[32m[     info][0m Current commit [19caeda] is bad. Return value: 1
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[aa2480c5fb4fa679e109545b1a76cfd20bb0f624] configure.ac: Use ACX_PROG_CC_ALMOST_PEDANTIC too.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [aa2480c]
++---------------------------------------- Current commit hash: [aa2480c] ----------------------------------------+
+GCC for commit [aa2480c] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-aa2480c/bin/gcc with -O3:
+checksum = 24d8d1e9
+Output of /tmp/gcc-aa2480c/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at aa2480c... configure.ac: Use ACX_PROG_CC_ALMOST_PEDANTIC too.
+[32m[     info][0m Current commit [aa2480c] is good. Return value: 0
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[2f119dcccd49dcb0c8b72b4048712bdbc0e3988e] elf.h (ASM_GENERATE_INTERNAL_LABEL, [...]): Delete.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [2f119dc]
++---------------------------------------- Current commit hash: [2f119dc] ----------------------------------------+
+GCC for commit [2f119dc] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-2f119dc/bin/gcc with -O3:
+checksum = 24d8d1e9
+Output of /tmp/gcc-2f119dc/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2f119dc... elf.h (ASM_GENERATE_INTERNAL_LABEL, [...]): Delete.
+[32m[     info][0m Current commit [2f119dc] is good. Return value: 0
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[cc2137be63a9fe19d4788f921a322d9b93410de0] targhooks.c (default_builtin_reciprocal): New default target hook.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [cc2137b]
++---------------------------------------- Current commit hash: [cc2137b] ----------------------------------------+
+GCC for commit [cc2137b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-cc2137b/bin/gcc with -O3:
+checksum = 24d8d1ee
+Output of /tmp/gcc-cc2137b/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at cc2137b... targhooks.c (default_builtin_reciprocal): New default target hook.
+[32m[     info][0m Current commit [cc2137b] is bad. Return value: 1
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[b42c318374d46ec5dbaa70ce262c0863a8d3ff73] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [b42c318]
++---------------------------------------- Current commit hash: [b42c318] ----------------------------------------+
+GCC for commit [b42c318] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-b42c318/bin/gcc with -O3:
+checksum = 24d8d1e9
+Output of /tmp/gcc-b42c318/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at b42c318... Daily bump.
+[32m[     info][0m Current commit [b42c318] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[5be014d5b728cf754020b8ab4df1cd029f69922e] [multiple changes]
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [5be014d]
++---------------------------------------- Current commit hash: [5be014d] ----------------------------------------+
+GCC for commit [5be014d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-5be014d/bin/gcc with -O3:
+checksum = 24d8d1ee
+Output of /tmp/gcc-5be014d/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5be014d... [multiple changes]
+[32m[     info][0m Current commit [5be014d] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[1d2b1d91675ba5a26e4d04b209355047421adf92] config.gcc (i?86-*-darwin*): Add t-crtfm and t-crtpc.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430-orig/tc0485 orig
+[32m[     info][0m Testing commit: [1d2b1d9]
++---------------------------------------- Current commit hash: [1d2b1d9] ----------------------------------------+
+GCC for commit [1d2b1d9] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-1d2b1d9/bin/gcc with -O3:
+checksum = 24d8d1e9
+Output of /tmp/gcc-1d2b1d9/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1d2b1d9... config.gcc (i?86-*-darwin*): Add t-crtfm and t-crtpc.
+[32m[     info][0m Current commit [1d2b1d9] is good. Return value: 0
+
+5be014d5b728cf754020b8ab4df1cd029f69922e is the first bad commit
+commit 5be014d5b728cf754020b8ab4df1cd029f69922e
+Author: Andrew Pinski <pinskia@gcc.gnu.org>
+Date:   Fri Jun 15 22:42:36 2007 -0700
+
+    [multiple changes]
+    
+    2007-06-15  Andrew Pinski <andrew_pinski@playstation.sony.com>
+                Zdenek Dvorak <dvorakz@suse.cz>
+                Richard Guenther  <rguenther@suse.de>
+                Kaz Kojima  <kkojima@gcc.gnu.org>
+    
+    	* tree-vrp.c (compare_values_warnv): Convert val2 to
+    	the type of val1.
+    	(extract_range_from_assert): Create
+    	POINTER_PLUS_EXPR for pointer types.
+    	(extract_range_from_binary_expr): Handle
+    	only POINTER_PLUS_EXPR, MIN_EXPR, and MAX_EXPR
+    	for pointer types.
+    	* doc/c-tree.texi (POINTER_PLUS_EXPR): Document.
+    	* tree-ssa-loop-niter.c (split_to_var_and_offset): Handle
+    	POINTER_PLUS_EXPR as PLUS_EXPR.
+    	(number_of_iterations_lt_to_ne):
+    	For pointer types, use sizetype when
+    	creating MINUS_EXPR/PLUS_EXPRs.
+    	(assert_loop_rolls_lt): For pointer types, use sizetype when
+    	creating MINUS_EXPR/PLUS_EXPRs.
+    	(number_of_iterations_le): Likewise.
+    	(expand_simple_operations): POINTER_PLUS_EXPR are simple also.
+    	(derive_constant_upper_bound): Handle POINTER_PLUS_EXPR just
+    	like PLUS_EXPR and MINUS_EXPR.
+    	* tree-pretty-print.c (dump_generic_node): Handle
+    	POINTER_PLUS_EXPR.
+    	(op_prio): Likewise.
+    	(op_symbol_1): Likewise.
+    	* optabs.c (optab_for_tree_code): Likewise.
+    	* tree-ssa-loop-manip.c (create_iv): Handle pointer base
+    	specially.
+    	* tree-tailcall.c (process_assignment): Mention
+    	POINTER_PLUS_EXPR in a TODO comment.
+    	* tree.c (build2_stat): Assert when trying to use PLUS_EXPR or
+    	MINUS_EXPR with a pointer. Also assert for POINTER_PLUS_EXPR
+    	not used with a pointer and an integer type.
+    	* tree-scalar-evolution.c (add_to_evolution_1): Convert the
+    	increment using chrec_convert_rhs instead of chrec_convert.
+    	(follow_ssa_edge_in_rhs): Handle POINTER_PLUS_EXPR like
+    	PLUS_EXPR except for the right hand side's type will be
+    	sizetype.
+    	(interpret_rhs_modify_stmt): Handle POINTER_PLUS_EXPR.
+    	(fold_used_pointer_cast): Kill.
+    	(pointer_offset_p): Kill.
+    	(fold_used_pointer): Kill.
+    	(pointer_used_p): Kill.
+    	(analyze_scalar_evolution_1 <case GIMPLE_MODIFY_STMT>): Don't
+    	call fold_used_pointer.
+    	(instantiate_parameters_1): Convert the increment
+    	using chrec_convert_rhs instead of chrec_convert.
+    	Handle POINTER_PLUS_EXPR as PLUS_EXPR.
+    	* builtins.c (get_pointer_alignment): Handle POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR.
+    	(expand_builtin_strcat): Create a POINTER_PLUS_EXPR instead of
+    	PLUS_EXPR for pointers.
+    	(std_gimplify_va_arg_expr): Likewise.
+    	(fold_builtin_memory_op): Likewise.
+    	(fold_builtin_strstr): Likewise.
+    	(fold_builtin_strchr): Likewise.
+    	(fold_builtin_strrchr): Likewise.
+    	(fold_builtin_strpbrk): Likewise.
+    	(expand_builtin_memory_chk): Likewise.
+    	(fold_builtin_memory_chk): Likewise.
+    	(std_expand_builtin_va_start): Use
+    	sizetype for the call to make_tree and then convert
+    	to the pointer type.
+    	(fold_builtin_memchr): Use POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR for adding to a pointer.
+    	(std_gimplify_va_arg_expr): Use fold_build2 for
+    	the creating of POINTER_PLUS_EXPR.  For the BIT_AND_EXPR, cast
+    	the operands to sizetype first and then cast the BIT_AND_EXPR
+    	back to the pointer type.
+    	* fold-const.c (build_range_check): Handle pointer types
+    	specially.
+    	(extract_array_ref): Look for POINTER_PLUS_EXPR instead
+    	of PLUS_EXPR's. Make sure the offset is converted to
+    	sizetype.
+    	(try_move_mult_to_index): Strip the NOPs from the offset.
+    	Remove code argument and replace all uses with PLUS_EXPR.
+    	(fold_to_nonsharp_ineq_using_bound): Handle pointer types
+    	specially. Don't use a pointer type for MINUS_EXPR.
+    	(fold_unary): Handle for (T1)(X op Y),
+    	only p+ as that is the only as that can be handled for
+    	binary operators now.
+    	(fold_binary <case POINTER_PLUS_EXPR>): Add folding of
+    	POINTER_PLUS_EXPR.
+    	<case PLUS_EXPR>: Add folding of PTR+INT into
+    	PTR p+ INT.
+    	Don't call try_move_mult_to_index.
+    	<case MINUS_EXPR>: Fold (PTR0 p+ A) - (PTR1 p+ B)
+    	into (PTR0 - PTR1) + (A - B). Fold (PTR0 p+ A) - PTR1 into
+    	(PTR0 - PTR1) + A iff (PTR0 - PTR1) simplifies.
+    	Don't call try_move_mult_to_index.
+    	(tree_expr_nonnegative_warnv_p): Handle POINTER_PLUS_EXPR.
+    	(tree_expr_nonzero_p): Likewise.
+    	(fold_indirect_ref_1): Look at POINTER_PLUS_EXPR instead
+    	of PLUS_EXPR for the complex expression folding.
+    	* tree-chrec.c (chrec_fold_plus_poly_poly): If the
+    	first chrec is a pointer type, then the second should
+    	be sizetype and not the first's type.
+    	For POINTER_PLUS_EXPR, use a different right hand side type.
+    	Handle POINTER_PLUS_EXPR like PLUS_EXPR.
+    	(chrec_fold_plus_1): For POINTER_PLUS_EXPR, use a
+    	different right hand side type.
+    	Handle POINTER_PLUS_EXPR like PLUS_EXPR.
+    	(chrec_fold_plus): For pointer types, use POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR.
+    	When either operand is zero, convert the other operand.
+    	(chrec_apply): Use chrec_convert_rhs
+    	on the argument x instead of chrec_convert.
+    	(reset_evolution_in_loop): For pointer types, the new_evol
+    	should be sizetype.
+    	(convert_affine_scev): For POINTER_PLUS_EXPR, use a
+    	different right hand side type.
+    	Handle POINTER_PLUS_EXPR like PLUS_EXPR.
+    	(chrec_convert_rhs): New function.
+    	(chrec_convert_aggressive): For POINTER_PLUS_EXPR, use a
+    	different right hand side type.
+    	Handle POINTER_PLUS_EXPR like PLUS_EXPR.
+    	* tree-chrec.h (chrec_convert_rhs): New prototype.
+    	(build_polynomial_chrec): For pointer types, the right hand
+    	* tree-ssa-ccp.c (maybe_fold_stmt_indirect): Look for
+    	POINTER_PLUS_EXPR instead of PLUS_EXPR's.
+    	Remove subtraction case as it is always addition now.
+    	Make sure the offset is converted to sizetype.
+    	(fold_stmt_r): Don't handle PLUS_EXPR/MINUS_EXPR specially.
+    	Handle POINTER_PLUS_EXPR like PLUS_EXPR was handled before.
+    	* tree-ssa-loop-ivopts.c (determine_base_object): Abort for
+    	PLUS_EXPR in pointer type.
+    	Handle POINTER_PLUS_EXPR.
+    	(tree_to_aff_combination): Likewise.
+    	(force_expr_to_var_cost): Likewise.
+    	(force_expr_to_var_cost): Likewise. Create a POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR for pointers.
+    	* c-format.c (check_format_arg): Handle POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR of pointer types.
+    	* tree-stdarg.c (va_list_counter_bump): Handle POINTER_PLUS_EXPR
+    	as PLUS_EXPR.
+    	(check_va_list_escapes): Likewise.
+    	(check_all_va_list_escapes): Likewise.
+    	* dwarf2out.c (loc_descriptor_from_tree_1):
+    	Handle POINT_PLUS_EXPR as a PLUS_EXPR.
+    	* expr.c (expand_expr_real_1): Handle POINTER_PLUS_EXPR.
+    	(string_constant): Likewise.
+    	* tree-ssa-address.c (tree_mem_ref_addr): When adding
+    	the offset to the base, use POINTER_PLUS_EXPR.
+    	(add_to_parts): Convert the index to sizetype.
+    	(create_mem_ref): Create A POINTER_PLUS_EXPR for the one case.
+    	* matrix-reorg.c (collect_data_for_malloc_call): Stmt
+    	will now only be either INDIRECT_REF and POINTER_PLUS_EXPR.
+    	Offset only holds something for PLUS_EXPR.
+    	(ssa_accessed_in_tree): Handle POINTER_PLUS_EXPR just as
+    	a PLUS_EXPR.
+    	(analyze_transpose): POINTER_PLUS_EXPR will only show up now
+    	and not PLUS_EXPR.
+    	(analyze_accesses_for_modify_stmt): Likewise.
+    	Remove comment about the type being integral type as it is
+    	wrong now.
+    	(can_calculate_expr_before_stmt): Handle POINTER_PLUS_EXPR as
+    	PLUS_EXPR.
+    	(transform_access_sites): POINTER_PLUS_EXPR will only show up now
+    	and not PLUS_EXPR.
+    	Correct the type which the artimentic is done in (is now
+    	sizetype).
+    	Reindent one loop.
+    	* tree-data-ref.c (split_constant_offset): Handle
+    	POINTER_PLUS_EXPR
+    	* tree-affine.c (tree_to_aff_combination): Likewise.
+    	* c-typeck.c (build_unary_op): For pointers create the increment
+    	as a sizetype. Create a POINTER_PLUS_EXPR instead of PLUS_EXPR
+    	for pointers.
+    	* gimplify.c (gimplify_self_mod_expr): Create a
+    	POINTER_PLUS_EXPR instead of PLUS_EXPR for pointers.
+    	(gimplify_omp_atomic_fetch_op): Handle POINTER_PLUS_EXPR.
+    	* tree.def (POINTER_PLUS_EXPR): New tree code.
+    	* tree-predcom.c (ref_at_iteration): If we have a pointer
+    	type do the multiplication in sizetype.
+    	* tree-mudflap.c (mf_xform_derefs_1): Create a
+    	POINTER_PLUS_EXPR instead of PLUS_EXPR for pointers.
+    	* tree-ssa-forwprop.c
+    	(forward_propagate_addr_into_variable_array_index):
+    	Don't expect there to be a cast for the index as that
+    	does not exist anymore.
+    	(forward_propagate_addr_expr_1): Check for POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR.
+    	Don't check for the first operand of the POINTER_PLUS_EXPR
+    	was the index as it cannot be.
+    	Call forward_propagate_addr_into_variable_array_index with
+    	the SSA_NAME instead of the statement.
+    	* varasm.c (const_hash_1): Handle POINTER_PLUS_EXPR.
+    	(compare_constant): Likewise.
+    	(copy_constant): Likewise.
+    	(compute_reloc_for_constant): Likewise.
+    	(output_addressed_constants): Likewise.
+    	(initializer_constant_valid_p): Likewise.
+    	* tree-ssa.c (tree_ssa_useless_type_conversion_1):
+    	Convert the MIN/MAX of the inner type to the outer
+    	type before comparing them.
+    	* tree-ssa-loop-prefetch.c (idx_analyze_ref):  Handle
+    	POINTER_PLUS_EXPR instead of PLUS_EXPR.
+    	(issue_prefetch_ref): Create a POINTER_PLUS_EXPR instead
+    	of PLUS_EXPR for pointers.
+    	* tree-inline.c (estimate_num_insns_1): Handle
+    	POINTER_PLUS_EXPR.
+    	* tree-vect-transform.c (vect_create_addr_base_for_vector_ref):
+    	Create a POINTER_PLUS_EXPR instead of PLUS_EXPR for pointers.
+    	(bump_vector_ptr): Create a POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR for the pointer increment statement.
+    	(vect_update_ivs_after_vectorizer): For pointer types, create
+    	POINTER_PLUS_EXPR instead of PLUS_EXPR and also create
+    	MULT_EXPR in sizetype.
+    	(vect_gen_niters_for_prolog_loop): Add a cast when creating
+    	byte_misalign.
+    	* tree-object-size.c (plus_expr_object_size): Handle
+    	POINTER_PLUS_EXPR instead of PLUS_EXPR.  Removing all the extra
+    	code which is trying to figure out which side is a pointer and
+    	is the index.
+    	(check_for_plus_in_loops_1): Likewise.
+    	(check_for_plus_in_loops): Likewise.
+    	* c-common.c (pointer_int_sum): Create a
+    	POINTER_PLUS_EXPR instead of PLUS_EXPR for pointers.
+    	* tree-ssa-structalias.c (handle_ptr_arith): Handle
+    	only POINTER_PLUS_EXPR.  Removing all the extra
+    	code which is trying to figure out which side is a pointer and
+    	is the index.
+    	* tree-cfg.c (verify_expr): Add extra checking for pointers and
+    	PLUS_EXPR and MINUS_EXPR.
+    	Also add checking to make sure the operands of POINTER_PLUS_EXPR
+    	are correct.
+    	* config/frv/frv.c (frv_expand_builtin_va_start): Use sizetype
+    	with make_tree, instead of a pointer type.
+    	* config/s390/s390.c (s390_va_start): Use POINTER_PLUS_EXPR
+    	for pointers instead of PLUS_EXPR.
+    	(s390_gimplify_va_arg): Likewise.
+    	* config/spu/spu.c (spu_va_start): Create POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR when doing addition on pointer
+    	types.  Use sizetype for the second operand.
+    	(spu_gimplify_va_arg_expr): Likewise.
+    	* config/sparc/sparc.c (sparc_gimplify_va_arg): Use
+    	POINTER_PLUS_EXPR instead of PLUS_EXPR when the operand was
+    	a pointer.  Don't create a BIT_AND_EXPR for pointer types.
+    	* config/i386/i386.c (ix86_va_start): Use POINTER_PLUS_EXPR
+    	for the pointer addition and also use size_int/sizetype
+    	for the offset.
+    	(ix86_gimplify_va_arg): Likewise.
+    	Perform BIT_AND_EXPR on sizetype arguments.
+    	* config/sh/sh.c (sh_va_start): Call make_tree with sizetype
+    	and convert its result to a pointer type.  Use POINTER_PLUS_EXPR
+    	for the pointer additions and also use size_int for the offsets.
+    	(sh_gimplify_va_arg_expr): Use POINTER_PLUS_EXPR for the pointer
+    	additions and also use size_int for the offsets.  Perform
+    	BIT_AND_EXPR on sizetype arguments.
+    	* config/ia64/ia64.c (ia64_gimplify_va_arg): Use
+    	POINTER_PLUS_EXPR for pointers and create the
+    	BIT_AND_EXPR in sizetype.
+    	* config/rs6000/rs6000.c (rs6000_va_start): Use POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR for pointer addition.
+    	(rs6000_va_start): Likewise.
+    	Also use sizetype for the offset.
+    	* config/pa/pa.c (reloc_needed): Handle POINTER_PLUS_EXPR
+    	as PLUS_EXPR/MINUS_EXPR.
+    	(hppa_gimplify_va_arg_expr): Don't create MINUS_EXPR or
+    	PLUS_EXPR for pointers, instead use POINTER_PLUS_EXPR.
+    	Don't use BIT_AND_EXPR on a pointer type, convert the
+    	expression to sizetype first.
+    	* config/mips/mips.c (mips_va_start): Use POINTER_PLUS_EXPR
+    	for pointers.
+    	(mips_gimplify_va_arg_expr): Likewise.
+    	Don't create BIT_AND_EXPR in a pointer type.
+    
+    
+    
+    2007-06-15  Andrew Pinski  <andrew_pinski@playstation.sony.com>
+    
+            * trans-intrinsic.c (gfc_conv_intrinsic_repeat): Use
+            POINTER_PLUS_EXPR instead of PLUS_EXPR for pointer addition.
+            * trans-expr.c (gfc_trans_string_copy): Create
+            POINTER_PLUS_EXPR instead of a PLUS_EXPR
+            for pointer types.
+    
+    2007-06-15  Andrew Pinski  <andrew_pinski@playstation.sony.com>
+    
+    	* typeck.c (build_binary_op): For templates build the
+    	expression in pieces to avoid the assert in build2_stat.
+    	(get_member_function_from_ptrfunc):
+    	Change over to using POINTER_PLUS_EXPR and convert
+    	the second operand to sizetype.
+    	* typeck2.c (build_m_component_ref):  Likewise.
+    	* init.c (expand_virtual_init): Create a POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR for pointers.
+    	(build_new_1): Likewise.
+    	(build_vec_delete_1): Likewise.
+    	(build_vec_delete): Likewise.
+    	* class.c (build_base_path): Likewise.
+    	(build_base_path): Likewise.
+    	(convert_to_base_statically): Likewise.
+    	(fixed_type_or_null): Handle POINTER_PLUS_EXPR.
+    	(get_vtbl_decl_for_binfo): Handle POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR.
+    	(dfs_accumulate_vtbl_inits): Create a POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR for pointers.
+    	* call.c (build_special_member_call): Likewise.
+    	* rtti.c (build_headof): Likewise.
+    	Use sizetype instead of ptrdiff_type_node.
+    	(tinfo_base_init): Create a POINTER_PLUS_EXPR
+    	instead of PLUS_EXPR for pointers.
+    	* except.c (expand_start_catch_block):  Do a
+    	NEGATIVE and then a POINTER_PLUS_EXPR instead
+    	of a MINUS_EXPR.
+    	* cp-gimplify.c (cxx_omp_clause_apply_fn): Convert
+    	PLUS_EXPR on pointer types over to use
+    	POINTER_PLUS_EXPR and remove the conversion
+    	to the pointer types.
+    	* method.c (thunk_adjust): Use POINTER_PLUS_EXPR for
+    	adding to a pointer type. Use size_int instead of
+    	ssize_int. Convert the index to sizetype before
+    	adding it to the pointer.
+    
+    
+    
+    2007-06-15  Andrew Pinski  <andrew_pinski@playstation.sony.com>
+    
+            * trans.c (Attribute_to_gnu): When subtracting an
+            offset from a pointer, use POINTER_PLUS_EXPR with
+            NEGATE_EXPR instead of MINUS_EXPR.
+            (gnat_to_gnu): Likewise.
+            * utils.c (convert): When converting between
+            thin pointers, use POINTER_PLUS_EXPR and sizetype
+            for the offset.
+            * utils2.c (known_alignment): POINTER_PLUS_EXPR
+            have the same semantics as PLUS_EXPR for alignment.
+            (build_binary_op): Add support for the semantics of
+            POINTER_PLUS_EXPR's operands.
+            When adding an offset to a pointer, use POINTER_PLUS_EXPR.
+    
+    
+    
+    2007-06-15 Andrew Pinski  <andrew_pinski@playstation.sony.com>
+    
+            * class.c (make_class_data): Build the index in sizetype.
+            Use POINTER_PLUS_EXPR instead of PLUS_EXPR when
+            adding to a pointer type.
+            (build_symbol_entry): Likewise.
+            * expr.c (build_java_arrayaccess): Likewise.
+            (build_field_ref): Likewise.
+            (build_known_method_ref): Likewise.
+            (build_invokevirtual): Likewise.
+            * except.c (build_exception_object_ref): Do a
+            NEGATIVE and then a POINTER_PLUS_EXPR instead
+            of a MINUS_EXPR.
+    
+    
+    2007-06-15  Andrew Pinski  <andrew_pinski@playstation.sony.com>
+    
+    	PR tree-opt/32225
+    	* gcc.c-torture/compile/20070605-1.c: New test.
+    
+    	* gcc.c-torture/compile/20070603-1.c: New testcase.
+    	* gcc.c-torture/compile/20070603-2.c: New testcase.
+    
+    	* gcc.c-torture/compile/20070531-1.c: New test.
+    
+    	PR tree-opt/32167
+    	* gcc.c-torture/compile/20070531-2.c: New test.
+    
+    	PR tree-opt/32144
+    	* gcc.c-torture/compile/20070529-1.c: New test.
+    
+    	PR tree-opt/32145
+    	* gcc.c-torture/compile/20070529-2.c: New test.
+    
+    	PR tree-opt/32015
+    	* gcc.c-torture/compile/20070520-1.c: New test.
+    
+    	* g++.dg/ext/java-1.C: New test.
+    
+    	* gcc.dg/vect/vect-106.c: We are now able to vectorize two
+    	loops instead of one. Remove the "can't determine dependence"
+    	check.
+    	* gcc.dg/tree-ssa/20030815-1.c: Remove testcase which is no longer
+    	needed as the cast is gone in the first place.
+    	* gcc.dg/max-1.c: Change local variable a to be a global one.
+    	* gcc.dg/tree-ssa/ssa-pre-8.c: Update testcase since we don't
+    	have a cast which is PREd.
+    
+    From-SVN: r125755
+
+:040000 040000 d443de7903cb1314af05be6afc4f2c3d18cfeba3 38d2712d68c005bb2f6a828dfc94c8b9162ee397 M	gcc
+bisect run success
+[32m[     info][0m First bad commit: 5be014d [multiple changes]
+Checking out files:  33% (3271/9912)   Checking out files:  34% (3371/9912)   Checking out files:  35% (3470/9912)   Checking out files:  36% (3569/9912)   Checking out files:  37% (3668/9912)   Checking out files:  38% (3767/9912)   Checking out files:  39% (3866/9912)   Checking out files:  40% (3965/9912)   Checking out files:  41% (4064/9912)   Checking out files:  42% (4164/9912)   Checking out files:  43% (4263/9912)   Checking out files:  43% (4265/9912)   Checking out files:  44% (4362/9912)   Checking out files:  45% (4461/9912)   Checking out files:  46% (4560/9912)   Checking out files:  47% (4659/9912)   Checking out files:  48% (4758/9912)   Checking out files:  49% (4857/9912)   Checking out files:  50% (4956/9912)   Checking out files:  51% (5056/9912)   Checking out files:  52% (5155/9912)   Checking out files:  53% (5254/9912)   Checking out files:  53% (5347/9912)   Checking out files:  54% (5353/9912)   Checking out files:  55% (5452/9912)   Checking out files:  56% (5551/9912)   Checking out files:  57% (5650/9912)   Checking out files:  58% (5749/9912)   Checking out files:  59% (5849/9912)   Checking out files:  60% (5948/9912)   Checking out files:  61% (6047/9912)   Checking out files:  62% (6146/9912)   Checking out files:  63% (6245/9912)   Checking out files:  64% (6344/9912)   Checking out files:  65% (6443/9912)   Checking out files:  66% (6542/9912)   Checking out files:  67% (6642/9912)   Checking out files:  68% (6741/9912)   Checking out files:  69% (6840/9912)   Checking out files:  69% (6887/9912)   Checking out files:  70% (6939/9912)   Checking out files:  71% (7038/9912)   Checking out files:  72% (7137/9912)   Checking out files:  73% (7236/9912)   Checking out files:  74% (7335/9912)   Checking out files:  75% (7434/9912)   Checking out files:  76% (7534/9912)   Checking out files:  77% (7633/9912)   Checking out files:  78% (7732/9912)   Checking out files:  79% (7831/9912)   Checking out files:  80% (7930/9912)   Checking out files:  81% (8029/9912)   Checking out files:  82% (8128/9912)   Checking out files:  83% (8227/9912)   Checking out files:  84% (8327/9912)   Checking out files:  85% (8426/9912)   Checking out files:  86% (8525/9912)   Checking out files:  87% (8624/9912)   Checking out files:  87% (8668/9912)   Checking out files:  88% (8723/9912)   Checking out files:  89% (8822/9912)   Checking out files:  90% (8921/9912)   Checking out files:  91% (9020/9912)   Checking out files:  92% (9120/9912)   Checking out files:  93% (9219/9912)   Checking out files:  94% (9318/9912)   Checking out files:  95% (9417/9912)   Checking out files:  96% (9516/9912)   Checking out files:  97% (9615/9912)   Checking out files:  98% (9714/9912)   Checking out files:  99% (9813/9912)   Checking out files: 100% (9912/9912)   Checking out files: 100% (9912/9912), done.
+Previous HEAD position was 1d2b1d9... config.gcc (i?86-*-darwin*): Add t-crtfm and t-crtpc.
+HEAD is now at 7896beb... jni.cc (_Jv_JNI_FindClass): Initialize class.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [5be014d]
++---------------------------------------- Current commit hash: [5be014d] ----------------------------------------+
+GCC for commit [5be014d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-5be014d/bin/gcc with -O3:
+checksum = 24d8d1ee
+Output of /tmp/gcc-5be014d/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5be014d... [multiple changes]
+[32m[     info][0m Current commit [5be014d] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [1d2b1d9]
++---------------------------------------- Current commit hash: [1d2b1d9] ----------------------------------------+
+GCC for commit [1d2b1d9] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+checksum = 24d8d1e9
+Output of /tmp/gcc-1d2b1d9/bin/gcc with -O3:
+checksum = 24d8d1e9
+Output of /tmp/gcc-1d2b1d9/bin/gcc with -O0:
+checksum = 24d8d1e9
+----------------------------------------------------
+No local changes to save
+HEAD is now at 1d2b1d9... config.gcc (i?86-*-darwin*): Add t-crtfm and t-crtpc.
+[32m[     info][0m Current commit [1d2b1d9] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [5be014d] with -O0:
+checksum = 24d8d1e9
+Output of gcc [5be014d] with -O1:
+checksum = 24d8d1e9
+Output of gcc [5be014d] with -O2:
+checksum = 24d8d1e9
+Output of gcc [5be014d] with -O3:
+checksum = 24d8d1ee
+Output of gcc [5be014d] with -Os:
+checksum = 24d8d1ee
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

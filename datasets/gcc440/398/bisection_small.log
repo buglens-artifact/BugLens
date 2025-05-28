@@ -1,0 +1,724 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.4.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+0
+0
+0
+1
+0
+Output of gcc-4.4.0 with -Os:
+0
+0
+0
+0
+0
+0
+Output of gcc-4.4.0 with -O1:
+0
+0
+0
+0
+1
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-3.4.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[a8e6c82ab09c4c7a8490bc3861049b1941b84c75] re PR c++/13574 (array default initializer in class lets gcc consume all memory and die)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [a8e6c82]
++---------------------------------------- Current commit hash: [a8e6c82] ----------------------------------------+
+GCC for commit [a8e6c82] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-a8e6c82/bin/gcc with -Os:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-a8e6c82/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a8e6c82... re PR c++/13574 (array default initializer in class lets gcc consume all memory and die)
+[32m[     info][0m Current commit [a8e6c82] is good. Return value: 0
+
+Bisecting: 18332 revisions left to test after this (roughly 14 steps)
+[c10bc6e9a0f720a8e8db03c90960017218fe9879] dependency.c (gfc_is_same_range): Compare the stride...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [c10bc6e]
++---------------------------------------- Current commit hash: [c10bc6e] ----------------------------------------+
+GCC for commit [c10bc6e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-c10bc6e/bin/gcc with -Os:
+0
+0
+0
+0
+6293808
+0
+Output of /tmp/gcc-c10bc6e/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at c10bc6e... dependency.c (gfc_is_same_range): Compare the stride...
+[32m[     info][0m Current commit [c10bc6e] is bad. Return value: 1
+
+Bisecting: 9165 revisions left to test after this (roughly 13 steps)
+[9b1f5820ab6e7ff76a478f77029bf40d79a4f689] * gcc.dg/pr12092-1.c: Do not run on x86_64.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [9b1f582]
++---------------------------------------- Current commit hash: [9b1f582] ----------------------------------------+
+GCC for commit [9b1f582] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-9b1f582/bin/gcc with -Os:
+0
+0
+0
+0
+6293888
+0
+Output of /tmp/gcc-9b1f582/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 9b1f582... * gcc.dg/pr12092-1.c: Do not run on x86_64.
+[32m[     info][0m Current commit [9b1f582] is bad. Return value: 1
+
+Bisecting: 4582 revisions left to test after this (roughly 12 steps)
+[d917fa87989411da1a6e002993aec077469ff719] mainpage.html: Clarify links.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [d917fa8]
++---------------------------------------- Current commit hash: [d917fa8] ----------------------------------------+
+GCC for commit [d917fa8] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-d917fa8/bin/gcc with -Os:
+0
+0
+0
+0
+6293888
+0
+Output of /tmp/gcc-d917fa8/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at d917fa8... mainpage.html: Clarify links.
+[32m[     info][0m Current commit [d917fa8] is bad. Return value: 1
+
+Bisecting: 2291 revisions left to test after this (roughly 11 steps)
+[874e7baa4ce28aedab159353f0c40846a7b771e5] stl_vector.h: Trivial formatting fixes.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [874e7ba]
++---------------------------------------- Current commit hash: [874e7ba] ----------------------------------------+
+GCC for commit [874e7ba] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-874e7ba/bin/gcc with -Os:
+0
+0
+0
+0
+-518026920
+0
+Output of /tmp/gcc-874e7ba/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 874e7ba... stl_vector.h: Trivial formatting fixes.
+[32m[     info][0m Current commit [874e7ba] is bad. Return value: 1
+
+Bisecting: 1145 revisions left to test after this (roughly 10 steps)
+[6f5b4f3e5ae86e31fd507ff4d0f986e58febb829] arm.c (thumb_legitimize_address): New function.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [6f5b4f3]
++---------------------------------------- Current commit hash: [6f5b4f3] ----------------------------------------+
+Building GCC for commit [6f5b4f3]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC installation failed. Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 6f5b4f3 arm.c (thumb_legitimize_address): New function.
+HEAD is now at 6f5b4f3 arm.c (thumb_legitimize_address): New function.
+Note: checking out '6f5b4f3'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 6f5b4f3... arm.c (thumb_legitimize_address): New function.
+Deleted branch temp-test-branch (was 6f5b4f3).
+Fail to build gcc for commit [6f5b4f3], skip this commit. Return 125.
+Bisecting: 1144 revisions left to test after this (roughly 10 steps)
+[2495e20b5d855d6d8679ba0f98758b0d7053ffdd] * fr.po: Update.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [2495e20]
++---------------------------------------- Current commit hash: [2495e20] ----------------------------------------+
+Building GCC for commit [2495e20]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC installation failed. Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 2495e20 * fr.po: Update.
+HEAD is now at 2495e20 * fr.po: Update.
+Note: checking out '2495e20'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 2495e20... * fr.po: Update.
+Deleted branch temp-test-branch (was 2495e20).
+Fail to build gcc for commit [2495e20], skip this commit. Return 125.
+Bisecting: 1144 revisions left to test after this (roughly 10 steps)
+[18586cb7fcd1c0c9cb3d4caaca50411407eca65f] re PR preprocessor/14198 ([3.4.0][MIPS]FAIL: gcc.dg/cpp/assert4.c (test for excess errors))
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [18586cb]
++---------------------------------------- Current commit hash: [18586cb] ----------------------------------------+
+Building GCC for commit [18586cb]...
+Switched to a new branch 'temp-test-branch'
+Modified collect2.c to correct open function usage.
+GCC installation failed. Skip this commit, return 125
+Saved working directory and index state WIP on temp-test-branch: 18586cb re PR preprocessor/14198 ([3.4.0][MIPS]FAIL: gcc.dg/cpp/assert4.c (test for excess errors))
+HEAD is now at 18586cb re PR preprocessor/14198 ([3.4.0][MIPS]FAIL: gcc.dg/cpp/assert4.c (test for excess errors))
+Note: checking out '18586cb'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+
+HEAD is now at 18586cb... re PR preprocessor/14198 ([3.4.0][MIPS]FAIL: gcc.dg/cpp/assert4.c (test for excess errors))
+Deleted branch temp-test-branch (was 18586cb).
+Fail to build gcc for commit [18586cb], skip this commit. Return 125.
+Bisecting: 1144 revisions left to test after this (roughly 10 steps)
+[43a21dfc46151a5f50f7372fda42b6eba36950c9] re PR middle-end/9707 (Unnecessary range test in switches with less than 4 cases)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [43a21df]
++---------------------------------------- Current commit hash: [43a21df] ----------------------------------------+
+GCC for commit [43a21df] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-43a21df/bin/gcc with -Os:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-43a21df/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 43a21df... re PR middle-end/9707 (Unnecessary range test in switches with less than 4 cases)
+[32m[     info][0m Current commit [43a21df] is good. Return value: 0
+
+Bisecting: 222 revisions left to test after this (roughly 8 steps)
+[74b9f2d5c81c1799cc8bf2a1b41c5fbad88a0127] invoke.texi: Rename MIPS's -mfix-vr4122-bugs to -mfix-vr4120.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [74b9f2d]
++---------------------------------------- Current commit hash: [74b9f2d] ----------------------------------------+
+GCC for commit [74b9f2d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-74b9f2d/bin/gcc with -Os:
+0
+0
+0
+0
+-236545880
+0
+Output of /tmp/gcc-74b9f2d/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 74b9f2d... invoke.texi: Rename MIPS's -mfix-vr4122-bugs to -mfix-vr4120.
+[32m[     info][0m Current commit [74b9f2d] is bad. Return value: 1
+
+Bisecting: 110 revisions left to test after this (roughly 7 steps)
+[4f976745b7f4deeed63381e21990fd2a2c2e2103] c-decl.c (build_compound_literal): Use TYPE_READONLY.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [4f97674]
++---------------------------------------- Current commit hash: [4f97674] ----------------------------------------+
+GCC for commit [4f97674] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-4f97674/bin/gcc with -Os:
+0
+0
+0
+0
+-1211768008
+0
+Output of /tmp/gcc-4f97674/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4f97674... c-decl.c (build_compound_literal): Use TYPE_READONLY.
+[32m[     info][0m Current commit [4f97674] is bad. Return value: 1
+
+Bisecting: 55 revisions left to test after this (roughly 6 steps)
+[b150f4f320ed62f4b5d42466948644a8e3ed9d0d] [multiple changes]
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [b150f4f]
++---------------------------------------- Current commit hash: [b150f4f] ----------------------------------------+
+GCC for commit [b150f4f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-b150f4f/bin/gcc with -Os:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-b150f4f/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b150f4f... [multiple changes]
+[32m[     info][0m Current commit [b150f4f] is good. Return value: 0
+
+Bisecting: 27 revisions left to test after this (roughly 5 steps)
+[18c6ada9b2ee27a40db256f4c32779fc25872050] cgraph.c: Add overall comment.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [18c6ada]
++---------------------------------------- Current commit hash: [18c6ada] ----------------------------------------+
+GCC for commit [18c6ada] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-18c6ada/bin/gcc with -Os:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-18c6ada/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 18c6ada... cgraph.c: Add overall comment.
+[32m[     info][0m Current commit [18c6ada] is good. Return value: 0
+
+Bisecting: 13 revisions left to test after this (roughly 4 steps)
+[ef1140a912b50510fdf4fd7fdb3b9d243087690b] * md.texi (vec_set, vec_extract, vec_init): Document.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [ef1140a]
++---------------------------------------- Current commit hash: [ef1140a] ----------------------------------------+
+GCC for commit [ef1140a] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-ef1140a/bin/gcc with -Os:
+0
+0
+0
+0
+1417339368
+0
+Output of /tmp/gcc-ef1140a/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at ef1140a... * md.texi (vec_set, vec_extract, vec_init): Document.
+[32m[     info][0m Current commit [ef1140a] is bad. Return value: 1
+
+Bisecting: 6 revisions left to test after this (roughly 3 steps)
+[2e9ceb77befba5b08e2e27eeed70550e5be570b2] re PR c++/14007 (Incorrect use of const partial specialization for reference template argument)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [2e9ceb7]
++---------------------------------------- Current commit hash: [2e9ceb7] ----------------------------------------+
+GCC for commit [2e9ceb7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-2e9ceb7/bin/gcc with -Os:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-2e9ceb7/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2e9ceb7... re PR c++/14007 (Incorrect use of const partial specialization for reference template argument)
+[32m[     info][0m Current commit [2e9ceb7] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[2c0a14b2ee95d9c5172d5863967ec883e576b8e5] README: Bring up to date with new subdirectories; remove duplicate subdirectory lines.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [2c0a14b]
++---------------------------------------- Current commit hash: [2c0a14b] ----------------------------------------+
+GCC for commit [2c0a14b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-2c0a14b/bin/gcc with -Os:
+0
+0
+0
+0
+-570359192
+0
+Output of /tmp/gcc-2c0a14b/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2c0a14b... README: Bring up to date with new subdirectories; remove duplicate subdirectory lines.
+[32m[     info][0m Current commit [2c0a14b] is bad. Return value: 1
+
+Bisecting: 1 revision left to test after this (roughly 1 step)
+[ab40b100d3e1676c60d3ccd0765a45736471beaf] mt_allocator.h (__mt_alloc<>::deallocate): Rearrange arithmetic to avoid computing two divisions at each deallocation.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [ab40b10]
++---------------------------------------- Current commit hash: [ab40b10] ----------------------------------------+
+GCC for commit [ab40b10] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-ab40b10/bin/gcc with -Os:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-ab40b10/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at ab40b10... mt_allocator.h (__mt_alloc<>::deallocate): Rearrange arithmetic to avoid computing two divisions at each deallocation.
+[32m[     info][0m Current commit [ab40b10] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[f736cb3eedc28efce160effa53403e4b69411427] opts.c (decode_options): Do function inlining with very small max-inline-insns-* parameters when...
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc440/398 small
+[32m[     info][0m Testing commit: [f736cb3]
++---------------------------------------- Current commit hash: [f736cb3] ----------------------------------------+
+GCC for commit [f736cb3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-f736cb3/bin/gcc with -Os:
+0
+0
+0
+0
+-276089240
+0
+Output of /tmp/gcc-f736cb3/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at f736cb3... opts.c (decode_options): Do function inlining with very small max-inline-insns-* parameters when...
+[32m[     info][0m Current commit [f736cb3] is bad. Return value: 1
+
+f736cb3eedc28efce160effa53403e4b69411427 is the first bad commit
+commit f736cb3eedc28efce160effa53403e4b69411427
+Author: Gabor Loki <loki@inf.u-szeged.hu>
+Date:   Sat Apr 3 00:17:49 2004 +0200
+
+    opts.c (decode_options): Do function inlining with very small max-inline-insns-* parameters when...
+    
+    2004-04-02  Gabor Loki <loki@inf.u-szeged.hu>
+    
+           * opts.c (decode_options): Do function inlining with very small
+           max-inline-insns-* parameters when optimizing for size.
+    
+    From-SVN: r80359
+
+:040000 040000 f3a7c8a1782c836a4d3be8ac7dbd7dcfe971cf14 4a745ca9fa2d62593073cb3e15a36f6efdfd0a2e M	gcc
+bisect run success
+[32m[     info][0m First bad commit: f736cb3 opts.c (decode_options): Do function inlining with very small max-inline-insns-* parameters when...
+Checking out files:  13% (7500/56581)   Checking out files:  14% (7922/56581)   Checking out files:  15% (8488/56581)   Checking out files:  16% (9053/56581)   Checking out files:  17% (9619/56581)   Checking out files:  17% (9912/56581)   Checking out files:  18% (10185/56581)   Checking out files:  19% (10751/56581)   Checking out files:  20% (11317/56581)   Checking out files:  21% (11883/56581)   Checking out files:  22% (12448/56581)   Checking out files:  23% (13014/56581)   Checking out files:  24% (13580/56581)   Checking out files:  24% (13938/56581)   Checking out files:  25% (14146/56581)   Checking out files:  26% (14712/56581)   Checking out files:  27% (15277/56581)   Checking out files:  28% (15843/56581)   Checking out files:  29% (16409/56581)   Checking out files:  30% (16975/56581)   Checking out files:  31% (17541/56581)   Checking out files:  32% (18106/56581)   Checking out files:  33% (18672/56581)   Checking out files:  34% (19238/56581)   Checking out files:  35% (19804/56581)   Checking out files:  35% (19985/56581)   Checking out files:  36% (20370/56581)   Checking out files:  37% (20935/56581)   Checking out files:  38% (21501/56581)   Checking out files:  39% (22067/56581)   Checking out files:  40% (22633/56581)   Checking out files:  41% (23199/56581)   Checking out files:  42% (23765/56581)   Checking out files:  43% (24330/56581)   Checking out files:  44% (24896/56581)   Checking out files:  45% (25462/56581)   Checking out files:  46% (26028/56581)   Checking out files:  46% (26143/56581)   Checking out files:  47% (26594/56581)   Checking out files:  48% (27159/56581)   Checking out files:  49% (27725/56581)   Checking out files:  50% (28291/56581)   Checking out files:  51% (28857/56581)   Checking out files:  52% (29423/56581)   Checking out files:  53% (29988/56581)   Checking out files:  53% (30133/56581)   Checking out files:  54% (30554/56581)   Checking out files:  55% (31120/56581)   Checking out files:  56% (31686/56581)   Checking out files:  57% (32252/56581)   Checking out files:  58% (32817/56581)   Checking out files:  59% (33383/56581)   Checking out files:  60% (33949/56581)   Checking out files:  61% (34515/56581)   Checking out files:  62% (35081/56581)   Checking out files:  62% (35295/56581)   Checking out files:  63% (35647/56581)   Checking out files:  64% (36212/56581)   Checking out files:  65% (36778/56581)   Checking out files:  66% (37344/56581)   Checking out files:  67% (37910/56581)   Checking out files:  68% (38476/56581)   Checking out files:  69% (39041/56581)   Checking out files:  70% (39607/56581)   Checking out files:  71% (40173/56581)   Checking out files:  72% (40739/56581)   Checking out files:  72% (40906/56581)   Checking out files:  73% (41305/56581)   Checking out files:  74% (41870/56581)   Checking out files:  75% (42436/56581)   Checking out files:  76% (43002/56581)   Checking out files:  77% (43568/56581)   Checking out files:  78% (44134/56581)   Checking out files:  79% (44699/56581)   Checking out files:  80% (45265/56581)   Checking out files:  81% (45831/56581)   Checking out files:  82% (46397/56581)   Checking out files:  82% (46716/56581)   Checking out files:  83% (46963/56581)   Checking out files:  84% (47529/56581)   Checking out files:  85% (48094/56581)   Checking out files:  86% (48660/56581)   Checking out files:  87% (49226/56581)   Checking out files:  88% (49792/56581)   Checking out files:  89% (50358/56581)   Checking out files:  90% (50923/56581)   Checking out files:  91% (51489/56581)   Checking out files:  91% (52001/56581)   Checking out files:  92% (52055/56581)   Checking out files:  93% (52621/56581)   Checking out files:  94% (53187/56581)   Checking out files:  95% (53752/56581)   Checking out files:  96% (54318/56581)   Checking out files:  97% (54884/56581)   Checking out files:  98% (55450/56581)   Checking out files:  99% (56016/56581)   Checking out files:  99% (56363/56581)   Checking out files: 100% (56581/56581)   Checking out files: 100% (56581/56581), done.
+Previous HEAD position was f736cb3... opts.c (decode_options): Do function inlining with very small max-inline-insns-* parameters when...
+HEAD is now at 880f8ea... user.cfg.in: Define _GLIBCXX_HAS_GTHREADS for mutex, condition_variable, and thread output.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [f736cb3]
++---------------------------------------- Current commit hash: [f736cb3] ----------------------------------------+
+GCC for commit [f736cb3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-f736cb3/bin/gcc with -Os:
+0
+0
+0
+0
+-1418507848
+0
+Output of /tmp/gcc-f736cb3/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at f736cb3... opts.c (decode_options): Do function inlining with very small max-inline-insns-* parameters when...
+[32m[     info][0m Current commit [f736cb3] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [ab40b10]
++---------------------------------------- Current commit hash: [ab40b10] ----------------------------------------+
+GCC for commit [ab40b10] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-ab40b10/bin/gcc with -Os:
+0
+0
+0
+0
+1
+0
+Output of /tmp/gcc-ab40b10/bin/gcc with -O1:
+0
+0
+0
+0
+1
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at ab40b10... mt_allocator.h (__mt_alloc<>::deallocate): Rearrange arithmetic to avoid computing two divisions at each deallocation.
+[32m[     info][0m Current commit [ab40b10] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [f736cb3] with -O0:
+0
+0
+0
+0
+1
+0
+Output of gcc [f736cb3] with -O1:
+0
+0
+0
+0
+1
+0
+Output of gcc [f736cb3] with -O2:
+0
+0
+0
+0
+1
+0
+Output of gcc [f736cb3] with -O3:
+0
+0
+0
+0
+-1587436856
+0
+Output of gcc [f736cb3] with -Os:
+0
+0
+0
+0
+1479832456
+0
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

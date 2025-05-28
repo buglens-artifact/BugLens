@@ -1,0 +1,10 @@
+tree-ch
+tree-copyrename
+tree-dce
+tree-dominator-opts
+tree-dse
+tree-loop-im
+tree-loop-ivcanon
+tree-loop-optimize
+tree-scev-cprop
+tree-vectorize

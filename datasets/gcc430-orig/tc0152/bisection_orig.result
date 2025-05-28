@@ -1,0 +1,1 @@
+cb2d412 tree-ssa-copy.c (may_propagate_copy): Remove redundant checks.

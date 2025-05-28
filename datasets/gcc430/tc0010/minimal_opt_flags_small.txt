@@ -1,0 +1,10 @@
+tree-ch
+tree-dominator-opts
+tree-loop-im
+tree-loop-optimize
+tree-salias
+tree-scev-cprop
+tree-sra
+tree-store-ccp
+tree-vrp
+unswitch-loops

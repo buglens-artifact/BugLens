@@ -1,0 +1,355 @@
+[32m[     info][0m Compiler type: gcc
+[32m[     info][0m Bad compiler: /tmp/deduplication/prebuild_compilers/gcc-4.3.0/bin/gcc
+====================Ground truth & buggy output:====================
+Correct output:
+0
+Output of gcc-4.3.0 with -Os:
+1
+Output of gcc-4.3.0 with -O3:
+0
+====================================================================
+[32m[     info][0m Good version found: gcc-4.2.0
+[32m[     info][0m Start Bisection...
+No local changes to save
+Bisecting: a merge base must be tested
+[b23987ec2f0f24c38c78f7cf63c91a699da681bd] tree.h (DECL_PTA_ARTIFICIAL): Remove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [b23987e]
++---------------------------------------- Current commit hash: [b23987e] ----------------------------------------+
+GCC for commit [b23987e] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b23987e/bin/gcc with -Os:
+0
+Output of /tmp/gcc-b23987e/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b23987e... tree.h (DECL_PTA_ARTIFICIAL): Remove.
+[32m[     info][0m Current commit [b23987e] is good. Return value: 0
+
+Bisecting: 4487 revisions left to test after this (roughly 12 steps)
+[b718216c5ad4bc0054646d701d3b4fa67d74c96b] df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [b718216]
++---------------------------------------- Current commit hash: [b718216] ----------------------------------------+
+GCC for commit [b718216] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-b718216/bin/gcc with -Os:
+1
+Output of /tmp/gcc-b718216/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at b718216... df-scan.c (df_get_exit-block_use_set): Always add the stack pointer to the exit block use set.
+[32m[     info][0m Current commit [b718216] is bad. Return value: 1
+
+Bisecting: 2243 revisions left to test after this (roughly 11 steps)
+[2b5e5642e38e17dc60ca6408f4c2bba651e1a9f7] builtins.c (fold_builtin_load_exponent): New.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [2b5e564]
++---------------------------------------- Current commit hash: [2b5e564] ----------------------------------------+
+GCC for commit [2b5e564] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-2b5e564/bin/gcc with -Os:
+0
+Output of /tmp/gcc-2b5e564/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 2b5e564... builtins.c (fold_builtin_load_exponent): New.
+[32m[     info][0m Current commit [2b5e564] is good. Return value: 0
+
+Bisecting: 1121 revisions left to test after this (roughly 10 steps)
+[a97dcb4c3690f2b6fa294c8931998c7a7daed883] warnings_are_errors_1.f90: Add -std=f95 to options.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [a97dcb4]
++---------------------------------------- Current commit hash: [a97dcb4] ----------------------------------------+
+GCC for commit [a97dcb4] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-a97dcb4/bin/gcc with -Os:
+0
+Output of /tmp/gcc-a97dcb4/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a97dcb4... warnings_are_errors_1.f90: Add -std=f95 to options.
+[32m[     info][0m Current commit [a97dcb4] is good. Return value: 0
+
+Bisecting: 560 revisions left to test after this (roughly 9 steps)
+[538639f4ab33f1a9f8c347a8f1e2369fdc4989e4] VMFrame.java (<init>): Add parameter for "this" pointer.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [538639f]
++---------------------------------------- Current commit hash: [538639f] ----------------------------------------+
+GCC for commit [538639f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-538639f/bin/gcc with -Os:
+1
+Output of /tmp/gcc-538639f/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 538639f... VMFrame.java (<init>): Add parameter for "this" pointer.
+[32m[     info][0m Current commit [538639f] is bad. Return value: 1
+
+Bisecting: 280 revisions left to test after this (roughly 8 steps)
+[39dd88f08d3f8e69796f77aba403d5ade33df9c0] 2007-04-30  Benjamin Kosnik  <bkoz@redhat.com>
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [39dd88f]
++---------------------------------------- Current commit hash: [39dd88f] ----------------------------------------+
+GCC for commit [39dd88f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-39dd88f/bin/gcc with -Os:
+0
+Output of /tmp/gcc-39dd88f/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 39dd88f... 2007-04-30  Benjamin Kosnik  <bkoz@redhat.com>
+[32m[     info][0m Current commit [39dd88f] is good. Return value: 0
+
+Bisecting: 140 revisions left to test after this (roughly 7 steps)
+[5abd2125f012351411df08f07918667ce3e418a9] m32c.c (SYMBOL_FLAG_FUNCVEC_FUNCTION): Define.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [5abd212]
++---------------------------------------- Current commit hash: [5abd212] ----------------------------------------+
+GCC for commit [5abd212] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-5abd212/bin/gcc with -Os:
+0
+Output of /tmp/gcc-5abd212/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 5abd212... m32c.c (SYMBOL_FLAG_FUNCVEC_FUNCTION): Define.
+[32m[     info][0m Current commit [5abd212] is good. Return value: 0
+
+Bisecting: 70 revisions left to test after this (roughly 6 steps)
+[cd2d8c70db3e977ff4c6b83c541c77866bc807aa] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [cd2d8c7]
++---------------------------------------- Current commit hash: [cd2d8c7] ----------------------------------------+
+GCC for commit [cd2d8c7] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-cd2d8c7/bin/gcc with -Os:
+1
+Output of /tmp/gcc-cd2d8c7/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at cd2d8c7... Daily bump.
+[32m[     info][0m Current commit [cd2d8c7] is bad. Return value: 1
+
+Bisecting: 34 revisions left to test after this (roughly 5 steps)
+[4b077790466b7e7e7982b323fe30f3ea3c377c02] Daily bump.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [4b07779]
++---------------------------------------- Current commit hash: [4b07779] ----------------------------------------+
+GCC for commit [4b07779] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-4b07779/bin/gcc with -Os:
+0
+Output of /tmp/gcc-4b07779/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 4b07779... Daily bump.
+[32m[     info][0m Current commit [4b07779] is good. Return value: 0
+
+Bisecting: 17 revisions left to test after this (roughly 4 steps)
+[35dd9a0e6d9491ee708c2d75ecf8d74aa40cbb39] s390.md (GPR0_REGNUM, [...]): Constants added.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [35dd9a0]
++---------------------------------------- Current commit hash: [35dd9a0] ----------------------------------------+
+GCC for commit [35dd9a0] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-35dd9a0/bin/gcc with -Os:
+0
+Output of /tmp/gcc-35dd9a0/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 35dd9a0... s390.md (GPR0_REGNUM, [...]): Constants added.
+[32m[     info][0m Current commit [35dd9a0] is good. Return value: 0
+
+Bisecting: 8 revisions left to test after this (roughly 3 steps)
+[538075fe425ea95f3845eaaefe644d511d636c48] pod_char_traits.h (char_traits<>::move): Use __builtin_memmove.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [538075f]
++---------------------------------------- Current commit hash: [538075f] ----------------------------------------+
+GCC for commit [538075f] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-538075f/bin/gcc with -Os:
+0
+Output of /tmp/gcc-538075f/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 538075f... pod_char_traits.h (char_traits<>::move): Use __builtin_memmove.
+[32m[     info][0m Current commit [538075f] is good. Return value: 0
+
+Bisecting: 4 revisions left to test after this (roughly 2 steps)
+[a747170836486ab3bbe8d16ec5f0c26566a0a0ff] configure.ac (gcc_gxx_include_dir): Use $(libsubdir_to_prefix).
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [a747170]
++---------------------------------------- Current commit hash: [a747170] ----------------------------------------+
+GCC for commit [a747170] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-a747170/bin/gcc with -Os:
+0
+Output of /tmp/gcc-a747170/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at a747170... configure.ac (gcc_gxx_include_dir): Use $(libsubdir_to_prefix).
+[32m[     info][0m Current commit [a747170] is good. Return value: 0
+
+Bisecting: 2 revisions left to test after this (roughly 1 step)
+[8c0dbf3490bd297d601118bc95a2a8640aa73a39] re PR libgcj/29324 (add wait handling hook)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [8c0dbf3]
++---------------------------------------- Current commit hash: [8c0dbf3] ----------------------------------------+
+GCC for commit [8c0dbf3] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-8c0dbf3/bin/gcc with -Os:
+0
+Output of /tmp/gcc-8c0dbf3/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 8c0dbf3... re PR libgcj/29324 (add wait handling hook)
+[32m[     info][0m Current commit [8c0dbf3] is good. Return value: 0
+
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[bae8b6b2c3a56ab3405445cae8502df405cf815b] gcse.c (gcse_main): Do jump bypassing in CPROP2.
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [bae8b6b]
++---------------------------------------- Current commit hash: [bae8b6b] ----------------------------------------+
+GCC for commit [bae8b6b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-bae8b6b/bin/gcc with -Os:
+1
+Output of /tmp/gcc-bae8b6b/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at bae8b6b... gcse.c (gcse_main): Do jump bypassing in CPROP2.
+[32m[     info][0m Current commit [bae8b6b] is bad. Return value: 1
+
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[7f6055d052b5e8407b136322af334a62b2f2719d] re PR rtl-optimization/31848 (Invalid loop optimization causes bootstrap failure in genautomata)
+running /tmp/deduplication/scripts/r_wrongcode_gcc.sh /tmp/deduplication/benchmarks/gcc430/tc0504 small
+[32m[     info][0m Testing commit: [7f6055d]
++---------------------------------------- Current commit hash: [7f6055d] ----------------------------------------+
+GCC for commit [7f6055d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-7f6055d/bin/gcc with -Os:
+0
+Output of /tmp/gcc-7f6055d/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7f6055d... re PR rtl-optimization/31848 (Invalid loop optimization causes bootstrap failure in genautomata)
+[32m[     info][0m Current commit [7f6055d] is good. Return value: 0
+
+bae8b6b2c3a56ab3405445cae8502df405cf815b is the first bad commit
+commit bae8b6b2c3a56ab3405445cae8502df405cf815b
+Author: Steven Bosscher <steven@gcc.gnu.org>
+Date:   Sat May 12 18:15:38 2007 +0000
+
+    gcse.c (gcse_main): Do jump bypassing in CPROP2.
+    
+    	* gcse.c (gcse_main): Do jump bypassing in CPROP2.
+    	* passes.c (init_optimization_passes): Move pass_jump_bypass
+    	after loop2.
+    
+    	* basic-block.h (bb_has_eh_pred): Fix style issue.
+    
+    From-SVN: r124640
+
+:040000 040000 880e42a3c55243596e2fa45e255aa315059aedc9 78b90aadc039034e99169255054a51841695be9b M	gcc
+bisect run success
+[32m[     info][0m First bad commit: bae8b6b gcse.c (gcse_main): Do jump bypassing in CPROP2.
+Checking out files:  32% (14587/44489)   Checking out files:  33% (14682/44489)   Checking out files:  34% (15127/44489)   Checking out files:  35% (15572/44489)   Checking out files:  36% (16017/44489)   Checking out files:  37% (16461/44489)   Checking out files:  38% (16906/44489)   Checking out files:  39% (17351/44489)   Checking out files:  40% (17796/44489)   Checking out files:  41% (18241/44489)   Checking out files:  42% (18686/44489)   Checking out files:  43% (19131/44489)   Checking out files:  44% (19576/44489)   Checking out files:  45% (20021/44489)   Checking out files:  46% (20465/44489)   Checking out files:  47% (20910/44489)   Checking out files:  48% (21355/44489)   Checking out files:  49% (21800/44489)   Checking out files:  50% (22245/44489)   Checking out files:  51% (22690/44489)   Checking out files:  52% (23135/44489)   Checking out files:  53% (23580/44489)   Checking out files:  54% (24025/44489)   Checking out files:  55% (24469/44489)   Checking out files:  56% (24914/44489)   Checking out files:  57% (25359/44489)   Checking out files:  58% (25804/44489)   Checking out files:  59% (26249/44489)   Checking out files:  60% (26694/44489)   Checking out files:  61% (27139/44489)   Checking out files:  62% (27584/44489)   Checking out files:  62% (27828/44489)   Checking out files:  63% (28029/44489)   Checking out files:  64% (28473/44489)   Checking out files:  65% (28918/44489)   Checking out files:  66% (29363/44489)   Checking out files:  67% (29808/44489)   Checking out files:  68% (30253/44489)   Checking out files:  69% (30698/44489)   Checking out files:  70% (31143/44489)   Checking out files:  71% (31588/44489)   Checking out files:  72% (32033/44489)   Checking out files:  73% (32477/44489)   Checking out files:  73% (32867/44489)   Checking out files:  74% (32922/44489)   Checking out files:  75% (33367/44489)   Checking out files:  76% (33812/44489)   Checking out files:  77% (34257/44489)   Checking out files:  78% (34702/44489)   Checking out files:  78% (35014/44489)   Checking out files:  79% (35147/44489)   Checking out files:  80% (35592/44489)   Checking out files:  81% (36037/44489)   Checking out files:  82% (36481/44489)   Checking out files:  83% (36926/44489)   Checking out files:  84% (37371/44489)   Checking out files:  85% (37816/44489)   Checking out files:  86% (38261/44489)   Checking out files:  87% (38706/44489)   Checking out files:  87% (38779/44489)   Checking out files:  88% (39151/44489)   Checking out files:  89% (39596/44489)   Checking out files:  90% (40041/44489)   Checking out files:  91% (40485/44489)   Checking out files:  92% (40930/44489)   Checking out files:  93% (41375/44489)   Checking out files:  94% (41820/44489)   Checking out files:  95% (42265/44489)   Checking out files:  96% (42710/44489)   Checking out files:  96% (42926/44489)   Checking out files:  97% (43155/44489)   Checking out files:  98% (43600/44489)   Checking out files:  99% (44045/44489)   Checking out files: 100% (44489/44489)   Checking out files: 100% (44489/44489), done.
+Previous HEAD position was 7f6055d... re PR rtl-optimization/31848 (Invalid loop optimization causes bootstrap failure in genautomata)
+HEAD is now at 5635785... ssa-dse-1.c: New test.
+
+[32m[     info][0m Checking the result...
+=========================================================================================================================
+[32m[     info][0m Testing commit: [bae8b6b]
++---------------------------------------- Current commit hash: [bae8b6b] ----------------------------------------+
+GCC for commit [bae8b6b] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-bae8b6b/bin/gcc with -Os:
+1
+Output of /tmp/gcc-bae8b6b/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at bae8b6b... gcse.c (gcse_main): Do jump bypassing in CPROP2.
+[32m[     info][0m Current commit [bae8b6b] is bad. Return value: 1
+
+[32m[     info][0m Testing commit: [7f6055d]
++---------------------------------------- Current commit hash: [7f6055d] ----------------------------------------+
+GCC for commit [7f6055d] already exists. Using existing binary.
+------------------Current output:-------------------
+Ground truth:
+0
+Output of /tmp/gcc-7f6055d/bin/gcc with -Os:
+0
+Output of /tmp/gcc-7f6055d/bin/gcc with -O3:
+0
+----------------------------------------------------
+No local changes to save
+HEAD is now at 7f6055d... re PR rtl-optimization/31848 (Invalid loop optimization causes bootstrap failure in genautomata)
+[32m[     info][0m Current commit [7f6055d] is good. Return value: 0
+
+[32m[     info][0m Bisection result is correct.
+=========================================================================================================================
+
+[32m[     info][0m Getting extra information...
+=========================================================================================================================
+Output of gcc [bae8b6b] with -O0:
+0
+Output of gcc [bae8b6b] with -O1:
+0
+Output of gcc [bae8b6b] with -O2:
+0
+Output of gcc [bae8b6b] with -O3:
+0
+Output of gcc [bae8b6b] with -Os:
+1
+[32m[     info][0m Got extra information.
+=========================================================================================================================
+[32m[     info][0m Bisection done.

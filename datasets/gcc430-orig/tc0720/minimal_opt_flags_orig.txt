@@ -1,0 +1,4 @@
+inline-small-functions
+ipa-reference
+toplevel-reorder
+unit-at-a-time
